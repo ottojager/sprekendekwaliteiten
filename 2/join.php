@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<div>
-			<form>
+			<form method="post">
 				<table>
 					<tr>
 						<td>
