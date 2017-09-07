@@ -4,7 +4,7 @@ if (isset($_POST['makeLobbyButton'])) {
 		// generate game id
 		$id = '';
 		for ($i = 0; $i != 5; $i++) {
-			$id .= chr(mt_rand(65, 90));
+			$id .= chr(mt_rand(65, 90)); // random uppercase ASCII character
 		}
 
 		$game = array(
@@ -13,7 +13,7 @@ if (isset($_POST['makeLobbyButton'])) {
 		);
 
 		$json = json_encode($game);
-		file_put_contents("games/$id.json", $json);
+		file_put_contents("./games/$id.json", $json);
 	} else {
 		$error = 'Naam moet minimaal 3 characters bevaten.';
 	}
