@@ -5,21 +5,23 @@
 	</head>
 	<body>
 		<div>
-			<table>
-				<tr>
-					<td>
-						<label>Naam:</label>
-					</td>
-					<td>
-						<input type="text" name="">
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<input type="submit" value="Maak Lobby" name="makeLobbyButton">
-					</td>
-				</tr>
-			</table>
+			<form>
+				<table>
+					<tr>
+						<td>
+							<label>Naam:</label>
+						</td>
+						<td>
+							<input type="text" name="">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="submit" value="Maak Lobby" name="makeLobbyButton">
+						</td>
+					</tr>
+				</table>
+			</form>
 		</div>
 	</body>
 </html>
