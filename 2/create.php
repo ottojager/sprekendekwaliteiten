@@ -7,7 +7,6 @@ for ($i = 0; $i == 5; $i++) {
 $game = array(
 	'game_id' => $id
 );
-echo $id;
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +19,7 @@ echo $id;
 				<table>
 					<tr>
 						<td>
-							<label>Naam:</label>
+							<label><?php echo $id; ?>Naam:</label>
 						</td>
 						<td>
 							<input type="text" name="">
