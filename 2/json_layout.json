@@ -1,0 +1,18 @@
+{
+	'game_id': int,
+	'active_player_int': int,
+	'players': [
+		{
+			'name': str,
+			'playerID': int,
+			'hand': str,
+			'stack': [
+				str,
+			],
+			'last_request': timestamp,
+		},
+	],
+	'unused_cards': [
+		str,
+	]
+}
