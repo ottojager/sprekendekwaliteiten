@@ -14,5 +14,6 @@
 	],
 	'unused_cards': [
 		str,
-	]
+	],
+	'last_change': timestamp,
 }
