@@ -3,7 +3,14 @@
 	if (isset($_POST['join_button'])) {
 		if (strlen($_POST['name']) >= 3) {
 			if (strlen($_POST['code']) == 5) {
-				//code to get unique ID and go to lobby
+				$games_list = scandir("games");
+				if (in_array($_POST['code'].'.json', $games_list)) {
+					$_SESSION['game'] = $_POST['code'];
+					header('Location: lobby.php');
+				}
+				else {
+					echo 'verkeerde code of lobby bestaat niet';
+				}
 			} else {
 				$error = 'code moet vijf cijfers zijn.';
 			}
