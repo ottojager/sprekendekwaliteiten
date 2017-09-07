@@ -9,7 +9,10 @@
 			'stack': [
 				str,
 			],
+<<<<<<< HEAD
 			'last_request': timestamp,
+=======
+>>>>>>> acd4a3ceb7924cc5571bd7e7b729318801e6d5ca
 		},
 	],
 	'unused_cards': [
