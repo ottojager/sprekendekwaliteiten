@@ -13,11 +13,13 @@ if (isset($_POST['makeLobbyButton'])) {
 		);
 
 		$json = json_encode($game);
+		file_put_contents("games/$id.json", $json);
 	} else {
 		$error = 'Naam moet minimaal 3 characters bevaten.';
 	}
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
