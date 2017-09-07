@@ -1,5 +1,11 @@
 <?php
-	
+	if (isset($_POST['joinButton'])) {
+		if (strlen($_POST['name']) >= 3) {
+
+		} else {
+			$error = 'niet lang genoeg?!';
+		}
+	}
 ?>
 
 
@@ -10,6 +16,11 @@
 	</head>
 	<body>
 		<div>
+			<?php
+			if (isset($error)) {
+				echo "<p>$error</p>";
+			}
+			?>
 			<form method="post">
 				<table>
 					<tr>
@@ -17,7 +28,7 @@
 							<label>Naam:</label>
 						</td>
 						<td>
-							<input type="text" name="">
+							<input type="text" name="name">
 						</td>
 					</tr>
 					<tr>
@@ -25,7 +36,7 @@
 							<label>code:</label>
 						</td>
 						<td>
-							<input type="text" name="">
+							<input type="text" name="code">
 						</td>
 					</tr>
 					<tr>
