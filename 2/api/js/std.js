@@ -5,7 +5,7 @@ function start_update() {
      		document.getElementById("demo").innerHTML = this.responseText;
 		}
   	};
-	xhttp.open("GET", "check.php", true);
+	xhttp.open("GET", "../check.php", true);
 	xhttp.send();
 }
 
