@@ -18,6 +18,6 @@
 	],
 	'graveyard': [
 		str,
-	]
+	],
 	'last_change': timestamp,
 }
