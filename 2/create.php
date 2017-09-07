@@ -8,8 +8,8 @@ if (isset($_POST['makeLobbyButton'])) {
 		}
 
 		$game = array(
-			'game_id' => $id
-			'leader_name' => $_POST['name'];
+			'game_id' => $id,
+			'leader_name' => $_POST['name'],
 		);
 
 		$json = json_encode($game);
