@@ -1,7 +1,12 @@
 <?php
-	if (isset($_POST['joinButton'])) {
+	session_start();
+	if (isset($_POST['join_button'])) {
 		if (strlen($_POST['name']) >= 3) {
-
+			if (strlen($_POST['code']) == 5) {
+				//code to get unique ID and go to lobby
+			} else {
+				$error = 'code moet vijf cijfers zijn.';
+			}
 		} else {
 			$error = 'niet lang genoeg?!';
 		}
@@ -41,7 +46,7 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input type="submit" value="join" name="joinButton">
+							<input type="submit" value="join" name="join_button">
 						</td>
 					</tr>
 				</table>
