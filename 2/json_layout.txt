@@ -1,6 +1,7 @@
 {
 	'game_id': int,
 	'active_player_int': int,
+	'leader_name': str,
 	'players': [
 		{
 			'name': str,
