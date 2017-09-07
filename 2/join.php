@@ -2,10 +2,21 @@
 	session_start();
 	if (isset($_POST['join_button'])) {
 		if (strlen($_POST['name']) >= 3) {
-			if (strlen($_POST['code']) == 5) {
+			$code = $_POST['code'];
+			if (strlen($code) == 5) {
 				$games_list = scandir("games");
-				if (in_array($_POST['code'].'.json', $games_list)) {
-					$_SESSION['game'] = $_POST['code'];
+				if (in_array($code.'.json', $games_list)) {
+					$json = json_decode(file_get_contents("./games/$code.json"), true);
+
+					$id = count($json['players']) + 1;
+					$json['players'][] = array(
+						'name' => $_POST['name'],
+						'playerID' => $id,
+					);
+					file_put_contents("./games/$code.json", json_encode($json));
+
+					$_SESSION['playerID'] = $id;
+					$_SESSION['game'] = $code;
 					header('Location: lobby.php');
 				}
 				else {

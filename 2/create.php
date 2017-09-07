@@ -11,11 +11,12 @@ if (isset($_POST['makeLobbyButton'])) {
 		$game = array(
 			'game_id' => $id,
 			'leader_name' => $_POST['name'],
+			'players' => array(),
 		);
 
 		$json = json_encode($game);
 		file_put_contents("./games/$id.json", $json);
-		
+
 		$_SESSION['game'] = $id;
 		header('Location: lobby.php');
 	} else {
