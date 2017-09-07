@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_POST['makeLobbyButton'])) {
 	if (strlen($_POST['name']) >= 3) {
 		// generate game id
@@ -14,6 +15,9 @@ if (isset($_POST['makeLobbyButton'])) {
 
 		$json = json_encode($game);
 		file_put_contents("./games/$id.json", $json);
+		
+		$_SESSION['game'] = $id;
+		header('Location: lobby.php');
 	} else {
 		$error = 'Naam moet minimaal 3 characters bevaten.';
 	}
