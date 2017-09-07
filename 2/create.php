@@ -1,3 +1,13 @@
+<?php
+$id = '';
+for ($i = 0; $i == 5; $i++) {
+	$id .= chr(mt_rand(65, 90));
+}
+
+$game = array(
+	'game_id' =>
+)
+?>
 <!DOCTYPE html>
 <html>
 	<head>
