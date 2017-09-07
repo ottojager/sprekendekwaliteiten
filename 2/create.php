@@ -1,12 +1,22 @@
 <?php
-$id = '';
-for ($i = 0; $i != 5; $i++) {
-	$id .= chr(mt_rand(65, 90));
-}
+if (isset($_POST['makeLobbyButton'])) {
+	if (strlen($_POST['name']) >= 3) {
+		// generate game id
+		$id = '';
+		for ($i = 0; $i != 5; $i++) {
+			$id .= chr(mt_rand(65, 90));
+		}
 
-$game = array(
-	'game_id' => $id
-);
+		$game = array(
+			'game_id' => $id
+			'leader_name' => $_POST['name'];
+		);
+
+		$json = json_encode($game);
+	} else {
+		$error = 'Naam moet minimaal 3 characters bevaten.';
+	}
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,14 +25,19 @@ $game = array(
 	</head>
 	<body>
 		<div>
+			<?php
+			if (isset($error)) {
+				echo "<p>$error</p>";
+			}
+			?>
 			<form>
 				<table>
 					<tr>
 						<td>
-							<label><?php echo $id; ?>Naam:</label>
+							<label>Naam:</label>
 						</td>
 						<td>
-							<input type="text" name="">
+							<input type="text" name="name">
 						</td>
 					</tr>
 					<tr>
