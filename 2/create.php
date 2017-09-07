@@ -32,7 +32,7 @@ if (isset($_POST['makeLobbyButton'])) {
 				echo "<p>$error</p>";
 			}
 			?>
-			<form>
+			<form method="post">
 				<table>
 					<tr>
 						<td>
