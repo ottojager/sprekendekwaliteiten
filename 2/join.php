@@ -1,7 +1,12 @@
 <?php
+	session_start();
 	if (isset($_POST['joinButton'])) {
 		if (strlen($_POST['name']) >= 3) {
-
+			if (strlen($_POST['code']) == 5) {
+				//code to get unique ID and go to lobby
+			} else {
+				$error = 'code moet vijf cijfers zijn.';
+			}
 		} else {
 			$error = 'niet lang genoeg?!';
 		}
