@@ -8,7 +8,7 @@
 				if (in_array($code.'.json', $games_list)) {
 					$json = json_decode(file_get_contents("./games/$code.json"), true);
 
-					$id = count($json['players']) + 1;
+					$id = count($json['players']);
 					if ($id > 8) {
 						$error = 'lobby is vol';
 					} else {
