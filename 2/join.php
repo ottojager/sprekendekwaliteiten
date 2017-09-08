@@ -15,6 +15,7 @@
 						$json['players'][] = array(
 							'name' => $_POST['name'],
 							'playerID' => $id,
+							'lastUpdate' => time(),
 						);
 						file_put_contents("./games/$code.json", json_encode($json));
 
