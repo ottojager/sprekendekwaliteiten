@@ -26,5 +26,10 @@
 			<ol id="player_list">
 			</ol>
 		</div>
+		<?php
+		if ($_SESSION['player_id'] == 0) {
+			?><button onclick="">Game beginnen</button><?php
+		}
+		?>
 	</body>
 </html>

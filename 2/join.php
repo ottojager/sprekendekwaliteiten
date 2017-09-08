@@ -14,12 +14,12 @@
 					} else {
 						$json['players'][] = array(
 							'name' => $_POST['name'],
-							'playerID' => $id,
+							'player_id' => $id,
 						);
 						file_put_contents("./games/$code.json", json_encode($json));
 
-						$_SESSION['playerID'] = $id;
-						$_SESSION['game'] = $code;
+						$_SESSION['player_id'] = $id;
+						$_SESSION['game_id'] = $code;
 						header('Location: lobby.php');
 					}
 				} else {

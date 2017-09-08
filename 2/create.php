@@ -18,8 +18,8 @@ if (isset($_POST['makeLobbyButton'])) {
 		$json = json_encode($game);
 		file_put_contents("./games/$id.json", $json);
 
-		$_SESSION['playerID'] = 0;
-		$_SESSION['game'] = $id;
+		$_SESSION['player_id'] = 0;
+		$_SESSION['game_id'] = $id;
 		header('Location: lobby.php');
 	} else {
 		$error = 'Naam moet minimaal 3 characters bevaten.';
