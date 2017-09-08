@@ -5,7 +5,9 @@
 	</head>
 	<body>
 		<div id="main">
-
+			<p id="leader"></p>
+			<ol id="player_list">
+			</ol>
 		</div>
 	</body>
 </html>
