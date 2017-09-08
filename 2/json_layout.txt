@@ -21,4 +21,5 @@
 		str,
 	],
 	'last_change': timestamp,
+	'game_started': bool,
 }
