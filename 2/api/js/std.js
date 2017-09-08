@@ -13,5 +13,5 @@ function start_update() {
 start_update();
 
 window.setInterval(function(){
-   start_update();
+	start_update();
 }, 3000);
