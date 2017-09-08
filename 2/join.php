@@ -15,8 +15,9 @@
 						$json['players'][] = array(
 							'name' => $_POST['name'],
 							'playerID' => $id,
-							'lastUpdate' => time(),
+							'last_request' => time(),
 						);
+						$json['last_change'] = time();
 						file_put_contents("./games/$code.json", json_encode($json));
 
 						$_SESSION['playerID'] = $id;
