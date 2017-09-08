@@ -14,8 +14,14 @@
 					} else {
 						$json['players'][] = array(
 							'name' => $_POST['name'],
+<<<<<<< HEAD
 							'player_id' => $id,
+=======
+							'playerID' => $id,
+							'last_request' => time(),
+>>>>>>> d548cbe9837161f2ed1c4f162018d732a09c2b0e
 						);
+						$json['last_change'] = time();
 						file_put_contents("./games/$code.json", json_encode($json));
 
 						$_SESSION['player_id'] = $id;
