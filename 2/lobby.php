@@ -27,7 +27,7 @@
 			</ol>
 		</div>
 		<?php
-		if ($_SESSION['player_id'] == 0) {
+		if ($_SESSION['player_id'] == 9) {
 			?><button onclick="">Game beginnen</button><?php
 		}
 		?>
