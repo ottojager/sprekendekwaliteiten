@@ -12,7 +12,7 @@ if (isset($_POST['makeLobbyButton'])) {
 			'game_id' => $id,
 			'leader_name' => $_POST['name'],
 			'players' => array(),
-			'game_started' => false;
+			'game_started' => false,
 		);
 
 		$json = json_encode($game);
