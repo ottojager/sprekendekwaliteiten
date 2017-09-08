@@ -9,6 +9,8 @@ function start_update() {
 	xhttp.send();
 }
 
+start_update();
+
 window.setInterval(function(){
   start_update();
 }, 3000);
