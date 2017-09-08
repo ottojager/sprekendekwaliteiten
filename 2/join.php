@@ -9,17 +9,20 @@
 					$json = json_decode(file_get_contents("./games/$code.json"), true);
 
 					$id = count($json['players']) + 1;
-					$json['players'][] = array(
-						'name' => $_POST['name'],
-						'playerID' => $id,
-					);
-					file_put_contents("./games/$code.json", json_encode($json));
+					if ($id > 8) {
+						$error = 'lobby is vol';
+					} else {
+						$json['players'][] = array(
+							'name' => $_POST['name'],
+							'playerID' => $id,
+						);
+						file_put_contents("./games/$code.json", json_encode($json));
 
-					$_SESSION['playerID'] = $id;
-					$_SESSION['game'] = $code;
-					header('Location: lobby.php');
-				}
-				else {
+						$_SESSION['playerID'] = $id;
+						$_SESSION['game'] = $code;
+						header('Location: lobby.php');
+					}
+				} else {
 					echo 'verkeerde code of lobby bestaat niet';
 				}
 			} else {
