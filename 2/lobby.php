@@ -10,6 +10,25 @@ if (!isset($_SESSION['game_id'])) {
 	<head>
 		<title>Speelvorm 2</title>
 		<script src="api/js/std.js"></script>
+
+		<?php
+		// java script only needed for the game leader
+		if ($_SESSION['player_id'] == 9) {
+		?>
+		<script>
+			function start_game() {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						window.location.href = 'game.php';
+					}
+				};
+				xhttp.open("GET", "http://localhost/kwal-spel/2/api/start.php", true);
+				xhttp.send();
+			}
+		</script>
+		<?php } // end of leader only javascript ?>
+
 		<script>
 			window.setInterval(function(){
 				start_update();
@@ -36,7 +55,7 @@ if (!isset($_SESSION['game_id'])) {
 		</div>
 		<?php
 		if ($_SESSION['player_id'] == 9) {
-			?><button onclick="">Game beginnen</button><?php
+			?><button onclick="start_game()">Game beginnen</button><?php
 		}
 		?>
 	</body>
