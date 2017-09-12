@@ -1,4 +1,4 @@
-<html>
+<html lang="nl=NL">
     <head>
         <script type="text/javascript">
             var cardStack = 
@@ -16,6 +16,7 @@
             ;   
         </script>
         <script type="text/javascript" src="singleplayer.js" defer></script>
+        <link rel="stylesheet" href="stylesheet.css" type="text/css">
     </head>
     <body>
         <ul>
