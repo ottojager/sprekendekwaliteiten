@@ -1,4 +1,10 @@
-<? session_start(); ?>
+<?
+session_start();
+
+if (!isset($_SESSION['game_id'])) {
+	header('location: ./');
+}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
