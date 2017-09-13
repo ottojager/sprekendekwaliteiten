@@ -28,9 +28,10 @@ if (isset($_POST['makeLobbyButton'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="nl=NL">
 	<head>
-		<title>Speelvorm 2</title>
+		<title>Spelvorm 2</title>
+        <link rel="stylesheet" href="cr_stylesheet.css" type="text/css">
 	</head>
 	<body>
 		<div>
@@ -40,21 +41,13 @@ if (isset($_POST['makeLobbyButton'])) {
 			}
 			?>
 			<form method="post">
-				<table>
-					<tr>
-						<td>
-							<label>Naam:</label>
-						</td>
-						<td>
-							<input type="text" name="name">
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2">
-							<input type="submit" value="Maak Lobby" name="makeLobbyButton">
-						</td>
-					</tr>
-				</table>
+                <h1>Kwaliteitenspel</h1>
+                <div id="formstyle">
+				<label>Naam:</label>
+					<input type="text" name="name">
+                
+                    <input type="submit" value="Maak Lobby" name="makeLobbyButton">
+                </div>	
 			</form>
 		</div>
 	</body>
