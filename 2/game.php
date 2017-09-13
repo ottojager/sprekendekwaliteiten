@@ -6,7 +6,9 @@
 	</head>
 	<body>
 		<p id="current_card"></p>
-        <ol id="cardstack">
-        </ol>
+        <ul id="players">
+        </ul>
+        <ul id="cardstack">
+        </ul>
 	</body>
 </html>
