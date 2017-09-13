@@ -5,8 +5,8 @@
 		<script src="api/js/std.js"></script>
 	</head>
 	<body>
-		<p>
-			in een game!
-		</p>
+		<p id="current_card"></p>
+        <ol id="cardstack">
+        </ol>
 	</body>
 </html>
