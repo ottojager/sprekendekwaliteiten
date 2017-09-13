@@ -43,12 +43,15 @@ if (!isset($_SESSION['game_id'])) {
 					child.innerHTML = item['name'];
 					list.appendChild(child);
 				});
+				document.getElementById("game_id").innerHTML = game_info['game_id'];
+				document.getElementById("leader").innerHTML = 'Leader: ' + game_info['leader_name'];
 				//document.getElementById("player_list").innerHTML = game_info[""];
 			}, 3000);
 		</script>
 	</head>
 	<body>
 		<div id="main">
+			<h3 id="game_id"></h3>
 			<p id="leader"></p>
 			<ol id="player_list">
 			</ol>
