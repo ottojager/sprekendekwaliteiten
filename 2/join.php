@@ -37,9 +37,10 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="nl=NL">
 	<head>
 		<title>Speelvorm 2</title>
+        <link rel="stylesheet" href="join_stylesheet.css" type="text/css">
 	</head>
 	<body>
 		<div>
@@ -49,30 +50,17 @@
 			}
 			?>
 			<form method="post">
-				<table>
-					<tr>
-						<td>
-							<label>Naam:</label>
-						</td>
-						<td>
-							<input type="text" name="name">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<label>code:</label>
-						</td>
-						<td>
-							<input type="text" name="code">
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2">
-							<input type="submit" value="join" name="join_button">
-						</td>
-					</tr>
-				</table>
-			</form>
+                <h1>Kwaliteitenspel</h1>
+                <div id="naamstyle">
+                    <label>Vul je naam:</label>
+                    <input type="text" name="name">
+                </div>
+                <div id="groepstyle">
+                    <label>Groepscode:</label>
+                    <input type="text" name="code">
+                </div>
+                <input type="submit" value="Join" name="join_button">
+            </form>
 		</div>
 	</body>
 </html>

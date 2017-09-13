@@ -30,7 +30,7 @@ if (isset($_POST['makeLobbyButton'])) {
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
-		<title>Spelvorm 2</title>
+		<title>Speelvorm 2</title>
         <link rel="stylesheet" href="cr_stylesheet.css" type="text/css">
 	</head>
 	<body>
