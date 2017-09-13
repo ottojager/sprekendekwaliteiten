@@ -29,8 +29,8 @@
         	<li id="slot7"></li>
         	<li id="slot8"></li>
 		</ul>
-        <div id="current" aria-live="assertive" style="background-color:green;"></div>
-		<button id="backButton" onclick="backButton(this)" style="background-color:lightblue;">terug</button>
-        <div id="graveyard" style="background-color:red;">oude</div>
+        <div id="current" aria-live="assertive"></div>
+		<button id="backButton" onclick="backButton(this)">terug</button>
+        <div id="graveyard">oude</div>
     </body>
 </html>

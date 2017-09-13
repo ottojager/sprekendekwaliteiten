@@ -26,7 +26,30 @@ body {
     width: 100%;
     padding: 31px;
 }
-ul li 
+ul {
+    flex-flow: row wrap;
+    color: #000000;
+    font-family: calibri, sans-serif;
+    list-style: none;
+}
+ul li {
+    flex: 1 1 auto;
+    width: 15.73%;
+    height: 27.62%;
+    margin: 26px;
+    border: 1px solid #000000;
+    border-radius: 13px;
+    background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);
+}
+#current {
+    background-color: #009900;
+}
+#backButton {
+    background-color: #38eaed;
+}
+#graveyard {
+    background-color: #da1f20;
+}
 @media screen and (min-width: 40em) /*640px*/ {
     body {
         background-color: #ffffff; /*#199bbe;*/
