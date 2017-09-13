@@ -3,7 +3,7 @@
 	if (isset($_POST['join_button'])) {
 		if (strlen($_POST['name']) >= 3) {
 			$code = $_POST['code'];
-			if (strlen($code) == 5) {
+			if (strlen($code) == 3) {
 				$games_list = scandir("games");
 				if (in_array($code.'.json', $games_list)) {
 					$json = json_decode(file_get_contents("./games/$code.json"), true);
