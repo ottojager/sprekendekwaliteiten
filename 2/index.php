@@ -7,8 +7,8 @@ session_start();
 		<title>Speelvorm 2</title>
 	</head>
 	<body>
-		<a href="create.php">Maak loby</a>
-		<a href="join.php">Join loby</a>
+		<a href="create.php">Maak lobby</a>
+		<a href="join.php">Join lobby</a>
 		<?php if (isset($_SESSION['game_id'])) { echo '<a href="./delete.php">delete session</a>';}?>
 	</body>
 </html>

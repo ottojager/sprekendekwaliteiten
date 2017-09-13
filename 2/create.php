@@ -4,7 +4,7 @@ if (isset($_POST['makeLobbyButton'])) {
 	if (strlen($_POST['name']) >= 3) {
 		// generate game id
 		$id = '';
-		for ($i = 0; $i != 5; $i++) {
+		for ($i = 0; $i != 3; $i++) {
 			$id .= chr(mt_rand(65, 90)); // random uppercase ASCII character
 		}
 
