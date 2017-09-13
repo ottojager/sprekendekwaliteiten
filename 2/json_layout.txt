@@ -7,7 +7,7 @@
 		{
 			'name': str,
 			'playerID': int,
-			'hand': str,
+			'current_card': str,
 			'stack': [
 				str,
 			],
