@@ -6,6 +6,8 @@ if ($_SESSION['player_id'] == 9 && isset($_SESSION['game_id'])) {
 	$game = $_SESSION['game_id'];
 	$json = (array)json_decode(file_get_contents("../games/$game.json"));
 	$json['game_started'] = true;
+
+	// Create card stack
 	// TODO: change this once we have a more central database
 	$db = mysqli_connect('localhost', 'root');
 	if (!$db) {
@@ -19,6 +21,11 @@ if ($_SESSION['player_id'] == 9 && isset($_SESSION['game_id'])) {
 	    $card_stack[] = $card['name'];
 	}
 	shuffle($card_stack);
+
+	// create player card stacks
+	foreach($json['players'] => $key) {
+		$json['players'][$key]['stack'] = array();
+	}
 	$json['card_stack'] = $card_stack;
 	file_put_contents("../games/$game.json", json_encode($json));
 } else {
