@@ -58,6 +58,7 @@ ul li {
     max-height: 27.81%;
     min-width: 98px;
     min-height: 19.20%;
+    margin: 26px;
     padding: 6px;
     border-radius: 16px;
     background-color: #1d5981;
@@ -65,6 +66,7 @@ ul li {
 #backButton {
     max-width: 16.83%;
     min-width: 98px;
+    margin: 26px;
     padding: 6px;
     border: 1px #830e73 solid;
     border-radius: 9px;
@@ -75,6 +77,7 @@ ul li {
     max-height: 27.81%;
     min-width: 98px;
     min-height: 19.20%;
+    margin: 26px;
     padding: 6px;
     border-radius: 16px;
     background-color: #a71d0f;
