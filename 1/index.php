@@ -29,7 +29,7 @@
         	<li id="slot7"></li>
         	<li id="slot8"></li>
 		</ul>
-        <div id="current" aria-live="assertive"></div>
+        <div id="current"></div>
 		<button id="backButton" onclick="backButton(this)">terug</button>
         <div id="graveyard">oude</div>
     </body>
