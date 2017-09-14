@@ -6,7 +6,11 @@ if ($_SESSION['player_id'] == 9 && isset($_SESSION['game_id'])) {
 	$game = $_SESSION['game_id'];
 	$json = (array)json_decode(file_get_contents("../games/$game.json"));
 	$json['game_started'] = true;
+	// TODO: change this once we have a more central database
 	$db = mysqli_connect('localhost', 'root');
+	if (!$db) {
+		$db = mysqli_connect('localhost', 'root', 'r00t');
+	}
 	mysqli_select_db($db, "kwaliteitenspel");
 	$sql = "SELECT * FROM cards";
 	$result = mysqli_query($db, $sql);
