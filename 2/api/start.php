@@ -4,7 +4,7 @@ session_start();
 if ($_SESSION['player_id'] == 9 && isset($_SESSION['game_id'])) {
 	//TODO: add check for minimum amount of players
 	$game = $_SESSION['game_id'];
-	$json = (array)json_decode(file_get_contents("../games/$game.json"));
+	$json = json_decode(file_get_contents("../games/$game.json"), true);
 	$json['game_started'] = true;
 
 	// Create card stack
@@ -23,7 +23,7 @@ if ($_SESSION['player_id'] == 9 && isset($_SESSION['game_id'])) {
 	shuffle($card_stack);
 
 	// create player card stacks
-	foreach($json['players'] => $key) {
+	foreach($json['players'] as $key => $value) {
 		$json['players'][$key]['stack'] = array();
 	}
 	$json['card_stack'] = $card_stack;
