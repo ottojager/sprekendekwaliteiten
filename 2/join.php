@@ -2,7 +2,7 @@
 	session_start();
 	if (isset($_POST['join_button'])) {
 		if (strlen($_POST['name']) >= 3) {
-			$code = $_POST['code'];
+			$code = strtoupper($_POST['code']);
 			if (strlen($code) == 3) {
 				$games_list = scandir("games");
 				if (in_array($code.'.json', $games_list)) {
