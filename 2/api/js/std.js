@@ -1,3 +1,8 @@
+function reply_click(clicked_id) {
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET", "http://localhost/kwal-spel/2/api/game_logic.php?sel=" + clicked_id, true);
+	xhttp.send();
+}
 function addListeners() {
 	"use strict";
 	var i;
