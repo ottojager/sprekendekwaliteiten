@@ -15,8 +15,7 @@ if (isset($_POST['makeLobbyButton'])) {
 			'game_started' => false,
 		);
 
-		$json = json_encode($game);
-		file_put_contents("./games/$id.json", $json);
+		file_put_contents("./games/$id.json", json_encode($game));
 
 		$_SESSION['player_id'] = 9;
 		$_SESSION['game_id'] = $id;
@@ -45,9 +44,9 @@ if (isset($_POST['makeLobbyButton'])) {
                 <div id="formstyle">
 				<label>Naam:</label>
 					<input type="text" name="name">
-                
+
                     <input type="submit" value="Maak Lobby" name="makeLobbyButton">
-                </div>	
+                </div>
 			</form>
 		</div>
 	</body>
