@@ -27,6 +27,11 @@ if ($_SESSION['player_id'] == 9 && isset($_SESSION['game_id'])) {
 		$json['players'][$key]['stack'] = array();
 	}
 	$json['card_stack'] = $card_stack;
+
+	// make first player the active player
+	$json['current_player'] = 0;
+
+	// write back to file
 	file_put_contents("../games/$game.json", json_encode($json));
 } else {
 	header('HTTP/1.1 403 Forbidden');
