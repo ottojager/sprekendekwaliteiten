@@ -21,39 +21,63 @@ time, mark, audio, video {
 html {
     display: flex;
     width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #ffffff, #71bbff);
 }
 body {
-    width: 100%;
-    padding: 31px;
+    width: 60%;
+    height: 100%;
+    margin: 0 auto 0 auto;
+    border-radius: 10px;
+    background-color: #fffefe;
+    box-shadow: 0px 0 31px 0 #65606a;
 }
 ul {
-    flex-flow: row wrap;
+    display: flex;
+    flex-wrap: wrap;
     color: #000000;
     font-family: calibri, sans-serif;
     list-style: none;
 }
 ul li {
-    flex: 0 auto;
-    flex-flow: row wrap;
+    flex: 1;
     /*width: 15.73%;
     height: 27.62%;*/
-    max-width: 50%;
+    max-width: 16.83%;
     max-height: 27.81%;
-    min-width: 7.53%;
+    min-width: 98px;
     min-height: 19.20%;
     margin: 26px;
+    padding: 6px;
     border: 1px solid #000000;
-    border-radius: 13px;
-    background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);
+    border-radius: 16px;
+    /*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
 #current {
-    background-color: #009900;
+    max-width: 16.83%;
+    max-height: 27.81%;
+    min-width: 98px;
+    min-height: 19.20%;
+    padding: 6px;
+    border-radius: 16px;
+    background-color: #1d5981;
 }
 #backButton {
-    background-color: #38eaed;
+    max-width: 16.83%;
+    min-width: 98px;
+    padding: 6px;
+    border: 1px #830e73 solid;
+    border-radius: 9px;
+    background-color: #830e73;
 }
 #graveyard {
-    background-color: #da1f20;
+    max-width: 16.83%;
+    max-height: 27.81%;
+    min-width: 98px;
+    min-height: 19.20%;
+    padding: 6px;
+    border-radius: 16px;
+    background-color: #a71d0f;
 }
 @media screen and (min-width: 40em) /*640px*/ {
     body {
