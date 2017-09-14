@@ -6,7 +6,7 @@
 	'players': [
 		{
 			'name': str,
-			'playerID': int,
+			'player_id': int,
 			'current_card': str,
 			'stack': [
 				str,
