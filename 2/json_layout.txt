@@ -1,6 +1,6 @@
 {
 	'game_id': int,
-	'active_player_int': int,
+	'current_player': int,
 	'leader_name': str,
 	'leader_last_request': timestamp,
 	'players': [
