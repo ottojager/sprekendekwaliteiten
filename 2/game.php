@@ -25,7 +25,7 @@
             $game = $_SESSION['game_id'];
             $json = json_decode(file_get_contents("./games/$game.json"), true);
             foreach ($json['players'] as $key => $value) {
-                echo '<li>'.$value['name'].'</li>';
+                echo '<li id="player'.$value['player_id'].'">'.$value['name'].'</li>';
             }
             ?>
         </ul>
