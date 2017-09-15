@@ -3,11 +3,11 @@
 	'current_player': int,
 	'leader_name': str,
 	'leader_last_request': timestamp,
+	'current_card': str,
 	'players': [
 		{
 			'name': str,
 			'player_id': int,
-			'current_card': str,
 			'stack': [
 				str,
 			],
