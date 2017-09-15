@@ -4,10 +4,10 @@ function reply_click(clicked_id) {
 	xhttp.send();
 	start_update();
 }
-function addListeners() {
+function addListeners(amount_players) {
 	"use strict";
 	var i;
-	for (i = 0; i < Object.keys(game_info["players"]).length; i += 1) {
+	for (i = 0; i <  amount_players; i += 1) {
         document.getElementById(i.toString()).addEventListener('click', function() {
 			reply_click(this.id);
 		});
