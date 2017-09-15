@@ -39,9 +39,9 @@ body {
     justify-content: space-around;
 }
 #current {
-    max-width: 16.83%;
+    max-width: 19.83%;
     max-height: 27.81%;
-    min-width: 98px;
+    min-width: 119px;
     min-height: 19.20%;
     margin: 26px;
     padding: 6px;
@@ -52,7 +52,7 @@ body {
 #backButton {
     height: 53px;
     max-width: 16.83%;
-    min-width: 98px;
+    min-width: 119px;
     margin: 26px;
     padding: 6px;
     color: #ffffef;
@@ -63,7 +63,7 @@ body {
 #graveyard {
     max-width: 16.83%;
     max-height: 27.81%;
-    min-width: 98px;
+    min-width: 119px;
     min-height: 19.20%;
     margin: 26px;
     padding: 6px;
@@ -85,7 +85,7 @@ ul li {
     max-width: 7.83%;
     max-height: 27.81%;
     min-width: 89px;
-    min-height: 19.20%;
+    min-height: 17.2%;
     margin: 26px;
     padding: 6px;
     border: 17px solid #830e73;

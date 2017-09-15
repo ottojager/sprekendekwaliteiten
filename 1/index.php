@@ -21,7 +21,7 @@
     <body>
         <div id="top">
             <div id="current"></div>
-            <button id="backButton" onclick="backButton(this)">terug</button>
+            <button id="backButton" onclick="backButton(this)">Ongedaan maken</button>
             <div id="graveyard">oude</div>
         </div>
         <ul>
