@@ -28,6 +28,9 @@ if ($_SESSION['player_id'] == 9 && isset($_SESSION['game_id'])) {
 	}
 	$json['card_stack'] = $card_stack;
 
+	//draw first card
+	$json['current_card'] = array_shift($json['card_stack']);
+
 	// make first player the active player
 	$json['current_player'] = 0;
 
