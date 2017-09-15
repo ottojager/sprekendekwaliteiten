@@ -7,15 +7,15 @@
         <script>
 			window.setInterval(function(){
 				start_update();
+				document.getElementById("current_card").innerHTML = game_info['current_card'];
                 // card stack
                 game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].forEach(function(item, index){
 					var child = document.createElement('li');
 					child.innerHTML = item;
 					list.appendChild(child);
 				});
-				document.getElementById("current_card").innerHTML = game_info['current_card'];
 				//document.getElementById("player_list").innerHTML = game_info[""];
-			}, 5000);
+			}, 2000);
 		</script>
 	</head>
 	<body>
