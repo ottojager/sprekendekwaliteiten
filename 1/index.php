@@ -19,6 +19,11 @@
         <link rel="stylesheet" href="stylesheet.css" type="text/css">
     </head>
     <body>
+        <div id="top">
+            <div id="current"></div>
+            <button id="backButton" onclick="backButton(this)">terug</button>
+            <div id="graveyard">oude</div>
+        </div>
         <ul>
         	<li id="slot1"></li>
         	<li id="slot2"></li>
@@ -29,8 +34,5 @@
         	<li id="slot7"></li>
         	<li id="slot8"></li>
 		</ul>
-        <div id="current"></div>
-		<button id="backButton" onclick="backButton(this)">terug</button>
-        <div id="graveyard">oude</div>
     </body>
 </html>
