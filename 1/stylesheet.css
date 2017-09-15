@@ -35,7 +35,7 @@ body {
 #top {
     display: flex;
     width: 40%;
-    margin: 0 auto 0 auto;
+    margin: 40px auto 0 auto;
     justify-content: space-around;
 }
 #current {
@@ -50,10 +50,10 @@ body {
     background-color: #1d5981;
 }
 #backButton {
-    height: 53px;
+    height: 43px;
     max-width: 16.83%;
     min-width: 119px;
-    margin: 26px;
+    margin: 90px 26px 0 26px;
     padding: 6px;
     color: #ffffef;
     border: 1px #830e73 solid;
@@ -87,7 +87,7 @@ ul li {
     min-width: 89px;
     min-height: 17.2%;
     margin: 26px;
-    padding: 6px;
+    padding: 5px;
     border: 17px solid #830e73;
     border-radius: 16px;
     /*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
