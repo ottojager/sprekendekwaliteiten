@@ -5,6 +5,7 @@
 		<title>Speelvorm 2</title>
 		<script src="api/js/std.js"></script>
         <script>
+			start_update()
 			addListeners()
 			window.setInterval(function(){
 				start_update();
