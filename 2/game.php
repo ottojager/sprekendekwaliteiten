@@ -28,6 +28,7 @@
                 echo '<li id="'.$value['player_id'].'">'.$value['name'].'</li>';
             }
             ?>
+			<script>addListeners()</script>
         </ul>
         <ul id="card_stack">
         </ul>
