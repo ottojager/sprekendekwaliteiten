@@ -52,10 +52,17 @@ if (!isset($_SESSION['game_id'])) {
 	</head>
 	<body>
 		<div id="main">
-			<h3 id="game_id"></h3>
-			<p id="leader"></p>
-			<ol id="player_list">
-			</ol>
+			<?php
+			$game = $_SESSION['game_id'];
+			$json = json_decode(file_get_contents("./games/$game.json"), true);
+			echo '<h3 id="game_id">'.$json['game_id'].'</h3>';
+			echo '<p id="leader">Leader: '.$json['leader_name'].'</p>';
+			echo '<ol id="player_list">';
+			foreach ($json['players'] as $key => $value) {
+				echo '<li>'.$value['name'].'</li>';
+			}
+			echo '</ol>';
+			?>
 		</div>
 		<?php
 		if ($_SESSION['player_id'] == 9) {
