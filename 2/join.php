@@ -40,7 +40,7 @@
 <html lang="nl=NL">
 	<head>
 		<title>Speelvorm 2</title>
-        <link rel="stylesheet" href="cssmap/join_stylesheet.css" type="text/css">
+        <link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
 	</head>
 	<body>
 		<div>
