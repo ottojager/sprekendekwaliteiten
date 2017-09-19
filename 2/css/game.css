@@ -32,47 +32,6 @@ body {
     background-color: #fffefe;
     box-shadow: 0px 0 31px 0 #65606a;
 }
-#top {
-    display: flex;
-    width: 40%;
-    margin: 40px auto 0 auto;
-    font-family: sans-serif;
-    font-size: 14px;
-    justify-content: space-around;
-}
-#current {
-    max-width: 19.83%;
-    max-height: 27.81%;
-    min-width: 119px;
-    min-height: 19.20%;
-    margin: 26px;
-    padding: 6px;
-    color: #ffffef;
-    border-radius: 16px;
-    background-color: #1d5981;
-}
-#backButton {
-    height: 43px;
-    max-width: 16.83%;
-    min-width: 119px;
-    margin: 90px 26px 0 26px;
-    padding: 6px;
-    color: #ffffef;
-    border: 1px #830e73 solid;
-    border-radius: 9px;
-    background-color: #830e73;
-}
-#graveyard {
-    max-width: 16.83%;
-    max-height: 27.81%;
-    min-width: 119px;
-    min-height: 19.20%;
-    margin: 26px;
-    padding: 6px;
-    color: #ffffef;
-    border-radius: 16px;
-    background-color: #a71d0f;
-}
 ul {
     display: flex;
     flex-wrap: wrap;
