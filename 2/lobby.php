@@ -48,6 +48,7 @@ if (!isset($_SESSION['game_id'])) {
 				//document.getElementById("player_list").innerHTML = game_info[""];
 			}, 3000);
 		</script>
+        <link rel="stylesheet" href="css/lobby_stylesheet.css" type="text/css">
 	</head>
 	<body>
 		<div id="main">
