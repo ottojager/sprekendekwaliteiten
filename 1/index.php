@@ -1,9 +1,12 @@
 <html lang="nl=NL">
     <head>
         <script type="text/javascript">
-            var cardStack = 
+            var cardStack =
                 <?php
                 $db = mysqli_connect('localhost', 'root');
+                if (!$db) {
+                    $db = mysqli_connect('localhost', 'root', 'r00t')
+                }
                 mysqli_select_db($db, "kwaliteitenspel");
                 $sql = "SELECT * FROM cards";
                 $result = mysqli_query($db, $sql);
@@ -13,7 +16,7 @@
                 }
                 echo json_encode($array);
                 ?>
-            ;   
+            ;
         </script>
         <script type="text/javascript" src="singleplayer.js" defer></script>
         <link rel="stylesheet" href="stylesheet.css" type="text/css">
