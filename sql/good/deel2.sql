@@ -7,7 +7,7 @@ INSERT INTO cards (name) VALUES ('doelgericht');
 INSERT INTO cards (name) VALUES ('direct');
 INSERT INTO cards (name) VALUES ('evenwichtig');
 INSERT INTO cards (name) VALUES ('gedisciplineerd');
-INSERT INTO cards (name) VALUES ('gemoedeljk');
+INSERT INTO cards (name) VALUES ('gemoedelijk');
 INSERT INTO cards (name) VALUES ('handig');
 INSERT INTO cards (name) VALUES ('idealistisch');
 INSERT INTO cards (name) VALUES ('inspirerend');
