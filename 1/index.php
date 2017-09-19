@@ -19,6 +19,7 @@
             ;
         </script>
         <script type="text/javascript" src="singleplayer.js" defer></script>
+        <title>Speelvorm 1</title>
         <link rel="stylesheet" href="stylesheet.css" type="text/css">
     </head>
     <body>

@@ -32,8 +32,7 @@ body {
     box-shadow: 0px 0 31px 0 #65606a;
 }
 #main {
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 #game_id {
     width: 25%;
@@ -45,7 +44,6 @@ body {
     color: #ffffff;
     border-radius: 5px;
     background-color: #6e00bc;
-    order: 2;
 }
 #leader {
     width: 25%;
@@ -57,7 +55,6 @@ body {
     color: #ffffff;
     border-radius: 5px;
     background-color: #2752a3;
-    order: 1;
 }
 #player_list {
     width: 25%;
@@ -69,7 +66,6 @@ body {
     color: #ffffff;
     border-radius: 5px;
     background-color: #11740b;
-    order: 3;
 }
 input[type=text] {
     border-radius: 5px;

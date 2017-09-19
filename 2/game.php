@@ -17,6 +17,7 @@
 				//document.getElementById("player_list").innerHTML = game_info[""];
 			}, 2000);
 		</script>
+        <link rel="stylesheet" href="css/game.css" type="text/css">
 	</head>
 	<body>
 		<p id="current_card"></p>
