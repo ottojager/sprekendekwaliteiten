@@ -5,7 +5,7 @@
                 <?php
                 $db = mysqli_connect('localhost', 'root');
                 if (!$db) {
-                    $db = mysqli_connect('localhost', 'root', 'r00t')
+                    $db = mysqli_connect('localhost', 'root', 'r00t');
                 }
                 mysqli_select_db($db, "kwaliteitenspel");
                 $sql = "SELECT * FROM cards";
