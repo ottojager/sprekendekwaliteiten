@@ -32,9 +32,15 @@ body {
     background-color: #fffefe;
     box-shadow: 0px 0 31px 0 #65606a;
 }
+#current_card {
+    margin: 13%;
+    border: 17px solid #830e73;
+    border-radius: 9px;
+}
 ul {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     color: #000000;
     font-family: calibri, sans-serif;
     list-style: none;
@@ -42,7 +48,7 @@ ul {
 ul li {
     width: 15.73%;
     height: 27.62%;
-    margin: 26px;
+    margin: 6px;
     padding: 4px;
     border: 1px solid #166432;
     border-radius: 6px;
