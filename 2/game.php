@@ -9,7 +9,9 @@
 				start_update();
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
                 // card stack
-                game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].forEach(function(item, index){
+				var list = document.getElementById('card_stack');
+				list.innerHTML = '';
+				game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].forEach(function(item, index){
 					var child = document.createElement('li');
 					child.innerHTML = item;
 					list.appendChild(child);
