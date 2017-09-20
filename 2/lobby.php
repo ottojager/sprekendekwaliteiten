@@ -49,6 +49,7 @@ if (!isset($_SESSION['game_id'])) {
 			}, 3000);
 		</script>
         <link rel="stylesheet" href="css/lobby_stylesheet.css" type="text/css">
+        <link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
 		<div id="main">

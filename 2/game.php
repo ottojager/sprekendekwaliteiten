@@ -18,6 +18,7 @@
 			}, 2000);
 		</script>
         <link rel="stylesheet" href="css/game.css" type="text/css">
+        <link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
 		<p id="current_card"></p>
