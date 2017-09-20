@@ -34,34 +34,32 @@
 		}
 	}
 ?>
-
-
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
 		<title>Speelvorm 2</title>
-        <link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
-        <link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
+		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
+		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
 		<div>
-			<?php
+<?php
 			if (isset($error)) {
 				echo "<p>$error</p>";
 			}
 			?>
 			<form method="post">
-                <h1>Kwaliteitenspel</h1>
-                <div id="naamstyle">
-                    <label>Vul je naam:</label>
-                    <input type="text" name="name">
-                </div>
-                <div id="groepstyle">
-                    <label>Groepscode:</label>
-                    <input type="text" name="code">
-                </div>
-                <input type="submit" value="Join" name="join_button">
-            </form>
+				<h1>Kwaliteitenspel</h1>
+				<div id="naamstyle">
+					<label>Vul je naam:</label>
+					<input type="text" name="name">
+				</div>
+				<div id="groepstyle">
+					<label>Groepscode:</label>
+					<input type="text" name="code">
+				</div>
+				<input type="submit" value="Join" name="join_button">
+			</form>
 		</div>
 	</body>
 </html>

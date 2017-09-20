@@ -25,29 +25,27 @@ if (isset($_POST['makeLobbyButton'])) {
 	}
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
 		<title>Speelvorm 2</title>
-        <link rel="stylesheet" href="css/cr_stylesheet.css" type="text/css">
-        <link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
+		<link rel="stylesheet" href="css/cr_stylesheet.css" type="text/css">
+		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
 		<div>
-			<?php
+<?php
 			if (isset($error)) {
 				echo "<p>$error</p>";
 			}
 			?>
 			<form method="post">
-                <h1>Kwaliteitenspel</h1>
-                <div id="formstyle">
-				<label>Naam:</label>
+				<h1>Kwaliteitenspel</h1>
+				<div id="formstyle">
+					<label>Naam:</label>
 					<input type="text" name="name">
-
-                    <input type="submit" value="Maak Lobby" name="makeLobbyButton">
-                </div>
+					<input type="submit" value="Maak Lobby" name="makeLobbyButton">
+				</div>
 			</form>
 		</div>
 	</body>

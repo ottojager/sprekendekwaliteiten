@@ -9,6 +9,6 @@ session_start();
 	<body>
 		<a href="create.php">Maak lobby</a>
 		<a href="join.php">Join lobby</a>
-		<?php if (isset($_SESSION['game_id'])) { echo '<a href="./delete.php">delete session</a>';}?>
+<?php 	if (isset($_SESSION['game_id'])) { echo '<a href="./delete.php">delete session</a>';}?>
 	</body>
 </html>
