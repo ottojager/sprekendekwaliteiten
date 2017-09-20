@@ -21,6 +21,7 @@
         <script type="text/javascript" src="singleplayer.js" defer></script>
         <title>Speelvorm 1</title>
         <link rel="stylesheet" href="stylesheet.css" type="text/css">
+        <link rel="icon" sizes="16x16" type="image/png" href="Rainbow_placeholder.png">
     </head>
     <body>
         <div id="top">

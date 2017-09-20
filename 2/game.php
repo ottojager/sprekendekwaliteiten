@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<html>
+<html lang="nl=NL">
 	<head>
 		<title>Speelvorm 2</title>
 		<script src="api/js/std.js"></script>

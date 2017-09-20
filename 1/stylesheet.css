@@ -63,7 +63,7 @@ body {
     background-color: #830e73;
 }
 #graveyard {
-    max-width: 16.83%;
+    max-width: 14.83%;
     max-height: 27.81%;
     min-width: 119px;
     min-height: 19.20%;
@@ -72,6 +72,7 @@ body {
     color: #ffffef;
     border-radius: 16px;
     background-color: #a71d0f;
+    overflow: hidden;
 }
 ul {
     display: flex;
