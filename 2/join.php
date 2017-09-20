@@ -24,7 +24,7 @@
 						header('Location: lobby.php');
 					}
 				} else {
-					$error = 'verkeerde code of lobby bestaat niet';
+					$error = 'Verkeerde code of lobby bestaat niet';
 				}
 			} else {
 				$error = 'code moet vijf cijfers zijn.';
