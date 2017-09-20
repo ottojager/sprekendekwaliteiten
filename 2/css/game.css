@@ -37,7 +37,7 @@ body {
     border: 17px solid #830e73;
     border-radius: 9px;
 }
-ul {
+#player_list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -45,7 +45,7 @@ ul {
     font-family: calibri, sans-serif;
     list-style: none;
 }
-ul li {
+#player_list > li {
     width: 15.73%;
     height: 27.62%;
     margin: 6px;
@@ -54,7 +54,11 @@ ul li {
     border-radius: 6px;
     color: #fffefe;
     background-color: #166432;
+    list-style: none;
     /*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
+}
+#card_stack {
+    list-style: none;
 }
 @media screen and (min-width: 40em) /*640px*/ {
     body {
