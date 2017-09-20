@@ -54,10 +54,15 @@ body {
     border-radius: 6px;
     color: #fffefe;
     background-color: #166432;
+    font-family: calibri, sans-serif;
     list-style: none;
     /*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
 #card_stack {
+    border: 1px solid #a82519;
+    border-radius: 6px;
+    color: #fffefe;
+    background-color: #a82519;
     list-style: none;
 }
 @media screen and (min-width: 40em) /*640px*/ {

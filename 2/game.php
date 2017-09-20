@@ -23,6 +23,7 @@
         <link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
+        <h1>Kwaliteitenspel</h1>
 		<p id="current_card"></p>
         <ul id="player_list">
             <?php
