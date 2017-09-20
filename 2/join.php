@@ -1,38 +1,36 @@
 <?php
-	session_start();
-	if (isset($_POST['join_button'])) {
-		if (strlen($_POST['name']) >= 3) {
-			$code = strtoupper($_POST['code']);
-			if (strlen($code) == 3) {
-				$games_list = scandir("games");
-				if (in_array($code.'.json', $games_list)) {
-					$json = json_decode(file_get_contents("./games/$code.json"), true);
-
-					$id = count($json['players']);
-					if ($id > 8) {
-						$error = 'lobby is vol';
-					} else {
-						$json['players'][] = array(
-							'name' => $_POST['name'],
-							'player_id' => $id,
-						);
-						$json['last_change'] = time();
-						file_put_contents("./games/$code.json", json_encode($json));
-
-						$_SESSION['player_id'] = $id;
-						$_SESSION['game_id'] = $code;
-						header('Location: lobby.php');
-					}
+session_start();
+if (isset($_POST['join_button'])) {
+	if (strlen($_POST['name']) >= 3) {
+		$code = strtoupper($_POST['code']);
+		if (strlen($code) == 3) {
+			$games_list = scandir("games");
+			if (in_array($code.'.json', $games_list)) {
+				$json = json_decode(file_get_contents("./games/$code.json"), true);
+				$id = count($json['players']);
+				if ($id > 8) {
+					$error = 'lobby is vol';
 				} else {
-					$error = 'Verkeerde code of lobby bestaat niet';
+					$json['players'][] = array(
+						'name' => $_POST['name'],
+						'player_id' => $id,
+					);
+					$json['last_change'] = time();
+					file_put_contents("./games/$code.json", json_encode($json));
+					$_SESSION['player_id'] = $id;
+					$_SESSION['game_id'] = $code;
+					header('Location: lobby.php');
 				}
 			} else {
-				$error = 'Code moet vijf cijfers zijn.';
+				$error = 'Verkeerde code of lobby bestaat niet';
 			}
 		} else {
-			$error = 'Niet lang genoeg?!';
+			$error = 'Code moet vijf cijfers zijn.';
 		}
+	} else {
+		$error = 'Niet lang genoeg?!';
 	}
+}
 ?>
 <!DOCTYPE html>
 <html lang="nl=NL">
