@@ -27,10 +27,10 @@
 					$error = 'Verkeerde code of lobby bestaat niet';
 				}
 			} else {
-				$error = 'code moet vijf cijfers zijn.';
+				$error = 'Code moet vijf cijfers zijn.';
 			}
 		} else {
-			$error = 'niet lang genoeg?!';
+			$error = 'Niet lang genoeg?!';
 		}
 	}
 ?>
