@@ -8,7 +8,7 @@ if (isset($_POST['join_button'])) {
 			if (in_array($code.'.json', $games_list)) {
 				$json = json_decode(file_get_contents("./games/$code.json"), true);
 				$id = count($json['players']);
-				if ($id > 8) {
+				if ($id > 10) {
 					$error = 'lobby is vol';
 				} else {
 					$json['players'][] = array(

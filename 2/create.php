@@ -17,7 +17,7 @@ if (isset($_POST['makeLobbyButton'])) {
 
 		file_put_contents("./games/$id.json", json_encode($game));
 
-		$_SESSION['player_id'] = 9;
+		$_SESSION['player_id'] = 11;
 		$_SESSION['game_id'] = $id;
 		header('Location: lobby.php');
 	} else {
