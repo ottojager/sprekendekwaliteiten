@@ -49,14 +49,11 @@ h1 {
 #current_card {
     width: 27%;
     height: 33%;
-    margin: 21% 1% 31% 7%;
+    margin: 21% 1% 26% 7%;
     border: 13px solid #830e73;
     border-radius: 9px;
 }
 #player_list {
-    /*display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;*/
     color: #000000;
     font-family: calibri, sans-serif;
     list-style: none;
