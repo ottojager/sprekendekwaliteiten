@@ -32,6 +32,17 @@ body {
     background-color: #fffefe;
     box-shadow: 0px 0 31px 0 #65606a;
 }
+h1 {
+    width: 30%;
+    height: 47px;
+    margin: 15% auto 10% auto;
+    padding: 18px;
+    font-family: sans-serif;
+    font-size: 2.6vw;
+    color: #ffffff;
+    border-radius: 25px;
+    background-color: #2752a3;
+}
 #current_card {
     margin: 13%;
     border: 17px solid #830e73;

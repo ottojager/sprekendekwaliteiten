@@ -77,7 +77,8 @@ button {
     font-family: sans-serif;
     font-size: 1.6vw;
     color: #ffffff;
-    border-radius: 10px;
+    border: 1px solid #a41600;
+    border-radius: 7px;
     background-color: #a41600;
 }
 @media screen and (min-width: 40em) /*640px*/ {
