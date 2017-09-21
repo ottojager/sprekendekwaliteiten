@@ -1,7 +1,7 @@
 <?php
 // file called to start the game
 session_start();
-if ($_SESSION['player_id'] == 9 && isset($_SESSION['game_id'])) {
+if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	//TODO: add check for minimum amount of players
 	$game = $_SESSION['game_id'];
 	$json = json_decode(file_get_contents("../games/$game.json"), true);
