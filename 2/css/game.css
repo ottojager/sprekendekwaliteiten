@@ -19,12 +19,14 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 html {
-    display: flex;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, #ffffff, #71bbff);
 }
 body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 60%;
     height: 100%;
     margin: 0 auto 0 auto;
@@ -34,31 +36,33 @@ body {
 }
 h1 {
     width: 30%;
-    height: 47px;
-    margin: 15% auto 10% auto;
-    padding: 18px;
+    height: 5%;
+    margin: 3% auto 1% auto;
+    padding: 5px;
     font-family: sans-serif;
     font-size: 2.6vw;
     color: #ffffff;
-    border-radius: 25px;
+    border-radius: 13px;
     background-color: #2752a3;
 }
 #current_card {
-    margin: 13%;
-    border: 17px solid #830e73;
+    width: 27%;
+    height: 33%;
+    margin: 3% 1% 0% 7%;
+    border: 13px solid #830e73;
     border-radius: 9px;
 }
 #player_list {
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: column;*/
     color: #000000;
     font-family: calibri, sans-serif;
     list-style: none;
 }
 #player_list > li {
-    width: 15.73%;
-    height: 27.62%;
+    width: 67.73px;
+    height: 13.62%;
     margin: 6px;
     padding: 4px;
     border: 1px solid #166432;
