@@ -16,7 +16,6 @@
 					child.innerHTML = item;
 					list.appendChild(child);
 				});
-				//document.getElementById("player_list").innerHTML = game_info[""];
 			}, 2000);
 		</script>
         <link rel="stylesheet" href="css/game.css" type="text/css">
