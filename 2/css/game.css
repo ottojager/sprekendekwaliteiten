@@ -22,6 +22,7 @@ html {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, #ffffff, #71bbff);
+    background-repeat: no-repeat;
 }
 body {
     display: flex;
@@ -48,7 +49,7 @@ h1 {
 #current_card {
     width: 27%;
     height: 33%;
-    margin: 3% 1% 0% 7%;
+    margin: 21% 1% 31% 7%;
     border: 13px solid #830e73;
     border-radius: 9px;
 }
@@ -74,6 +75,7 @@ h1 {
     /*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
 #card_stack {
+    margin: 1%;
     border: 1px solid #a82519;
     border-radius: 6px;
     color: #fffefe;
