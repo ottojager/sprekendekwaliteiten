@@ -9,6 +9,12 @@ if ($_SESSION['player_id'] == $json['current_player']) {
 	if ($_GET['sel'] != $_SESSION['player_id']) {
 		//add card to chosen players cards and draw new card
 		$json['players'][$_GET['sel']]['stack'][] = $json['current_card'];
+		//check if there are any cards left if so end the game
+		if (empty($json['card_stack'])) {
+			//save game and go scorboard/end thingy
+			file_put_contents("../games/$game.json", json_encode($json));
+			window.location.href = 'end.php';
+		}
 		$json['current_card'] = array_shift($json['card_stack']);
 		//give turn to next player
 		if ($json['current_player'] == count($json['players']) - 1) {
