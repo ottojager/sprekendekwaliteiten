@@ -15,6 +15,4 @@ if ($_SESSION['player_id'] == $json['current_player']) {
 	}
 }
 file_put_contents("../games/$game.json", json_encode($json));
-// fopen("test.txt", "w", $_SESSION['game_id');
-// fclose("test.txt");
 ?>
