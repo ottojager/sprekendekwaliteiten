@@ -7,19 +7,23 @@ if (isset($_POST['join_button'])) {
 			$games_list = scandir("games");
 			if (in_array($code.'.json', $games_list)) {
 				$json = json_decode(file_get_contents("./games/$code.json"), true);
-				$id = count($json['players']);
-				if ($id > 10) {
-					$error = 'lobby is vol';
-				} else {
-					$json['players'][] = array(
-						'name' => $_POST['name'],
-						'player_id' => $id,
-					);
-					$json['last_change'] = time();
-					file_put_contents("./games/$code.json", json_encode($json));
-					$_SESSION['player_id'] = $id;
-					$_SESSION['game_id'] = $code;
-					header('Location: lobby.php');
+				if (!$json['game_started']) {
+					$id = count($json['players']);
+					if ($id > 10) {
+						$error = 'lobby is vol';
+					} else {
+						$json['players'][] = array(
+							'name' => $_POST['name'],
+							'player_id' => $id,
+						);
+						$json['last_change'] = time();
+						file_put_contents("./games/$code.json", json_encode($json));
+						$_SESSION['player_id'] = $id;
+						$_SESSION['game_id'] = $code;
+						header('Location: lobby.php');
+					} else {
+						$error = 'Je kan geen game joinen als die al bezig is.';
+					}
 				}
 			} else {
 				$error = 'Verkeerde code of lobby bestaat niet';
