@@ -13,7 +13,7 @@ if (!isset($_SESSION['game_id'])) {
 
 		<?php
 		// java script only needed for the game leader
-		if ($_SESSION['player_id'] == 9) {
+		if ($_SESSION['player_id'] == 11) {
 		?>
 		<script>
 			function start_game() {
@@ -66,7 +66,7 @@ if (!isset($_SESSION['game_id'])) {
 			?>
 		</div>
 		<?php
-		if ($_SESSION['player_id'] == 9) {
+		if ($_SESSION['player_id'] == 11) {
 			?><button onclick="start_game()">Game beginnen</button><?php
 		}
 		?>
