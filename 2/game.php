@@ -1,9 +1,4 @@
-<?php
-session_start();
-if (!isset($_SESSION['game_id'])) {
-	header('Location: ./');
-}
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
