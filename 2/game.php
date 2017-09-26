@@ -25,6 +25,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 				};
 				xhttp.open("GET", "http://localhost/kwal-spel/2/api/end.php", true);
 				xhttp.send();
+				document.location.href = 'end.php';
 		}
 		</script>
 		<?php } // end user only JS ?>
@@ -36,7 +37,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 
 				// if game has ended
 				if (game_info['card_stack'] == 0) {
-					document.location.href = 'end.php'
+					document.location.href = 'end.php';
 				}
 
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
@@ -79,6 +80,11 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 					};
 
 					addListeners(amount_players);
+					//check it is the players turn
+					if (game_info['current_player'] == own_id) {
+						document.getElementById("current_card").focus();
+						console.log('focusing current card');
+					}
 				};
 			}, 5000);
 		</script>
