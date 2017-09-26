@@ -11,12 +11,28 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 	<head>
 		<title>Speelvorm 2</title>
 		<script src="api/js/std.js"></script>
-        <script>
+		<?php
+		// leader only JS
+		if ($_SESSION['player_id'] == 11) { // if user is game leader
+		?>
+		<script>function end_game() {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+								window.location.href = 'game.php';
+						}
+				};
+				xhttp.open("GET", "http://localhost/kwal-spel/2/api/end.php", true);
+				xhttp.send();
+		}
+		</script>
+		<?php } // end user only JS ?>
+		<script>
 			var amount_players = <?php echo count($json['players']);?>;
 			window.setInterval(function(){
 				start_update();
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
-                // card stack
+				// card stack
 				var list = document.getElementById('card_stack');
 				list.innerHTML = '';
 				game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].forEach(function(item, index){
@@ -58,21 +74,28 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 				};
 			}, 5000);
 		</script>
-        <link rel="stylesheet" href="css/game.css" type="text/css">
-        <link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
+		<link rel="stylesheet" href="css/game.css" type="text/css">
+		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-        <h1>Kwaliteitenspel</h1>
+		<h1>Kwaliteitenspel</h1>
 		<p id="current_card"></p>
-        <ul id="player_list">
-            <?php
-            foreach ($json['players'] as $key => $value) {
-                echo '<li id="'.$value['player_id'].'">'.$value['name'].'</li>';
-            }
-            ?>
-        </ul>
-        <ul id="card_stack">
-        </ul>
+		<ul id="player_list">
+			<?php
+			foreach ($json['players'] as $key => $value) {
+				echo '<li id="'.$value['player_id'].'">'.$value['name'].'</li>';
+			}
+			?>
+		</ul>
+		<ul id="card_stack">
+		</ul>
+		<?php
+		// Leader only end game & undo buttons
+		if ($_SESSION['player_id'] == 11) { // if user is game leader
+		?>
+		<button onclick="end_game()">Game beindigen</button>
+		<button>Undo</button>
+		<?php } // end leader only buttons ?>
 	</body>
 </html>
 <script>addListeners(amount_players);
