@@ -36,10 +36,10 @@ body {
     box-shadow: 0px 0 31px 0 #65606a;
 }
 h1 {
-    flex: none;
+    flex: 0 0 auto;
+    align-self: flex-end;
     width: 30%;
     height: 5%;
-    margin: 3% auto 1% auto;
     padding: 5px;
     font-family: sans-serif;
     font-size: 2.6vw;
@@ -51,7 +51,6 @@ h1 {
     flex: 1 1.1;
     width: 27%;
     height: 33%;
-    margin: 21% 1% 26% 7%;
     border: 11px solid #830e73;
     border-radius: 9px;
 }
@@ -99,10 +98,13 @@ h1 {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         background-color: #ffffff;
     }
     #current_card {
-        flex: 1 auto;
+        flex: 0 1 auto;
+        align-self: center;
         width: 27%;
         height: 33%;
         margin: 35% 1% 19% 7%;
@@ -110,6 +112,9 @@ h1 {
         border-radius: 9px;
     }
     #player_list > li:first-child {
-        margin-top: 88%;
+        /*margin-top: 88%;*/
+    }
+    #player_list > li:last-child {
+        /*margin-bottom: 8%;*/
     }
 }
