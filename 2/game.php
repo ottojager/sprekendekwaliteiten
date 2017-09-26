@@ -84,7 +84,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		<ul id="player_list">
 			<?php
 			foreach ($json['players'] as $key => $value) {
-				echo '<li id="'.$value['player_id'].'">'.$value['name'].'</li>';
+				echo '<li id="'.$value['player_id'].'">'.$value['name'].'(0)'.'</li>';
 			}
 			?>
 		</ul>
