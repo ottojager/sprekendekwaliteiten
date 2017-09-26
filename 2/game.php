@@ -32,6 +32,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		<script>
 			var amount_players = <?php echo count($json['players']);?>;
 			var own_id = <?php echo $_SESSION['player_id'];?>;
+			var notification = new Audio('sound/notification.mp3');
 			window.setInterval(function(){
 				start_update();
 
@@ -83,6 +84,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 					//check it is the players turn
 					if (game_info['current_player'] == own_id) {
 						document.getElementById("current_card").focus();
+						notification.play();
 						console.log('focusing current card');
 					}
 				};
