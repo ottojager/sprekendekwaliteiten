@@ -21,9 +21,9 @@ if (isset($_POST['join_button'])) {
 						$_SESSION['player_id'] = $id;
 						$_SESSION['game_id'] = $code;
 						header('Location: lobby.php');
-					} else {
-						$error = 'Je kan geen game joinen als die al bezig is.';
 					}
+				} else {
+					$error = 'Je kan geen game joinen als die al bezig is.';
 				}
 			} else {
 				$error = 'Verkeerde code of lobby bestaat niet';
