@@ -15,7 +15,8 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		// leader only JS
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
 		?>
-		<script>function end_game() {
+		<script>
+		function end_game() {
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function() {
 						if (this.readyState == 4 && this.status == 200) {
