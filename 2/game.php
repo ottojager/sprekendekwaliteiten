@@ -31,7 +31,6 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		<script>
 			var amount_players = <?php echo count($json['players']);?>;
 			var own_id = <?php echo $_SESSION['player_id'];?>;
-			alert(own_id);
 			window.setInterval(function(){
 				start_update();
 
