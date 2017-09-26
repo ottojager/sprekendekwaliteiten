@@ -53,8 +53,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 					for (var i = game_info['current_player']; i < amount_players; i += 1) {
 						console.log('adding player to list:' + i);
 						var li = document.createElement('li');
-						li.innerHTML = game_info['players'][i]['name'];
-						li.innerHTML += '(' + game_info['players'][i]['stack'].length + ')';
+						li.innerHTML = game_info['players'][i]['name'] + '(' + game_info['players'][i]['stack'].length + ')';
 						li.id = i;
 						player_list.appendChild(li);
 					};
@@ -64,8 +63,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 						for (var i = 0; i < game_info['current_player']; i++) {
 							console.log('adding player to list 2:' + i);
 							var li = document.createElement('li');
-							li.innerHTML = game_info['players'][i]['name'];
-							li.innerHTML += '(' + game_info['players'][i]['stack'].length + ')';
+							li.innerHTML = game_info['players'][i]['name'] + '(' + game_info['players'][i]['stack'].length + ')';
 							li.id = i;
 							player_list.appendChild(li);
 						};
