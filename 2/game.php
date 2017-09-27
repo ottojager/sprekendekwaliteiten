@@ -42,6 +42,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 				}
 
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
+				//check if displayed gotten card is less than the newest info ifso update HTML
 				if (document.getElementById("card_stack").childNodes.length < game_info['players'][own_id]['stack'].length) {
 					// card stack
 					console.log('remaking cardstack')
@@ -55,7 +56,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 					notification.play();
 				}
 				//changing player list order
-				//check if the displayer player list doesn't match the new one
+				//check if the displayed player list doesn't match the new one ifso update HTMl
 				if (game_info['current_player'] != document.getElementById("player_list").firstElementChild.id) {
 					//fill player list inits
 					var player_list = document.getElementById('player_list');
@@ -90,6 +91,8 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 						notification.play();
 						console.log('focusing current card');
 					}
+					//update amount of cards left
+					document.getElementById("cards_left").innerHTML =  'nog ' + game_info['card_stack'].length + ' kaarten';
 				};
 			}, 5000);
 		</script>
@@ -106,6 +109,9 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 			}
 			?>
 		</ul>
+		<div id="cards_left">
+			<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
+		</div>
 		<ul id="card_stack">
 		</ul>
 		<?php
