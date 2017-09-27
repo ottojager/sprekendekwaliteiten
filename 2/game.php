@@ -42,15 +42,18 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 				}
 
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
-				// card stack
-				var list = document.getElementById('card_stack');
-				list.innerHTML = '';
-				game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].forEach(function(item, index){
-					var child = document.createElement('li');
-					child.innerHTML = item;
-					list.appendChild(child);
-				});
-
+				if (document.getElementById("card_stack").childNodes.length < game_info['players'][own_id]['stack'].length) {
+					// card stack
+					console.log('remaking cardstack')
+					var list = document.getElementById('card_stack');
+					list.innerHTML = '';
+					game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].forEach(function(item, index){
+						var child = document.createElement('li');
+						child.innerHTML = item;
+						list.appendChild(child);
+					});
+					notification.play();
+				}
 				//changing player list order
 				//check if the displayer player list doesn't match the new one
 				if (game_info['current_player'] != document.getElementById("player_list").firstElementChild.id) {
