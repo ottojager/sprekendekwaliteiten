@@ -99,18 +99,19 @@ h1 {
     align-self: flex-start;
             -webkit-align-self: flex-start;
             -ms-align-self: flex-start;
+    margin: 1%;
     border-radius: 6px;
     color: #fffefe;
-    background-color: #a82519;
+    background-color: #830e73;
     font-family: calibri, sans-serif;
 }
-#card_stack {
+.card_stack {
     flex: 0 auto;
         -webkit-flex: 0 auto;
         -ms-flex: 0 auto;
-    align-self: center;
-        -webkit-align-self: center;
-        -ms-align-self: center;
+    align-self: flex-start;
+        -webkit-align-self: flex-start;
+        -ms-align-self: flex-start;
     margin: 1%;
     /*border: 1px solid #a82519;*/
     border-radius: 6px;
