@@ -68,14 +68,13 @@ h1 {
     border-radius: 9px;
 }
 #player_list {
-    flex: 0  1 auto;
+    flex: 0 1 auto;
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
     align-self: flex-start;
             -webkit-align-self: flex-start;
             -ms-align-self: flex-start;
     width: 33%;
-    color: #000000;
     font-family: calibri, sans-serif;
     list-style: none;
 }
@@ -147,9 +146,9 @@ h1 {
         flex-direction: row;
             -webkit-flex-direction: row;
             -ms-flex-direction: row;
-        justify-content: flex-start;
-            -webkit-justify-content: flex-start;
-            -ms-justify-content: flex-start;
+        justify-content: space-around;
+            -webkit-justify-content: space-around;
+            -ms-justify-content: space-around;
         align-items: stretch;
             -webkit-align-items: stretch;
             -ms-align-items: stretch;
