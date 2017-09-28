@@ -72,8 +72,8 @@ h1 {
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
     align-self: flex-start;
-            -webkit-align-self: flex-start;
-            -ms-align-self: flex-start;
+        -webkit-align-self: flex-start;
+        -ms-align-self: flex-start;
     width: 33%;
     font-family: calibri, sans-serif;
     list-style: none;
@@ -97,8 +97,8 @@ h1 {
 }
 #cards_left {
     align-self: flex-start;
-            -webkit-align-self: flex-start;
-            -ms-align-self: flex-start;
+        -webkit-align-self: flex-start;
+        -ms-align-self: flex-start;
     margin: 1%;
     border-radius: 6px;
     color: #fffefe;
@@ -162,9 +162,9 @@ h1 {
         flex: 0 1 auto;
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
-        align-self: baseline;
-            -webkit-align-self: baseline;
-            -ms-align-self: baseline;
+        align-self: flex-start;
+            -webkit-align-self: flex-start;
+            -ms-align-self: flex-start;
         width: 33%;
         height: 33%;
         margin: 0% 13% 1% 7%;
