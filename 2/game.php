@@ -115,16 +115,17 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		<div id="cards_left">
 			<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
 		</div>
-		<ul id="card_stack">
-		</ul>
+
+		<!-- keep these on one line or it will see a child element that isn't there -->
+		<ul id="card_stack"></ul>
 		<?php
 		// Leader only end game & undo buttons
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
 		?>
-        <div id="leader">
-		<button onclick="end_game()">Game beindigen</button>
-		<button>Undo</button>
-        </div>
+		<div id="leader">
+			<button onclick="end_game()">Game beindigen</button>
+			<button>Undo</button>
+		</div>
 		<?php } // end leader only buttons ?>
 	</body>
 </html>
