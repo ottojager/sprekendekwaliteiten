@@ -66,7 +66,6 @@ h1 {
     height: 33%;
     border: 11px solid #830e73;
     border-radius: 9px;
-    order: 2;
 }
 #player_list {
     flex: 0  1 auto;
@@ -79,7 +78,6 @@ h1 {
     color: #000000;
     font-family: calibri, sans-serif;
     list-style: none;
-    order: 1;
 }
 #player_list > li {
     width: 67.73px;
@@ -108,9 +106,8 @@ h1 {
     background-color: #a82519;
     font-family: calibri, sans-serif;
     list-style: none;
-    order: 3;
 }
-button {
+#leader > button {
     align-self: center;
         -webkit-align-self: center;
         -ms-align-self: center;
@@ -118,7 +115,6 @@ button {
     padding: 1%;
     background-image: linear-gradient(to top, #ffffff, #ffffff, #ffffff, #a82519, #ffffff, #ffffff, #ffffff)
     border: 0px solid #000000;
-    order: 4;
 }
 @media screen and (min-width: 40em) /*640px*/ {
     body {
@@ -138,9 +134,6 @@ button {
         flex-direction: row;
             -webkit-flex-direction: row;
             -ms-flex-direction: row;
-        flex-wrap: wrap;
-            -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
         justify-content: flex-start;
             -webkit-justify-content: flex-start;
             -ms-justify-content: flex-start;
@@ -170,7 +163,7 @@ button {
         /*margin-bottom: 8%;*/
     }
 }
-#player_list > li > button {
+#player_list > li > button { /*Note to self: Talk to Bas about button inside li.*/
     background: transparent;
-    border: none !important;
+    border: none !important; /*and about his border style*/
 }
