@@ -114,7 +114,7 @@ h1 {
         -webkit-align-self: flex-start;
         -ms-align-self: flex-start;
     margin: 1%;
-    /*border: 1px solid #a82519;*/
+    padding: 2px;
     border-radius: 6px;
     color: #fffefe;
     background-color: #a82519;
@@ -170,7 +170,7 @@ h1 {
         height: 33%;
         margin: 0% 13% 1% 7%;
         border: 23px solid #830e73;
-        border-radius: 9px;
+        border-radius: 13px;
     }
     #player_list > li:first-child {
         /*margin-top: 34%;*/
