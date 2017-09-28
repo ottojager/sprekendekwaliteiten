@@ -122,17 +122,14 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		// Leader only end game & undo buttons
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
 		?>
-<<<<<<< HEAD
 		<div id="leader">
 			<button onclick="end_game()">Game beindigen</button>
 			<button>Undo</button>
 		</div>
-=======
         <div id="leader">
             <button onclick="end_game()">Game beindigen</button>
             <button>Undo</button>
         </div>
->>>>>>> 8288363987bb00ddcaaf9dfeba79a306ff3ff8c5
 		<?php } // end leader only buttons ?>
 	</body>
 </html>
