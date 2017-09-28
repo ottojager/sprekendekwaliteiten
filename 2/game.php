@@ -122,8 +122,8 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
 		?>
         <div id="leader">
-		<button onclick="end_game()">Game beindigen</button>
-		<button>Undo</button>
+            <button onclick="end_game()">Game beindigen</button>
+            <button>Undo</button>
         </div>
 		<?php } // end leader only buttons ?>
 	</body>
