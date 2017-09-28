@@ -37,8 +37,13 @@ function leader_card(amount_players) {
 	for (i = 0; i <  amount_players; i += 1) {
         document.getElementById(i.toString()).addEventListener('click', function() {
             var id_player = this.id;
-            document.getElementById('leider').innerHTML = game_info['players'][id_player]['stack'];
-        
+			var list = document.getElementById('leider');
+			list.innerHTML = '';
+			game_info['players'][id_player]['stack'].forEach(function(item, index){
+				var child = document.createElement('li');
+				child.innerHTML = item;
+				list.appendChild(child);
+			});
 		});
 	}
 }
