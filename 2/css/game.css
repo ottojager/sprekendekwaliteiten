@@ -94,6 +94,7 @@ h1 {
 #player_list > li > button { /*Note to self: Talk to Bas about button inside li.*/
     background: transparent;
     border: none !important; /*and about his border style*/
+    color: #fffefe;
 }
 #cards_left {
     align-self: flex-start;
@@ -168,7 +169,7 @@ h1 {
         width: 33%;
         height: 33%;
         margin: 0% 13% 1% 7%;
-        border: 13px solid #830e73;
+        border: 23px solid #830e73;
         border-radius: 9px;
     }
     #player_list > li:first-child {
