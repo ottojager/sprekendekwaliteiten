@@ -92,6 +92,19 @@ h1 {
     list-style: none;
     /*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
+#player_list > li > button { /*Note to self: Talk to Bas about button inside li.*/
+    background: transparent;
+    border: none !important; /*and about his border style*/
+}
+#cards_left {
+    align-self: flex-start;
+            -webkit-align-self: flex-start;
+            -ms-align-self: flex-start;
+    border-radius: 6px;
+    color: #fffefe;
+    background-color: #a82519;
+    font-family: calibri, sans-serif;
+}
 #card_stack {
     flex: 0 auto;
         -webkit-flex: 0 auto;
@@ -100,7 +113,7 @@ h1 {
         -webkit-align-self: center;
         -ms-align-self: center;
     margin: 1%;
-    border: 1px solid #a82519;
+    /*border: 1px solid #a82519;*/
     border-radius: 6px;
     color: #fffefe;
     background-color: #a82519;
@@ -143,18 +156,18 @@ h1 {
         background-color: #ffffff;
     }
     h1 {
-        margin-right: 35%;
+        margin-right: 37%;
     }
     #current_card {
         flex: 0 1 auto;
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
-        align-self: center;
-            -webkit-align-self: center;
-            -ms-align-self: center;
+        align-self: baseline;
+            -webkit-align-self: baseline;
+            -ms-align-self: baseline;
         width: 33%;
         height: 33%;
-        margin: 5% 1% 1% 7%;
+        margin: 5% 13% 1% 7%;
         border: 13px solid #830e73;
         border-radius: 9px;
     }
@@ -165,8 +178,4 @@ h1 {
     /*#player_list > li:last-child {
         margin-bottom: 8%;
     }*/
-}
-#player_list > li > button { /*Note to self: Talk to Bas about button inside li.*/
-    background: transparent;
-    border: none !important; /*and about his border style*/
 }
