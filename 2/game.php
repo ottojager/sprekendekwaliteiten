@@ -117,22 +117,27 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		</div>
 
 		<!-- keep these on one line or it will see a child element that isn't there -->
-		<ul id="card_stack"></ul>
+		<ul id="card_stack" class="card_stack"></ul>
 		<?php
-		// Leader only end game & undo buttons
+		// Leader only end game, undo buttons, and card list
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
 		?>
+		<ul id="leider" class="card_stack"></ul>
 		<div id="leader">
 			<button onclick="end_game()">Game beindigen</button>
 			<button>Undo</button>
 		</div>
-        <div id="leader">
-            <button onclick="end_game()">Game beindigen</button>
-            <button>Undo</button>
-        </div>
 		<?php } // end leader only buttons ?>
 	</body>
 </html>
-<script>addListeners(amount_players);
+<?php
+if ($_SESSION['player_id'] == 11) {
+?>
+<script>
+leader_card(amount_players);
+</script>
+<?php } ?>
+<script>
+addListeners(amount_players);
 //alert(document.getElementById("player_list").firstElementChild.text);
 </script>
