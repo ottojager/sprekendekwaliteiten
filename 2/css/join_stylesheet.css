@@ -19,20 +19,20 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 html {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, #ffffff, #71bbff);
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, #ffffff, #71bbff);
 }
 body {
-    display: flex;
-        display: -webkit-flex; /* Safari 6.1+ */
-        display: -ms-flex; /* IE 10 */
-    flex-direction: column;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-    flex-wrap: wrap;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
+	display: flex;
+		display: -webkit-flex; /* Safari 6.1+ */
+		display: -ms-flex; /* IE 10 */
+	flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+	flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
     width: 60%;
     height: 100%;
     margin: 0 auto 0 auto;
@@ -83,19 +83,4 @@ input[type=submit] {
     color: #ffffff;
     border-radius: 10px;
     background-color: #a41600;
-}
-@media screen and (min-width: 40em) /*640px*/ {
-    body {
-        background-color: #ffffff; /*#199bbe;*/
-    }
-}
-@media screen and (min-width: 64em) /*1024px*/ {
-    body {
-        background-color: #fffffe; /*#1920ef;*/
-    }
-}
-@media screen and (min-width: 80em) /*1280px*/ {
-    body {
-        background-color: #ffffff;
-    }
 }

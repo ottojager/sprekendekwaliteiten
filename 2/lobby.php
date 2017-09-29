@@ -48,8 +48,8 @@ if (!isset($_SESSION['game_id'])) {
 				//document.getElementById("player_list").innerHTML = game_info[""];
 			}, 3000);
 		</script>
-		<link rel="stylesheet" href="css/lobby_stylesheet.css" type="text/css">
-		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
+        <link rel="stylesheet" href="css/lobby_stylesheet.css" type="text/css">
+        <link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
 		<div id="main">
@@ -64,11 +64,11 @@ if (!isset($_SESSION['game_id'])) {
 			}
 			echo '</ol>';
 			?>
-		</div>
 		<?php
 		if ($_SESSION['player_id'] == 11) {
 			?><button onclick="start_game()">Game beginnen</button><?php
 		}
 		?>
+		</div>
 	</body>
 </html>
