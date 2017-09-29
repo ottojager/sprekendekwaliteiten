@@ -20,12 +20,11 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function() {
 						if (this.readyState == 4 && this.status == 200) {
-								window.location.href = 'game.php';
+								document.location.href = 'end.php';
 						}
 				};
 				xhttp.open("GET", "http://localhost/kwal-spel/2/api/end.php", true);
 				xhttp.send();
-				document.location.href = 'end.php';
 		}
 		</script>
 		<?php } // end user only JS ?>
@@ -116,8 +115,12 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 			<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
 		</div>
 
+		<?php
+		if (!$_SESSION['player_id'] == 11) { // if user is not the game user
+		?>
 		<!-- keep these on one line or it will see a child element that isn't there -->
 		<ul id="card_stack" class="card_stack"></ul>
+		<?php } ?>
 		<?php
 		// Leader only end game, undo buttons, and card list
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
