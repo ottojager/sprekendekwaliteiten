@@ -2,11 +2,17 @@
 session_start();
 if (isset($_POST['makeLobbyButton'])) {
 	if (strlen($_POST['name']) >= 3) {
+		//list of filtered codes
+		$filtered_names = array (
+			'LUL','KUT','PIK','SEX','FUC','FUK','SUC','KKK','GAY','FAG','NIG','ZAK','POO','PIS','DIK','KOK','COK','ASS','TIT','JIZ','CUM','BSD'
+		);
 		// generate game id
-		$id = '';
-		for ($i = 0; $i != 3; $i++) {
-			$id .= chr(mt_rand(65, 90)); // random uppercase ASCII character
-		}
+		do {
+			$id = '';
+			for ($i = 0; $i != 3; $i++) {
+				$id .= chr(mt_rand(65, 90)); // random uppercase ASCII character
+			}
+		} while (in_array($id,$filtered_names));
 
 		$game = array(
 			'game_id' => $id,
