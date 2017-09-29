@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_POST['makeLobbyButton'])) {
-	if (strlen($_POST['name']) >= 3) {
+	if (strlen(str_replace(' ', '', $_POST['name'])) >= 3) {
 		//list of filtered codes
 		$filtered_names = array (
 			'LUL','KUT','PIK','SEX','FUC','FUK','SUC','KKK','GAY','FAG','NIG','ZAK','POO','PIS','DIK','KOK','COK','ASS','TIT','JIZ','CUM','BSD'
@@ -27,7 +27,7 @@ if (isset($_POST['makeLobbyButton'])) {
 		$_SESSION['game_id'] = $id;
 		header('Location: lobby.php');
 	} else {
-		$error = 'Naam moet minimaal 3 characters bevaten.';
+		$error = 'Naam moet minimaal 3 letters bevaten.';
 	}
 }
 ?>

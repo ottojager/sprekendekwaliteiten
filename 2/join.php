@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_POST['join_button'])) {
-	if (strlen($_POST['name']) >= 3) {
+	if (strlen(str_replace(' ', '', $_POST['name'])) >= 3) {
 		$code = strtoupper($_POST['code']);
 		if (strlen($code) == 3) {
 			$games_list = scandir("games");
@@ -29,10 +29,10 @@ if (isset($_POST['join_button'])) {
 				$error = 'Verkeerde code of lobby bestaat niet';
 			}
 		} else {
-			$error = 'Code moet vijf cijfers zijn.';
+			$error = 'Code moet 3 letters zijn.';
 		}
 	} else {
-		$error = 'Niet lang genoeg?!';
+		$error = 'Naam moet minimaal 3 letters bevaten.';
 	}
 }
 ?>
