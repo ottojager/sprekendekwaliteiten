@@ -31,6 +31,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		<script>
 			var amount_players = <?php echo count($json['players']);?>;
 			var own_id = <?php echo $_SESSION['player_id'];?>;
+			var first_refresh = new Boolean(true);
 			var notification = new Audio('sound/notification.mp3');
 			window.setInterval(function(){
 				start_update();
@@ -52,7 +53,11 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 						child.innerHTML = item;
 						list.appendChild(child);
 					});
-					notification.play();
+					if (first_refresh) {
+						first_refresh = !first_refresh;
+					} else {
+						notification.play();
+					}
 				}
 				//changing player list order
 				//check if the displayed player list doesn't match the new one ifso update HTMl
@@ -120,7 +125,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		<!-- keep these on one line or it will see a child element that isn't there -->
 		<ul id="card_stack" class="card_stack"></ul>
 		<?php } ?>
-		
+
 		<?php
 		// Leader only end game, undo buttons, and card list
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
