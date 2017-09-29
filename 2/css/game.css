@@ -57,6 +57,7 @@ h1 {
     color: #ffffff;
     border-radius: 13px;
     background-color: #2752a3;
+    text-align: center;
 }
 #current_card {
     flex: 1 1 auto;
@@ -142,9 +143,6 @@ h1 {
 }
 @media screen and (min-width: 80em) /*1280px*/ {
     body {
-        display: flex;
-            display: -webkit-flex; /* Safari 6.1+ */
-            display: -ms-flex; /* IE 10 */
         flex-direction: row;
             -webkit-flex-direction: row;
             -ms-flex-direction: row;
