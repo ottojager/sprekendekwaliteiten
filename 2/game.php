@@ -116,7 +116,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		</div>
 
 		<?php
-		if (!$_SESSION['player_id'] == 11) { // if user is not the game user
+		if ($_SESSION['player_id'] != 11) { // if user is not the game user
 		?>
 		<!-- keep these on one line or it will see a child element that isn't there -->
 		<ul id="card_stack" class="card_stack"></ul>
