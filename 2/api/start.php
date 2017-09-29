@@ -18,7 +18,7 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	$result = mysqli_query($db, $sql);
 	$card_stack = array();
 	while ($card = mysqli_fetch_assoc($result)) {
-	    $card_stack[] = $card['name'];
+		$card_stack[] = $card['name'];
 	}
 	shuffle($card_stack);
 
