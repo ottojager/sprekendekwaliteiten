@@ -70,7 +70,6 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 						li.appendChild(button);
 						li.id = i;
 						player_list.appendChild(li);
-
 					};
 					//check if player = 0 becuase this code is then useless
 					if (game_info['current_player'] > 0) {
@@ -107,7 +106,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		<ul id="player_list">
 			<?php
 			foreach ($json['players'] as $key => $value) {
-				echo '<li id="'.$value['player_id'].'">'.$value['name'].'</li>';
+				echo '<li id="'.$value['player_id'].'">'.'<button>'.$value['name'].' (0)<button>'.'</li>';
 			}
 			?>
 		</ul>
