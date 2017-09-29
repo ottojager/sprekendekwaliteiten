@@ -133,7 +133,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		<ul id="leider" class="card_stack"></ul>
 		<div id="leader">
 			<button onclick="end_game()">Game beindigen</button>
-			<button>Undo</button>
+			<button>Ongedaan maken</button>
 		</div>
 		<?php } // end leader only buttons ?>
 	</body>
