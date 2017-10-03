@@ -20,7 +20,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function() {
 						if (this.readyState == 4 && this.status == 200) {
-								document.location.href = 'end.php';
+								document.location.href = './end/';
 						}
 				};
 				xhttp.open("GET", "http://localhost/kwal-spel/2/api/end.php", true);
@@ -38,7 +38,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 
 				// if game has ended
 				if (game_info['card_stack'] == 0) {
-					document.location.href = 'end.php';
+					document.location.href = './end/';
 				}
 
 				document.getElementById("current_card").innerHTML = game_info['current_card'];

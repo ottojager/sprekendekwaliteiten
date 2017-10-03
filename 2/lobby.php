@@ -21,18 +21,18 @@ if (!(bool)$json) { // if $json actually has content
 		// java script only needed for the game leader
 		if ($_SESSION['player_id'] == 11) {
 		?>
-		<script>
-			function start_game() {
-				var xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-						window.location.href = 'game.php';
-					}
-				};
-				xhttp.open("GET", "http://localhost/kwal-spel/2/api/start.php", true);
-				xhttp.send();
-			}
-		</script>
+			<script>
+				function start_game() {
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+							window.location.href = 'game.php';
+						}
+					};
+					xhttp.open("GET", "http://localhost/kwal-spel/2/api/start.php", true);
+					xhttp.send();
+				}
+				</script>
 		<?php } // end of leader only javascript ?>
 
 		<script>
