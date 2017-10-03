@@ -37,8 +37,8 @@ body {
 	width: 60%;
 	height: 100%;
 	margin: 0 auto 0 auto;
-	border-radius: 10px;
-	background-color: #c8eaeb;
+	/*border-radius: 10px;*/
+	background-color: #c4f6f8;
 	box-shadow: 0px 0 31px 0 #65606a;
 }
 h1 {
@@ -55,7 +55,7 @@ h1 {
 	font-family: sans-serif;
 	font-size: 2.6vw;
 	color: #ffffff;
-	border-radius: 13px;
+	/*border-radius: 13px;*/
 	background-color: #2752a3;
 	text-align: center;
 }
@@ -66,7 +66,7 @@ h1 {
 	width: 33%;
 	height: 33%;
 	border: 11px solid #830e73;
-	border-radius: 9px;
+	/*border-radius: 9px;*/
 }
 #player_list {
 	flex: 0 1 auto;
@@ -85,7 +85,7 @@ h1 {
 	margin: 6px;
 	padding: 4px;
 	border: 1px solid #166432;
-	border-radius: 6px;
+	/*border-radius: 6px;*/
 	color: #fffefe;
 	background-color: #166432;
 	font-family: calibri, sans-serif;
@@ -102,7 +102,7 @@ h1 {
 		-webkit-align-self: flex-start;
 		-ms-align-self: flex-start;
 	margin: 1%;
-	border-radius: 6px;
+	/*border-radius: 6px;*/
 	color: #fffefe;
 	background-color: #830e73;
 	font-family: calibri, sans-serif;
@@ -116,7 +116,7 @@ h1 {
 		-ms-align-self: flex-start;
 	margin: 1%;
 	padding: 2px;
-	border-radius: 6px;
+	/*border-radius: 6px;*/
 	color: #fffefe;
 	background-color: #a82519;
 	font-family: calibri, sans-serif;
@@ -130,15 +130,16 @@ h1 {
 	padding: 1%;
 	background-image: linear-gradient(to top, #ffffff, #ffffff, #ffffff, #a82519, #ffffff, #ffffff, #ffffff)
 	border: 0px solid #000000;
+	border-radius: 0px;
 }
 @media screen and (min-width: 40em) /*640px*/ {
 	body {
-		background-color: #ffffff; /*#199bbe;*/
+		background-color: #c4f6f8; /*#199bbe;*/
 	}
 }
 @media screen and (min-width: 64em) /*1024px*/ {
 	body {
-		background-color: #fffffe; /*#1920ef;*/
+		background-color: #c4f6f8; /*#1920ef;*/
 	}
 }
 @media screen and (min-width: 80em) /*1280px*/ {
@@ -152,7 +153,7 @@ h1 {
 		align-items: stretch;
 			-webkit-align-items: stretch;
 			-ms-align-items: stretch;
-		background-color: #ffffff;
+		background-color: #c4f6f8;
 	}
 	h1 {
 		margin-right: 37%;
@@ -168,7 +169,7 @@ h1 {
 		height: 33%;
 		margin: 0% 13% 1% 7%;
 		border: 23px solid #830e73;
-		border-radius: 13px;
+		/*border-radius: 13px;*/
 	}
 	#player_list > li:first-child {
 		/*margin-top: 34%;*/
