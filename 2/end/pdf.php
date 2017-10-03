@@ -7,5 +7,5 @@ $pdf->Cell(0, 10, 'Kwaliteiten spell', 0, 1, 'C'); // add the text in a 10 heigh
 
 $pdf->Output(); // sends the PDF to the user
                 // browsers with a build in PDF viewer will show it
-				// other browsers will download it
+                // other browsers will download it
  ?>
