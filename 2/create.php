@@ -4,7 +4,7 @@ if (isset($_POST['makeLobbyButton'])) {
 	if (strlen(str_replace(' ', '', $_POST['name'])) >= 3) {
 		//list of filtered codes
 		$filtered_names = array (
-			'LUL','KUT','PIK','SEX','FUC','FUK','SUC','KKK','GAY','FAG','NIG','ZAK','POO','PIS','DIK','KOK','COK','ASS','TIT','JIZ','CUM','BSD'
+			'LUL','KUT','PIK','SEX','FUC','FUK','SUC','KKK','GAY','FAG','NIG','ZAK','POO','PIS','DIK','KOK','COK','ASS','TIT','JIZ','CUM','BSD','WIN','MAC','IOS'
 		);
 		// generate game id
 		do {
