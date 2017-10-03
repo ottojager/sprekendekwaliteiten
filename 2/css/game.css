@@ -86,10 +86,12 @@ h1 {
 	height: 13.62%;
 	margin: 6px;
 	padding: 4px;
-	border: 1px solid #166432;
+	border: 0px solid #d81d26;
+	border-bottom-width: 2px;
+	border-left-width: 2px;
 	/*border-radius: 6px;*/
-	color: #fffefe;
-	background-color: #166432;
+	color: #1f3f50;
+	background-color: #c4f6f8;
 	font-family: calibri, sans-serif;
 	list-style: none;
 	/*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
@@ -97,7 +99,7 @@ h1 {
 #player_list > li > button { /*Note to self: Talk to Bas about button inside li.*/
 	background: transparent;
 	border: none !important; /*and about his border style*/
-	color: #fffefe;
+	color: #1f3f50;
 }
 #cards_left {
 	align-self: flex-start;
@@ -174,7 +176,7 @@ h1 {
 	}
 	#player_list > li:first-child {
 		/*margin-top: 34%;*/
-		background-color: #267442;
+		background-color: #c4f6f8;
 	}
 	/*#player_list > li:last-child {
 		margin-bottom: 8%;
