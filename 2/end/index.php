@@ -14,5 +14,4 @@ if ($_SESSION['player_id'] == 11) {
 	$player = $json['players'][ $_SESSION['player_id'] ];
 	include('players.php');
 }
-
 ?>
