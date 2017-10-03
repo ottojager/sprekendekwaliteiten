@@ -26,28 +26,28 @@ html {
 }
 body {
 	display: flex;
-	display: -webkit-flex; /* Safari 6.1+ */
-	display: -ms-flex; /* IE 10 */
+		display: -webkit-flex; /* Safari 6.1+ */
+		display: -ms-flex; /* IE 10 */
 	flex-direction: column;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
 	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
 	width: 60%;
 	height: 100%;
 	margin: 0 auto 0 auto;
 	border-radius: 10px;
-	background-color: #fffefe;
+	background-color: #c8eaeb;
 	box-shadow: 0px 0 31px 0 #65606a;
 }
 h1 {
 	flex: 1 0 auto;
-	-webkit-flex: 1 0 auto;
-	-ms-flex: 1 0 auto;
+		-webkit-flex: 1 0 auto;
+		-ms-flex: 1 0 auto;
 	align-self: flex-start;
-	-webkit-align-self: flex-start;
-	-ms-align-self: flex-start;
+		-webkit-align-self: flex-start;
+		-ms-align-self: flex-start;
 	width: 19%;
 	height: 5%;
 	margin: 3% 3% 0% 3%;
@@ -61,8 +61,8 @@ h1 {
 }
 #current_card {
 	flex: 1 1 auto;
-	-webkit-flex: 1 1 auto;
-	-ms-flex: 1 1 auto;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
 	width: 33%;
 	height: 33%;
 	border: 11px solid #830e73;
@@ -70,11 +70,11 @@ h1 {
 }
 #player_list {
 	flex: 0 1 auto;
-	-webkit-flex: 0 1 auto;
-	-ms-flex: 0 1 auto;
+		-webkit-flex: 0 1 auto;
+		-ms-flex: 0 1 auto;
 	align-self: flex-start;
-	-webkit-align-self: flex-start;
-	-ms-align-self: flex-start;
+		-webkit-align-self: flex-start;
+		-ms-align-self: flex-start;
 	width: 33%;
 	font-family: calibri, sans-serif;
 	list-style: none;
@@ -99,8 +99,8 @@ h1 {
 }
 #cards_left {
 	align-self: flex-start;
-	-webkit-align-self: flex-start;
-	-ms-align-self: flex-start;
+		-webkit-align-self: flex-start;
+		-ms-align-self: flex-start;
 	margin: 1%;
 	border-radius: 6px;
 	color: #fffefe;
@@ -109,11 +109,11 @@ h1 {
 }
 .card_stack {
 	flex: 0 auto;
-	-webkit-flex: 0 auto;
-	-ms-flex: 0 auto;
+		-webkit-flex: 0 auto;
+		-ms-flex: 0 auto;
 	align-self: flex-start;
-	-webkit-align-self: flex-start;
-	-ms-align-self: flex-start;
+		-webkit-align-self: flex-start;
+		-ms-align-self: flex-start;
 	margin: 1%;
 	padding: 2px;
 	border-radius: 6px;
@@ -124,8 +124,8 @@ h1 {
 }
 #leader > button {
 	align-self: center;
-	-webkit-align-self: center;
-	-ms-align-self: center;
+		-webkit-align-self: center;
+		-ms-align-self: center;
 	margin: 1%;
 	padding: 1%;
 	background-image: linear-gradient(to top, #ffffff, #ffffff, #ffffff, #a82519, #ffffff, #ffffff, #ffffff)
@@ -144,14 +144,14 @@ h1 {
 @media screen and (min-width: 80em) /*1280px*/ {
 	body {
 		flex-direction: row;
-		-webkit-flex-direction: row;
-		-ms-flex-direction: row;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
 		justify-content: space-around;
-		-webkit-justify-content: space-around;
-		-ms-justify-content: space-around;
+			-webkit-justify-content: space-around;
+			-ms-justify-content: space-around;
 		align-items: stretch;
-		-webkit-align-items: stretch;
-		-ms-align-items: stretch;
+			-webkit-align-items: stretch;
+			-ms-align-items: stretch;
 		background-color: #ffffff;
 	}
 	h1 {
@@ -159,11 +159,11 @@ h1 {
 	}
 	#current_card {
 		flex: 0 1 auto;
-		-webkit-flex: 0 1 auto;
-		-ms-flex: 0 1 auto;
+			-webkit-flex: 0 1 auto;
+			-ms-flex: 0 1 auto;
 		align-self: flex-start;
-		-webkit-align-self: flex-start;
-		-ms-align-self: flex-start;
+			-webkit-align-self: flex-start;
+			-ms-align-self: flex-start;
 		width: 33%;
 		height: 33%;
 		margin: 0% 13% 1% 7%;
