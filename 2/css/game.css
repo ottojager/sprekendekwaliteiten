@@ -56,7 +56,6 @@ h1 {
 	font-size: 2.6vw;
 	font-weight: bold;
 	color: #1f3f50;
-	/*border-radius: 13px;*/
 	background-color: #c4f6f8;
 	text-align: center;
 }
@@ -66,8 +65,6 @@ h1 {
 		-ms-flex: 1 1 auto;
 	width: 33%;
 	height: 33%;
-	/*border: 11px solid #830e73;
-	border-radius: 9px;*/
 	background-color: #234152;
 }
 #player_list {
@@ -89,7 +86,6 @@ h1 {
 	border: 0px solid #d81d26;
 	border-bottom-width: 2px;
 	border-left-width: 2px;
-	/*border-radius: 6px;*/
 	color: #1f3f50;
 	background-color: #c4f6f8;
 	font-family: calibri, sans-serif;
@@ -106,7 +102,6 @@ h1 {
 		-webkit-align-self: flex-start;
 		-ms-align-self: flex-start;
 	margin: 1%;
-	/*border-radius: 6px;*/
 	color: #1f3f50;
 	background-color: #c4f6f8;
 	font-family: calibri, sans-serif;
@@ -120,7 +115,6 @@ h1 {
 		-ms-align-self: flex-start;
 	margin: 1%;
 	padding: 2px;
-	/*border-radius: 6px;*/
 	color: #fffefe;
 	background-color: #a82519;
 	font-family: calibri, sans-serif;
@@ -171,8 +165,6 @@ h1 {
 		width: 33%;
 		height: 33%;
 		margin: 0% 13% 1% 7%;
-		/*border: 23px solid #830e73;
-		border-radius: 13px;*/
 	}
 	#player_list > li:first-child {
 		/*margin-top: 34%;*/
