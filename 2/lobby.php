@@ -4,6 +4,12 @@ session_start();
 if (!isset($_SESSION['game_id'])) {
 	header('location: ./');
 }
+$game = $_SESSION['game_id'];
+$json = json_decode(@file_get_contents("./games/$game.json"), true);
+if (!(bool)$json) { // if $json actually has content
+	@unlink("../games/$game.json"); // delete the empty file if one were to exist
+	header('Location: ./delete.php'); // send the user to delete.php to have their session cleared
+}
 ?>
 <!DOCTYPE html>
 <html lang="nl=NL">
@@ -54,8 +60,6 @@ if (!isset($_SESSION['game_id'])) {
 	<body>
 		<div id="main">
 			<?php
-			$game = $_SESSION['game_id'];
-			$json = json_decode(file_get_contents("./games/$game.json"), true);
 			echo '<h3 id="game_id">'.$json['game_id'].'</h3>';
 			echo '<p id="leader">Leader: '.$json['leader_name'].'</p>';
 			echo '<ol id="player_list">';

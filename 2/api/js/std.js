@@ -19,6 +19,8 @@ function start_update() {
 		if (this.readyState == 4 && this.status == 200) {
 	 		//document.getElementById("main").innerHTML = this.responseText;
 		 	game_info = JSON.parse(this.responseText);
+		} else if (this.readyState == 4 && this.status == 404) {
+			window.location.href = './delete.php'; // redirect users to delete.php to have session cleared
 		}
   	};
 	xhttp.open("GET", "http://localhost/kwal-spel/2/api/check.php", true);
