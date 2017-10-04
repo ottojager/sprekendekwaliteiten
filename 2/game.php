@@ -43,7 +43,8 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
 				// check if displayed gotten card is less than the newest info if so update HTML
-				<? if ($_SESSION['player_id'] != 11) { // update card list for players ?>
+
+				<?php if ($_SESSION['player_id'] != 11) { // update card list for players ?>
 				if (document.getElementById("card_stack").childNodes.length < game_info['players'][own_id]['stack'].length) {
 					// card stack
 					console.log('remaking cardstack')
