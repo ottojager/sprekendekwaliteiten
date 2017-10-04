@@ -19,4 +19,4 @@ foreach ($json['players'][$player]['stack'] as $key => $value) {
 $pdf->Output(); // sends the PDF to the user
                 // browsers with a build in PDF viewer will show it
                 // other browsers will download it
- ?>
+?>
