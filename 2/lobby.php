@@ -50,7 +50,7 @@ if (!(bool)$json) { // if $json actually has content
 					list.appendChild(child);
 				});
 				document.getElementById("game_id").innerHTML = game_info['game_id'];
-				document.getElementById("leader").innerHTML = 'Leader: ' + game_info['leader_name'];
+				document.getElementById("leader").innerHTML = 'Leider: ' + game_info['leader_name'];
 				//document.getElementById("player_list").innerHTML = game_info[""];
 			}, 3000);
 		</script>
