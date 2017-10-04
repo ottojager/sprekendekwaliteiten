@@ -75,6 +75,7 @@ input[type=submit] {
     margin: 0% 35% 0% 35%;
     font-family: sans-serif;
     font-size: 1.6vw;
+	border: 0px solid #234152;
     color: #ffffff;
     background-color: #234152;
 }
