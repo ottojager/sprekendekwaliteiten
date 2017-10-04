@@ -123,6 +123,9 @@ h1 {
 .card_stack > li {
 	padding: 0 2px 0 2px;
 }
+.card_stack > li:first-child {
+	padding-top: 2px;
+}
 .card_stack > li:last-child {
 	padding-bottom: 2px;
 }
