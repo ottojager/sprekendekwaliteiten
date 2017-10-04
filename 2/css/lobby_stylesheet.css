@@ -58,7 +58,6 @@ body {
 	font-family: sans-serif;
 	font-size: 20px;
 	color: #ffffff;
-	border-radius: 5px;
 	background-color: #6e00bc;
 	text-align: center;
 }
@@ -70,7 +69,6 @@ body {
 	font-family: sans-serif;
 	font-size: 20px;
 	color: #ffffff;
-	border-radius: 5px;
 	background-color: #2752a3;
 }
 #player_list {
@@ -80,7 +78,6 @@ body {
 	font-family: sans-serif;
 	font-size: 20px;
 	color: #ffffff;
-	border-radius: 5px;
 	background-color: #11740b;
 }
 button {
@@ -90,6 +87,5 @@ button {
 	font-size: 20px;
 	color: #ffffff;
 	border: 1px solid #a41600;
-	border-radius: 7px;
 	background-color: #a41600;
 }
