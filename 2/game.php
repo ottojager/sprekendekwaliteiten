@@ -140,6 +140,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 	</body>
 </html>
 <?php
+// adding listeners
 if ($_SESSION['player_id'] == 11) {
 ?>
 <script>
