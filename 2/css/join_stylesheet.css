@@ -36,7 +36,6 @@ body {
     width: 60%;
     height: 100%;
     margin: 0 auto 0 auto;
-    border-radius: 10px;
     background-color: #fffefe;
     box-shadow: 0px 0 31px 0 #65606a;
 }
@@ -48,7 +47,6 @@ h1 {
     font-family: sans-serif;
     font-size: 2.7vw;
     color: #ffffff;
-    border-radius: 25px;
     background-color: #2752a3;
 }
 #naamstyle {
@@ -58,7 +56,6 @@ h1 {
     font-family: sans-serif;
     font-size: 1.6vw;
     color: #ffffff;
-    border-radius: 9px;
     background-color: #6e00bc;
 }
 #groepstyle {
@@ -68,11 +65,10 @@ h1 {
     font-family: sans-serif;
     font-size: 1.6vw;
     color: #ffffff;
-    border-radius: 9px;
     background-color: #6e00bc;
 }
 input[type=text] {
-    border-radius: 5px;
+    border-radius: 0px;
 }
 input[type=submit] {
     width: 30%;
@@ -81,6 +77,5 @@ input[type=submit] {
     font-family: sans-serif;
     font-size: 1.6vw;
     color: #ffffff;
-    border-radius: 10px;
     background-color: #a41600;
 }
