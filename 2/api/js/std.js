@@ -39,7 +39,7 @@ function leader_card(amount_players) {
 	for (i = 0; i <  amount_players; i += 1) {
 		document.getElementById(i.toString()).addEventListener('click', function() {
 			var id_player = this.id;
-			var list = document.getElementById('leider');
+			var list = document.getElementById('card_stack');
 			list.innerHTML = '';
 			game_info['players'][id_player]['stack'].forEach(function(item, index){
 				var child = document.createElement('li');

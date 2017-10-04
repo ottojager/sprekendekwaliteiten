@@ -17,14 +17,14 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		?>
 		<script>
 		function end_game() {
-				var xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function() {
-						if (this.readyState == 4 && this.status == 200) {
-								document.location.href = './end/';
-						}
-				};
-				xhttp.open("GET", "http://localhost/kwal-spel/2/api/end.php", true);
-				xhttp.send();
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.location.href = './end/';
+				}
+			};
+			xhttp.open("GET", "http://localhost/kwal-spel/2/api/end.php", true);
+			xhttp.send();
 		}
 		</script>
 		<?php } // end user only JS ?>
@@ -42,7 +42,8 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 				}
 
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
-				//check if displayed gotten card is less than the newest info ifso update HTML
+				// check if displayed gotten card is less than the newest info if so update HTML
+				<? if ($_SESSION['player_id'] != 11) { // update card list for players ?>
 				if (document.getElementById("card_stack").childNodes.length < game_info['players'][own_id]['stack'].length) {
 					// card stack
 					console.log('remaking cardstack')
@@ -59,6 +60,8 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 						notification.play();
 					}
 				}
+				<?php } ?>
+
 				//changing player list order
 				//check if the displayed player list doesn't match the new one ifso update HTMl
 				if (game_info['current_player'] != document.getElementById("player_list").firstElementChild.id) {
@@ -91,6 +94,12 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 					};
 
 					addListeners(amount_players);
+					<?php
+					// leader only
+					if ($_SESSION['player_id'] == 11) {
+					?>
+					leader_card(amount_players);
+					<?php } ?>
 					//check it is the players turn
 					if (game_info['current_player'] == own_id) {
 						document.getElementById("current_card").focus();
@@ -119,19 +128,14 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 			<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
 		</div>
 
-		<?php
-		if ($_SESSION['player_id'] != 11) { // if user is not the game leader
-		?>
-		<!-- keep these on one line or it will see a child element that isn't there -->
+		<!-- keep these on one line or JS will see a child element that isn't there -->
 		<ul id="card_stack" class="card_stack"></ul>
 		<?php
-		} else { // if user is game leader
+		if ($_SESSION['player_id'] == 11) { // if user is game leader
 			// Leader only end game, undo buttons, and card list
 		?>
-		<ul id="leider" class="card_stack"></ul>
-		<div id="leader">
-			<button onclick="end_game()">Game beindigen</button>
-			<button>Ongedaan maken</button>
+		<button onclick="end_game()">Game beindigen</button>
+		<button>Ongedaan maken</button>
 		</div>
 		<?php } // end leader only buttons ?>
 	</body>
@@ -142,8 +146,9 @@ if ($_SESSION['player_id'] == 11) {
 <script>
 leader_card(amount_players);
 </script>
-<?php } ?>
+<?php } else { ?>
 <script>
 addListeners(amount_players);
 //alert(document.getElementById("player_list").firstElementChild.text);
 </script>
+<?php } ?>
