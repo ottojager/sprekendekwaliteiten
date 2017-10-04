@@ -124,11 +124,9 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		?>
 		<!-- keep these on one line or it will see a child element that isn't there -->
 		<ul id="card_stack" class="card_stack"></ul>
-		<?php } ?>
-
 		<?php
-		// Leader only end game, undo buttons, and card list
-		if ($_SESSION['player_id'] == 11) { // if user is game leader
+		} else { // if user is game leader
+			// Leader only end game, undo buttons, and card list
 		?>
 		<ul id="leider" class="card_stack"></ul>
 		<div id="leader">
