@@ -21,7 +21,7 @@ time, mark, audio, video {
 html {
 	width: 100%;
 	height: 100%;
-    background-color: #fffefe;
+	background-color: #fffefe;/*fix tab here*/
 }
 body {
 	display: flex;
@@ -33,52 +33,52 @@ body {
 	flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
-    width: 60%;
-    height: 100%;
-    margin: 0 auto 0 auto;
-    background-color: #fffefe;
+	width: 60%;
+	height: 100%;
+	margin: 0 auto 0 auto;
+	background-color: #fffefe;
 }
 h1 {
-    width: 30%;
-    height: 47px;
-    margin: 15% auto 15% auto;
-    padding: 18px;
-    font-family: sans-serif;
-    font-size: 2.7vw;
-    color: #234152;
-    background-color: #fffefe;
+	width: 30%;
+	height: 47px;
+	margin: 15% auto 15% auto;
+	padding: 18px;
+	font-family: sans-serif;
+	font-size: 2.7vw;
+	color: #234152;
+	background-color: #fffefe;
 }
 #naamstyle {
-    width: 40%;
-    height: 35px;
-    margin: 13% auto 3% auto;
+	width: 40%;
+	height: 35px;
+	margin: 13% auto 3% auto;
 	padding: 1px;
-    font-family: sans-serif;
-    font-size: 1.6vw;
-    color: #ffffff;
-    background-color: #234152;
+	font-family: sans-serif;
+	font-size: 1.6vw;
+	color: #ffffff;
+	background-color: #234152;
 }
 #groepstyle {
-    width: 40%;
-    height: 35px;
-    margin: 5% auto 10% auto;
+	width: 40%;
+	height: 35px;
+	margin: 5% auto 10% auto;
 	padding: 1px;
-    font-family: sans-serif;
-    font-size: 1.6vw;
-    color: #ffffff;
-    background-color: #234152;
+	font-family: sans-serif;
+	font-size: 1.6vw;
+	color: #ffffff;
+	background-color: #234152;
 }
 input[type=text] {
-    border-radius: 0px;
+	border-radius: 0px;
 	border: 0px solid #234152;
 }
 input[type=submit] {
-    width: 30%;
-    height: 30%;
-    margin: 0% 35% 0% 35%;
-    font-family: sans-serif;
-    font-size: 1.6vw;
+	width: 30%;
+	height: 30%;
+	margin: 0% 35% 0% 35%;
+	font-family: sans-serif;
+	font-size: 1.6vw;
 	border: 0px solid #234152;
-    color: #ffffff;
-    background-color: #234152;
+	color: #ffffff;
+	background-color: #234152;
 }
