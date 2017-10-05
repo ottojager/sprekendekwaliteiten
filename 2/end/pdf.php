@@ -2,6 +2,10 @@
 session_start();
 require('../../fpdf/fpdf.php');
 
+if (!isset($_SESSION['player_id'] && !isset($_SESSION['game_id']))) {
+	header('Location: ../');
+}
+
 $game = $_SESSION['game_id'];
 $player = $_SESSION['player_id'];
 $json = json_decode(file_get_contents("../games/$game.json"), true);
