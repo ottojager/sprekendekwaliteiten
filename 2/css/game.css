@@ -95,7 +95,7 @@ h1 {
 }
 #player_list > li > button { /*Note to self: Talk to Bas about button inside li.*/
 	background: transparent;
-	border: none !important; /*and about his border style*/
+	border: 0px solid #020119;
 	color: #1f3f50;
 }
 #cards_left {
