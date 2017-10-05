@@ -21,7 +21,7 @@ time, mark, audio, video {
 html {
 	width: 100%;
 	height: 100%;
-	background-image: linear-gradient(to bottom, #ffffff, #71bbff);
+	background-color: #fefffe;
 }
 body {
 	display: flex;
@@ -37,14 +37,13 @@ body {
 	height: 100%;
 	margin: 0 auto 0 auto;
 	background-color: #fffefe;
-	box-shadow: 0px 0 31px 0 #65606a;
 }
 a {
 	margin-top: 13%;
-	padding: 4px;
+	padding: 6px;
 	font-family: calibri, sans-serif;
 	color: #ffffff;
-	background-color: #a82519;
+	background-color: #1f3f50;
 	border-radius: 0px;
 	text-decoration: none;
 }
