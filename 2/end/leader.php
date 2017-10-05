@@ -14,6 +14,6 @@
 		echo '</ul>';
 	}
 	?>
-	<a href="../delete.php">Game verlaaten</a>
+	<a href="../delete.php">Game verlaten</a>
 </body>
 </html>
