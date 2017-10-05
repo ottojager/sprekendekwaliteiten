@@ -8,7 +8,11 @@ if (!isset($_SESSION['player_id'] && !isset($_SESSION['game_id']))) {
 
 $game = $_SESSION['game_id'];
 $player = $_SESSION['player_id'];
-$json = json_decode(file_get_contents("../games/$game.json"), true);
+$json = json_decode(@file_get_contents("../games/$game.json"), true);
+if (!(bool)$json) { // if the json is empty or not existant
+	@unlink("../games/$game.json"); // remove bugged .json if it even exists
+	header('Location: ../delete.php'); // send to user to have it's session deleted
+}
 
 $pdf = new FPDF();
 $pdf->AddPage();
