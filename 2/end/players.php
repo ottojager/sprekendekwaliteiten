@@ -11,7 +11,12 @@
 		echo "<li>$value</li>";
 	}
 	echo '</ul>';
+
+	foreach ($json['players'] as $key => $value) {
+		echo '<a href="?p='.$value['player_id'].'">'.$value['name'].'</a> ';
+	}
 	?>
+
 	<a href="../delete.php">Game verlaaten</a>
 </body>
 </html>

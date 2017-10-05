@@ -38,7 +38,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 
 				// if game has ended
 				if (game_info['card_stack'] == 0) {
-					document.location.href = './end/';
+					document.location.href = './end/?p='+own_id;
 				}
 
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
