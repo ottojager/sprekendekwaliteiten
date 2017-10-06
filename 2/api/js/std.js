@@ -33,6 +33,12 @@ window.setInterval(function(){
 	start_update();
 }, 3000);
 
+function undo() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET", "http://localhost/kwal-spel/2/api/undo.php");
+	xhttp.send();
+};
+
 function leader_card(amount_players) {
 	"use strict";
 	var i;

@@ -136,7 +136,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 			// Leader only end game, undo buttons, and card list
 		?>
 		<button onclick="end_game()">Game beindigen</button>
-		<button>Ongedaan maken</button>
+		<button onclick="undo()">Ongedaan maken</button>
 		<?php } // end leader only buttons ?>
 	</body>
 </html>
