@@ -24,6 +24,7 @@ if (isset($_POST['makeLobbyButton'])) {
 				'players' => array(),
 				'game_started' => false,
 				'max_cards' => (int)$_POST['cards'],
+				'turn_action' => array().
 			);
 
 			file_put_contents("./games/$id.json", json_encode($game));

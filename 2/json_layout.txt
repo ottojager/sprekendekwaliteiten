@@ -23,4 +23,7 @@
 	'last_change': timestamp,
 	'game_started': bool,
 	'max_cards': int,
+	'turn_action': [
+		int,
+	]
 }

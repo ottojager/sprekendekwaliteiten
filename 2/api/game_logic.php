@@ -7,6 +7,8 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 if ($_SESSION['player_id'] == $json['current_player']) {
 	//check if player didn't select themself
 	if ($_GET['sel'] != $_SESSION['player_id']) {
+		//add to game info which player is selected
+		$json['turn-action'] = $_GET['sel'];
 		//add card to chosen players cards and draw new card
 		$json['players'][$_GET['sel']]['stack'][] = $json['current_card'];
 		$json['current_card'] = array_shift($json['card_stack']);
