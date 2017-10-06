@@ -21,6 +21,7 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 		$card_stack[] = $card['name'];
 	}
 	shuffle($card_stack);
+	$card_stack = array_slice($card_stack, 0, $json['max_cards']);
 
 	// create player card stacks
 	foreach($json['players'] as $key => $value) {
