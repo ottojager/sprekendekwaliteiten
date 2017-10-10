@@ -34,11 +34,19 @@ body {
 	background-color: #fffefe;
 }
 p {
+	width: 22%;
 	margin: 3% 0%;
 	padding: 4px;
+	font-family: sans-serif;
 	color: #c4f6f8;
 	background-color: #1f3f50;
 }
 ul {
+	font-family: sans-serif;
 	list-style: none;
+}
+a {
+	font-family: sans-serif;
+	background-color: #fefdfd;
+	text-decoration: none;
 }
