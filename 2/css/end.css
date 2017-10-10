@@ -18,3 +18,27 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+body {
+	display: flex;
+		display: -webkit-flex; /* Safari 6.1+ */
+		display: -ms-flex; /* IE 10 */
+	flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+	flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+	width: 60%;
+	height: 100%;
+	margin: 0 auto 0 auto;
+	background-color: #fffefe;
+}
+p {
+	margin: 3% 0%;
+	padding: 4px;
+	color: #c4f6f8;
+	background-color: #1f3f50;
+}
+ul {
+	list-style: none;
+}
