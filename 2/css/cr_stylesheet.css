@@ -38,7 +38,7 @@ body {
 	background-color: #fffefe;
 }
 h1 {
-	width: 30%;
+	width: 50%;
 	height: 47px;
 	margin: 15% auto 15% auto;
 	padding: 18px;
@@ -47,9 +47,10 @@ h1 {
 	font-weight: bold;
 	color: #1f3f50;
 	background-color: #fffefe;
+	text-align: center;
 }
 #formstyle {
-	width: 36%;
+	width: 50%;
 	height: 32px;
 	margin: 15% auto 15% auto;
 	padding: 4px;
@@ -59,16 +60,7 @@ h1 {
 	background-color: #1f3f50;
 }
 #cardstyle {
-	width: 36%;
-	height: 32px;
-	margin: 15% auto 15% auto;
-	padding: 4px;
-	font-family: sans-serif;
-	font-size: 24px;
-	color: #ffffff;
-	background-color: #1f3f50;
-}
-label {
+	width: 50%;
 	height: 32px;
 	margin: 15% auto 15% auto;
 	padding: 4px;
@@ -78,22 +70,22 @@ label {
 	background-color: #1f3f50;
 }
 input[type=text] {
-	border: 0px solid #123456;
+	border: 1px solid #1f3f50;
 	border-radius: 0px;
 }
 input[type=number] {
-	border: 0px solid #123456;
+	border: 1px solid #1f3f50;
 	border-radius: 0px;
 }
 input[type=submit] {
-	width: 100%;
+	width: 40%;
 	height: 32px;
-	margin: 25% auto 15% auto;
+	margin: 0% 30%;
 	padding: 4px;
 	font-family: sans-serif;
-	font-size: 1.6vw;
+	font-size: 24px;
 	color: #ffffff;
-	border: 0px solid #123456;
+	border: 1px solid #1f3f50;
 	border-radius: 0px;
 	background-color: #1f3f50;
 }
