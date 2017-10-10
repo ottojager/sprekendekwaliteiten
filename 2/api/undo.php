@@ -10,7 +10,6 @@ if ($_SESSION['player_id'] == 11) {
 		array_unshift($json['card_stack'], $json['current_card']);
 		//add last used to card to current card
 		$last_player = array_pop($json['turn_action']);
-		if
 		$json['current_card'] = array_pop($json['players'][$last_player]['stack']);
 		//turn current player 1 back
 		if ($json['current_player'] == 0) {
