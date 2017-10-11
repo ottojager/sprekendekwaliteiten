@@ -145,6 +145,9 @@ button {
 }
 @media screen and (min-width: 64em) /*1024px*/ {
 	body {
+		flex-direction: row;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
 		background-color: #ffffff; /*#1920ef;*/
 	}
 }

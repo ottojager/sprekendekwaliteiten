@@ -30,19 +30,22 @@ body {
 }
 #top {
 	display: flex;
+		display: -webkit-flex; /* Safari 6.1+ */
+		display: -ms-flex; /* IE 10 */
 	justify-content: space-around;
-    width: 40%;
+		-webkit-justify-content: space-around;
+		-ms-justify-content: space-around;
+    width: 100%;
     margin: 40px auto 0 auto;
     font-family: sans-serif;
-    font-size: 14px;
-    justify-content: space-around;
+    font-size: 17px;
 }
 #current {
-    max-height: 27.81%;
-    min-height: 19.20%;
+    height: 19.20%;
     width: 137px;
     margin: 26px;
     padding: 6px;
+	font-family: sans-serif;
     color: #ffffef;
     background-color: #1d5981;
 }
@@ -52,32 +55,40 @@ body {
     min-width: 119px;
     margin: 26px;
     padding: 6px;
+	font-family: sans-serif;
     color: #ffffef;
     border: 1px #830e73 solid;
     background-color: #830e73;
 }
 #graveyard {
-	height: 50px;
+	height: 45px;
 	width: 137px;
     margin: 26px;
     padding: 6px;
+	font-family: sans-serif;
     color: #ffffef;
     background-color: #a71d0f;
 }
 ul {
+	display: flex;
+		display: -webkit-flex; /* Safari 6.1+ */
+		display: -ms-flex; /* IE 10 */
+	justify-content: space-around;
+		-webkit-justify-content: space-around;
+		-ms-justify-content: space-around;
+	flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
     color: #000000;
-    font-family: calibri, sans-serif;
+	font-family: sans-serif;
     list-style: none;
 }
 ul li {
-    width: 13.73%;
+    width: 17%;
     height: 21.62%;
-    /*max-width: 7.83%;
-    max-height: 27.81%;
-    min-width: 97px;
-    min-height: 17.2%;*/
-    margin: 26px;
+    margin: 26px 0px;
     padding: 3px;
+	font-family: sans-serif;
     border: 17px solid #830e73;
     /*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
