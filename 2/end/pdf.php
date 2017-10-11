@@ -2,7 +2,7 @@
 session_start();
 require('../../fpdf/fpdf.php');
 
-if (!isset($_SESSION['player_id'] && !isset($_SESSION['game_id']))) {
+if (!isset($_SESSION['player_id']) && !isset($_SESSION['game_id'])) {
 	header('Location: ../');
 }
 
