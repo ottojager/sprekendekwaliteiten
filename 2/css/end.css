@@ -40,13 +40,16 @@ p {
 	font-family: sans-serif;
 	color: #c4f6f8;
 	background-color: #1f3f50;
+	text-align: center;
 }
 ul {
 	font-family: sans-serif;
 	list-style: none;
+	text-align: center;
 }
 a {
 	font-family: sans-serif;
 	background-color: #fefdfd;
 	text-decoration: none;
+	text-align: center;
 }
