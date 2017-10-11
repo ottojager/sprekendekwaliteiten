@@ -17,7 +17,7 @@ INSERT INTO cards (name) VALUES ('ijverig');
 INSERT INTO cards (name) VALUES ('kan relativeren');
 INSERT INTO cards (name) VALUES ('levendig');
 INSERT INTO cards (name) VALUES ('makkelijke prater');
-INSERT INTO cards (name) VALUES ('inlevingsvermogen');
+INSERT INTO cards (name) VALUES ('inlevings-vermogen');
 INSERT INTO cards (name) VALUES ('mild');
 INSERT INTO cards (name) VALUES ('moedig');
 INSERT INTO cards (name) VALUES ('nuchter');
