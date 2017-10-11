@@ -19,6 +19,7 @@
 	}
 	?>
 
+	<a href="./pdf.php">download de pdf</a>
 	<a href="../delete.php">Game verlaten</a>
 </body>
 </html>
