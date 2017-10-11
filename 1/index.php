@@ -3,7 +3,7 @@
         <script type="text/javascript">
             var cardStack =
                 <?php
-                $db = mysqli_connect('localhost', 'root');
+                $db = @mysqli_connect('localhost', 'root');
                 if (!$db) {
                     $db = mysqli_connect('localhost', 'root', 'r00t');
                 }
