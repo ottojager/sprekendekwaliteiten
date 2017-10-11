@@ -51,8 +51,6 @@ body {
 }
 #backButton {
 	height: 43px;
-	max-width: 16.83%;
-	min-width: 119px;
 	margin: 26px;
 	padding: 6px;
 	font-family: sans-serif;
@@ -85,12 +83,13 @@ ul {
 	list-style: none;
 }
 ul li {
-	width: 17%;
+	width: 20%;
 	height: 21.62%;
 	margin: 26px 0px;
 	padding: 3px;
 	font-family: sans-serif;
-	border: 17px solid #830e73;
+	color: #c4f6f8;
+	background-color: #234152;
 	/*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
 @media screen and (min-width: 40em) /*640px*/ {
