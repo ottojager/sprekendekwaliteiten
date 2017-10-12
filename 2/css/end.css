@@ -28,6 +28,12 @@ body {
 	flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
+	justify-content: space-around;
+		-webkit-justify-content: space-around;
+		-ms-justify-content: space-around;
+	align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
 	width: 60%;
 	height: 100%;
 	margin: 0 auto 0 auto;
