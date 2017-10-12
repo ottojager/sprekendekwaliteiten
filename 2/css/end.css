@@ -54,8 +54,10 @@ ul {
 	text-align: center;
 }
 a {
+	margin: 2px;
 	font-family: sans-serif;
-	background-color: #fefdfd;
+	background-color: #a82519;
 	text-decoration: none;
+	text-decoration-line: none;
 	text-align: center;
 }
