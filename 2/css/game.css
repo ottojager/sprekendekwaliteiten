@@ -60,13 +60,17 @@ h1 {
 	text-align: center;
 }
 #current_card {
-	flex: 1 1 auto;
+	flex: 0 0 auto;
 		-webkit-flex: 1 1 auto;
 		-ms-flex: 1 1 auto;
-	width: 33%;
-	height: 33%;
-	color: #c4f6f8;
-	background-color: #234152;
+	width: 0%;
+	height: 0%;
+	color: #234152;
+}
+img {
+	flex: 1 1 auto;
+	width: 39%;
+	height: 23%;
 }
 #player_list {
 	flex: 0 1 auto;
@@ -166,6 +170,7 @@ button {
 	}
 	h1 {
 		margin-right: 37%;
+		margin-left: 37%;
 	}
 	#current_card {
 		flex: 0 1 auto;
@@ -174,8 +179,8 @@ button {
 		align-self: flex-start;
 			-webkit-align-self: flex-start;
 			-ms-align-self: flex-start;
-		width: 33%;
-		height: 33%;
+		width: 0%;
+		height: 0%;
 		margin: 0% 13% 1% 7%;
 	}
 	#player_list > li:first-child {
