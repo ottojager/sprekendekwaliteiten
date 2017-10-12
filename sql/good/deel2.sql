@@ -28,7 +28,7 @@ INSERT INTO cards (name) VALUES ('vastberaden');
 INSERT INTO cards (name) VALUES ('verantwoordelijk');
 INSERT INTO cards (name) VALUES ('kan goed analyseren');
 INSERT INTO cards (name) VALUES ('voor jezelf opkomen');
-INSERT INTO cards (name) VALUES ('weet te ondescheiden');
+INSERT INTO cards (name) VALUES ('weet te onderscheiden');
 INSERT INTO cards (name) VALUES ('optimistisch');
 INSERT INTO cards (name) VALUES ('zelfstandig');
 INSERT INTO cards (name) VALUES ('ziet samenhang');
