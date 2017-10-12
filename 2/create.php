@@ -6,9 +6,9 @@ if (isset($_POST['makeLobbyButton'])) {
 			                                                          // TODO: add a propper minimum amount of cards
 			//list of filtered codes
 			$filtered_names = array (
-				'LUL','KUT','PIK','SEX','FUC','FUK','SUC','KKK','GAY','FAG','NIG','ZAK','POO','PIS','DIK','KOK','COK','ASS',
-				'TIT','JIZ','CUM','GOY','STD','NAZ','NZI','HEL','GUN','BOM','PRN','WWI','JAP','NIP','NAP','WAR','WII','HIV',
-				'SOA','HIS','HER','DWN'
+				'LUL','KUT','PIK','SEX','FUC','FUK','SUC','KKK','GAY','FAG','NIG','ZAK','POO','PIS','DIK','KOK','COK',
+				'ASS','TIT','JIZ','CUM','GOY','STD','NAZ','NZI','HEL','GUN','BOM','PRN','WWI','JAP','NIP','NAP','WAR',
+				'WII','HIV','SOA','HIS','HER','DWN','MOF'
 			);
 			// generate game id
 			do {
