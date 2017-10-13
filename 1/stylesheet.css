@@ -52,7 +52,7 @@ body {
 #backButton {
 	height: 43px;
 	margin: 26px;
-	padding: 6px;
+	padding: 6px 6px;
 	font-family: sans-serif;
 	color: #ffffef;
 	border: 1px #830e73 solid;
