@@ -62,7 +62,7 @@ if (isset($_POST['makeLobbyButton'])) {
 				</div>
 				<div id="cardstyle">
 					<label>Aantal kaarten:</label>
-					<input type="number" name="cards" min="0" max="70">
+					<input type="number" name="cards" min="0" max="70" value="70">
 				</div>
 					<input type="submit" value="Maak Lobby" name="makeLobbyButton">
 			</form>
