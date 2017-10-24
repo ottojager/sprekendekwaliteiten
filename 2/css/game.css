@@ -192,7 +192,6 @@ button {
 			-ms-align-self: flex-start;
 		width: 0%;
 		height: 0%;
-		margin: 0% 13% 1% 7%;
 	}
 	#player_list > li:first-child {
 		/*margin-top: 34%;*/
