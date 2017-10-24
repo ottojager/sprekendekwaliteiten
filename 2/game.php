@@ -117,7 +117,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 	</head>
 	<body>
 		<h1>Kwaliteitenspel</h1>
-		<img src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p>
+		<div id="card_display"><img src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
 		<ul id="player_list">
 			<?php
 			foreach ($json['players'] as $key => $value) {
