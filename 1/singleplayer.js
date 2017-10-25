@@ -25,7 +25,7 @@ function fillSlots() {
 function rewriteGraveyard() {
     "use strict";
     var i;
-    document.getElementById("graveyard").innerHTML = "Graveyard?<br>";
+    document.getElementById("graveyard").innerHTML = "Afval stapel<br>";
     for (i = 0; i < graveyard.length; i += 1) {
         document.getElementById("graveyard").innerHTML += graveyard[i] + "<br>";
     }
@@ -92,7 +92,7 @@ function reply_click(clicked_id) {
     		}
 			window.location.href = 'pdf.php?cards=' + cards;
 		});
-						 
+
         alert("Je hebt alle kaarten gehad. Klik op 'download PDF' om je resultaten te downloaden.");
     }
 }

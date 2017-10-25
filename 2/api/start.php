@@ -9,11 +9,8 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 
 	// Create card stack
 	// TODO: change this once we have a more central database
-	$db = mysqli_connect('localhost', 'root');
-	if (!$db) {
-		$db = mysqli_connect('localhost', 'root', 'r00t');
-	}
-	mysqli_select_db($db, "kwaliteitenspel");
+	$db = @mysqli_connect('localhost:3351', 'niels', 'aware');
+	mysqli_select_db($db, "kwalspelaccess");
 	$sql = "SELECT * FROM cards";
 	$result = mysqli_query($db, $sql);
 	$card_stack = array();

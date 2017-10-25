@@ -3,11 +3,8 @@
         <script type="text/javascript">
             var cardStack =
                 <?php
-                $db = @mysqli_connect('localhost', 'root');
-                if (!$db) {
-                    $db = mysqli_connect('localhost', 'root', 'r00t');
-                }
-                mysqli_select_db($db, "kwaliteitenspel");
+                $db = @mysqli_connect('localhost:3351', 'niels', 'aware');
+                mysqli_select_db($db, "kwalspelaccess");
                 $sql = "SELECT * FROM cards";
                 $result = mysqli_query($db, $sql);
                 $array = array();
@@ -27,7 +24,7 @@
         <div id="top">
             <div id="current"></div>
             <button id="backButton" onclick="backButton(this)">Ongedaan maken</button>
-            <div id="graveyard">oude</div>
+            <div id="graveyard">Afval stapel</div>
         </div>
         <ul>
         	<li><button id="slot1"></button></li>

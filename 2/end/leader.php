@@ -2,7 +2,7 @@
 <html lang="nl=NL">
 <head>
 	<title>Speelvorm 2</title>
-	<link rel="stylesheet" href="/../kwal-spel/2/css/end.css" type="text/css">
+	<link rel="stylesheet" href="/../css/end.css" type="text/css">
 	<link rel="icon" sizes="16x16" type="image/png" href="/../kwal-spel/2/css/Rainbow_placeholder.png">
 </head>
 <body>

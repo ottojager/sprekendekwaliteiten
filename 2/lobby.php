@@ -29,7 +29,7 @@ if (!(bool)$json) { // if $json actually has content
 							window.location.href = 'game.php';
 						}
 					};
-					xhttp.open("GET", "http://localhost/kwal-spel/2/api/start.php", true);
+					xhttp.open("GET", "http://reacursist.nl/kwaliteiten/2/api/start.php", true);
 					xhttp.send();
 				}
 				</script>

@@ -23,7 +23,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 					document.location.href = './end/';
 				}
 			};
-			xhttp.open("GET", "http://localhost/kwal-spel/2/api/end.php", true);
+			xhttp.open("GET", "http://reacursist.nl/kwaliteiten/2/api/end.php", true);
 			xhttp.send();
 		}
 		</script>
