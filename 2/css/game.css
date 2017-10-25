@@ -73,7 +73,7 @@ h1 {
 	height: 9%;
 	bottom: 37px;
     left: 160px;
-    font-size: 19px;
+    font-size: 20px;
 	color: #234152;
 	z-index: 2;
 }
@@ -121,6 +121,7 @@ img {
 	margin: 1%;
 	color: #1f3f50;
 	background-color: #fefeff;
+    font-size: 20px;
 	font-family: calibri, sans-serif;
 }
 .card_stack {
