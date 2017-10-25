@@ -69,10 +69,10 @@ h1 {
 }
 #current_card {
 	position: absolute;
-	width: 9%;
+	width: 50%;
 	height: 9%;
-	bottom: 69px;
-    left: 164px;
+	bottom: 37px;
+    left: 160px;
     font-size: 18px;
 	color: #234152;
 	z-index: 2;
@@ -190,8 +190,8 @@ button {
 		align-self: flex-start;
 			-webkit-align-self: flex-start;
 			-ms-align-self: flex-start;
-		width: 0%;
-		height: 0%;
+		width: 50%;
+		height: 9%;
 	}
 	#player_list > li:first-child {
 		/*margin-top: 34%;*/
