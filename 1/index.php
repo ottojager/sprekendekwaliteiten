@@ -30,14 +30,14 @@
             <div id="graveyard">oude</div>
         </div>
         <ul>
-        	<li id="slot1"></li>
-        	<li id="slot2"></li>
-        	<li id="slot3"></li>
-        	<li id="slot4"></li>
-        	<li id="slot5"></li>
-        	<li id="slot6"></li>
-        	<li id="slot7"></li>
-        	<li id="slot8"></li>
+        	<li><button id="slot1"></button></li>
+        	<li><button id="slot2"></button></li>
+        	<li><button id="slot3"></button></li>
+        	<li><button id="slot4"></button></li>
+        	<li><button id="slot5"></button></li>
+        	<li><button id="slot6"></button></li>
+        	<li><button id="slot7"></button></li>
+        	<li><button id="slot8"></button></li>
 		</ul>
     </body>
 </html>
