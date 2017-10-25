@@ -73,7 +73,7 @@ h1 {
 	height: 9%;
 	bottom: 37px;
     left: 160px;
-    font-size: 18px;
+    font-size: 19px;
 	color: #234152;
 	z-index: 2;
 }
@@ -111,6 +111,7 @@ img {
 #player_list > li > button { /*Note to self: Talk to Bas about button inside li.*/
 	background: transparent;
 	border: 0px solid #020119;
+    font-size: 24px;
 	color: #1f3f50;
 }
 #cards_left {
