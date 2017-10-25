@@ -43,10 +43,13 @@ body {
 	margin: 0 auto 0 auto;
 	background-color: #fffefe;
 }
+body > p:first-child {
+	margin-top: 3%;
+}
 p {
-	flex: 1 1 auto;
+	flex: 0 1 auto;
 	width: 23%;
-	margin: 3% 0%;
+	margin: 0% 0% 3% 0%;
 	padding: 4px;
 	font-family: sans-serif;
 	color: #c4f6f8;
@@ -54,7 +57,7 @@ p {
 	text-align: center;
 }
 ul {
-	flex: 1 1 auto;
+	flex: 0 1 auto;
 	font-family: sans-serif;
 	color: #000000;
 	background-color: #fffefe;
@@ -62,10 +65,11 @@ ul {
 	text-align: center;
 }
 a {
-	flex: 1 1 auto;
+	flex: 0 1 auto;
 	margin: 2px;
 	padding: 3px;
 	font-family: sans-serif;
+	color: #fffffe;
 	background-color: #a82519;
 	text-decoration: none;
 	text-decoration-line: none;
