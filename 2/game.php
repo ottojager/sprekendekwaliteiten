@@ -42,6 +42,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 				}
 
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
+				document.getElementById("card_image").alt = game_info['current_card'];
 				// check if displayed gotten card is less than the newest info if so update HTML
 
 				<?php if ($_SESSION['player_id'] != 11) { // update card list for players ?>
@@ -117,7 +118,7 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 	</head>
 	<body>
 		<h1>Kwaliteitenspel</h1>
-		<div id="card_display"><img src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
+		<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
 		<ul id="player_list">
 			<?php
 			foreach ($json['players'] as $key => $value) {
