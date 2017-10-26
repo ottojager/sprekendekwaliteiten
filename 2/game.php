@@ -118,8 +118,8 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 	</head>
 	<body>
 		<h1>Kwaliteitenspel</h1>
-		<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
-		<ul id="player_list">
+		<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p tabindex="1" id="current_card"></p></div>
+		<ul tabindex="2" id="player_list">
 			<?php
 			foreach ($json['players'] as $key => $value) {
 				echo '<li id="'.$value['player_id'].'">'.'<button>'.$value['name'].' (0)</button>'.'</li>';
@@ -131,13 +131,13 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 		</div>
 
 		<!-- keep these on one line or JS will see a child element that isn't there -->
-		<ul id="card_stack" class="card_stack"></ul>
+		<ul tabindex="3" id="card_stack" class="card_stack"></ul>
 		<?php
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
 			// Leader only end game, undo buttons, and card list
 		?>
-		<button onclick="end_game()">Game beindigen</button>
-		<button onclick="undo()">Ongedaan maken</button>
+		<button tabindex="4" onclick="end_game()">Game beindigen</button>
+		<button tabindex="5" onclick="undo()">Ongedaan maken</button>
 		<?php } // end leader only buttons ?>
 	</body>
 </html>
