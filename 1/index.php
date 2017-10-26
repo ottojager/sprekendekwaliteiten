@@ -26,7 +26,6 @@
 		<div id="top">
 			<div id="current"></div>
 			<button id="backButton" onclick="backButton(this)">Ongedaan maken</button>
-			<div id="graveyard">Afval stapel</div>
 		</div>
 		<ul>
 			<li><button id="slot1"></button></li>
@@ -38,5 +37,6 @@
 			<li><button id="slot7"></button></li>
 			<li><button id="slot8"></button></li>
 		</ul>
+		<div id="graveyard">Afval stapel</div>
 	</body>
 </html>
