@@ -80,7 +80,7 @@ ul {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 	color: #000000;
-	font-family: sans-serif;
+	font-family: sans-serif;/*note to self: change fonts*/
 	list-style: none;
 }
 ul li {
