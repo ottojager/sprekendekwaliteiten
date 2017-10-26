@@ -7,9 +7,11 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	$json = json_decode(file_get_contents("../games/$game.json"), true);
 	$json['game_started'] = true;
 
+	// connect to database
+	$config = json_decode(file_get_contents('../database_config.json')); // load the db connection info
+	$db = mysqli_connect($config['hostname'], $config['username'], $config['password']);
+
 	// Create card stack
-	// TODO: change this once we have a more central database
-	$db = @mysqli_connect('localhost:3351', 'niels', 'aware');
 	mysqli_select_db($db, "kwalspelaccess");
 	$sql = "SELECT * FROM cards";
 	$result = mysqli_query($db, $sql);
