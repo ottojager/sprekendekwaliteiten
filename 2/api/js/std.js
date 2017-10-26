@@ -1,6 +1,6 @@
 function reply_click(clicked_id) {
 	var xhttp = new XMLHttpRequest();
-	xhttp.open("GET", "http://reacursist.nl/kwaliteiten/2/api/game_logic.php?sel=" + clicked_id, true);
+	xhttp.open("GET", "http://localhost/kwal-spel/2/api/game_logic.php?sel=" + clicked_id, true);
 	xhttp.send();
 	start_update();
 }
@@ -23,7 +23,7 @@ function start_update() {
 			window.location.href = './delete.php'; // redirect users to delete.php to have session cleared
 		}
   	};
-	xhttp.open("GET", "http://reacursist.nl/kwaliteiten/2/api/check.php", true);
+	xhttp.open("GET", "http://localhost/kwal-spel/2/api/check.php", true);
 	xhttp.send();
 }
 
@@ -35,7 +35,7 @@ window.setInterval(function(){
 
 function undo() {
 	var xhttp = new XMLHttpRequest();
-	xhttp.open("GET", "http://reacursist.nl/kwaliteiten/2/api/undo.php");
+	xhttp.open("GET", "http://localhost/kwal-spel/2/api/undo.php");
 	xhttp.send();
 };
 
