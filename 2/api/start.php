@@ -8,7 +8,7 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	$json['game_started'] = true;
 
 	// connect to database
-	$config = json_decode(file_get_contents('../database_config.json')); // load the db connection info
+	$config = json_decode(file_get_contents('../database_config.json'), true); // load the db connection info
 	$db = mysqli_connect($config['hostname'], $config['username'], $config['password']);
 
 	// Create card stack
