@@ -73,6 +73,7 @@ h1 {
 	height: 9%;
 	bottom: 37px;
     left: 160px;
+	font-family: calibri, sans-serif;
     font-size: 20px;
 	color: #234152;
 	z-index: 2;
@@ -111,6 +112,7 @@ img {
 #player_list > li > button { /*Note to self: Talk to Bas about button inside li.*/
 	background: transparent;
 	border: 0px solid #020119;
+	font-family: calibri, sans-serif;
     font-size: 24px;
 	color: #1f3f50;
 }
@@ -121,8 +123,8 @@ img {
 	margin: 1%;
 	color: #1f3f50;
 	background-color: #fefeff;
-    font-size: 20px;
 	font-family: calibri, sans-serif;
+    font-size: 20px;
 }
 .card_stack {
 	flex: 0 auto;
