@@ -24,7 +24,7 @@
 	</head>
 	<body>
 		<div id="top">
-			<div id="current"></div>
+			<div id="huidig"><p>Huidige kaart:</p><div id="current"></div></div>
 			<button id="backButton" onclick="backButton(this)">Ongedaan maken</button>
 		</div>
 		<ul>
