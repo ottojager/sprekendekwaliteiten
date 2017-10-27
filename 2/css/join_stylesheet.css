@@ -50,24 +50,26 @@ h1 {
 	background-color: #fffefe;
 }
 #naamstyle {
-	width: 43%;
+	width: 47%;
 	height: 35px;
 	margin: 13% auto 3% auto;
-	padding: 1px;
+	padding: 5px 5px 0px 5px;
 	font-family: sans-serif;
 	font-size: 1.6vw;
 	color: #ffffff;
 	background-color: #234152;
+	text-align: center;
 }
 #groepstyle {
-	width: 43%;
+	width: 47%;
 	height: 35px;
 	margin: 5% auto 10% auto;
-	padding: 1px;
+	padding: 5px 5px 0px 5px;
 	font-family: sans-serif;
 	font-size: 1.6vw;
 	color: #ffffff;
 	background-color: #234152;
+	text-align: center;
 }
 input[type=text] {
 	border-radius: 0px;
