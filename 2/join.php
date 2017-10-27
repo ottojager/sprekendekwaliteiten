@@ -53,12 +53,12 @@ if (isset($_POST['join_button'])) {
 			<form method="post">
 				<h1>Kwaliteitenspel</h1>
 				<div id="naamstyle">
-					<label>Vul je naam:</label>
-					<input type="text" name="name">
+					<label for="name">Vul je naam in:</label>
+					 <input id="name"type="text" name="name">
 				</div>
 				<div id="groepstyle">
-					<label>Groepscode:</label>
-					<input type="text" name="code">
+					<label for="code">Groepscode:</label>
+					 <input id="code" type="text" name="code">
 				</div>
 				<input type="submit" value="Join" name="join_button">
 			</form>
