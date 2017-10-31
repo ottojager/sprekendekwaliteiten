@@ -68,7 +68,7 @@ h1 {
 	position: absolute;
 	width: 50%;
 	height: 9%;
-	bottom: 11%;
+	bottom: 12%;
     left: 34%;
 	font-family: calibri, sans-serif;
     font-size: 20px;
@@ -163,6 +163,9 @@ button img {
 @media screen and (min-width: 40em) /*640px*/ {
 	body {
 		background-color: #ffffff; /*#199bbe;*/
+		flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
 	}
 }
 @media screen and (min-width: 64em) /*1024px*/ {
@@ -178,9 +181,6 @@ button img {
 		flex-direction: row;
 			-webkit-flex-direction: row;
 			-ms-flex-direction: row;
-		flex-wrap: wrap;
-			-webkit-flex-wrap: wrap;
-			-ms-flex-wrap: wrap;
 		justify-content: space-around;
 			-webkit-justify-content: space-around;
 			-ms-justify-content: space-around;
