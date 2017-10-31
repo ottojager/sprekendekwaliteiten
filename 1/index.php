@@ -25,7 +25,7 @@
 	<body>
 		<div id="top">
 			<div id="huidig"><p>Huidige kaart:</p><div id="current"></div></div>
-			<button id="backButton" onclick="backButton(this)"><img src="Knop.png"></button>
+			<button id="backButton" onclick="backButton(this)"><img src="Knop.png" alt="Ongedaan maken"></button>
 		</div>
 		<ul>
 			<li><button id="slot1"></button></li>
