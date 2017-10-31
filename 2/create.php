@@ -8,7 +8,7 @@ if (isset($_POST['makeLobbyButton'])) {
 			$filtered_names = array (
 				'LUL','KUT','PIK','SEX','FUC','FUK','SUC','KKK','GAY','FAG','NIG','ZAK','POO','PIS','DIK','KOK','COK',
 				'ASS','TIT','JIZ','CUM','GOY','STD','NAZ','NZI','HEL','GUN','BOM','PRN','WWI','JAP','NIP','NAP','WAR',
-				'WII','HIV','SOA','HIS','HER','DWN','MOF'
+				'WII','HIV','SOA','HIS','HER','DWN','MOF','CBT',
 			);
 			// generate game id
 			do {

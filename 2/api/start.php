@@ -8,7 +8,7 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	$json['game_started'] = true;
 
 	// connect to database
-	$config = json_decode(file_get_contents('../database_config.json'), true); // load the db connection info
+	$config = json_decode(file_get_contents('../../database_config.json'), true); // load the db connection info
 	$db = mysqli_connect($config['hostname'], $config['username'], $config['password']);
 
 	// Create card stack
@@ -21,12 +21,12 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	}
 	shuffle($card_stack);
 	$card_stack = array_slice($card_stack, 0, $json['max_cards']);
+	$json['card_stack'] = $card_stack;
 
 	// create player card stacks
 	foreach($json['players'] as $key => $value) {
 		$json['players'][$key]['stack'] = array();
 	}
-	$json['card_stack'] = $card_stack;
 
 	//draw first card
 	$json['current_card'] = array_shift($json['card_stack']);
