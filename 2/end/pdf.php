@@ -17,7 +17,7 @@ if (!(bool)$json) { // if the json is empty or not existant
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial', 'B', 16); // set various font options (font family, style, size)
-$pdf->Cell(0, 10, 'Kwaliteiten spell', 0, 1, 'C'); // add text in a new 10 heigh centered cell without a border
+$pdf->Cell(0, 10, 'Kwaliteiten spel', 0, 1, 'C'); // add text in a new 10 heigh centered cell without a border
 
 $pdf->SetFont('Arial', '', 12); // reset font to something more standard
 foreach ($json['players'][$player]['stack'] as $key => $value) {
