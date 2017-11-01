@@ -60,8 +60,8 @@ h1 {
 	flex: 1 1 auto;
 		-webkit-flex: 1 1 auto;
 		-ms-flex: 1 1 auto;
-	width: 60%;
-	height: 39%;
+	width: 500px;
+	height: 279px;
 	position: relative;
 }
 #current_card {
@@ -167,6 +167,18 @@ button img {
 			-webkit-flex-wrap: wrap;
 			-ms-flex-wrap: wrap;
 	}
+	h1 {
+		flex: 0 0 auto;
+			-webkit-flex: 0 0 auto;
+			-ms-flex: 1 0 auto;
+	}
+	#card_display{
+		flex: 0 0 auto;
+			-webkit-flex: 1 0 auto;
+			-ms-flex: 1 1 auto;
+		width: 321px;
+		height: 0px;
+	}
 }
 @media screen and (min-width: 64em) /*1024px*/ {
 	body {
@@ -174,6 +186,10 @@ button img {
 			-webkit-flex-direction: row;
 			-ms-flex-direction: row;
 		background-color: #ffffff; /*#1920ef;*/
+	}
+	#card_display{
+		width: 421px;
+		height: 0px;
 	}
 }
 @media screen and (min-width: 80em) /*1280px*/ {
@@ -192,6 +208,10 @@ button img {
 	h1 {
 		margin-right: 37%;
 		margin-left: 37%;
+	}
+	#card_display{
+		width: 500px;
+		height: 279px;
 	}
 	#current_card {
 		flex: 0 1 auto;
