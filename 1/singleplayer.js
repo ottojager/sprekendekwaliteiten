@@ -45,6 +45,7 @@ function addListeners() {
 }
 
 function endGame() {
+    gameEnded = 1;
 	//top leegmaken
 	document.getElementById("top").innerHTML = "";
 	//button naar pdf toevoegen
@@ -61,7 +62,7 @@ function endGame() {
     	}
 		window.location.href = 'pdf.php?cards=' + cards;
 	});
-	
+
     alert("Je hebt alle kaarten gehad. Klik op 'download PDF' om je resultaten te downloaden.");
 }
 
@@ -69,6 +70,7 @@ addListeners();
 
 var graveyard = [];
 var lastChosenPosition = [];
+var gameEnded = 0;
 //kaarten schudden
 shuffle(cardStack);
 //8 handkaarten neerleggen
@@ -79,25 +81,27 @@ document.getElementById("current").innerHTML = currentCard;
 
 function reply_click(clicked_id) {
     "use strict";
-    var i;
-    lastChosenPosition.unshift(clicked_id);
-    if (clicked_id !== "graveyard") {
-        //plaats actieve kaart in graveyard array
-        graveyard.unshift(document.getElementById(clicked_id).innerHTML);
-        //vervang geselecteerde hand kaart met actieve kaart
-        document.getElementById(clicked_id).innerHTML = currentCard;
-    } else {
-        //actieve kaart in graveyard doen
-        graveyard.unshift(document.getElementById("current").innerHTML);
-    }
-    //graveyard reïninitaliseren
-    rewriteGraveyard();
-    //nieuwe kaart pakken en in current slot doen
-    currentCard = takeCard();
-    document.getElementById("current").innerHTML = currentCard;
-    //checken of de game eindigt
-    if (cardStack.length === 0 && currentCard == null) {
-		endGame();
+    if (gameEnded == 0) {
+        var i;
+        lastChosenPosition.unshift(clicked_id);
+        if (clicked_id !== "graveyard") {
+            //plaats actieve kaart in graveyard array
+            graveyard.unshift(document.getElementById(clicked_id).innerHTML);
+            //vervang geselecteerde hand kaart met actieve kaart
+            document.getElementById(clicked_id).innerHTML = currentCard;
+        } else {
+            //actieve kaart in graveyard doen
+            graveyard.unshift(document.getElementById("current").innerHTML);
+        }
+        //graveyard reïninitaliseren
+        rewriteGraveyard();
+        //nieuwe kaart pakken en in current slot doen
+        currentCard = takeCard();
+        document.getElementById("current").innerHTML = currentCard;
+        //checken of de game eindigt
+        if (cardStack.length === 0 && currentCard == null) {
+	           endGame();
+        }
     }
 }
 function backButton() {
