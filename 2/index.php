@@ -12,7 +12,13 @@ session_start();
 		<a href="create.php">Maak lobby</a>
 		<a href="join.php">Join lobby</a>
 <?php	if (isset($_SESSION['game_id'])) {
-			echo '<a href="./game.php">terug naar game</a> ';
+			$game = $_SESSION['game_id'];
+			$json = json_decode(file_get_contents("./games/$game.json"), true);
+			if ($json['game_started']) {
+				echo '<a href="./game.php">terug naar game</a> ';
+			} else {
+				echo '<a href="./lobby.php">terug naar game</a> ';
+			}
 			echo '<a href="./delete.php">delete session</a>';
 		}?>
 	</body>

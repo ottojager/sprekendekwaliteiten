@@ -5,6 +5,9 @@ if (!isset($_SESSION['game_id'])) {
 }
 $game = $_SESSION['game_id'];
 $json = json_decode(file_get_contents("./games/$game.json"), true);
+if ($json['game_started'] == false) {
+	header('location: ./lobby.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="nl=NL">
