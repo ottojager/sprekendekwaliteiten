@@ -75,7 +75,7 @@ h1 {
 	color: #234152;
 	z-index: 2;
 }
-img {
+#card_display img {
 	width: 100%;
 	height: 100%;
 	z-index: 1;
@@ -172,12 +172,10 @@ button img {
 			-webkit-flex: 0 0 auto;
 			-ms-flex: 1 0 auto;
 	}
-	#card_display{
-		flex: 0 0 auto;
-			-webkit-flex: 1 0 auto;
-			-ms-flex: 1 1 auto;
-		width: 321px;
-		height: 0px;
+	#card_display img {
+		width: 100%;
+		height: 100%;
+		z-index: 1;
 	}
 }
 @media screen and (min-width: 64em) /*1024px*/ {
@@ -187,9 +185,10 @@ button img {
 			-ms-flex-direction: row;
 		background-color: #ffffff; /*#1920ef;*/
 	}
-	#card_display{
-		width: 421px;
-		height: 0px;
+	#card_display img {
+		width: 100%;
+		height: 100%;
+		z-index: 1;
 	}
 }
 @media screen and (min-width: 80em) /*1280px*/ {
@@ -209,9 +208,10 @@ button img {
 		margin-right: 37%;
 		margin-left: 37%;
 	}
-	#card_display{
-		width: 500px;
-		height: 279px;
+	#card_display img {
+		width: 100%;
+		height: 100%;
+		z-index: 1;
 	}
 	#current_card {
 		flex: 0 1 auto;
