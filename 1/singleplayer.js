@@ -44,6 +44,27 @@ function addListeners() {
 		});
 }
 
+function endGame() {
+	//top leegmaken
+	document.getElementById("top").innerHTML = "";
+	//button naar pdf toevoegen
+	var btn = document.createElement("button");
+    btn.innerHTML = "download PDF";
+	btn.id ='pdf';
+	document.getElementById("top").appendChild(btn);
+	//listener aan button geven
+	document.getElementById("pdf").addEventListener('click', function() {
+		var cards = "";
+		var i;
+    	for (i = 1; i < 9; i += 1) {
+       		cards += document.getElementById("slot" + i.toString()).innerHTML + ",";
+    	}
+		window.location.href = 'pdf.php?cards=' + cards;
+	});
+	
+    alert("Je hebt alle kaarten gehad. Klik op 'download PDF' om je resultaten te downloaden.");
+}
+
 addListeners();
 
 var graveyard = [];
@@ -76,24 +97,7 @@ function reply_click(clicked_id) {
     document.getElementById("current").innerHTML = currentCard;
     //checken of de game eindigt
     if (cardStack.length === 0 && currentCard == null) {
-		//top leegmaken
-		document.getElementById("top").innerHTML = "";
-		//button naar pdf toevoegen
-		var btn = document.createElement("button");
-    	btn.innerHTML = "download PDF";
-		btn.id ='pdf';
-		document.getElementById("top").appendChild(btn);
-		//listener aan button geven
-		document.getElementById("pdf").addEventListener('click', function() {
-			var cards = "";
-			var i;
-    		for (i = 1; i < 9; i += 1) {
-        		cards += document.getElementById("slot" + i.toString()).innerHTML + ",";
-    		}
-			window.location.href = 'pdf.php?cards=' + cards;
-		});
-
-        alert("Je hebt alle kaarten gehad. Klik op 'download PDF' om je resultaten te downloaden.");
+		endGame();
     }
 }
 function backButton() {

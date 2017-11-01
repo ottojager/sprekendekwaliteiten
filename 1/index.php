@@ -38,5 +38,6 @@
 			<li><button id="slot8"></button></li>
 		</ul>
 		<div id="graveyard">Afval stapel</div>
+		<button id="endGame" onclick="endGame()"></button>
 	</body>
 </html>
