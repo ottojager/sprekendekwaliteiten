@@ -26,7 +26,6 @@
 		<h1>Spel</h1>
 		<div id="top">
 			<div id="huidig"><h2>Huidige kaart:</p><div id="current"></div></div>
-			<button id="backButton" onclick="backButton(this)"><img src="Knop.png" alt="Ongedaan maken"></button>
 		</div>
 		<ul>
 			<li><button id="slot1"></button></li>
@@ -38,9 +37,11 @@
 			<li><button id="slot7"></button></li>
 			<li><button id="slot8"></button></li>
 		</ul>
+		<a class="skiplink" href="#top">Back to top</a>
 		<div id="graveyard">
 			<h2>Afval stapel</h2>
 		</div>
+		<button id="backButton" onclick="backButton(this)"><img src="Knop.png" alt="Ongedaan maken"></button>
 		<button id="endGame" onclick="endGame()"></button>
 	</body>
 </html>
