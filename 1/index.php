@@ -18,13 +18,14 @@
 			;
 		</script>
 		<script type="text/javascript" src="singleplayer.js" defer></script>
-		<title>Speelvorm 1</title>
+		<title>Spelvorm 1 - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="Rainbow_placeholder.png">
 	</head>
 	<body>
+		<h1>Spel</h1>
 		<div id="top">
-			<div id="huidig"><p>Huidige kaart:</p><div id="current"></div></div>
+			<div id="huidig"><h2>Huidige kaart:</p><div id="current"></div></div>
 			<button id="backButton" onclick="backButton(this)"><img src="Knop.png" alt="Ongedaan maken"></button>
 		</div>
 		<ul>
@@ -37,7 +38,9 @@
 			<li><button id="slot7"></button></li>
 			<li><button id="slot8"></button></li>
 		</ul>
-		<div id="graveyard">Afval stapel</div>
+		<div id="graveyard">
+			<h2>Afval stapel</h2>
+		</div>
 		<button id="endGame" onclick="endGame()"></button>
 	</body>
 </html>

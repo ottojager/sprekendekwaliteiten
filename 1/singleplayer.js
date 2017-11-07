@@ -25,9 +25,19 @@ function fillSlots() {
 function rewriteGraveyard() {
     "use strict";
     var i;
-    document.getElementById("graveyard").innerHTML = "Afval stapel<br>";
-    for (i = 0; i < graveyard.length; i += 1) {
-        document.getElementById("graveyard").innerHTML += graveyard[i] + "<br>";
+    var garbage_pile = document.getElementById("graveyard"); //TODO: rename to something better than garbage_pile
+    garbage_pile.innerHTML = ""; // empty the list
+    var head = document.createElement('h2');
+    head.innerHTML = "Afval stapel";
+    garbage_pile.appendChild(head);
+
+    for (i = 0; (i < graveyard.length); i += 1) { // do a max of 3 items otherwise do all
+        if (i == 3) {
+            break;
+        }
+        var item = document.createElement('li');
+        item.innerHTML = graveyard[i];
+        garbage_pile.appendChild(item)
     }
 }
 
