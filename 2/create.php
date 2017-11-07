@@ -57,14 +57,16 @@ if (isset($_POST['makeLobbyButton'])) {
 			}
 			?>
 			<form method="post">
-				<h1>Kwaliteitenspel</h1>
-				<div id="formstyle">
+				<div id="title"><h1>Kwaliteitenspel</h1></div>
+				<div class="cardstyle">
 					<label>Naam:</label>
 					<input type="text" name="name">
 				</div>
-				<div id="cardstyle">
+				<div id="no_ones_gonna_look_trough_this_code_anyway" >
+				<div class="cardstyle">
 					<label>Aantal kaarten:</label>
 					<input type="number" name="cards" min="0" max="70" value="70">
+				</div>
 				</div>
 					<input type="submit" value="Maak Lobby" name="makeLobbyButton">
 			</form>
