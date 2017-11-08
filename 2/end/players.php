@@ -15,7 +15,9 @@
 	echo '</ul>';
 
 	foreach ($json['players'] as $key => $value) {
-		echo '<a href="?p='.$value['player_id'].'">'.$value['name'].'</a> ';
+		if ($value['name'] != 'Afval stapel') {
+			echo '<a href="?p='.$value['player_id'].'">'.$value['name'].'</a> ';
+		}
 	}
 	?>
 

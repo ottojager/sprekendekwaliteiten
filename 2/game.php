@@ -75,25 +75,29 @@ if ($json['game_started'] == false) {
 					console.log('cleared player list');
 					//fill list starting with the current till last player
 					for (var i = game_info['current_player']; i < amount_players; i += 1) {
-						console.log('adding player to list:' + i);
-						var li = document.createElement('li');
-						var button =  document.createElement('button');
-						button.innerHTML = game_info['players'][i]['name'] + '(' + game_info['players'][i]['stack'].length + ')';
-						li.appendChild(button);
-						li.id = i;
-						player_list.appendChild(li);
-					};
-					//check if player = 0 becuase this code is then useless
-					if (game_info['current_player'] > 0) {
-						//fill list starting with first player to the player before the current one
-						for (var i = 0; i < game_info['current_player']; i++) {
-							console.log('adding player to list 2:' + i);
+						if (game_info['players'][i]['name'] != 'Afval stapel') {
+							console.log('adding player to list:' + i);
 							var li = document.createElement('li');
 							var button =  document.createElement('button');
 							button.innerHTML = game_info['players'][i]['name'] + '(' + game_info['players'][i]['stack'].length + ')';
 							li.appendChild(button);
 							li.id = i;
 							player_list.appendChild(li);
+						}
+					};
+					//check if player = 0 becuase this code is then useless
+					if (game_info['current_player'] > 0) {
+						//fill list starting with first player to the player before the current one
+						for (var i = 0; i < game_info['current_player']; i++) {
+							if (game_info['players'][i]['name'] != 'Afval stapel') {
+								console.log('adding player to list 2:' + i);
+								var li = document.createElement('li');
+								var button =  document.createElement('button');
+								button.innerHTML = game_info['players'][i]['name'] + '(' + game_info['players'][i]['stack'].length + ')';
+								li.appendChild(button);
+								li.id = i;
+								player_list.appendChild(li);
+							}
 						};
 					};
 
@@ -137,7 +141,9 @@ if ($json['game_started'] == false) {
 		<ul tabindex="2" id="player_list">
 			<?php
 			foreach ($json['players'] as $key => $value) {
-				echo '<li id="'.$value['player_id'].'">'.'<button>'.$value['name'].' (0)</button>'.'</li>';
+				if ($value['name'] != 'Afval stapel') {
+					echo '<li id="'.$value['player_id'].'">'.'<button>'.$value['name'].' (0)</button>'.'</li>';
+				}
 			}
 			?>
 		</ul>

@@ -4,34 +4,38 @@ session_set_cookie_params(24*60*60); // change how long session cookies last
 session_start();
 if (isset($_POST['join_button'])) {
 	if (strlen(str_replace(' ', '', $_POST['name'])) >= 3) {
-		$code = strtoupper($_POST['code']);
-		if (strlen($code) == 3) {
-			$games_list = scandir("games");
-			if (in_array($code.'.json', $games_list)) {
-				$json = json_decode(file_get_contents("./games/$code.json"), true);
-				if (!$json['game_started']) {
-					$id = count($json['players']);
-					if ($id > 10) {
-						$error = 'lobby is vol';
+		if ($_POST['name'] != 'Afval stapel') {
+			$code = strtoupper($_POST['code']);
+			if (strlen($code) == 3) {
+				$games_list = scandir("games");
+				if (in_array($code.'.json', $games_list)) {
+					$json = json_decode(file_get_contents("./games/$code.json"), true);
+					if (!$json['game_started']) {
+						$id = count($json['players']);
+						if ($id > 10) {
+							$error = 'lobby is vol';
+						} else {
+							$json['players'][] = array(
+								'name' => $_POST['name'],
+								'player_id' => $id,
+							);
+							$json['last_change'] = time();
+							file_put_contents("./games/$code.json", json_encode($json));
+							$_SESSION['player_id'] = $id;
+							$_SESSION['game_id'] = $code;
+							header('Location: lobby.php');
+						}
 					} else {
-						$json['players'][] = array(
-							'name' => $_POST['name'],
-							'player_id' => $id,
-						);
-						$json['last_change'] = time();
-						file_put_contents("./games/$code.json", json_encode($json));
-						$_SESSION['player_id'] = $id;
-						$_SESSION['game_id'] = $code;
-						header('Location: lobby.php');
+						$error = 'Je kan geen game joinen als die al bezig is.';
 					}
 				} else {
-					$error = 'Je kan geen game joinen als die al bezig is.';
+					$error = 'Verkeerde code of lobby bestaat niet';
 				}
 			} else {
-				$error = 'Verkeerde code of lobby bestaat niet';
+				$error = 'Code moet 3 letters zijn.';
 			}
 		} else {
-			$error = 'Code moet 3 letters zijn.';
+			$error = 'Die naam is gereseveert';
 		}
 	} else {
 		$error = 'Naam moet minimaal 3 letters bevaten.';

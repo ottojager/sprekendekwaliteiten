@@ -8,12 +8,14 @@
 <body>
 	<?php
 	foreach ($json['players'] as $key => $player) {
-		echo '<p>'.$player['name'].':</p>';
-		echo '<ul>';
-		foreach ($player['stack'] as $key => $value) {
-			echo "<li>$value</li>";
+		if ($player['name'] != 'Afval stapel') {
+			echo '<p>'.$player['name'].':</p>';
+			echo '<ul>';
+			foreach ($player['stack'] as $key => $value) {
+				echo "<li>$value</li>";
+			}
+			echo '</ul>';
 		}
-		echo '</ul>';
 	}
 	?>
 	<a href="../delete.php">Spel verlaten</a>
