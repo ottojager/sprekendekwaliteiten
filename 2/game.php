@@ -155,6 +155,15 @@ if ($json['game_started'] == false) {
 
 		<!-- keep these on one line or JS will see a child element that isn't there -->
 		<ul tabindex="4" id="card_stack" class="card_stack"></ul>
+		<button
+		<?php
+		if ($_SESSION['player_id'] == 11) {
+			echo 'onclick="view_cards('. (count($json['players'])-1) .')"';
+		} else {
+			echo 'onclick="reply_click('. (count($json['players'])-1) .')"';
+		}
+		?>
+		>Afval stapel</button>
 		<?php
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
 			// Leader only end game, undo buttons, and card list

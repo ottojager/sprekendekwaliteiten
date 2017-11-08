@@ -44,14 +44,17 @@ function leader_card(amount_players) {
 	var i;
 	for (i = 0; i <  amount_players; i += 1) {
 		document.getElementById(i.toString()).addEventListener('click', function() {
-			var id_player = this.id;
-			var list = document.getElementById('card_stack');
-			list.innerHTML = '';
-			game_info['players'][id_player]['stack'].forEach(function(item, index){
-				var child = document.createElement('li');
-				child.innerHTML = item;
-				list.appendChild(child);
-			});
+			view_cards(this.id);
 		});
 	}
+}
+
+function view_cards(id_player) {
+	var list = document.getElementById('card_stack');
+	list.innerHTML = '';
+	game_info['players'][id_player]['stack'].forEach(function(item, index){
+		var child = document.createElement('li');
+		child.innerHTML = item;
+		list.appendChild(child);
+	});
 }
