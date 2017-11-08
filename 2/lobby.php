@@ -14,7 +14,7 @@ if (!(bool)$json) { // if $json actually has content
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
-		<title>Speelvorm 2</title>
+		<title>Lobby - Feedback - Kwaliteitenspel</title>
 		<script src="api/js/std.js"></script>
 
 		<?php
