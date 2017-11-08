@@ -62,7 +62,7 @@ if (isset($_POST['join_button'])) {
 					<label for="code">Groepscode:</label>
 					 <input id="code" type="text" name="code">
 				</div>
-				<input type="submit" value="Join" name="join_button">
+				<input type="submit" value="Doe mee" name="join_button">
 			</form>
 		</div>
 	</body>

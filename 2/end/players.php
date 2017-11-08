@@ -20,6 +20,6 @@
 	?>
 
 	<a href="./pdf.php">download de pdf</a>
-	<a href="../delete.php">Game verlaten</a>
+	<a href="../delete.php">Spel verlaten</a>
 </body>
 </html>

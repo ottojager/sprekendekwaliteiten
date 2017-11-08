@@ -80,8 +80,9 @@ if (!(bool)$json) { // if $json actually has content
 	</head>
 	<body>
 		<div id="main">
+			<h2 id="game_id">Spel code:</h2>
 			<?php
-			echo '<h3 id="game_id">'.$json['game_id'].'</h3>';
+			echo '<p>'.$json['game_id'].'</p>';
 			echo '<p id="leader">Leider: '.$json['leader_name'].'</p>';
 			echo '<ol id="player_list">';
 			foreach ($json['players'] as $key => $value) {

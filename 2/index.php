@@ -9,8 +9,9 @@ session_start();
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<a href="create.php">Maak lobby</a>
-		<a href="join.php">Join lobby</a>
+		<h1>Feedback - Kwaliteitenspel</h1>
+		<a href="create.php">Aanmaken spel</a>
+		<a href="join.php">Doe mee aan spel</a>
 <?php	if (isset($_SESSION['game_id'])) {
 			$game = $_SESSION['game_id'];
 			$json = json_decode(file_get_contents("./games/$game.json"), true);
