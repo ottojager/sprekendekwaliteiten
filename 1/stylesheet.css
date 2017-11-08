@@ -129,7 +129,7 @@ ul li button {
 		background-color: #ffffff; /*#199bbe;*/
 	}
 }
-@media screen and (min-width: 64em) /*1024px*/ {
+@media screen and (min-width: 60em) /*992px*/ {
 	body {
 		background-color: #fffffe; /*#1920ef;*/
 	}
