@@ -62,7 +62,7 @@ if (!(bool)$json) { // if $json actually has content
 							xhttp.open("GET", "http://localhost/kwal-spel/2/api/kick.php?p="+index, false);
 							xhttp.send();
 						}
-						button.innerHTML = 'X';
+						button.innerHTML = '<img src="css/trash-icon.png" alt="verwijderen" height="25" width="25">';
 						child.appendChild(button);
 					<?php } ?>
 
@@ -87,7 +87,7 @@ if (!(bool)$json) { // if $json actually has content
 			echo '<ol id="player_list">';
 			foreach ($json['players'] as $key => $value) {
 				if ($_SESSION['player_id'] == 11) {
-					echo '<li>'.$value['name'].'<button onclick="alert(\''.$key.'\')">X</button></li>';
+					echo '<li>'.$value['name'].'<button onclick="alert(\''.$key.'\')"><img src="css/trash-icon.png" alt="verwijderen" height="25" width="25"></button></li>';
 				} else {
 					echo '<li>'.$value['name'].'</li>';
 				}
