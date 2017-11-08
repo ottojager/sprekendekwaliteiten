@@ -140,6 +140,8 @@ if ($json['game_started'] == false) {
 			<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
 		</div>
 
+		<a class="skiplink" href="#top">Naar huidige kaart</a>
+
 		<!-- keep these on one line or JS will see a child element that isn't there -->
 		<ul tabindex="4" id="card_stack" class="card_stack"></ul>
 		<?php
