@@ -18,15 +18,16 @@
 			;
 		</script>
 		<script type="text/javascript" src="singleplayer.js" defer></script>
-		<title>Spelvorm 1 - Kwaliteitenspel</title>
+		<title>Bewustwording - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="Rainbow_placeholder.png">
 	</head>
 	<body>
-		<h1>Spel</h1>
+		<h1>Kwaliteitenspel - Bewustwording</h1>
 		<div id="top">
 			<div id="huidig"><h2>Huidige kaart:</p><div id="current"></div></div>
 		</div>
+		<h2>Kaarten</h2>
 		<ul>
 			<li><button id="slot1"></button></li>
 			<li><button id="slot2"></button></li>
@@ -37,7 +38,7 @@
 			<li><button id="slot7"></button></li>
 			<li><button id="slot8"></button></li>
 		</ul>
-		<a class="skiplink" href="#top">Back to top</a>
+		<a class="skiplink" href="#top">Naar huidige kaart</a>
 		<div id="graveyard">
 			<h2>Afval stapel</h2>
 		</div>
