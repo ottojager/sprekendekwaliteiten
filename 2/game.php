@@ -129,6 +129,11 @@ if ($json['game_started'] == false) {
 			}
 		?></h2>
 		<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p tabindex="1" id="current_card"></p></div>
+
+		<div id="blind_current_player" tabindex="1">
+			<?php echo "huidige speler: " . $json['players'][$json['current_player']]['name'] ?>
+		</div>
+
 		<ul tabindex="2" id="player_list">
 			<?php
 			foreach ($json['players'] as $key => $value) {
