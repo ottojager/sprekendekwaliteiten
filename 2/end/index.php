@@ -11,7 +11,7 @@ if ($json['game_started'] == false) {
 	header('Location: ../');
 }
 
-if ($json['card_stack'] == array()) {
+if ($json['card_stack'] != array()) {
 	header('Location: ../game.php');
 }
 if (!(bool)$json) { // if $json actually has content
