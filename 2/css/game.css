@@ -80,6 +80,11 @@ h1 {
 	height: 100%;
 	z-index: 1;
 }
+#blind_current_player {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
 #player_list {
 	flex: 0 1 auto;
 		-webkit-flex: 0 1 auto;

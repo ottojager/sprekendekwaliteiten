@@ -28,7 +28,6 @@
 		<div id="top">
 			<div id="huidig"><h2>Huidige kaart:</h2><div id="current"></div></div>
 		</div>
-		<div>
 		<h2>Kaarten</h2>
 		<ul>
 			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend%20goed.png"><button id="slot1"></button></li>
@@ -40,8 +39,6 @@
 			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend%20goed.png"><button id="slot7"></button></li>
 			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend%20goed.png"><button id="slot8"></button></li>
 		</ul>
-		</div>
-		<div style="clear: both;"></div>
 		<a class="skiplink" href="#top">Naar huidige kaart</a>
 		<div id="graveyard">
 			<h2>Afval stapel</h2>

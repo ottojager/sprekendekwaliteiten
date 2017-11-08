@@ -19,14 +19,18 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 html {
-	width: 100%;
-	height: 100%;
+
 }
 body {
-	width: 70%;
-	height: 100%;
+	max-width: 1200px;
 	margin: 0 auto 0 auto;
 	background-color: #fffefe;
+}
+h1 {
+	margin: 25px 0 25px 0;
+	font-family: sans-serif;
+	font-size: 21px;
+	text-align: center;
 }
 #top {
 	display: flex;
@@ -40,9 +44,8 @@ body {
 	font-family: sans-serif;
 	font-size: 17px;
 }
-#huidig p {
+#huidig h2 {
 	width: 137px;
-	padding: 6px 6px 0px 6px;
 	font-family: sans-serif;
 	color: #ffffef;
 	background-color: #a71d0f;
@@ -50,7 +53,6 @@ body {
 #current {
 	height: 19.20%;
 	width: 137px;
-	/*margin: 0px;*/
 	padding: 6px;
 	font-family: sans-serif;
 	color: #ffffef;
@@ -71,47 +73,54 @@ body {
 	height: 70px;
 	width: 258px;
 }
+.skiplink {
+	right: 300%;
+	position: absolute;
+}
+.skiplink:focus {
+	position: absolute;
+	right: inherit;
+	background-color: #a71d0f;
+	border: 6px solid #234152;
+	text-decoration: none;
+}
 #graveyard {
-	height: auto;
-	width: 137px;
+	/*height: auto;*/
+	width: 168px;
 	margin: 26px;
 	padding: 6px;
 	font-family: sans-serif;
 	font-size: 17px;
 	color: #ffffef;
 	background-color: #a71d0f;
+	list-style: none;
 }
 ul {
-	display: flex;
-		display: -webkit-flex; /* Safari 6.1+ */
-		display: -ms-flex; /* IE 10 */
-	justify-content: space-around;
-		-webkit-justify-content: space-around;
-		-ms-justify-content: space-around;
-	flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
 	color: #000000;
 	font-family: sans-serif;/*note to self: change fonts*/
 	list-style: none;
 }
 ul li {
-	width: 20%;
-	height: 21.62%;
-	margin: 26px 0px;
-	padding: 3px;
+	/*width: 320px;
+	height: 200px;*/
+	margin: 20px auto;
 	background-color: #ffffff;
 }
-ul li button {
+
+ul li img {
 	width: 100%;
-	height: 40%;
-	margin: 26px 0px;
-	padding: 3px;
+	z-index: 1;
+}
+ul li button {
+	position: relative;
+	height: 24px;
+	bottom: 40px;
+	left: 18%;
 	font-family: sans-serif;
-	font-size: 19px;
-	color: #c4f6f8;
-	border: 0px solid #234152;
-	background-color: #234152;
+	color: #234152;
+	border: 0px solid #c4f6f8;
+	background-color: transparent;
+	z-index: 2;
 	/*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
 @media screen and (min-width: 40em) /*640px*/ {
@@ -129,14 +138,9 @@ ul li button {
 		background-color: #ffffff;
 	}
 	#top {
-		display: flex;
-			display: -webkit-flex; /* Safari 6.1+ */
-			display: -ms-flex; /* IE 10 */
-		justify-content: space-around;
-			-webkit-justify-content: space-around;
-			-ms-justify-content: space-around;
-		margin: 40px auto 0 auto;
-		font-family: sans-serif;
 		font-size: 17px;
+	}
+	ul li button {
+		bottom: 40px;
 	}
 }
