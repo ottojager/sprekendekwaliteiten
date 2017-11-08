@@ -45,7 +45,7 @@ if (isset($_POST['makeLobbyButton'])) {
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
-		<title>Speelvorm 2</title>
+		<title>Aanmaken spel - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/cr_stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>

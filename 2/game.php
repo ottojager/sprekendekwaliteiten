@@ -12,7 +12,6 @@ if ($json['game_started'] == false) {
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
-		<title>Speelvorm 2</title>
 		<script src="api/js/std.js"></script>
 		<?php
 		// leader only JS
@@ -116,11 +115,19 @@ if ($json['game_started'] == false) {
 				};
 			}, 5000);
 		</script>
+		<title>Spel - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/game.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<h1>Kwaliteitenspel</h1>
+		<h1>Spel - Feedback - Kwaliteitenspel</h1>
+		<h2><?php
+			if ($_SESSION['player_id'] == 11) {
+				echo 'Spelleider';
+			} else {
+				echo $json['players'][ $_SESSION['player_id'] ]['name']; // look it works don't touch it
+			}
+		?></h2>
 		<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p tabindex="1" id="current_card"></p></div>
 		<ul tabindex="2" id="player_list">
 			<?php
