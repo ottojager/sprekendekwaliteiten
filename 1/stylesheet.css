@@ -114,9 +114,10 @@ ul li img {
 ul li button {
 	position: relative;
 	height: 24px;
-	bottom: 40px;
+	bottom: 66px;
 	left: 18%;
 	font-family: sans-serif;
+	font-size: 21px;
 	color: #234152;
 	border: 0px solid #c4f6f8;
 	background-color: transparent;
@@ -131,6 +132,10 @@ ul li button {
 @media screen and (min-width: 64em) /*1024px*/ {
 	body {
 		background-color: #fffffe; /*#1920ef;*/
+	}
+	ul li button {
+		font-size: 14px;
+		bottom: 40px;
 	}
 }
 @media screen and (min-width: 80em) /*1280px*/ {
