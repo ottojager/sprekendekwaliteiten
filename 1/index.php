@@ -42,11 +42,11 @@
 		</ul>
 		</div>
 		<div style="clear: both;"></div>
+		<button class="col-xs-12 col-sm-6 col-md-3" id="backButton" onclick="backButton(this)"><img src="Knop.png" alt="Ongedaan maken"></button>
 		<a class="skiplink" href="#top">Naar huidige kaart</a>
-		<ul id="graveyard">
-			<li><h2>Afval stapel</h2></li>
+		<ul class="col-xs-12 col-sm-6 col-md-3" id="graveyard">
+			<li><h2>Afleg stapel</h2></li>
 		</ul>
-		<button id="backButton" onclick="backButton(this)"><img src="Knop.png" alt="Ongedaan maken"></button>
-		<button id="endGame" onclick="endGame()"></button>
+		<button class="col-xs-12 col-sm-6 col-md-3" id="endGame" onclick="endGame()">Be&#235;indig spel</button>
 	</body>
 </html>
