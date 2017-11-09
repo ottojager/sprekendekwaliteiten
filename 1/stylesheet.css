@@ -80,7 +80,7 @@ h1 {
 .skiplink:focus {
 	position: absolute;
 	right: inherit;
-	background-color: #a71d0f;
+	background-color: #abd5d9;
 	border: 6px solid #234152;
 	text-decoration: none;
 }
@@ -131,12 +131,13 @@ ul li button {
 	background-color: #a71d0f;
 }
 #endGame {
+	width: 168px;
 	margin: 26px;
 	font-family: sans-serif;
 	color: #234152;
 	border: 0px solid #c4f6f8;
 }
-@media screen and (min-width: 56em) /*768px*/ {
+@media screen and (min-width: 48em) /*768px*/ {
 	body {
 		background-color: #fffefe; /*#199bbe;*/
 	}
@@ -144,7 +145,7 @@ ul li button {
 		bottom: 55px;
 	}
 }
-@media screen and (min-width: 60em) /*992px*/ {
+@media screen and (min-width: 62em) /*992px*/ {
 	body {
 		background-color: #fffffe; /*#1920ef;*/
 	}
