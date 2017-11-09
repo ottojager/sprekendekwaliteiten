@@ -43,9 +43,9 @@
 		</div>
 		<div style="clear: both;"></div>
 		<a class="skiplink" href="#top">Naar huidige kaart</a>
-		<div id="graveyard">
-			<h2>Afval stapel</h2>
-		</div>
+		<ul id="graveyard">
+			<li><h2>Afval stapel</h2></li>
+		</ul>
 		<button id="backButton" onclick="backButton(this)"><img src="Knop.png" alt="Ongedaan maken"></button>
 		<button id="endGame" onclick="endGame()"></button>
 	</body>

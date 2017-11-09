@@ -27,9 +27,11 @@ function rewriteGraveyard() {
     var i;
     var garbage_pile = document.getElementById("graveyard"); //TODO: rename to something better than garbage_pile
     garbage_pile.innerHTML = ""; // empty the list
+    var head_li = document.createElement('li');
     var head = document.createElement('h2');
     head.innerHTML = "Afval stapel";
-    garbage_pile.appendChild(head);
+    head_li.appendChild(head)
+    garbage_pile.appendChild(head_li);
 
     for (i = 0; (i < graveyard.length); i += 1) { // do a max of 3 items otherwise do all
         if (i == 3) {
