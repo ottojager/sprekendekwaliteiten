@@ -61,22 +61,51 @@ function endGame(no_confirm) {
         gameEnded = 1;
         //top leegmaken
         document.getElementById("top").innerHTML = "";
-        //button naar pdf toevoegen
-        var btn = document.createElement("button");
-        btn.innerHTML = "download PDF";
-        btn.id ='pdf';
-        document.getElementById("top").appendChild(btn);
-        //listener aan button geven
-        document.getElementById("pdf").addEventListener('click', function() {
+
+        // container div
+        var div = document.createElement('div');
+
+        //input field for email
+        var email = document.createElement('input');
+        email.id = 'email';
+        email.type = 'email';
+        div.appendChild(email);
+        var btn = document.createElement('button');
+        btn.onclick = function() {
+            var email = document.getElementById('email').value;
+            var pattern = /[^@]*@[^@]*\..{2,}/;
+            var match = pattern.test(email);
+            var p = document.getElementById('error');
+            if (!match) {
+                p.innerHTML = 'Het ingevulde email adderess klopt niet';
+                exit();
+            } else {
+                p.innerHTML = '';
+            }
+
             var cards = "";
             var i;
             for (i = 1; i < 9; i += 1) {
                 cards += document.getElementById("slot" + i.toString()).innerHTML + ",";
             }
-            window.location.href = 'pdf.php?cards=' + cards;
-        });
 
-        alert("Je hebt alle kaarten gehad. Klik op 'download PDF' om je resultaten te downloaden.");
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+                    // just do nothig for the time being
+				}
+			};
+			xhttp.open("GET", "http://localhost/kwal-spel/1/mail.php?cards=" + cards + "&email=" + email, true);
+			xhttp.send();
+        }
+        btn.innerHTML='Stuur e-mail';
+        div.appendChild(btn);
+        // for later adding error messages
+        var p = document.createElement('p');
+        p.id = 'error';
+        div.appendChild(p);
+        document.getElementById("top").appendChild(div);
+        alert("Je hebt alle kaarten gehad. Vul je email in en klik op \"Stuur email\" om de resultaten als email naar jezelf te stuuren.");
     }
 
 }
