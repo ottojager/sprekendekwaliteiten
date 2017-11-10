@@ -50,13 +50,21 @@ h1 {
 	color: #ffffef;
 	background-color: #a71d0f;
 }
+#huidig img {
+	width: 237px;
+	z-index: 1;
+}
 #current {
-	height: 19.20%;
-	width: 137px;
-	padding: 6px;
+	position: relative;
+	height: 24px;
+	bottom: 32px;
+	left: 13%;
 	font-family: sans-serif;
-	color: #ffffef;
-	background-color: #1d5981;
+	font-size: 16px;
+	color: #234152;
+	border: 0px solid #c4f6f8;
+	background-color: transparent;
+	z-index: 2;
 }
 #backButton {
 	height: 70px;
@@ -81,7 +89,9 @@ h1 {
 	position: absolute;
 	right: inherit;
 	background-color: #abd5d9;
-	border: 6px solid #234152;
+	border: 0px solid #a71d0f;
+	border-bottom-width: 6px;
+	border-left-width: 6px;
 	text-decoration: none;
 }
 ul {

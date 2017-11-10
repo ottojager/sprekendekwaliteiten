@@ -26,7 +26,7 @@
 	<body>
 		<h1>Kwaliteitenspel - Bewustwording</h1>
 		<div id="top">
-			<div id="huidig"><h2>Huidige kaart:</h2><div id="current"></div></div>
+			<div id="huidig"><h2>Huidige kaart:</h2><img src="kaart-liggend%20goed.png"><div id="current"></div></div>
 		</div>
 		<div>
 		<h2>Kaarten</h2>
@@ -43,10 +43,10 @@
 		</div>
 		<div style="clear: both;"></div>
 		<button class="col-xs-12 col-sm-6 col-md-3" id="backButton" onclick="backButton(this)"><img src="Knop.png" alt="Ongedaan maken"></button>
-		<a class="skiplink" href="#top">Naar huidige kaart</a>
+		<a class="skiplink col-xs-12 col-sm-6 col-md-3" href="#top">Naar huidige kaart</a>
+		<button class="col-xs-12 col-sm-6 col-md-3" id="endGame" onclick="endGame()">Be&#235;indig spel</button>
 		<ul class="col-xs-12 col-sm-6 col-md-3" id="graveyard">
 			<li><h2>Afleg stapel</h2></li>
 		</ul>
-		<button class="col-xs-12 col-sm-6 col-md-3" id="endGame" onclick="endGame()">Be&#235;indig spel</button>
 	</body>
 </html>
