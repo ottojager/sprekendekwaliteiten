@@ -62,7 +62,7 @@ if (!(bool)$json) { // if $json actually has content
 							xhttp.open("GET", "http://localhost/kwal-spel/2/api/kick.php?p="+index, false);
 							xhttp.send();
 						}
-						button.innerHTML = '<img src="css/trash-icon.png" alt="verwijderen" height="25" width="25">';
+						button.innerHTML = '<img src="css/trash-icon.png" alt="verwijder speler" height="25" width="25">';
 						child.appendChild(button);
 					<?php } ?>
 
