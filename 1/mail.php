@@ -16,7 +16,9 @@ $message = '
 	<h1>Uw kaarten van Kwaliteitenspel - Bewustwording</h1>
 	<ul>';
 	foreach ($cards as $key => $value) {
-		$message .= '<li>'.$value.'</li>';
+		if ($value != '') {
+			$message .= '<li>'.$value.'</li>';
+		}
 	}
 $message .= '</ul>
 </body>
