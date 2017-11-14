@@ -19,7 +19,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 html {
-
+	@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500');
 }
 body {
 	max-width: 1200px;
