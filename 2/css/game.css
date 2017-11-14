@@ -26,12 +26,6 @@ html {
 	background-repeat: no-repeat;
 }
 body {
-	display: flex;
-		display: -webkit-flex; /* Safari 6.1+ */
-		display: -ms-flex; /* IE 10 */
-	flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
 	width: 60%;
 	height: 100%;
 	margin: 0 auto 0 auto;
@@ -39,12 +33,6 @@ body {
 	/*box-shadow: 0px 0 31px 0 #65606a;*/
 }
 h1 {
-	flex: 1 0 auto;
-		-webkit-flex: 1 0 auto;
-		-ms-flex: 1 0 auto;
-	align-self: flex-start;
-		-webkit-align-self: flex-start;
-		-ms-align-self: flex-start;
 	width: 96%;
 	height: 3%;
 	margin: 3% 3% 0% 3%;
@@ -57,9 +45,6 @@ h1 {
 	text-align: center;
 }
 #card_display {
-	flex: none;
-		-webkit-flex: none;
-		-ms-flex: none;
 	width: 200px;
 	height: 139px;
 	position: relative;
@@ -86,12 +71,6 @@ h1 {
 	overflow: hidden;
 }
 #player_list {
-	flex: 0 1 auto;
-		-webkit-flex: 0 1 auto;
-		-ms-flex: 0 1 auto;
-	align-self: flex-start;
-		-webkit-align-self: flex-start;
-		-ms-align-self: flex-start;
 	width: 31%;
 	margin-left: 2%;
 	font-family: calibri, sans-serif;
@@ -119,9 +98,6 @@ h1 {
 	color: #1f3f50;
 }
 #cards_left {
-	align-self: flex-start;
-		-webkit-align-self: flex-start;
-		-ms-align-self: flex-start;
 	margin: 1%;
 	color: #1f3f50;
 	background-color: #fefeff;
@@ -129,12 +105,6 @@ h1 {
     font-size: 20px;
 }
 .card_stack {
-	flex: 0 auto;
-		-webkit-flex: 0 auto;
-		-ms-flex: 0 auto;
-	align-self: flex-start;
-		-webkit-align-self: flex-start;
-		-ms-align-self: flex-start;
 	margin: 1%;
 	color: #fffefe;
 	background-color: #a82519;
@@ -151,9 +121,6 @@ h1 {
 	padding-bottom: 2px;
 }
 button {
-	align-self: center;
-		-webkit-align-self: center;
-		-ms-align-self: center;
 	width: 246px;
 	margin: 1%;
 	padding: 0%;
@@ -168,19 +135,10 @@ button img {
 @media screen and (min-width: 40em) /*640px*/ {
 	body {
 		background-color: #ffffff; /*#199bbe;*/
-		flex-wrap: wrap;
-			-webkit-flex-wrap: wrap;
-			-ms-flex-wrap: wrap;
 	}
 	h1 {
-		flex: 0 0 auto;
-			-webkit-flex: 0 0 auto;
-			-ms-flex: 1 0 auto;
 	}
 	#card_display {
-		flex: none;
-			-webkit-flex: none;
-			-ms-flex: none;
 		width: 300px;
 		height: 90px;
 	}
@@ -191,15 +149,9 @@ button img {
 }
 @media screen and (min-width: 64em) /*1024px*/ {
 	body {
-		flex-direction: row;
-			-webkit-flex-direction: row;
-			-ms-flex-direction: row;
 		background-color: #ffffff; /*#1920ef;*/
 	}
 	#card_display {
-		flex: 1 1 auto;
-			-webkit-flex: 1 1 auto;
-			-ms-flex: 1 1 auto;
 		width: 400px;
 		height: 279px;
 	}
@@ -210,15 +162,6 @@ button img {
 }
 @media screen and (min-width: 80em) /*1280px*/ {
 	body {
-		flex-direction: row;
-			-webkit-flex-direction: row;
-			-ms-flex-direction: row;
-		justify-content: space-around;
-			-webkit-justify-content: space-around;
-			-ms-justify-content: space-around;
-		align-items: stretch;
-			-webkit-align-items: stretch;
-			-ms-align-items: stretch;
 		background-color: #ffffff;
 	}
 	h1 {
@@ -234,12 +177,6 @@ button img {
 		height: 100%;
 	}
 	#current_card {
-		flex: 0 1 auto;
-			-webkit-flex: 0 1 auto;
-			-ms-flex: 0 1 auto;
-		align-self: flex-start;
-			-webkit-align-self: flex-start;
-			-ms-align-self: flex-start;
 		width: 50%;
 		height: 9%;
 	}
@@ -247,4 +184,17 @@ button img {
 		/*margin-top: 34%;*/
 		background-color: #fdfdfd;
 	}
+}
+.skiplink {
+	right: 300%;
+	position: absolute;
+}
+.skiplink:focus {
+	position: absolute;
+	right: inherit;
+	background-color: #abd5d9;
+	border: 0px solid #a71d0f;
+	border-bottom-width: 6px;
+	border-left-width: 6px;
+	text-decoration: none;
 }

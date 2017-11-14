@@ -120,7 +120,7 @@ if ($json['game_started'] == false) {
 			}, 5000);
 		</script>
 		<title>Spel - Feedback - Kwaliteitenspel</title>
-		<link rel="stylesheet" href="css/game.css" type="text/css">
+		<link rel="stylesheet" href="./css/game.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
