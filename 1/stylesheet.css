@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,7 +20,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 html {
-	@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500');
 }
 body {
 	max-width: 1200px;
@@ -28,8 +28,8 @@ body {
 }
 h1 {
 	margin: 25px 0 25px 0;
-	font-family: sans-serif;
-	font-size: 21px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 40px;
 	text-align: center;
 }
 #top {

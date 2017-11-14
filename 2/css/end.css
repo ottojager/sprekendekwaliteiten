@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,7 +22,6 @@ time, mark, audio, video {
 html {
 	width: 100%;
 	height: 100%;
-	@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500');
 }
 body {
 	display: flex;
