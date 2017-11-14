@@ -28,19 +28,19 @@ body {
 }
 h1 {
 	margin: 25px 0 25px 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-size: 40px;
 	text-align: center;
 }
 #top {
 	margin: 40px 40% 0 40%;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 }
 #huidig h2 {
 	width: 133px;
 	padding: 4px;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #ffffef;
 	background-color: #a71d0f;
 }
@@ -53,7 +53,7 @@ h1 {
 	height: 24px;
 	bottom: 32px;
 	left: 13%;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	color: #234152;
 	border: 0px solid #c4f6f8;
@@ -65,7 +65,7 @@ h1 {
 	width: auto;
 	margin: 26px;
 	padding: 0px 0px;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 17.6px;
 	color: #ffffef;
 	border: 0px #830e73 solid;
@@ -90,7 +90,7 @@ h1 {
 }
 ul {
 	color: #000000;
-	font-family: sans-serif;/*note to self: change fonts*/
+	font-family: 'Roboto', sans-serif;
 	list-style: none;
 }
 ul li {
@@ -109,7 +109,7 @@ ul li button {
 	height: 24px;
 	bottom: 66px;
 	left: 12%;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 21px;
 	color: #234152;
 	border: 0px solid #c4f6f8;
@@ -122,7 +122,7 @@ ul li button {
 	width: 168px;
 	margin: 26px;
 	padding: 6px;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	color: #ffffef;
 	background-color: #a71d0f;
@@ -137,7 +137,7 @@ ul li button {
 #endGame {
 	width: 168px;
 	margin: 26px;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #c4f6f8;
 	border: 0px solid #c4f6f8;
 	background-color: #234152;
