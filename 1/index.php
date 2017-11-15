@@ -29,7 +29,7 @@
 			<div id="huidig"><h2>Huidige kaart:</h2><img src="kaart-liggend%20goed.png"><div id="current"></div></div>
 		</div>
 		<div>
-		<h2>Kaarten</h2>
+		<h2>Jouw 8 kaarten</h2>
 		<ul>
 			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend%20goed.png"><button id="slot1"></button></li>
 			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend%20goed.png"><button id="slot2"></button></li>

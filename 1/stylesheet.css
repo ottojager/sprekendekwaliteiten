@@ -41,8 +41,10 @@ h1 {
 	width: 133px;
 	padding: 4px;
 	font-family: 'Roboto', sans-serif;
-	color: #ffffef;
-	background-color: #a71d0f;
+	font-style: italic;
+	color: #234152;
+	background-color: transparent;
+	text-align: center;
 }
 #huidig img {
 	width: 237px;
@@ -87,6 +89,9 @@ h1 {
 	border-bottom-width: 6px;
 	border-left-width: 6px;
 	text-decoration: none;
+}
+h2 {
+	font-family: 'Roboto', sans-serif;
 }
 ul {
 	color: #000000;
