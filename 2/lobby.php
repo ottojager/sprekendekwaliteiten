@@ -96,7 +96,7 @@ if (!(bool)$json) { // if $json actually has content
 			?>
 		<?php
 		if ($_SESSION['player_id'] == 11) {
-			?><button onclick="start_game()">Start spel</button><?php
+			?><button onclick="start_game()">Start het spel</button><?php
 		}
 		?>
 		</div>
