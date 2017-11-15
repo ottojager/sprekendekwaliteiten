@@ -90,7 +90,8 @@ h1 {
 	border-left-width: 6px;
 	text-decoration: none;
 }
-h2 {
+#jkaart {
+	margin-left: 50px;
 	font-family: 'Roboto', sans-serif;
 }
 ul {
