@@ -22,6 +22,7 @@ if (isset($_POST['join_button'])) {
 							$json['last_change'] = time();
 							file_put_contents("./games/$code.json", json_encode($json));
 							$_SESSION['player_id'] = $id;
+							$_SESSION['player_name'] = $_POST['name']; // because player_id might need to change later
 							$_SESSION['game_id'] = $code;
 							header('Location: lobby.php');
 						}

@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+
 if (!isset($_SESSION['game_id'])) {
 	header('Location: ./');
 }
@@ -8,6 +10,22 @@ $json = json_decode(file_get_contents("./games/$game.json"), true);
 if ($json['game_started'] == false) {
 	header('location: ./lobby.php');
 }
+
+// reset player_id values so they match again
+// also check if they player has been kicked or not and redirect those back to the home screen
+if ($_SESSION['player_id'] != 11) {
+	$kicked = true; // used to check if the player may have been kicked
+	foreach ($json['players'] as $key => $value) {
+		if ($value['name'] == $_SESSION['player_name']) {
+			$_SESSION['player_id'] = $value['player_id'];
+			$kicked = false;
+		}
+	}
+	if ($kicked) {
+		header('Location: ./delete.php');
+	}
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="nl=NL">
