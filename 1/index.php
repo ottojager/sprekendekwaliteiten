@@ -44,7 +44,7 @@
 		<div style="clear: both;"></div>
 		<button class="col-xs-12 col-sm-6 col-md-3" id="backButton" onclick="backButton(this)"><img src="Knop.png" alt="Ongedaan maken"></button>
 		<a class="skiplink col-xs-12 col-sm-6 col-md-3" href="#current">Naar huidige kaart</a>
-		<button class="col-xs-12 col-sm-6 col-md-3" id="endGame" onclick="endGame()">Be&#235;indig spel</button>
+		<div id="eindspel" class="col-xs-12 col-sm-6 col-md-3"><img src="knop%20goed.png" alt="Beëindig spel"><button id="endGame" onclick="endGame()">Be&#235;indig spel</button></div>
 		<ul class="col-xs-12 col-sm-6 col-md-3" id="graveyard" style="clear:both;">
 			<li><h2>Afleg stapel</h2></li>
 		</ul>

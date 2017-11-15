@@ -116,6 +116,24 @@ ul li button {
 	z-index: 2;
 	/*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
+#eindspel {
+	width: 188px;
+}
+#eindspel img{
+	width: 188px;
+	z-index: 1;
+}
+#endGame {
+	position: relative;
+	width: 138px;
+	left: 20px;
+	bottom: 30px;
+	font-family: 'Roboto', sans-serif;
+	color: #c4f6f8;
+	border: 0px solid #c4f6f8;
+	background-color: #234152;
+	z-index: 2;
+}
 #graveyard {
 	width: 216px;
 	margin: 0px;
@@ -135,14 +153,6 @@ ul li button {
 	background-color: transparent;
 	border-left: 2px solid #d92427;
 	border-bottom: 2px solid #d92427;
-}
-#endGame {
-	width: 168px;
-	margin: 26px;
-	font-family: 'Roboto', sans-serif;
-	color: #c4f6f8;
-	border: 0px solid #c4f6f8;
-	background-color: #234152;
 }
 @media screen and (min-width: 48em) /*768px*/ {
 	body {
