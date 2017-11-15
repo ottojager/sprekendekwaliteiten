@@ -43,7 +43,7 @@ if ($_SESSION['player_id'] != 11) {
 					document.location.href = './end/';
 				}
 			};
-			xhttp.open("GET", "http://localhost/kwal-spel/2/api/end.php", true);
+			xhttp.open("GET", "./api/end.php", true);
 			xhttp.send();
 		}
 		</script>

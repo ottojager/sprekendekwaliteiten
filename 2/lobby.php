@@ -29,7 +29,7 @@ if (!(bool)$json) { // if $json actually has content
 							window.location.href = 'game.php';
 						}
 					};
-					xhttp.open("GET", "http://localhost/kwal-spel/2/api/start.php", true);
+					xhttp.open("GET", "./api/start.php", true);
 					xhttp.send();
 				}
 				</script>
@@ -59,7 +59,7 @@ if (!(bool)$json) { // if $json actually has content
 						var button = document.createElement('button');
 						button.onclick = function() {
 							var xhttp = new XMLHttpRequest();
-							xhttp.open("GET", "http://localhost/kwal-spel/2/api/kick.php?p="+index, false);
+							xhttp.open("GET", "./api/kick.php?p="+index, false);
 							xhttp.send();
 						}
 						button.innerHTML = '<img src="css/trash-icon.png" alt="verwijder speler" height="25" width="25">';
