@@ -96,7 +96,6 @@ ul {
 ul li {
 	/*width: 320px;
 	height: 200px;*/
-	margin: 20px auto;
 	background-color: #ffffff;
 }
 
@@ -118,21 +117,24 @@ ul li button {
 	/*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
 #graveyard {
-	/*height: auto;*/
-	width: 168px;
-	margin: 26px;
-	padding: 6px;
+	width: 216px;
+	margin: 0px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
-	color: #ffffef;
-	background-color: #a71d0f;
+	color: #234152;
+	border: 0px solid #c0fefe;
 	list-style: none;
 }
 #graveyard h2 {
-	background-color: #a71d0f;
+	padding: 3px;
+	background-color: transparent;
+	/*border-left: 2px solid #d92427;*/
 }
 #graveyard li {
-	background-color: #a71d0f;
+	padding: 3px;
+	background-color: transparent;
+	border-left: 2px solid #d92427;
+	border-bottom: 2px solid #d92427;
 }
 #endGame {
 	width: 168px;
