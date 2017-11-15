@@ -129,9 +129,9 @@ ul li button {
 	left: 20px;
 	bottom: 30px;
 	font-family: 'Roboto', sans-serif;
-	color: #c4f6f8;
+	color: #acd7da;
 	border: 0px solid #c4f6f8;
-	background-color: #234152;
+	background-color: #294253;
 	z-index: 2;
 }
 #graveyard {
@@ -180,5 +180,8 @@ ul li button {
 	}
 	ul li button {
 		bottom: 40px;
+	}
+	#eindspel {
+		margin: 42px;
 	}
 }
