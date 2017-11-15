@@ -52,14 +52,14 @@ p {
 	width: 23%;
 	margin: 0% 0% 3% 0%;
 	padding: 4px;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #c4f6f8;
 	background-color: #1f3f50;
 	text-align: center;
 }
 ul {
 	flex: 0 1 auto;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #000000;
 	background-color: #fffefe;
 	list-style: none;
@@ -69,7 +69,7 @@ a {
 	flex: 0 1 auto;
 	margin: 2px;
 	padding: 3px;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #fffffe;
 	background-color: #a82519;
 	text-decoration: none;

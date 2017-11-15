@@ -38,9 +38,8 @@ h1 {
 	height: 3%;
 	margin: 3% 3% 0% 3%;
 	padding: 5px;
-	font-family: sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-size: 2.6vw;
-	font-weight: bold;
 	color: #1f3f50;
 	background-color: #fefeff; /*#c4f6f8;*/
 	text-align: center;
@@ -56,7 +55,7 @@ h1 {
 	height: 9%;
 	bottom: 12%;
     left: 34%;
-	font-family: calibri, sans-serif;
+	font-family: 'Roboto', sans-serif;
     font-size: 20px;
 	color: #234152;
 	z-index: 2;
@@ -74,7 +73,7 @@ h1 {
 #player_list {
 	width: 31%;
 	margin-left: 2%;
-	font-family: calibri, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	list-style: none;
 }
 #player_list > li {
@@ -87,14 +86,14 @@ h1 {
 	border-left-width: 2px;
 	color: #1f3f50;
 	background-color: #fefeff;
-	font-family: calibri, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	list-style: none;
 	/*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
 #player_list > li > button { /*Note to self: Talk to Bas about button inside li.*/
 	background: transparent;
 	border: 0px solid #020119;
-	font-family: calibri, sans-serif;
+	font-family: 'Roboto', sans-serif;
     font-size: 24px;
 	color: #1f3f50;
 }
@@ -102,14 +101,14 @@ h1 {
 	margin: 1%;
 	color: #1f3f50;
 	background-color: #fefeff;
-	font-family: calibri, sans-serif;
+	font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
 .card_stack {
 	margin: 1%;
 	color: #fffefe;
 	background-color: #a82519;
-	font-family: calibri, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	list-style: none;
 }
 .card_stack > li {

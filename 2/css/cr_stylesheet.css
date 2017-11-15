@@ -30,9 +30,8 @@ body {
 }
 h1 {
 	height: 47px;
-	font-family: sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-size: 31px;
-	font-weight: bold;
 	color: #1f3f50;
 	background-color: #fffefe;
 	text-align: center;
@@ -42,7 +41,7 @@ h1 {
 	height: 52px;
 	padding: 4px;
 	margin: 0% auto 0% auto;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 26px;
 	color: #ffffff;
 	background-color: #1f3f50;
@@ -65,7 +64,7 @@ input[type=submit] {
 	height: 32px;
 	margin: 0% 30%;
 	padding: 4px;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	color: #ffffff;
 	border: 1px solid #1f3f50;
