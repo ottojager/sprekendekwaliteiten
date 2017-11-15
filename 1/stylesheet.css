@@ -123,17 +123,17 @@ ul li button {
 	/*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
 #eindspel {
-	width: 188px;
+	width: 240px;
 }
 #eindspel img{
-	width: 188px;
+	width: 240px;
 	z-index: 1;
 }
 #endGame {
 	position: relative;
-	width: 138px;
-	left: 20px;
-	bottom: 30px;
+	width: 118px;
+	left: 54px;
+	bottom: 34px;
 	font-family: 'Roboto', sans-serif;
 	color: #acd7da;
 	border: 0px solid #c4f6f8;
@@ -188,6 +188,6 @@ ul li button {
 		bottom: 40px;
 	}
 	#eindspel {
-		margin: 42px;
+		margin: 37px;
 	}
 }
