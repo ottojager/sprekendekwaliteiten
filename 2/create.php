@@ -65,7 +65,15 @@ if (isset($_POST['makeLobbyButton'])) {
 				<div id="no_ones_gonna_look_trough_this_code_anyway" >
 				<div class="cardstyle">
 					<label for="cards">Aantal kaarten:</label>
-					<input id="cards" type="number" name="cards" min="0" max="70" value="70">
+					<select name="cards">
+						<option value="10">10</option>
+						<option value="20">20</option>
+						<option value="30">30</option>
+						<option value="40">40</option>
+						<option value="50">50</option>
+						<option value="60">60</option>
+						<option selected value="70">70</option>
+					</select>
 				</div>
 				</div>
 					<input type="submit" value="Aanmaken spel" name="makeLobbyButton">
