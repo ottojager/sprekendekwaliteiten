@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['game_id'])) {
+	header('HTTP/1.1 403 Forbidden');
+}
+
 // recipients
 $to = $_GET['email']; // TODO: make players input their email at the start of the game and then use those here
 $to = str_replace('\r', ' ', $to);
