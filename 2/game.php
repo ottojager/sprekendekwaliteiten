@@ -156,12 +156,12 @@ if ($_SESSION['player_id'] != 11) {
 				};
 			}, 5000);
 		</script>
-		<title>Spel - Feedback - Kwaliteitenspel</title>
+		<title>Actief - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="./css/game.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<h1>Spel - Feedback - Kwaliteitenspel</h1>
+		<h1>Actief - Feedback - Kwaliteitenspel</h1>
 		<h2><?php
 			if ($_SESSION['player_id'] == 11) {
 				echo 'Spelleider';
