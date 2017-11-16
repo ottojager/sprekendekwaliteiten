@@ -33,29 +33,29 @@ h1 {
 	text-align: center;
 }
 #top {
-	margin: 40px 40% 0 40%;
+	margin: 40px auto 0 auto;
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
-}
-#huidig h2 {
-	width: 133px;
-	padding: 4px;
-	font-family: 'Roboto', sans-serif;
-	font-style: italic;
 	color: #234152;
 	background-color: transparent;
+}
+#top > h2 {
+	width: 133px;
+	padding: 4px;
+	font-style: italic;
 	text-align: center;
 }
 #huidig img {
-	width: 237px;
+	width: 337px;
 	z-index: 1;
 }
 #current {
 	position: relative;
 	height: 24px;
-	bottom: 32px;
+	bottom: 38px;
 	left: 13%;
 	font-family: 'Roboto', sans-serif;
+	font-style: normal;
 	font-size: 16px;
 	color: #234152;
 	border: 0px solid #c4f6f8;
