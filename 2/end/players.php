@@ -6,6 +6,7 @@
 	<link rel="icon" sizes="16x16" type="image/png" href="/../kwal-spel/2/css/Rainbow_placeholder.png">
 </head>
 <body>
+	<h1>Einde - Feedback - Speelvorm 2</h1>
 	<?php
 	echo '<p>'.$player['name'].':</p>';
 	echo '<ul>';
