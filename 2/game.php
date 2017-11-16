@@ -66,21 +66,40 @@ if ($_SESSION['player_id'] != 11) {
 				// check if displayed gotten card is less than the newest info if so update HTML
 
 				<?php if ($_SESSION['player_id'] != 11) { // update card list for players ?>
-				if (document.getElementById("card_stack").childNodes.length != game_info['players'][own_id]['stack'].length) {
+				if (
+					(
+						document.getElementById("card_stack").childNodes.length != game_info['players'][own_id]['stack'].length &&
+						document.getElementById("card_stack").innerHTML != 'Nog geen kaarten ontvangen.' &&
+						game_info['players'][own_id]['stack'].length != 0
+					) || (
+						game_info['players'][own_id]['stack'].length > 0 &&
+						document.getElementById("card_stack").innerHTML == 'Nog geen kaarten ontvangen.'
+					)
+				) { // if the user has more cards than are currently being displayed
+					// or if the user a card and the card list still reads the default message
+
 					// card stack
-					console.log('remaking cardstack')
-					var list = document.getElementById('card_stack');
-					list.innerHTML = '';
+					console.log('remaking cardstack');
+					var div = document.getElementById('card_stack');
+					div.innerHTML = '';
+					var list = document.createElement('ul');
 					game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].forEach(function(item, index){
 						var child = document.createElement('li');
 						child.innerHTML = item;
 						list.appendChild(child);
 					});
+					div.appendChild(list);
+
 					if (first_refresh) {
 						first_refresh = !first_refresh;
 					} else {
 						notification.play();
 					}
+				} else if (
+					game_info['players'][own_id]['stack'].length == 0 &&
+					document.getElementById('card_stack').innerHTML != 'Nog geen kaarten ontvangen.'
+				) {
+					document.getElementById('card_stack').innerHTML = 'Nog geen kaarten ontvangen.';
 				}
 				<?php } ?>
 
@@ -172,7 +191,13 @@ if ($_SESSION['player_id'] != 11) {
 		<a class="skiplink" href="#top">Naar huidige kaart</a>
 
 		<!-- keep these on one line or JS will see a child element that isn't there -->
-		<ul tabindex="4" id="card_stack" class="card_stack"></ul>
+		<?php if ($_SESSION['player_id'] != 11) { ?>
+		<h2>Ontvangen kaarten</h2>
+		<div id="card_stack" class="card_stack">Nog geen kaarten ontvangen.</div>
+		<?php } else { ?>
+		<div id="card_stack" class="card_stack">Klik op een speler om hun kaarten te zien.</div>
+		<?php } ?>
+
 		<button
 		<?php
 		if ($_SESSION['player_id'] == 11) {
