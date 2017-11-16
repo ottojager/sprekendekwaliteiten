@@ -12,11 +12,13 @@ if ($_SESSION['player_id'] == 11) {
 		$last_player = array_pop($json['turn_action']);
 		$json['current_card'] = array_pop($json['players'][$last_player]['stack']);
 		//turn current player 1 back
-		if ($json['current_player'] == 0) {
-			$json['current_player'] = count($json['players']) - 1;
-		} else {
-			$json['current_player'] = $json['current_player'] - 1;
-		}
+		do {
+			if ($json['current_player'] == 0) {
+				$json['current_player'] = count($json['players']) - 1;
+			} else {
+				$json['current_player'] = $json['current_player'] - 1;
+			}
+		} while ($json['players'][ $json['current_player'] ]['name'] == 'Afval stapel');
 		//save changes
 		file_put_contents("../games/$game.json", json_encode($json));
 	}
