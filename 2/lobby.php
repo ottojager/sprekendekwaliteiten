@@ -75,11 +75,13 @@ if (!(bool)$json) { // if $json actually has content
 				//document.getElementById("player_list").innerHTML = game_info[""];
 			}, 3000);
 		</script>
-	<link rel="stylesheet" href="css/lobby_stylesheet.css" type="text/css">
-	<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
+		<link rel="stylesheet" href="css/lobby_stylesheet.css" type="text/css">
+		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
+		<h1>Lobby - Feedback - Kwaliteitenspel</h1>
 		<div id="main">
+			<h1></h1>
 			<h2 id="game_id">Spel code:</h2>
 			<?php
 			echo '<p>'.$json['game_id'].'</p>';
