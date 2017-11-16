@@ -1,8 +1,13 @@
 <?php
 session_start();
 
-$game = $_SESSION['game_id'];
+// recipients
+$to = $_GET['email']; // TODO: make players input their email at the start of the game and then use those here
+$to = str_replace('\r', ' ', $to);
+$to = str_replace('\n', ' ', $to);
 
+// getting player cards
+$game = $_SESSION['game_id'];
 $json = json_decode(file_get_contents("../games/$game.json"), True);
 $cards = $json['players'][ $_SESSION['player_id'] ]['stack'];
 
@@ -32,10 +37,6 @@ $subject_preferences = array(
     "line-break-chars" => "\r\n"
 );
 
-// recipients
-$to = $_GET['email']; // TODO: make players input their email at the start of the game and then use those here
-$to = str_replace('\r', ' ', $to);
-$to = str_replace('\n', ' ', $to);
 
 // Subject
 $subject = 'Uw kaarten';

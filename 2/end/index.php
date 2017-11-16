@@ -21,7 +21,6 @@ if (!(bool)$json) { // if $json actually has content
 if ($_SESSION['player_id'] == 11) {
 	include('leader.php');
 } else {
-	$player = $json['players'][ $_GET['p'] ];
 	include('players.php');
 }
 ?>

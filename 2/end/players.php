@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html lang="nl=NL">
 <head>
-	<title>Einde - Feedback - Speelvorm 2</title>
-	<link rel="stylesheet" href="/kwaliteiten/2/css/end.css" type="text/css">
+	<title>Einde - Feedback - Kwaliteitenspel</title>
+	<link rel="stylesheet" href="../css/end.css" type="text/css">
 	<link rel="icon" sizes="16x16" type="image/png" href="/../kwal-spel/2/css/Rainbow_placeholder.png">
 </head>
 <body>
-	<h1>Einde - Feedback - Speelvorm 2</h1>
-	<?php
-	echo '<p>'.$player['name'].':</p>';
-	echo '<ul>';
-	foreach ($player['stack'] as $key => $value) {
-		echo "<li>$value</li>";
-	}
-	echo '</ul>';
-
-	foreach ($json['players'] as $key => $value) {
-		if ($value['name'] != 'Afval stapel') {
-			echo '<a href="?p='.$value['player_id'].'">'.$value['name'].'</a> ';
-		}
-	}
-	?>
-
-	<a href="../delete.php">Spel verlaten</a>
+	<h1>Einde - Feedback - Kwaliteitenspel</h1>
+	<p>Type hier je email adres in, zodat je kaarten naar jou opgestuurd kunnen worden.</p>
+	<form action="./mail.php" method="post">
+		<input name="mail" type="email" id="email" />
+		<input type="submit" name="submit" value="Mail mijn kaarten">
+	</form>
 </body>
 </html>

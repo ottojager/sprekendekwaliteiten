@@ -58,7 +58,7 @@ if ($_SESSION['player_id'] != 11) {
 
 				// if game has ended
 				if (game_info['card_stack'] == 0) {
-					document.location.href = './end/?p='+own_id;
+					document.location.href = './end/';
 				}
 
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
