@@ -170,13 +170,13 @@ if ($_SESSION['player_id'] != 11) {
 				echo $json['players'][ $_SESSION['player_id'] ]['name']; // look it works don't touch it
 			}
 		?></h2>
-		<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p tabindex="1" id="current_card"></p></div>
+		<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
 
 		<div id="blind_current_player" tabindex="1">
 			<?php echo "huidige speler: " . $json['players'][$json['current_player']]['name'] ?>
 		</div>
 
-		<ul tabindex="2" id="player_list">
+		<ul id="player_list">
 			<?php
 			foreach ($json['players'] as $key => $value) {
 				if ($value['name'] != 'Afval stapel') {
@@ -185,7 +185,7 @@ if ($_SESSION['player_id'] != 11) {
 			}
 			?>
 		</ul>
-		<div tabindex="3" id="cards_left">
+		<div id="cards_left">
 			<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
 		</div>
 
@@ -212,8 +212,8 @@ if ($_SESSION['player_id'] != 11) {
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
 			// Leader only end game, undo buttons, and card list
 		?>
-		<button tabindex="5" onclick="end_game()">Game beindigen</button>
-		<button tabindex="6" onclick="undo()"><img src="css/Knop.png" alt="Ongedaan maken"></button>
+		<button onclick="end_game()">Game beindigen</button>
+		<button onclick="undo()"><img src="css/Knop.png" alt="Ongedaan maken"></button>
 		<?php } // end leader only buttons ?>
 	</body>
 </html>
