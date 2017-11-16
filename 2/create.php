@@ -35,10 +35,10 @@ if (isset($_POST['makeLobbyButton'])) {
 			$_SESSION['game_id'] = $id;
 			header('Location: lobby.php');
 		} else {
-			$error = 'Kaarten moet een getal tussen 0 en 70 zijn';
+			$error = 'Kaarten moet een getal tussen 0 en 70 zijn.';
 		}
 	} else {
-		$error = 'Naam moet minimaal 3 letters bevaten.';
+		$error = 'Naam moet minimaal 3 characters bevaten.';
 	}
 }
 ?>
@@ -48,14 +48,14 @@ if (isset($_POST['makeLobbyButton'])) {
 		<title>Aanmaken spel - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/cr_stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
+		<?php
+		if (isset($error)) {
+			echo "<script>alert('$error');</script>";
+		}
+		?>
 	</head>
 	<body>
 		<div>
-<?php
-			if (isset($error)) {
-				echo "<p>$error</p>";
-			}
-			?>
 			<form method="post">
 				<div id="title"><h1>Kwaliteitenspel</h1></div>
 				<div class="cardstyle">

@@ -30,16 +30,16 @@ if (isset($_POST['join_button'])) {
 						$error = 'Je kan geen game joinen als die al bezig is.';
 					}
 				} else {
-					$error = 'Verkeerde code of lobby bestaat niet';
+					$error = 'Verkeerde code of lobby bestaat niet.';
 				}
 			} else {
 				$error = 'Code moet 3 letters zijn.';
 			}
 		} else {
-			$error = 'Die naam is gereseveert';
+			$error = 'Die naam is gereseveert.';
 		}
 	} else {
-		$error = 'Naam moet minimaal 3 letters bevaten.';
+		$error = 'Naam moet minimaal 3 characters bevaten.';
 	}
 }
 ?>
@@ -49,14 +49,14 @@ if (isset($_POST['join_button'])) {
 		<title>Doe mee - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
+		<?php
+		if (isset($error)) {
+			echo "<script>alert('$error');</script>";
+		}
+		?>
 	</head>
 	<body>
 		<div>
-<?php
-			if (isset($error)) {
-				echo "<p>$error</p>";
-			}
-			?>
 			<form method="post">
 				<h1>Kwaliteitenspel</h1>
 				<div id="naamstyle">
