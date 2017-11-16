@@ -39,14 +39,13 @@ h1 {
 	color: #234152;
 	background-color: transparent;
 }
-#top > h2 {
-	width: 133px;
+.row h2 {
 	padding: 4px;
 	font-style: italic;
-	text-align: center;
+	text-align: right;
 }
 #huidig img {
-	width: 337px;
+	width: 100%;/*337px;*/
 	z-index: 1;
 }
 #current {
@@ -56,7 +55,7 @@ h1 {
 	left: 13%;
 	font-family: 'Roboto', sans-serif;
 	font-style: normal;
-	font-size: 16px;
+	font-size: 21px;
 	color: #234152;
 	border: 0px solid #c4f6f8;
 	background-color: transparent;

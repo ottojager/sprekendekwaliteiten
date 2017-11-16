@@ -26,9 +26,9 @@
 	</head>
 	<body>
 		<h1>Kwaliteitenspel - Bewustwording</h1>
-		<div id="top">
-			<h2 class="col-sm-4">Actieve kaart:</h2>
-			<div id="huidig" class="col-sm-8"><img src="kaart-liggend%20goed.png"><div id="current"></div></div>
+		<div id="top" class="row">
+			<h2 class="col-xs-1 col-sm-2 col-sm-offset-2" style="text-align: right;">Actieve kaart:</h2>
+			<div id="huidig" class="col-xs-11 col-sm-6 col-md-4"><img src="kaart-liggend%20goed.png"><button id="current"></button></div>
 		</div>
 		<div>
 		<h2 id="jkaart">Jouw 8 kaarten</h2>
