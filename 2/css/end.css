@@ -30,12 +30,6 @@ body {
 	flex-direction: column;
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
-	/*flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-	justify-content: space-around;
-		-webkit-justify-content: space-around;
-		-ms-justify-content: space-around;*/
 	align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -44,8 +38,11 @@ body {
 	margin: 0 auto 0 auto;
 	background-color: #fffefe;
 }
-body > p:first-child {
-	margin-top: 3%;
+h1 {
+	margin: 25px 0 25px 0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 40px;
+	text-align: center;
 }
 p {
 	flex: 0 1 auto;

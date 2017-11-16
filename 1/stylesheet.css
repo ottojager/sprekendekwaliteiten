@@ -51,7 +51,7 @@ h1 {
 #current {
 	position: relative;
 	height: 24px;
-	bottom: 38px;
+	bottom: 56px;
 	left: 13%;
 	font-family: 'Roboto', sans-serif;
 	font-style: normal;
@@ -163,6 +163,9 @@ ul li button {
 	body {
 		background-color: #fffefe; /*#199bbe;*/
 	}
+	#current {
+		bottom: 50px;
+	}
 	ul li button {
 		bottom: 55px;
 	}
@@ -170,6 +173,9 @@ ul li button {
 @media screen and (min-width: 62em) /*992px*/ {
 	body {
 		background-color: #fffffe; /*#1920ef;*/
+	}
+	#current {
+		bottom: 45px;
 	}
 	ul li button {
 		font-size: 14px;
@@ -182,6 +188,9 @@ ul li button {
 	}
 	#top {
 		font-size: 17px;
+	}
+	#current {
+		bottom: 44px;
 	}
 	ul li button {
 		bottom: 40px;

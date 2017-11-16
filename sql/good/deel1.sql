@@ -27,7 +27,7 @@ INSERT INTO cards (name) VALUES ('Rustig');
 INSERT INTO cards (name) VALUES ('Serieus');
 INSERT INTO cards (name) VALUES ('Speels');
 INSERT INTO cards (name) VALUES ('Veelzijdig');
-INSERT INTO cards (name) VALUES ('Vedraagzaam');
+INSERT INTO cards (name) VALUES ('Verdraagzaam');
 INSERT INTO cards (name) VALUES ('Vriendelijk');
 INSERT INTO cards (name) VALUES ('Vrolijk');
 INSERT INTO cards (name) VALUES ('Weet te overtuigen');
