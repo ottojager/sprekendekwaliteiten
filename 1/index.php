@@ -19,6 +19,7 @@
 		</script>
 		<script type="text/javascript" src="singleplayer.js" defer></script>
 		<title>Bewustwording - Kwaliteitenspel</title>
+		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="Rainbow_placeholder.png">
@@ -26,7 +27,8 @@
 	<body>
 		<h1>Kwaliteitenspel - Bewustwording</h1>
 		<div id="top">
-			<div id="huidig"><h2>Actieve kaart:</h2><img src="kaart-liggend%20goed.png"><div id="current"></div></div>
+			<h2 class="col-sm-4">Actieve kaart:</h2>
+			<div id="huidig" class="col-sm-8"><img src="kaart-liggend%20goed.png"><div id="current"></div></div>
 		</div>
 		<div>
 		<h2 id="jkaart">Jouw 8 kaarten</h2>
