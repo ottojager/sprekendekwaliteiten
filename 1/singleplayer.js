@@ -57,7 +57,7 @@ function addListeners() {
 }
 
 function endGame(no_confirm) {
-    if (no_confirm || confirm('Weet u zeker dat u het spel wil beëndigen?')) {
+    if (no_confirm || confirm('Weet u zeker dat u het spel wil beëindigen?')) {
         gameEnded = 1;
         //top leegmaken
         document.getElementById("top").innerHTML = "";
