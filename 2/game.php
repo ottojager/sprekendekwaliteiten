@@ -22,7 +22,7 @@ if ($_SESSION['player_id'] != 11) {
 		}
 	}
 	if ($kicked) {
-		header('Location: ./delete.php');
+		header('Location: ./delete.php'); // delete the player we don't care
 	}
 }
 
