@@ -138,12 +138,13 @@ if ($_SESSION['player_id'] != 11) {
 						};
 					};
 
-					addListeners(amount_players);
 					<?php
 					// leader only
 					if ($_SESSION['player_id'] == 11) {
 					?>
 					leader_card(amount_players);
+					<?php } else { // if it's not the game leader ?>
+					addListeners(amount_players);
 					<?php } ?>
 					//check it is the players turn
 					if (game_info['current_player'] == own_id) {
