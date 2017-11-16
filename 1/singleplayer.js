@@ -95,7 +95,7 @@ function endGame(no_confirm) {
                     // just do nothig for the time being
 				}
 			};
-			xhttp.open("GET", "http://localhost/kwal-spel/1/mail.php?cards=" + cards + "&email=" + email, true);
+			xhttp.open("GET", "./mail.php?cards=" + cards + "&email=" + email, true);
 			xhttp.send();
         }
         btn.innerHTML='Stuur e-mail';
