@@ -7,6 +7,9 @@ if (!isset($_SESSION['game_id'])) {
 
 // recipients
 $to = $_GET['email']; // TODO: make players input their email at the start of the game and then use those here
+if (filter_var($to, FILTER_VALIDATE_EMAIL)) {
+	header('HTTP/1.1 400 Bad Request');
+}
 $to = str_replace('\r', ' ', $to);
 $to = str_replace('\n', ' ', $to);
 
