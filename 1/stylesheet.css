@@ -19,6 +19,9 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+*:focus {
+	border: 7px solid #c0fefe;
+}
 html {
 }
 body {
@@ -62,16 +65,21 @@ h1 {
 	z-index: 2;
 }
 .skiplink {
-	right: 300%;
 	position: absolute;
+	right: 300%;
+	font-family: 'Roboto', sans-serif;
+	background-image: url(knop_goed.png);
+	background-size: 240px 49px;
+	background-repeat: no-repeat;
+	text-align: center;
 }
 .skiplink:focus {
 	position: absolute;
 	right: inherit;
-	background-color: #abd5d9;
+	width: 240px;
+	height: 49px;
+	color: #c4f6f8;
 	border: 0px solid #a71d0f;
-	border-bottom-width: 6px;
-	border-left-width: 6px;
 	text-decoration: none;
 }
 #jkaart {
