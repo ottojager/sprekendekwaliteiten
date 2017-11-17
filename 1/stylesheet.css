@@ -106,20 +106,21 @@ ul li button {
 	z-index: 2;
 	/*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
-#backButton {
-	height: 70px;
-	width: auto;
-	margin: 26px;
-	padding: 0px 0px;
-	font-family: 'Roboto', sans-serif;
-	font-size: 17.6px;
-	color: #ffffef;
-	border: 0px #830e73 solid;
-	background-color: #c0fefe;
-}
 #onmaken img {
 	width: 240px;
 	z-index: 1;
+}
+#backButton {
+	position: relative;
+	width: 160px;
+	left: 54px;
+	bottom: 34px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	color: #acd7da;
+	border: 0px #830e73 solid;
+	background-color: #294253;
+	z-index: 2;
 }
 #eindspel {
 	width: 240px;
@@ -195,7 +196,10 @@ ul li button {
 	ul li button {
 		bottom: 40px;
 	}
+	#onmaken {
+		margin: 30px;
+	}
 	#eindspel {
-		margin: 37px;
+		margin: 30px;
 	}
 }
