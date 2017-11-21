@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,21 +28,35 @@ body {
 	display: flex;
 		display: -webkit-flex; /* Safari 6.1+ */
 		display: -ms-flex; /* IE 10 */
+	flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
 	justify-content: space-around;
 		-webkit-justify-content: space-around;
 		-ms-justify-content: space-around;
-	align-items: flex-start;
-		-webkit-align-items: flex-start;
-		-ms-align-items: flex-start;
+	align-content: flex-start;
+		-webkit-align-content: flex-start;
+		-ms-align-content: flex-start;
 	width: 60%;
 	height: 100%;
 	margin: 0 auto 0 auto;
 	background-color: #fffefe;
 }
+h1 {
+	width: 96%;
+	height: 60px;
+	margin: 3% 3% 0% 3%;
+	padding: 5px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2.6vw;
+	color: #1f3f50;
+	background-color: #fefeff; /*#c4f6f8;*/
+	text-align: center;
+}
 a {
-	margin-top: 13%;
+	margin-top: 33px;
 	padding: 6px;
-	font-family: calibri, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #ffffff;
 	background-color: #1f3f50;
 	border-radius: 0px;
