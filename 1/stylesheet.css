@@ -110,19 +110,16 @@ ul li button.kaart:focus {
 	margin-top: 50px;
 }
 #knoppen button, #knoppen a {
-	background: url(knop_goed.png);
-	background-size: contain;
-	background-repeat:no-repeat;
-	/*position: relative;*/
 	width: 277px;
 	height: 57px;
-	/*left: 54px;
-	bottom: 34px;*/
 	padding: 0 50px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	color: #acd7da;
 	border: 0px #830e73 solid;
+	background: url(knop_goed.png);
+	background-size: contain;
+	background-repeat:no-repeat;
 }
 #knoppen button p, #knoppen a p {
 	background-color: #294253;
