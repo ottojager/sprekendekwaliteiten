@@ -19,12 +19,10 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 button {
 	background: none; /* weghalen als we toch een achtergrond op de buttons gaan zetten */
 	border: none;
 }
-
 *:focus {
 	border: 8px solid #d32b17;
 	border-radius: 3px;
@@ -71,7 +69,6 @@ h1 {
 	background-color: transparent;
 	z-index: 2;
 }
-
 #jkaart {
 	margin-left: 50px;
 	font-family: 'Roboto', sans-serif;
@@ -112,11 +109,9 @@ ul li button.kaart {
 ul li button.kaart:focus {
 	padding-bottom: 18px;
 }
-
 #knoppen {
 	margin-top: 50px;
 }
-
 #knoppen button, #knoppen a {
 	background: url(knop_goed.png);
 	background-size: contain;
@@ -132,12 +127,10 @@ ul li button.kaart:focus {
 	color: #acd7da;
 	border: 0px #830e73 solid;
 }
-
 #knoppen button p, #knoppen a p {
 	background-color: #294253;
 	z-index: 2;
 }
-
 .skiplink {
 	position: absolute;
 	right: 300%;
@@ -159,7 +152,6 @@ ul li button.kaart:focus {
 	padding: 0 42px;
 	border: 8px solid #d32b17;
 }
-
 #eindspel {
 	width: 240px;
 }
