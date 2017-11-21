@@ -47,7 +47,7 @@ if ($_SESSION['player_id'] != 11) {
 			xhttp.send();
 		}
 		</script>
-		<?php } // end user only JS ?>
+		<?php } // end leader only JS ?>
 		<script>
 			var amount_players = <?php echo count($json['players']);?>;
 			var own_id = <?php echo $_SESSION['player_id'];?>;
