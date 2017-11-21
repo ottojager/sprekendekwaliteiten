@@ -33,22 +33,29 @@
 		<div>
 		<h2 id="jkaart">Jouw 8 kaarten</h2>
 		<ul>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot1"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot2"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot3"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot4"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot5"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot6"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot7"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot8"></button></li>
+		<div class="row">
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot1" class="kaart"></button></li>
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot2" class="kaart"></button></li>
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot3" class="kaart"></button></li>
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot4" class="kaart"></button></li>
+		</div>	
+		<div class="row">
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot5" class="kaart"></button></li>
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot6" class="kaart"></button></li>
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot7" class="kaart"></button></li>
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot8" class="kaart"></button></li>
+		</div>
 		</ul>
 		</div>
-		<div style="clear: both;"></div>
-		<div id="onmaken" class="col-xs-12 col-sm-6 col-md-3"><img src="knop_goed.png" alt="Ongedaan maken"><button id="backButton" onclick="backButton(this)">Ongedaan maken</button></div>
-		<div class="col-xs-12 col-sm-6 col-md-3"><a class="skiplink" href="#current">Naar actieve kaart</a></div>
-		<div id="eindspel" class="col-xs-12 col-sm-6 col-md-3"><img src="knop_goed.png" alt="Beëindig spel"><button id="endGame" onclick="endGame()">Be&#235;indig spel</button></div>
-		<ul class="col-xs-12 col-sm-6 col-md-3" id="graveyard" style="clear:both;">
-			<li><h2>Afleg stapel</h2></li>
+
+		<div class="row" id="knoppen">
+			<div class="col-xs-12 col-sm-6 col-md-3"><button id="backButton" onclick="backButton(this)"><p>Ongedaan maken</p></button></div>
+			<div class="col-xs-12 col-sm-6 col-md-3"><p><a class="skiplink" href="#current">Naar actieve kaart</a></p></div>
+			<div class="col-xs-12 col-sm-6 col-md-3"><button id="endGame" onclick="endGame()"><p>Be&#235;indig spel</p></button></div>
+		</div>
+		
+		<ul class="col-xs-12 col-sm-6 col-md-3" id="graveyard">
+			<li><button><h2>Afleg stapel</h2></button></li>
 		</ul>
 	</body>
 </html>

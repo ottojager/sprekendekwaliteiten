@@ -19,7 +19,7 @@ function fillSlots() {
     "use strict";
     var i;
     for (i = 1; i < 9; i += 1) {
-        document.getElementById("slot" + i.toString()).innerHTML = takeCard();
+        document.getElementById("slot" + i.toString()).innerHTML = "<p>"+takeCard()+"</p>";
     }
 }
 function rewriteGraveyard() {
@@ -29,8 +29,10 @@ function rewriteGraveyard() {
     garbage_pile.innerHTML = ""; // empty the list
     var head_li = document.createElement('li');
     var head = document.createElement('h2');
-    head.innerHTML = "Afval stapel";
-    head_li.appendChild(head)
+	var head_button = document.createElement('button');
+    head.innerHTML = "Afvalstapel";
+	head_button.appendChild(head);
+    head_li.appendChild(head_button);
     garbage_pile.appendChild(head_li);
 
     for (i = 0; (i < graveyard.length); i += 1) { // do a max of 3 items otherwise do all
