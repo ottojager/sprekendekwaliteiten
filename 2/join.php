@@ -3,7 +3,8 @@ session_set_cookie_params(24*60*60); // change how long session cookies last
                                      // the arg is the number of seconds the cookie lasts
 session_start();
 if (isset($_POST['join_button'])) {
-	if (strlen(str_replace(' ', '', $_POST['name'])) >= 3) {
+	$name = trim($_POST['name']);
+	if (strlen($_POST['name']) >= 3) {
 		if ($_POST['name'] != 'Afval stapel') {
 			$code = strtoupper($_POST['code']);
 			if (strlen($code) == 3) {
@@ -27,7 +28,7 @@ if (isset($_POST['join_button'])) {
 							header('Location: lobby.php');
 						}
 					} else {
-						$error = 'Je kan geen game joinen als die al bezig is.';
+						$error = 'Je kan niet mee doen aan een spel als deze al bezig is.';
 					}
 				} else {
 					$error = 'Verkeerde code of lobby bestaat niet.';
