@@ -6,9 +6,12 @@ if (!isset($_SESSION['game_id'])) {
 }
 
 // recipients
-$to = $_GET['email']; // TODO: make players input their email at the start of the game and then use those here
-if (filter_var($to, FILTER_VALIDATE_EMAIL)) {
+$to = $_POST['email']; // TODO: make players input their email at the start of the game and then use those here
+echo $to;
+$to = filter_var($to, FILTER_VALIDATE_EMAIL);
+if (!$to) {
 	header('HTTP/1.1 400 Bad Request');
+	exit();
 }
 $to = str_replace('\r', ' ', $to);
 $to = str_replace('\n', ' ', $to);
@@ -16,7 +19,8 @@ $to = str_replace('\n', ' ', $to);
 // getting player cards
 $game = $_SESSION['game_id'];
 $json = json_decode(file_get_contents("../games/$game.json"), True);
-$cards = $json['players'][ $_SESSION['player_id'] ]['stack'];
+$player = $json['players'][ $_SESSION['player_id'] ];
+$cards = $player['stack'];
 
 // message
 $message = '
@@ -44,6 +48,8 @@ $subject_preferences = array(
     "line-break-chars" => "\r\n"
 );
 
+// who should recieve it
+// $headers[] = 'To: '.$player['name'].'<'.$to.'>';
 
 // Subject
 $subject = 'Uw kaarten';
@@ -61,5 +67,7 @@ $headers[] = 'Date: '.date('r (T)');
 $headers[] = iconv_mime_encode('Subject', $subject, $subject_preferences);
 
 // mail it!!!
-mail($to, $subject, $message, implode("\r\n", $headers));
+if (!mail($to, $subject, $message, implode("\r\n", $headers))) {
+	header('HTTP/1.1 666 Internal Server Error');
+}
 ?>

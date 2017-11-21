@@ -16,10 +16,14 @@ function send_mail() {
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 400) {
-				alert('Het ingevulde email adderess klopt niet')
+				alert('Het ingevulde email adderess klopt niet');
+			} else if (this.readyState == 4 && this.status == 200) {
+				alert('de mail is verstuurd');
+				var email = document.getElementById('email').value = '';
 			}
 		};
-		xhttp.open('GET', './mail.php', true);
+		xhttp.open('POST', './mail.php', true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xhttp.send('email='+email); // put any post values in here
 									// make sure they're propperly encoded
 	}
