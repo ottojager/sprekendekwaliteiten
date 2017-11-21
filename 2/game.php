@@ -65,6 +65,9 @@ if ($_SESSION['player_id'] != 11) {
 				document.getElementById("card_image").alt = game_info['current_card'];
 				// check if displayed gotten card is less than the newest info if so update HTML
 
+				document.getElementById('blind_current_player').innerHTML = 'huidige speler: '+game_info['players'][ game_info['current_player'] ]['name'];
+				// update blind turn notifier thing
+
 				<?php if ($_SESSION['player_id'] != 11) { // update card list for players ?>
 				if (
 					(
