@@ -3,7 +3,8 @@ session_set_cookie_params(24*60*60); // change how long session cookies last
                                      // the arg is the number of seconds the cookie lasts
 session_start();
 if (isset($_POST['makeLobbyButton'])) {
-	if (strlen(str_replace(' ', '', $_POST['name'])) >= 3) {
+	$name = trim($_POST['name']);
+	if (strlen($_POST['name']) >= 3) {
 		if ((int)$_POST['cards'] <= 70 && (int)$_POST['cards'] > 0) { // if the assigned amount of cards is less than 70
 			                                                          // TODO: add a propper minimum amount of cards
 			//list of filtered codes
