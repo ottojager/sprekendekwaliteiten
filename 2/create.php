@@ -77,7 +77,7 @@ if (isset($_POST['makeLobbyButton'])) {
 					</select>
 				</div>
 				</div>
-					<input type="submit" value="Aanmaken spel" name="makeLobbyButton">
+				<input type="submit" value="Aanmaken spel" name="makeLobbyButton">
 			</form>
 		</div>
 	</body>

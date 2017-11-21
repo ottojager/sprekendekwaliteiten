@@ -83,17 +83,14 @@ ul li {
 	height: 200px;*/
 	background-color: #ffffff;
 }
-
 ul li img {
 	width: 100%;
 	z-index: 1;
 }
-
 /* KNOPPEN */
 #knoppen {
 	clear: both;
 }
-
 ul li button.kaart {
 	position: relative;
 	height: 24px;
@@ -138,15 +135,13 @@ ul li button.kaart:focus {
 	background-image: url(knop_goed.png);
 	background-size: 240px 49px;
 	background-repeat: no-repeat;
-	text-align: center;
-	
+	text-align: center;	
 }
 .skiplink:focus {
 	position: absolute;
 	right: inherit;
 	text-decoration: none;
 }
-
 #knoppen button:focus, #knoppen a:focus {
 	height: 73px;
 	padding: 0 42px;
@@ -170,8 +165,7 @@ ul li button.kaart:focus {
 	background-color: #294253;
 	z-index: 2;
 }
-#graveyard {
-	
+#graveyard {	
 	width: 216px;
 	margin: 30px;
 	font-family: 'Roboto', sans-serif;
@@ -180,25 +174,21 @@ ul li button.kaart:focus {
 	border: 0px solid #c0fefe;
 	list-style: none;
 }
-
 #graveyard li {
 	padding: 3px;
 	background-color: transparent;
 	border-left: 2px solid #d92427;
 	border-bottom: 2px solid #d92427;
 }
-
 #graveyard li button {
 	border: none;
 	background: none;
 }
-
 #graveyard h2 {
 	padding: 3px;
 	background-color: transparent;
 	/*border-left: 2px solid #d92427;*/
 }
-
 @media screen and (min-width: 48em) /*768px*/ {
 	body {
 		background-color: #fffefe; /*#199bbe;*/
