@@ -19,7 +19,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 /* remove dotted outline/border in Firefox */
 button,
 button:focus,
@@ -30,11 +29,8 @@ input[type="button"]::-moz-focus-inner,
 input[type="submit"]::-moz-focus-inner,
 select::-moz-focus-inner,
 input[type="file"] > input[type="button"]::-moz-focus-inner {
-  	outline: none;
-	border: 0;
-	
+	outline: none;
 }
-
 select:-moz-focusring {
   	color: transparent;
   	text-shadow: 0 0 0 #000;
@@ -169,18 +165,9 @@ ul li button.kaart:focus {
 	padding: 0 42px;
 	border: 8px solid #d32b17;
 }
-/*
 #endGame {
-	position: relative;
-	width: 118px;
-	left: 54px;
-	bottom: 34px;
-	font-family: 'Roboto', sans-serif;
-	color: #acd7da;
-	border: 0px solid #c4f6f8;
-	background-color: #294253;
 	z-index: 2;
-}*/
+}
 #graveyard {
 	width: 216px;
 	margin: 30px;
@@ -205,7 +192,6 @@ ul li button.kaart:focus {
 	background-color: transparent;
 	/*border-left: 2px solid #d92427;*/
 }
-
 @media screen and (min-width: 48em) /*768px*/ {
 	body {
 		background-color: #fffefe; /*#199bbe;*/
@@ -241,9 +227,5 @@ ul li button.kaart:focus {
 	}
 	ul li button.kaart {
 		bottom: 45px;
-	}
-
-	#eindspel {
-		margin: 30px;
 	}
 }
