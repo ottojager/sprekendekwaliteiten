@@ -1,4 +1,4 @@
-INSERT INTO cards (name) VALUES ('Ambiteus');
+INSERT INTO cards (name) VALUES ('Ambitieus');
 INSERT INTO cards (name) VALUES ('Avontuurlijk');
 INSERT INTO cards (name) VALUES ('Behulpzaam');
 INSERT INTO cards (name) VALUES ('Bemiddelaar');
