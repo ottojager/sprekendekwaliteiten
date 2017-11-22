@@ -71,7 +71,7 @@ if ($_SESSION['player_id'] != 11) {
 				<?php if ($_SESSION['player_id'] != 11) { // update card list for players ?>
 				if (
 					(
-						document.getElementById("card_stack").childNodes.length != game_info['players'][own_id]['stack'].length &&
+						document.getElementById("card_stack").childNodes[0].childNodes.length != game_info['players'][own_id]['stack'].length &&
 						document.getElementById("card_stack").innerHTML != 'Nog geen kaarten ontvangen.' &&
 						game_info['players'][own_id]['stack'].length != 0
 					) || (
@@ -205,12 +205,11 @@ if ($_SESSION['player_id'] != 11) {
 		<button
 		<?php
 		if ($_SESSION['player_id'] == 11) {
-			echo 'onclick="view_cards('. (count($json['players'])-1) .')"';
+			echo 'onclick="view_cards('. (count($json['players'])-1) .')">Afval stapel';
 		} else {
-			echo 'onclick="reply_click('. (count($json['players'])-1) .')"';
+			echo 'onclick="reply_click('. (count($json['players'])-1) .')">Weggooien';
 		}
-		?>
-		>Afval stapel</button>
+		?></button>
 		<?php
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
 			// Leader only end game, undo buttons, and card list
