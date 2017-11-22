@@ -65,7 +65,7 @@ if ($_SESSION['player_id'] != 11) {
 				document.getElementById("card_image").alt = game_info['current_card'];
 				// check if displayed gotten card is less than the newest info if so update HTML
 
-				document.getElementById('blind_current_player').innerHTML = 'huidige speler: '+game_info['players'][ game_info['current_player'] ]['name'];
+				document.getElementById('blind_current_player').innerHTML = game_info['players'][ game_info['current_player'] ]['name'] + ' is aan de beurt.';
 				// update blind turn notifier thing
 
 				<?php if ($_SESSION['player_id'] != 11) { // update card list for players ?>
@@ -176,7 +176,7 @@ if ($_SESSION['player_id'] != 11) {
 		<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
 
 		<div id="blind_current_player" tabindex="1">
-			<?php echo "huidige speler: " . $json['players'][$json['current_player']]['name'] ?>
+			<?php echo $json['players'][$json['current_player']]['name']." is aan de beurt." ?>
 		</div>
 
 		<ul id="player_list">
