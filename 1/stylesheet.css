@@ -104,9 +104,6 @@ ul li img {
 	z-index: 1;
 }
 /* KNOPPEN */
-#knoppen {
-	clear: both;
-}
 ul li button.kaart {
 	position: relative;
 	height: 24px;
@@ -123,9 +120,10 @@ ul li button.kaart:focus {
 	padding-bottom: 18px;
 }
 #knoppen {
+	clear: both;
 	margin-top: 50px;
 }
-#knoppen button  {
+#knoppen button {
 	width: 277px;
 	height: 54px;
 	padding: 0 42px;
@@ -140,7 +138,6 @@ ul li button.kaart:focus {
 #knoppen button p {
 	background-color: #294253;
 }
-
 .skiplink {
 	display: block;
 	width: 277px;
@@ -156,7 +153,6 @@ ul li button.kaart:focus {
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-
 .skiplink:focus {
 	display: block;
 	width: 277px;
@@ -241,5 +237,23 @@ ul li button.kaart:focus {
 	}
 	ul li button.kaart {
 		bottom: 45px;
+	}
+	#knoppen button {
+		width: 277px;
+		height: 54px;
+		padding: 0 42px;
+	}
+	#knoppen button:focus, #knoppen a:focus {
+		height: 70px;
+		padding: 0 42px;
+	}
+	.skiplink {
+		width: 277px;
+		height: 54px;
+	}
+	.skiplink:focus {
+		display: block;
+		width: 277px;
+		height: 54px;
 	}
 }
