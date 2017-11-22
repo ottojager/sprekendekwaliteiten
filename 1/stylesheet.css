@@ -224,6 +224,27 @@ ul li button.kaart:focus {
 		font-size: 14px;
 		bottom: 40px;
 	}
+	#knoppen button {
+		width: 207px;
+		height: 40px;
+		padding: 0 32px;
+		font-size: 15px;
+	}
+	#knoppen button:focus, #knoppen a:focus {
+		height: 70px;
+		padding: 0 32px;
+		font-size: 15px;
+	}
+	.skiplink {
+		width: 207px;
+		height: 40px;
+		font-size: 15px;
+	}
+	.skiplink:focus {
+		width: 207px;
+		height: 40px;
+		font-size: 15px;
+	}
 }
 @media screen and (min-width: 80em) /*1280px*/ {
 	body {
@@ -242,18 +263,21 @@ ul li button.kaart:focus {
 		width: 277px;
 		height: 54px;
 		padding: 0 42px;
+		font-size: 17px;
 	}
 	#knoppen button:focus, #knoppen a:focus {
 		height: 70px;
 		padding: 0 42px;
+		font-size: 17px;
 	}
 	.skiplink {
 		width: 277px;
 		height: 54px;
+		font-size: 17px;
 	}
 	.skiplink:focus {
-		display: block;
 		width: 277px;
 		height: 54px;
+		font-size: 17px;
 	}
 }
