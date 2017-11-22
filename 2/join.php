@@ -42,6 +42,11 @@ if (isset($_POST['join_button'])) {
 	} else {
 		$error = 'Naam moet minimaal 3 characters bevaten.';
 	}
+	$name = $_POST['name'];
+	$code = $_POST['code'];
+} else {
+	$name = '';
+	$code = '';
 }
 ?>
 <!DOCTYPE html>
@@ -62,11 +67,11 @@ if (isset($_POST['join_button'])) {
 				<h1>Kwaliteitenspel</h1>
 				<div id="naamstyle">
 					<label for="name">Vul je naam in:</label>
-					 <input id="name"type="text" name="name">
+					 <input id="name"type="text" name="name" value="<?php echo $name ?>">
 				</div>
 				<div id="groepstyle">
 					<label for="code">Groepscode:</label>
-					 <input id="code" type="text" name="code">
+					 <input id="code" type="text" name="code" value="<?php echo $code ?>">
 				</div>
 				<input type="submit" value="Doe mee" name="join_button">
 			</form>

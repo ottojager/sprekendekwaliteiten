@@ -41,6 +41,9 @@ if (isset($_POST['makeLobbyButton'])) {
 	} else {
 		$error = 'Naam moet minimaal 3 characters bevaten.';
 	}
+	$name = $_POST['name'];
+} else {
+	$name = '';
 }
 ?>
 <!DOCTYPE html>
@@ -61,7 +64,7 @@ if (isset($_POST['makeLobbyButton'])) {
 				<div id="title"><h1>Kwaliteitenspel</h1></div>
 				<div class="cardstyle">
 					<label for="name">Naam:</label>
-					<input id="name" type="text" name="name">
+					<input id="name" type="text" name="name" value="<?php echo $name ?>">
 				</div>
 				<div id="no_ones_gonna_look_trough_this_code_anyway" >
 				<div class="cardstyle">
