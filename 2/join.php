@@ -4,8 +4,8 @@ session_set_cookie_params(24*60*60); // change how long session cookies last
 session_start();
 if (isset($_POST['join_button'])) {
 	$name = trim($_POST['name']);
-	if (strlen($_POST['name']) >= 3) {
-		if ($_POST['name'] != 'Afval stapel') {
+	if (strlen($name) >= 3) {
+		if ($name != 'Afval stapel') {
 			$code = strtoupper($_POST['code']);
 			if (strlen($code) == 3) {
 				$games_list = scandir("games");
@@ -17,13 +17,13 @@ if (isset($_POST['join_button'])) {
 							$error = 'lobby is vol';
 						} else {
 							$json['players'][] = array(
-								'name' => $_POST['name'],
+								'name' => $name,
 								'player_id' => $id,
 							);
 							$json['last_change'] = time();
 							file_put_contents("./games/$code.json", json_encode($json));
 							$_SESSION['player_id'] = $id;
-							$_SESSION['player_name'] = $_POST['name']; // because player_id might need to change later
+							$_SESSION['player_name'] = $name; // because player_id might need to change later
 							$_SESSION['game_id'] = $code;
 							header('Location: lobby.php');
 						}

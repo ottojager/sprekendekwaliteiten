@@ -4,7 +4,7 @@ session_set_cookie_params(24*60*60); // change how long session cookies last
 session_start();
 if (isset($_POST['makeLobbyButton'])) {
 	$name = trim($_POST['name']);
-	if (strlen($_POST['name']) >= 3) {
+	if (strlen($name) >= 3) {
 		if ((int)$_POST['cards'] <= 70 && (int)$_POST['cards'] > 0) { // if the assigned amount of cards is less than 70
 			                                                          // TODO: add a propper minimum amount of cards
 			//list of filtered codes
@@ -23,7 +23,7 @@ if (isset($_POST['makeLobbyButton'])) {
 
 			$game = array(
 				'game_id' => $id,
-				'leader_name' => $_POST['name'],
+				'leader_name' => $name,
 				'players' => array(),
 				'game_started' => false,
 				'max_cards' => (int)$_POST['cards'],
