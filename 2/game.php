@@ -200,7 +200,7 @@ if ($_SESSION['player_id'] != 11) {
 			<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
 		</div>
 
-		<a class="skiplink" href="#top">Naar huidige kaart</a>
+		<a class="skiplink" href="#current_card">Naar huidige kaart</a>
 
 		<!-- keep these on one line or JS will see a child element that isn't there -->
 		<?php if ($_SESSION['player_id'] != 11) { ?>
