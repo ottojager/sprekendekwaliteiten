@@ -25,6 +25,7 @@
 		<link rel="icon" sizes="16x16" type="image/png" href="Rainbow_placeholder.png">
 	</head>
 	<body>
+		<div id="above"></div>
 		<h1>Kwaliteitenspel - Bewustwording</h1>
 		<div id="top" class="row">
 			<h2 class="col-xs-1 col-sm-2 col-sm-offset-2" style="text-align: right;">Actieve kaart:</h2>
