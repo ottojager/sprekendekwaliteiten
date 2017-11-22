@@ -161,6 +161,12 @@ if ($_SESSION['player_id'] != 11) {
 					}
 				};
 			}, 5000);
+
+			function help_window() {
+				var name = game_info['players'][ game_info['current_player'] ]['name'];
+				var content = name + ' is aan de beurt. ' + name + ' selecteert in de lijst spelers een naam aan wie hij/zij de kwaliteit wil geven';
+				alert(content);
+			}
 		</script>
 		<title>Actief - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="./css/game.css" type="text/css">
@@ -219,6 +225,7 @@ if ($_SESSION['player_id'] != 11) {
 		<button onclick="end_game()">Game beindigen</button>
 		<button onclick="undo()"><img src="css/Knop.png" alt="Ongedaan maken"></button>
 		<?php } // end leader only buttons ?>
+		<button id="help" onclick="help_window()">Help!</button>
 	</body>
 </html>
 <?php
