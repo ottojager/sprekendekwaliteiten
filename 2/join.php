@@ -14,7 +14,7 @@ if (isset($_POST['join_button'])) {
 					if (!$json['game_started']) {
 						$id = count($json['players']);
 						if ($id > 10) {
-							$error = 'lobby is vol';
+							$error = 'Spel is vol.';
 						} else {
 							$json['players'][] = array(
 								'name' => $name,
@@ -31,7 +31,7 @@ if (isset($_POST['join_button'])) {
 						$error = 'Je kan niet mee doen aan een spel als deze al bezig is.';
 					}
 				} else {
-					$error = 'Verkeerde code of lobby bestaat niet.';
+					$error = 'Verkeerde code of spel bestaat niet.';
 				}
 			} else {
 				$error = 'Code moet 3 letters zijn.';
