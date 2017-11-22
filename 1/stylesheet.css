@@ -39,7 +39,7 @@ button {
 	background: none; /* weghalen als we toch een achtergrond op de buttons gaan zetten */
 	border: 0;
 }
-*:focus {
+button:focus {
 	border: 8px solid #d32b17;
 	border-radius: 3px;
 }
@@ -125,10 +125,10 @@ ul li button.kaart:focus {
 #knoppen {
 	margin-top: 50px;
 }
-#knoppen button, #knoppen a {
+#knoppen button  {
 	width: 277px;
-	height: 57px;
-	padding: 0 50px;
+	height: 54px;
+	padding: 0 42px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	color: #acd7da;
@@ -137,33 +137,47 @@ ul li button.kaart:focus {
 	background-size: contain;
 	background-repeat:no-repeat;
 }
-#knoppen button p, #knoppen a p {
+#knoppen button p {
 	background-color: #294253;
-	z-index: 2;
 }
+
 .skiplink {
+	display: block;
+	width: 277px;
+	height: 54px;
 	position: absolute;
-	right: 300%;
+	right: 500%;
 	font-family: 'Roboto', sans-serif;
-	background-image: url(knop_goed.png);
-	background-size: 240px 49px;
-	background-repeat: no-repeat;
+	font-size: 17px;
+	color: #acd7da;
 	text-align: center;
-	-webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
     text-decoration: none;
-    color: initial;
+   	background: url(knop_goed.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
+
 .skiplink:focus {
-	position: absolute;
+	display: block;
+	width: 277px;
+	height: 54px;
+	position: relative;
 	right: inherit;
 	text-decoration: none;
+	color: #acd7da;
+	padding-top: 15px !important;
+	margin-top: -8px;
+	text-align: center;
+    text-decoration: none;
+   	background: url(knop_goed.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 #knoppen button:focus, #knoppen a:focus {
-	height: 73px;
+	height: 70px;
 	padding: 0 42px;
 	border: 8px solid #d32b17;
+	margin-top: -8px;
 }
 #endGame {
 	z-index: 2;

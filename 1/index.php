@@ -50,7 +50,7 @@
 
 		<div class="row" id="knoppen">
 			<div class="col-xs-12 col-sm-6 col-md-3"><button id="backButton" onclick="backButton(this)"><p>Ongedaan maken</p></button></div>
-			<div class="col-xs-12 col-sm-6 col-md-3"><p><a class="skiplink" href="#current">Naar actieve kaart</a></p></div>
+			<div class="col-xs-12 col-sm-6 col-md-3"><a class="skiplink" href="#current">Naar actieve kaart</a></div>
 			<div class="col-xs-12 col-sm-6 col-md-3"><button id="endGame" onclick="endGame()"><p>Be&#235;indig spel</p></button></div>
 		</div>
 		
