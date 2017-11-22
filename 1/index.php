@@ -34,10 +34,10 @@
 		<h2 id="jkaart">Jouw 8 kaarten</h2>
 		<ul>
 		<div class="row">
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot1" class="kaart"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot2" class="kaart"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot3" class="kaart"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot4" class="kaart"></button></li>
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png" alt=""><button id="slot1" class="kaart"></button></li>
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png" alt=""><button id="slot2" class="kaart"></button></li>
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png" alt=""><button id="slot3" class="kaart"></button></li>
+			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png" alt=""><button id="slot4" class="kaart"></button></li>
 		</div>	
 		<div class="row">
 			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot5" class="kaart"></button></li>

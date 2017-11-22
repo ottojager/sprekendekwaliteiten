@@ -19,9 +19,29 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+/* remove dotted outline/border in Firefox */
+button,
+button:focus,
+a:focus, a:active,
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  	outline: none;
+	border: 0;
+	
+}
+
+select:-moz-focusring {
+  	color: transparent;
+  	text-shadow: 0 0 0 #000;
+}
 button {
 	background: none; /* weghalen als we toch een achtergrond op de buttons gaan zetten */
-	border: none;
+	border: 0;
 }
 *:focus {
 	border: 8px solid #d32b17;
@@ -132,7 +152,12 @@ ul li button.kaart:focus {
 	background-image: url(knop_goed.png);
 	background-size: 240px 49px;
 	background-repeat: no-repeat;
-	text-align: center;	
+	text-align: center;
+	-webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
 }
 .skiplink:focus {
 	position: absolute;
@@ -144,13 +169,7 @@ ul li button.kaart:focus {
 	padding: 0 42px;
 	border: 8px solid #d32b17;
 }
-#eindspel {
-	width: 240px;
-}
-#eindspel img{
-	width: 240px;
-	z-index: 1;
-}
+/*
 #endGame {
 	position: relative;
 	width: 118px;
@@ -161,8 +180,8 @@ ul li button.kaart:focus {
 	border: 0px solid #c4f6f8;
 	background-color: #294253;
 	z-index: 2;
-}
-#graveyard {	
+}*/
+#graveyard {
 	width: 216px;
 	margin: 30px;
 	font-family: 'Roboto', sans-serif;
@@ -186,6 +205,7 @@ ul li button.kaart:focus {
 	background-color: transparent;
 	/*border-left: 2px solid #d92427;*/
 }
+
 @media screen and (min-width: 48em) /*768px*/ {
 	body {
 		background-color: #fffefe; /*#199bbe;*/
