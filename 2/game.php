@@ -61,6 +61,10 @@ if ($_SESSION['player_id'] != 11) {
 					document.location.href = './end/';
 				}
 
+				// update amount of cards left
+				document.getElementById("cards_left").innerHTML = 'nog ' + game_info['card_stack'].length + ' kaarten';
+
+				// upate current card
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
 				document.getElementById("card_image").alt = game_info['current_card'];
 				// check if displayed gotten card is less than the newest info if so update HTML
@@ -138,8 +142,8 @@ if ($_SESSION['player_id'] != 11) {
 								li.id = i;
 								player_list.appendChild(li);
 							}
-						};
-					};
+						}
+					}
 
 					<?php
 					// leader only
@@ -155,8 +159,6 @@ if ($_SESSION['player_id'] != 11) {
 						notification.play();
 						console.log('focusing current card');
 					}
-					//update amount of cards left
-					document.getElementById("cards_left").innerHTML =  'nog ' + game_info['card_stack'].length + ' kaarten';
 				};
 			}, 5000);
 		</script>
