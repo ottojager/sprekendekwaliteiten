@@ -79,8 +79,8 @@ if (!(bool)$json) { // if $json actually has content
 			<div id="borderimage"></div>
 			<div id="player__name"></div>
 		</div>
-		<h1>Spelvoorbereiding - Feedback - Kwaliteitenspel</h1>
 		<div id="main">
+		<h1>Spelvoorbereiding - Feedback - Kwaliteitenspel</h1>
 			<?php if ($_SESSION['player_id'] == 11) { // game leader only ?>
 			<h2 id="game_id">Spelvoorbereiding</h2>
 			<p>Geef de spelers deze code:<?php echo $json['game_id']; ?><br />
