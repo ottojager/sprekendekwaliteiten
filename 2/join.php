@@ -52,6 +52,14 @@ if (isset($_POST['join_button'])) {
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
+		<script>
+		function validate() {
+			var name = document.getElementById('name').value;
+			var code = document.getElementById('code').value;
+
+			
+		}
+		</script>
 		<title>Doe mee - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
@@ -67,13 +75,13 @@ if (isset($_POST['join_button'])) {
 				<h1>Kwaliteitenspel</h1>
 				<div id="naamstyle">
 					<label for="name">Vul je naam in:</label>
-					 <input id="name"type="text" name="name" value="<?php echo $name ?>">
+					<input id="name"type="text" name="name" value="<?php echo $name ?>">
 				</div>
 				<div id="groepstyle">
 					<label for="code">Groepscode:</label>
-					 <input id="code" type="text" name="code" value="<?php echo $code ?>">
+					<input id="code" type="text" name="code" value="<?php echo $code ?>">
 				</div>
-				<input type="submit" value="Doe mee" name="join_button">
+				<button onclick="validate">Doe mee</button>
 			</form>
 		</div>
 	</body>
