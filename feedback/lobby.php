@@ -4,6 +4,8 @@ session_start();
 if (!isset($_SESSION['game_id'])) {
 	header('location: ./');
 }
+
+// load game's json file
 $game = $_SESSION['game_id'];
 $json = json_decode(@file_get_contents("./games/$game.json"), true);
 if (!(bool)$json) { // if $json actually has content
@@ -14,7 +16,7 @@ if (!(bool)$json) { // if $json actually has content
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
-		<title>Lobby - Feedback - Kwaliteitenspel</title>
+		<title>Spelvoorbereiding - Feedback - Kwaliteitenspel</title>
 		<script src="api/js/std.js"></script>
 
 		<?php
@@ -36,28 +38,26 @@ if (!(bool)$json) { // if $json actually has content
 		<?php } // end of leader only javascript ?>
 
 		<script>
-			var id = <?php echo $_SESSION['player_id']; ?>;
+			var id = <?php echo $_SESSION['player_id']; ?>; // the ID of the current user
 
-			window.setInterval(function(){
-				start_update();
+			var s = 3000; // how often to refresh in ms
+			window.setInterval(function(){ // run this code every [s] seconds
+				start_update(); // get the new game_info
 				if (game_info["game_started"] == true) {
-					window.location.href = 'game.php';
+					window.location.href = 'game.php'; // redirect users if the game has been started
 				}
 
-				if (game_info['players'][id] == []) { // when the user doesn't "exist"
-					window.location.href = './';
-				}
-
-				//document.getElementById("leader").innerHTML = game_info["leader_name"];
+				// regenerate the player list
 				var list = document.getElementById("player_list");
-				list.innerHTML = '';
+				list.innerHTML = ''; // empty the list
 				game_info["players"].forEach(function(item, index){
 					var child = document.createElement('li');
 					child.innerHTML = item['name'];
 
 					<?php if ($_SESSION['player_id'] == 11) { ?>
+						// kick button only visible to the game leader
 						var button = document.createElement('button');
-						button.onclick = function() {
+						button.onclick = function() { // send a request to the server to kick the player with ID [index]
 							var xhttp = new XMLHttpRequest();
 							xhttp.open("GET", "./api/kick.php?p="+index, false);
 							xhttp.send();
@@ -68,25 +68,26 @@ if (!(bool)$json) { // if $json actually has content
 
 					list.appendChild(child);
 				});
-
-				// these never update and are thus not needed
-				//document.getElementById("game_id").innerHTML = game_info['game_id'];
-				//document.getElementById("leader").innerHTML = 'Leider: ' + game_info['leader_name'];
-				//document.getElementById("player_list").innerHTML = game_info[""];
-			}, 3000);
+			}, s);
 		</script>
 		<link rel="stylesheet" href="css/lobby_stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<h1>Lobby - Feedback - Kwaliteitenspel</h1>
+		<h1>Spelvoorbereiding - Feedback - Kwaliteitenspel</h1>
 		<div id="main">
-			<h1></h1>
-			<h2 id="game_id">Spel code:</h2>
+			<?php if ($_SESSION['player_id'] == 11) { // game leader only ?>
+			<h2 id="game_id">Spelvoorbereiding</h2>
+			<p>Geef de spelers deze code:<?php echo $json['game_id']; ?><br />
+			<br />
+			De volgende spelers doen mee:</p>
+
+			<?php } else { // player only ?>
+			<p>De volgende spelers doen mee:</p>
+			<?php } ?>
+
+			<ul id="player_list">
 			<?php
-			echo '<p>'.$json['game_id'].'</p>';
-			echo '<p id="leader">Leider: '.$json['leader_name'].'</p>';
-			echo '<ol id="player_list">';
 			foreach ($json['players'] as $key => $value) {
 				if ($_SESSION['player_id'] == 11) {
 					echo '<li>'.$value['name'].'<button onclick="alert(\''.$key.'\')"><img src="css/trash-icon.png" alt="verwijderen" height="25" width="25"></button></li>';
@@ -94,8 +95,8 @@ if (!(bool)$json) { // if $json actually has content
 					echo '<li>'.$value['name'].'</li>';
 				}
 			}
-			echo '</ol>';
 			?>
+			</ul>
 		<?php
 		if ($_SESSION['player_id'] == 11) {
 			?><button onclick="start_game()">Start het spel</button><?php
