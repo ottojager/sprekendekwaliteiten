@@ -62,6 +62,7 @@ if (isset($_POST['makeLobbyButton'])) {
 	<body>
 		<div>
 			<div id="above"></div>
+			<div id="player__name"></div>
 			<form method="post">
 				<div id="title"><h1>Kwaliteitenspel</h1></div>
 				<div id="inveld">
