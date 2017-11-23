@@ -57,7 +57,7 @@ if (isset($_POST['join_button'])) {
 			var name = document.getElementById('name').value;
 			var code = document.getElementById('code').value;
 
-			
+
 		}
 		</script>
 		<title>Doe mee - Feedback - Kwaliteitenspel</title>
@@ -82,6 +82,7 @@ if (isset($_POST['join_button'])) {
 					<input id="code" type="text" name="code" value="<?php echo $code ?>">
 				</div>
 				<button onclick="validate">Doe mee</button>
+				<input name="join_button" value="Doe mee" type="submit" />
 			</form>
 		</div>
 	</body>
