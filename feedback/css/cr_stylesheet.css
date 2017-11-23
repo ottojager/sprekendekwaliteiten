@@ -35,8 +35,11 @@ body {
 	background-color: #234152;
 	border-bottom: 2px solid #d32b17;
 }
-#player__name {
+#help {
 	float: right;
+}
+#borderimage {
+	float: left;
 	width: 1px;
 	background-color: #234152;
 	border-bottom: 30px solid #564573;
@@ -44,6 +47,12 @@ body {
     -webkit-border-image: url(bovenste_balk.png) 20% round;
     -o-border-image: url(bovenste_balk.png) 20% round;
     border-image: url(bovenste_balk.png) 100% round;
+}
+#player__name {
+	width: 175px;
+	height: 28px;
+	background-color: #234152;
+	border-bottom: 2px solid #d32b17;
 }
 h1 {
 	height: 47px;
