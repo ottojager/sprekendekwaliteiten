@@ -213,11 +213,12 @@ if ($_SESSION['player_id'] != 11) {
 		<button
 		<?php
 		if ($_SESSION['player_id'] == 11) {
-			echo 'onclick="view_cards('. (count($json['players'])-1) .')">Afval stapel';
+			echo ' onclick="view_cards('. (count($json['players'])-1) .')">Afval stapel';
 		} else {
-			echo 'onclick="reply_click('. (count($json['players'])-1) .')">Weggooien';
+			echo ' onclick="reply_click('. (count($json['players'])-1) .')">Weggooien';
 		}
-		?></button>
+		?>
+		</button>
 		<?php
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
 			// Leader only end game, undo buttons, and card list
