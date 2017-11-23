@@ -52,6 +52,7 @@ if (isset($_POST['makeLobbyButton'])) {
 		<title>Aanmaken spel - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/cr_stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
+		<meta charset="utf-8">
 		<?php
 		if (isset($error)) {
 			echo "<script>alert('$error');</script>";
@@ -60,25 +61,28 @@ if (isset($_POST['makeLobbyButton'])) {
 	</head>
 	<body>
 		<div>
+			<div id="above"></div>
 			<form method="post">
 				<div id="title"><h1>Kwaliteitenspel</h1></div>
-				<div class="cardstyle">
-					<label for="name">Naam:</label>
-					<input id="name" type="text" name="name" value="<?php echo $name ?>">
+				<div id="inveld">
+					<div class="inputstyle">
+						<label for="name">Naam:</label>
+						<input id="name" type="text" name="name" value="<?php echo $name ?>">
+					</div>
 				</div>
 				<div id="no_ones_gonna_look_trough_this_code_anyway" >
-				<div class="cardstyle">
-					<label for="cards">Aantal kaarten:</label>
-					<select name="cards">
-						<option value="10">10</option>
-						<option value="20">20</option>
-						<option value="30">30</option>
-						<option value="40">40</option>
-						<option value="50">50</option>
-						<option value="60">60</option>
-						<option selected value="70">70</option>
-					</select>
-				</div>
+					<div class="cardstyle">
+						<label for="cards">Aantal kaarten:</label>
+						<select name="cards">
+							<option value="10">10</option>
+							<option value="20">20</option>
+							<option value="30">30</option>
+							<option value="40">40</option>
+							<option value="50">50</option>
+							<option value="60">60</option>
+							<option selected value="70">70</option>
+						</select>
+					</div>
 				</div>
 				<input type="submit" value="Aanmaken spel" name="makeLobbyButton">
 			</form>
