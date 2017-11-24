@@ -53,11 +53,23 @@ if (isset($_POST['join_button'])) {
 <html lang="nl=NL">
 	<head>
 		<script>
-		function validate() {
+		function validate_form() {
 			var name = document.getElementById('name').value;
 			var code = document.getElementById('code').value;
 
-
+			name = name.trim(); // remove white space at beggining and end of the string
+			console.log('name is '+name.length+' characters long.')
+			if (name.length >= 3) {
+				if (code.length == 3) {
+					console.log('sending form ..');
+					return true;
+				} else {
+					alert('De code moet precies 3 letters zijn.');
+				}
+			} else {
+				alert('Je naam moet minimaal 3 characters lang zijn.');
+			}
+			return false;
 		}
 		</script>
 		<title>Doe mee - Feedback - Kwaliteitenspel</title>
@@ -71,7 +83,7 @@ if (isset($_POST['join_button'])) {
 	</head>
 	<body>
 		<div>
-			<form method="post">
+			<form onsubmit="return validate_form()" method="post">
 				<h1>Kwaliteitenspel</h1>
 				<div id="naamstyle">
 					<label for="name">Vul je naam in:</label>
@@ -81,7 +93,6 @@ if (isset($_POST['join_button'])) {
 					<label for="code">Groepscode:</label>
 					<input id="code" type="text" name="code" value="<?php echo $code ?>">
 				</div>
-				<button onclick="validate">Doe mee</button>
 				<input name="join_button" value="Doe mee" type="submit" />
 			</form>
 		</div>
