@@ -36,6 +36,7 @@ select:-moz-focusring {
   	text-shadow: 0 0 0 #000;
 }
 button {
+	background: none; /* weghalen als we toch een achtergrond op de buttons gaan zetten */
 	border: 0;
 }
 button:focus {
@@ -45,37 +46,15 @@ button:focus {
 html {
 }
 body {
+	max-width: 1200px;
+	margin: 0 auto 0 auto;
 	background-color: #fffefe;
 }
-#container {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-#topbar {
+#above {
 	clear: both;
 	width: 100%;
 	height: 30px;
 	background-color: #234152;
-	border-bottom: 2px solid #d32b17;
-}
-#help {
-	float: right;
-}
-#borderimage {
-	float: left;
-	width: 1px;
-	background-color: #234152;
-	border-bottom: 30px solid #564573;
-	border-left: 20px solid #564573;
-    -webkit-border-image: url(bovenste_balk.png) 100% round;
-    -o-border-image: url(bovenste_balk.png) 100% round;
-    border-image: url(bovenste_balk.png) 100% round;
-}
-#player__name {
-	width: 175px;
-	height: 28px;
-	background-color: #234152;
-	border-bottom: 2px solid #d32b17;
 }
 h1 {
 	margin: 25px 0 25px 0;
@@ -83,32 +62,27 @@ h1 {
 	font-size: 40px;
 	text-align: center;
 }
-h2 {
-	color: #234152;	
-}
-#actievekaart {
+#top {
 	margin: 40px auto 0 auto;
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	color: #234152;
 	background-color: transparent;
 }
-#actievekaart h2 {
+.row h2 {
 	padding: 4px;
 	font-style: italic;
 	text-align: right;
 }
-#huidig {
-	width: 350px;
-	height: 200px;
-	background: url(kaart-liggend_goed.png);
-	background-size: contain;
-	background-repeat:no-repeat;
+#huidig img {
+	width: 100%;
+	z-index: 1;
 }
-#huidig p {
-	position: absolute;
-	bottom: 22px;
-	left: 55px;
+#current {
+	position: relative;
+	height: 24px;
+	bottom: 56px;
+	left: 13%;
 	font-family: 'Roboto', sans-serif;
 	font-style: normal;
 	font-size: 21px;
@@ -118,7 +92,7 @@ h2 {
 	z-index: 2;
 }
 #jkaart {
-	margin: 30px 0 0 50px;
+	margin-left: 50px;
 	font-family: 'Roboto', sans-serif;
 }
 ul {
@@ -127,43 +101,33 @@ ul {
 	list-style: none;
 }
 ul li {
+	/*width: 320px;
+	height: 200px;*/
 	background-color: #ffffff;
 }
-/*ul li img {
+ul li img {
 	width: 100%;
 	z-index: 1;
-}*/
-
-button.kaart {
-	margin-top: 30px;
-	width: 277px;
-	height: 164px;
-	padding: 0;
-	background: url(kaart-liggend_goed.png);
-	background-size: contain;
-	background-repeat:no-repeat;
-	
 }
-button.kaart:focus {
-	height: 168px;
-}
-button.kaart p {
-	position: absolute;
-	bottom: 25px;
-	left: 55px;
+/* KNOPPEN */
+ul li button.kaart {
+	position: relative;
+	height: 24px;
+	bottom: 66px;
+	left: 12%;
 	font-family: 'Roboto', sans-serif;
-	font-size: 17px;
-	border: 0;
+	font-size: 21px;
 	color: #234152;
 	background-color: transparent;
 	z-index: 2;
+	/*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
-
-
-/* KNOPPEN */
+ul li button.kaart:focus {
+	padding-bottom: 18px;
+}
 #knoppen {
 	clear: both;
-	margin-bottom: 50px;
+	
 }
 #knoppen button {
 	width: 277px;
@@ -224,7 +188,7 @@ button.kaart p {
 }
 #graveyard {
 	width: 216px;
-	margin-top: 30px;
+	margin: 30px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	color: #234152;
@@ -237,48 +201,36 @@ button.kaart p {
 	border-left: 2px solid #d92427;
 	border-bottom: 2px solid #d92427;
 }
-#graveyard button {
+#graveyard li button {
+	border: none;
 	background: none;
 }
-
-h2#aflegstapel {
-	font-family: 'Roboto', sans-serif;
-	font-size: 21px;
-	width: 277px;
-	margin-left: 16px;
-	
+#graveyard h2 {
+	padding: 3px;
+	background-color: transparent;
+	/*border-left: 2px solid #d92427;*/
 }
-
 @media screen and (min-width: 48em) /*768px*/ {
-	#container { padding: 20px; }
+	body {
+		background-color: #fffefe; /*#199bbe;*/
+	}
+	#current {
+		bottom: 50px;
+	}
+	ul li button.kaart {
+		bottom: 55px;
+	}
 }
 @media screen and (min-width: 62em) /*992px*/ {
 	body {
 		background-color: #fffffe; /*#1920ef;*/
 	}
-	#container { padding: 30px; }
-	#huidig {
-		width: 320px;
+	#current {
+		bottom: 45px;
 	}
-	
-	#huidig p {
-		bottom: 35px;
-	}
-	button.kaart {
-		width: 230px;
-		height: 131px;
+	ul li button.kaart {
 		font-size: 14px;
-	}
-	button.kaart:focus {
-		height: 135px;
-	}
-	button.kaart p {
-		bottom: 16px;
-		left: 45px;
-		font-size: 14px;
-	}
-	button.kaart:focus p {
-		bottom: 19px;
+		bottom: 40px;
 	}
 	#knoppen button {
 		width: 207px;
@@ -307,30 +259,14 @@ h2#aflegstapel {
 	body {
 		background-color: #ffffff;
 	}
-	#container { padding: 0; }
-	h2 {
-		font-size: 21px;
+	#top {
+		font-size: 17px;
 	}
-	#huidig {
-		width: 350px;
+	#current {
+		bottom: 44px;
 	}
-	#huidig p {
-		bottom: 22px;
-	}
-
-	button.kaart {
-		width: 277px;
-		height: 164px;
-	}
-	button.kaart:focus {
-		height: 168px;
-	}
-	button.kaart p {
-		bottom: 25px;
-	}
-	button.kaart:focus p {
-		bottom: 28px;
-		left: 55px;
+	ul li button.kaart {
+		bottom: 45px;
 	}
 	#knoppen button {
 		width: 277px;
@@ -355,4 +291,3 @@ h2#aflegstapel {
 		padding-top: 15px !important;
 	}
 }
-

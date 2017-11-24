@@ -27,13 +27,13 @@ function rewriteGraveyard() {
     var i;
     var garbage_pile = document.getElementById("graveyard"); //TODO: rename to something better than garbage_pile
     garbage_pile.innerHTML = ""; // empty the list
-    /*var head_li = document.createElement('li');
+    var head_li = document.createElement('li');
     var head = document.createElement('h2');
 	var head_button = document.createElement('button');
-    head.innerHTML = "Aflegstapel";
+    head.innerHTML = "Afvalstapel";
 	head_button.appendChild(head);
     head_li.appendChild(head_button);
-    garbage_pile.appendChild(head_li);*/
+    garbage_pile.appendChild(head_li);
 
     for (i = 0; (i < graveyard.length); i += 1) { // do a max of 3 items otherwise do all
         if (i == 3) {
@@ -41,8 +41,7 @@ function rewriteGraveyard() {
         }
         var item = document.createElement('li');
         item.innerHTML = graveyard[i];
-        garbage_pile.appendChild(item);
-		
+        garbage_pile.appendChild(item)
     }
 }
 
@@ -54,12 +53,8 @@ function addListeners() {
 			reply_click(this.id);
 		});
     }
-	document.getElementById("trash").addEventListener('click', function() {
+	document.getElementById("graveyard").addEventListener('click', function() {
 			reply_click(this.id);
-			window.scrollTo(0,document.body.scrollHeight);
-		});
-	document.getElementById("skiplink").addEventListener('click', function() {
-			window.scrollTo(0,0);
 		});
 }
 
@@ -135,7 +130,7 @@ function reply_click(clicked_id) {
     if (gameEnded == 0) {
         var i;
         lastChosenPosition.unshift(clicked_id);
-        if (clicked_id !== "trash") {
+        if (clicked_id !== "graveyard") {
             //plaats actieve kaart in graveyard array
             graveyard.unshift(document.getElementById(clicked_id).innerHTML);
             //vervang geselecteerde hand kaart met actieve kaart
@@ -158,7 +153,7 @@ function reply_click(clicked_id) {
 function backButton() {
     "use strict";
     //var lastCard = document.getElementById(lastChosenPosition[0]).innerHTML;
-    if (lastChosenPosition[0] !== "trash") {
+    if (lastChosenPosition[0] !== "graveyard") {
         cardStack.unshift(document.getElementById("current").innerHTML);
         currentCard = document.getElementById(lastChosenPosition[0]).innerHTML;
         document.getElementById("current").innerHTML = document.getElementById(lastChosenPosition[0]).innerHTML;

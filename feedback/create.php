@@ -61,7 +61,7 @@ if (isset($_POST['makeLobbyButton'])) {
 	</head>
 	<body>
 		<div>
-			<div id="above"></div>
+			<div id="topbar"></div>
 			<div id="help">
 				<div id="borderimage"></div>
 				<div id="player__name"></div>

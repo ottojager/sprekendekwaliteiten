@@ -74,7 +74,7 @@ if (!(bool)$json) { // if $json actually has content
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<div id="above"></div>
+		<div id="topbar"></div>
 		<div id="help">
 			<div id="borderimage"></div>
 			<div id="player__name"></div>

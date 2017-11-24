@@ -25,38 +25,47 @@
 		<link rel="icon" sizes="16x16" type="image/png" href="Rainbow_placeholder.png">
 	</head>
 	<body>
-		<div id="above"></div>
-		<h1>Kwaliteitenspel - Bewustwording</h1>
-		<div id="top" class="row">
-			<h2 class="col-xs-1 col-sm-2 col-sm-offset-2" style="text-align: right;">Actieve kaart:</h2>
-			<div id="huidig" class="col-xs-11 col-sm-6 col-md-4"><img src="kaart-liggend_goed.png"><div id="current"></div></div>
+		<div id="topbar"></div>
+		<div id="help">
+			<div id="borderimage"></div>
+			<div id="player__name"></div>
 		</div>
-		<div>
-		<h2 id="jkaart">Jouw 8 kaarten</h2>
-		<ul>
-		<div class="row">
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png" alt=""><button id="slot1" class="kaart"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png" alt=""><button id="slot2" class="kaart"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png" alt=""><button id="slot3" class="kaart"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png" alt=""><button id="slot4" class="kaart"></button></li>
-		</div>	
-		<div class="row">
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot5" class="kaart"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot6" class="kaart"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot7" class="kaart"></button></li>
-			<li class="col-xs-12 col-sm-6 col-md-3"><img src="kaart-liggend_goed.png"><button id="slot8" class="kaart"></button></li>
-		</div>
-		</ul>
-		</div>
+		<div id="container">
+			<h1>Kwaliteitenspel - Bewustwording</h1>
+			<div id="actievekaart" class="row">
+				<h2 class="col-md-offset-2 col-xs-1 col-sm-2 col-sm-offset-1 col-xs-offset-1">Actieve kaart:</h2>
+				<div id="huidig" class="col-xs-11 col-sm-6 col-md-4"><p id="current"></p></div>
+			</div>
+			<div id="kaarten">
+			<h2 id="jkaart">Jouw 8 kaarten</h2>
+			<ul>
+				<div class="row">
+					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot1" class="kaart"><p></p></button></li>
+					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot2" class="kaart"><p></p></button></li>
+					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot3" class="kaart"><p></p></button></li>
+					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot4" class="kaart"><p></p></button></li>
+				</div>	
+				<div class="row">
+					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot5" class="kaart"><p></p></button></li>
+					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot6" class="kaart"><p></p></button></li>
+					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot7" class="kaart"><p></p></button></li>
+					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot8" class="kaart"><p></p></button></li>
+				</div>
+			</ul>
+			</div>
 
-		<div class="row" id="knoppen">
-			<div class="col-xs-12 col-sm-6 col-md-3"><button id="backButton" onclick="backButton(this)"><p>Ongedaan maken</p></button></div>
-			<div class="col-xs-12 col-sm-6 col-md-3"><a class="skiplink" href="#current">Naar actieve kaart</a></div>
-			<div class="col-xs-12 col-sm-6 col-md-3"><button id="endGame" onclick="endGame()"><p>Be&#235;indig spel</p></button></div>
+			<div class="row" id="knoppen">
+				<div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="backButton" onclick="backButton(this)"><p>Ongedaan maken</p></button></div>
+				<div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><a class="skiplink" id="skiplink" href="#current">Naar actieve kaart</a></div>
+				<div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="trash"><p>Kaart weggooien</p></button></div>
+				<div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="endGame" onclick="endGame()"><p>Be&#235;indig spel</p></button></div>
+			</div>
+			<div class="row">
+				<h2 id="aflegstapel">Aflegstapel</h2>
+			</div>
+			<ul class="col-xs-12 col-sm-6 col-md-3" id="graveyard">
+				
+			</ul>
 		</div>
-		
-		<ul class="col-xs-12 col-sm-6 col-md-3" id="graveyard">
-			<li><button><h2>Afleg stapel</h2></button></li>
-		</ul>
 	</body>
 </html>
