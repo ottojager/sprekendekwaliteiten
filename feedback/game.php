@@ -176,18 +176,19 @@ if ($_SESSION['player_id'] != 11) {
 		<div id="topbar"></div>
 		<div id="sidetopbar">
 			<div id="borderimage"></div>
-			<div id="player__name"></div>
-			<button id="help" onclick="help_window()">Help!</button>
-		</div>
-		<div id="container">
-			<h1>Actief - Feedback - Kwaliteitenspel</h1>
-			<h2><?php
+			<div id="player__name">
+				<h2><?php
 				if ($_SESSION['player_id'] == 11) {
 					echo 'Spelleider';
 				} else {
 					echo $json['players'][ $_SESSION['player_id'] ]['name']; // look it works don't touch it
 				}
-			?></h2>
+				?></h2>
+			</div>
+			<button id="help" onclick="help_window()">Help!</button>
+		</div>
+		<div id="container">
+			<h1>Actief - Feedback - Kwaliteitenspel</h1>
 			<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
 
 			<div id="blind_current_player" tabindex="1">

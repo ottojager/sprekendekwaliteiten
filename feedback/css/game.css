@@ -57,6 +57,9 @@ body {
 #player__name {
 	width: 175px;
 	height: 28px;
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
 	background-color: #234152;
 	border-bottom: 2px solid #d32b17;
 }
@@ -94,6 +97,7 @@ h1 {
 	overflow: hidden;
 }
 #player_list {
+	float: right;
 	width: 31%;
 	margin-left: 2%;
 	font-family: 'Roboto', sans-serif;
@@ -128,6 +132,7 @@ h1 {
     font-size: 20px;
 }
 .card_stack {
+	width: 300px;
 	margin: 1%;
 	color: #fffefe;
 	background-color: #a82519;
