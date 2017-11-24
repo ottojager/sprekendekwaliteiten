@@ -26,7 +26,7 @@
 	</head>
 	<body>
 		<div id="topbar"></div>
-		<div id="help">
+		<div id="sidetopbar">
 			<div id="borderimage"></div>
 			<div id="player__name"></div>
 		</div>

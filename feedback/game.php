@@ -173,60 +173,67 @@ if ($_SESSION['player_id'] != 11) {
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<h1>Actief - Feedback - Kwaliteitenspel</h1>
-		<h2><?php
-			if ($_SESSION['player_id'] == 11) {
-				echo 'Spelleider';
-			} else {
-				echo $json['players'][ $_SESSION['player_id'] ]['name']; // look it works don't touch it
-			}
-		?></h2>
-		<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
-
-		<div id="blind_current_player" tabindex="1">
-			<?php echo $json['players'][$json['current_player']]['name']." is aan de beurt." ?>
+		<div id="topbar"></div>
+		<div id="sidetopbar">
+			<div id="borderimage"></div>
+			<div id="player__name"></div>
+			<button id="help" onclick="help_window()">Help!</button>
 		</div>
-
-		<ul id="player_list">
-			<?php
-			foreach ($json['players'] as $key => $value) {
-				if ($value['name'] != 'Afval stapel') {
-					echo '<li id="'.$value['player_id'].'">'.'<button>'.$value['name'].' (0)</button>'.'</li>';
+		<div id="container">
+			<h1>Actief - Feedback - Kwaliteitenspel</h1>
+			<h2><?php
+				if ($_SESSION['player_id'] == 11) {
+					echo 'Spelleider';
+				} else {
+					echo $json['players'][ $_SESSION['player_id'] ]['name']; // look it works don't touch it
 				}
+			?></h2>
+			<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
+
+			<div id="blind_current_player" tabindex="1">
+				<?php echo $json['players'][$json['current_player']]['name']." is aan de beurt." ?>
+			</div>
+
+			<ul id="player_list">
+				<?php
+				foreach ($json['players'] as $key => $value) {
+					if ($value['name'] != 'Afval stapel') {
+						echo '<li id="'.$value['player_id'].'">'.'<button>'.$value['name'].' (0)</button>'.'</li>';
+					}
+				}
+				?>
+			</ul>
+			<div id="cards_left">
+				<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
+			</div>
+
+			<a class="skiplink" href="#current_card">Naar huidige kaart</a>
+
+			<!-- keep these on one line or JS will see a child element that isn't there -->
+			<?php if ($_SESSION['player_id'] != 11) { ?>
+			<h2>Ontvangen kaarten</h2>
+			<div id="card_stack" class="card_stack">Nog geen kaarten ontvangen.</div>
+			<?php } else { ?>
+			<div id="card_stack" class="card_stack">Klik op een speler om hun kaarten te zien.</div>
+			<?php } ?>
+
+			<button
+			<?php
+			if ($_SESSION['player_id'] == 11) {
+				echo ' onclick="view_cards('. (count($json['players'])-1) .')">Afval stapel';
+			} else {
+				echo ' onclick="reply_click('. (count($json['players'])-1) .')">Weggooien';
 			}
 			?>
-		</ul>
-		<div id="cards_left">
-			<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
+			</button>
+			<?php
+			if ($_SESSION['player_id'] == 11) { // if user is game leader
+				// Leader only end game, undo buttons, and card list
+			?>
+			<button onclick="end_game()">Game beindigen</button>
+			<button onclick="undo()"><img src="css/Knop.png" alt="Ongedaan maken"></button>
+			<?php } // end leader only buttons ?>
 		</div>
-
-		<a class="skiplink" href="#current_card">Naar huidige kaart</a>
-
-		<!-- keep these on one line or JS will see a child element that isn't there -->
-		<?php if ($_SESSION['player_id'] != 11) { ?>
-		<h2>Ontvangen kaarten</h2>
-		<div id="card_stack" class="card_stack">Nog geen kaarten ontvangen.</div>
-		<?php } else { ?>
-		<div id="card_stack" class="card_stack">Klik op een speler om hun kaarten te zien.</div>
-		<?php } ?>
-
-		<button
-		<?php
-		if ($_SESSION['player_id'] == 11) {
-			echo ' onclick="view_cards('. (count($json['players'])-1) .')">Afval stapel';
-		} else {
-			echo ' onclick="reply_click('. (count($json['players'])-1) .')">Weggooien';
-		}
-		?>
-		</button>
-		<?php
-		if ($_SESSION['player_id'] == 11) { // if user is game leader
-			// Leader only end game, undo buttons, and card list
-		?>
-		<button onclick="end_game()">Game beindigen</button>
-		<button onclick="undo()"><img src="css/Knop.png" alt="Ongedaan maken"></button>
-		<?php } // end leader only buttons ?>
-		<button id="help" onclick="help_window()">Help!</button>
 	</body>
 </html>
 <?php

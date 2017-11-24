@@ -58,7 +58,7 @@ body {
 	background-color: #234152;
 	border-bottom: 2px solid #d32b17;
 }
-#help {
+#sidetopbar {
 	float: right;
 }
 #borderimage {
@@ -66,7 +66,7 @@ body {
 	width: 1px;
 	background-color: #234152;
 	border-bottom: 30px solid #564573;
-	border-left: 20px solid #564573;
+	border-left: 30px solid #564573;
     -webkit-border-image: url(bovenste_balk.png) 100% round;
     -o-border-image: url(bovenste_balk.png) 100% round;
     border-image: url(bovenste_balk.png) 100% round;
