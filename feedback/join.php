@@ -56,18 +56,19 @@ if (isset($_POST['join_button'])) {
 		function validate_form() {
 			var name = document.getElementById('name').value;
 			var code = document.getElementById('code').value;
+			var error = document.getElementById('error');
+			error.innerHTML = ''; // remove any left over error messages
 
 			name = name.trim(); // remove white space at beggining and end of the string
-			console.log('name is '+name.length+' characters long.')
+
 			if (name.length >= 3) {
 				if (code.length == 3) {
-					console.log('sending form ..');
 					return true;
 				} else {
-					alert('De code moet precies 3 letters zijn.');
+					error.innerHTML = 'De code moet precies 3 letters zijn.';
 				}
 			} else {
-				alert('Je naam moet minimaal 3 characters lang zijn.');
+				error.innerHTML = 'Je naam moet minimaal 3 characters lang zijn.';
 			}
 			return false;
 		}
@@ -85,6 +86,7 @@ if (isset($_POST['join_button'])) {
 		<div>
 			<form onsubmit="return validate_form()" method="post">
 				<h1>Kwaliteitenspel</h1>
+				<p id="error"></p>
 				<div id="naamstyle">
 					<label for="name">Vul je naam in:</label>
 					<input id="name"type="text" name="name" value="<?php echo $name ?>">
