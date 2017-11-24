@@ -92,13 +92,17 @@ if (isset($_POST['join_button'])) {
 			<form onsubmit="return validate_form()" method="post">
 				<h1>Kwaliteitenspel</h1>
 				<p id="error"></p>
-				<div id="naamstyle">
-					<label for="name">Vul je naam in:</label>
-					<input id="name"type="text" name="name" value="<?php echo $name ?>">
+				<div class="red_border">
+					<div id="naamstyle">
+						<label for="name">Vul je naam in:</label>
+						<input id="name"type="text" name="name" value="<?php echo $name ?>">
+					</div>
 				</div>
-				<div id="groepstyle">
-					<label for="code">Groepscode:</label>
-					<input id="code" type="text" name="code" value="<?php echo $code ?>">
+				<div class="red_border">
+					<div id="groepstyle">
+						<label for="code">Groepscode:</label>
+						<input id="code" type="text" name="code" value="<?php echo $code ?>">
+					</div>
 				</div>
 				<input name="join_button" value="Doe mee" type="submit" />
 			</form>
