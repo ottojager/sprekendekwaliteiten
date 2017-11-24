@@ -83,7 +83,12 @@ if (isset($_POST['join_button'])) {
 		?>
 	</head>
 	<body>
-		<div>
+		<div id="topbar"></div>
+		<div id="sidetopbar">
+			<div id="borderimage"></div>
+			<div id="player__name"></div>
+		</div>
+		<div id="container">
 			<form onsubmit="return validate_form()" method="post">
 				<h1>Kwaliteitenspel</h1>
 				<p id="error"></p>
