@@ -49,6 +49,22 @@ if (isset($_POST['makeLobbyButton'])) {
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
+		<script>
+		function validate_form() {
+			var name = document.getElementById('name').value;
+			var error = document.getElementById('error');
+			error.innerHTML = ''; // remove any left over error messages
+
+			name = name.trim(); // remove white space at beggining and end of the string
+
+			if (name.length >= 3) {
+				return true;
+			} else {
+				error.innerHTML = 'Je naam moet minimaal 3 characters lang zijn.';
+			}
+			return false;
+		}
+		</script>
 		<title>Aanmaken spel - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/cr_stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
@@ -66,8 +82,9 @@ if (isset($_POST['makeLobbyButton'])) {
 				<div id="borderimage"></div>
 				<div id="player__name"></div>
 			</div>
-			<form method="post">
+			<form onsubmit="return validate_form()" method="post">
 				<div id="title"><h1>Kwaliteitenspel</h1></div>
+				<p id="error"></p>
 				<div id="inveld">
 					<div class="inputstyle">
 						<label for="name">Naam:</label>
