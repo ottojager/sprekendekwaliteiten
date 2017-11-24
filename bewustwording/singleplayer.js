@@ -67,7 +67,7 @@ function endGame(no_confirm) {
     if (no_confirm || confirm('Weet u zeker dat u het spel wil beëindigen?')) {
         gameEnded = 1;
         //top leegmaken
-        document.getElementById("top").innerHTML = "";
+        document.getElementById("actievekaart").innerHTML = "";
 
         // container div
         var div = document.createElement('div');
@@ -111,7 +111,7 @@ function endGame(no_confirm) {
         var p = document.createElement('p');
         p.id = 'error';
         div.appendChild(p);
-        document.getElementById("top").appendChild(div);
+        document.getElementById("actievekaart").appendChild(div);
         alert("Je hebt alle kaarten gehad. Vul je email in en klik op \"Stuur email\" om de resultaten als email naar jezelf te stuuren.");
     }
 
