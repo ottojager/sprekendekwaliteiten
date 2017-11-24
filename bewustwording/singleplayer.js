@@ -19,7 +19,7 @@ function fillSlots() {
     "use strict";
     var i;
     for (i = 1; i < 9; i += 1) {
-        document.getElementById("slot" + i.toString()).innerHTML = "<p>"+takeCard()+"</p>";
+        document.getElementById("slot" + i.toString()).getElementsByTagName('p')[0].innerHTML = takeCard();
     }
 }
 function rewriteGraveyard() {
@@ -139,7 +139,7 @@ function reply_click(clicked_id) {
             //plaats actieve kaart in graveyard array
             graveyard.unshift(document.getElementById(clicked_id).innerHTML);
             //vervang geselecteerde hand kaart met actieve kaart
-            document.getElementById(clicked_id).innerHTML = currentCard;
+            document.getElementById(clicked_id).getElementsByTagName('p')[0].innerHTML = currentCard;
         } else {
             //actieve kaart in graveyard doen
             graveyard.unshift(document.getElementById("current").innerHTML);
