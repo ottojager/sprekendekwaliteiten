@@ -63,6 +63,15 @@ body {
 	background-color: #234152;
 	border-bottom: 2px solid #d32b17;
 }
+#help {
+	float: right;
+	width: 50px;
+	height: 30px;
+	margin: 0;
+	background-color: #234152;
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+}
 h1 {
 	margin: 25px 0 25px 0;
 	color: #234152;
@@ -117,7 +126,7 @@ h1 {
 	list-style: none;
 	/*background-image: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);*/
 }
-#player_list > li > button { /*Note to self: Talk to Bas about button inside li.*/
+#player_list > li > button {
 	background: transparent;
 	border: 0px solid #020119;
 	font-family: 'Roboto', sans-serif;

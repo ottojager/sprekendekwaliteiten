@@ -184,8 +184,8 @@ if ($_SESSION['player_id'] != 11) {
 					echo $json['players'][ $_SESSION['player_id'] ]['name']; // look it works don't touch it
 				}
 				?></h2>
-			</div>
 			<button id="help" onclick="help_window()">Help!</button>
+			</div>
 		</div>
 		<div id="container">
 			<h1>Actief - Feedback - Kwaliteitenspel</h1>
