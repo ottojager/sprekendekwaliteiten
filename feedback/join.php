@@ -40,7 +40,7 @@ if (isset($_POST['join_button'])) {
 			$error = 'Die naam is gereseveert.';
 		}
 	} else {
-		$error = 'Naam moet minimaal 3 characters bevaten.';
+		$error = 'Naam moet minimaal 3 tekens bevaten.';
 	}
 	$name = $_POST['name'];
 	$code = $_POST['code'];
@@ -68,7 +68,7 @@ if (isset($_POST['join_button'])) {
 					error.innerHTML = 'De code moet precies 3 letters zijn.';
 				}
 			} else {
-				error.innerHTML = 'Je naam moet minimaal 3 characters lang zijn.';
+				error.innerHTML = 'Je naam moet minimaal 3 tekens lang zijn.';
 			}
 			return false;
 		}
@@ -78,13 +78,6 @@ if (isset($_POST['join_button'])) {
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<div>
-			<?php
-			if (isset($error)) {
-				echo $error;
-			}
-			?>
-		</div>
 		<div id="topbar"></div>
 		<div id="sidetopbar">
 			<div id="borderimage"></div>
@@ -93,7 +86,7 @@ if (isset($_POST['join_button'])) {
 		<div id="container">
 			<form onsubmit="return validate_form()" method="post">
 				<h1>Kwaliteitenspel</h1>
-				<p id="error"></p>
+				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
 				<div class="red_border">
 					<div id="naamstyle">
 						<label for="name">Vul je naam in:</label>

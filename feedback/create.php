@@ -72,13 +72,6 @@ if (isset($_POST['makeLobbyButton'])) {
 	</head>
 	<body>
 		<div>
-			<div>
-				<?php
-				if (isset($error)) {
-					echo $error;
-				}
-				?>
-			</div>
 			<div id="topbar"></div>
 			<div id="sidetopbar">
 				<div id="borderimage"></div>
@@ -86,7 +79,7 @@ if (isset($_POST['makeLobbyButton'])) {
 			</div>
 			<form onsubmit="return validate_form()" method="post">
 				<div id="title"><h1>Kwaliteitenspel</h1></div>
-				<p id="error"></p>
+				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
 				<div id="inveld">
 					<div class="inputstyle">
 						<label for="name">Naam:</label>
