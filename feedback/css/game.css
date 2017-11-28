@@ -93,9 +93,12 @@ h1 {
 	text-align: right;
 }
 #card_display {
+	position: relative;
 	width: 200px;
 	height: 139px;
-	position: relative;
+	background-image: url(/./feedback/css/kaart-liggend_goed.png);
+	background-size: contain;
+	background-repeat:no-repeat;
 }
 #current_card {
 	position: absolute;

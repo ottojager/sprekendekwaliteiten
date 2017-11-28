@@ -191,7 +191,7 @@ if ($_SESSION['player_id'] != 11) {
 		<div id="container">
 			<h1>Actief - Feedback - Kwaliteitenspel</h1>
 			<div id="card_active" class="col-xs-1 col-sm-1 col-md-2 col-md-offset-1">Active kaart:</div>
-			<div id="card_display" class="col-xs-11 col-sm-6 col-md-5"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
+			<div id="card_display" class="col-xs-11 col-sm-6 col-md-5"><p id="current_card"></p></div>
 
 			<div id="blind_current_player" tabindex="1">
 				<?php echo $json['players'][$json['current_player']]['name']." is aan de beurt." ?>
