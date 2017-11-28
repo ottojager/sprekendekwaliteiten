@@ -69,14 +69,16 @@ if (isset($_POST['makeLobbyButton'])) {
 		<link rel="stylesheet" href="css/cr_stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 		<meta charset="utf-8">
-		<?php
-		if (isset($error)) {
-			echo "<script>alert('$error');</script>";
-		}
-		?>
 	</head>
 	<body>
 		<div>
+			<div>
+				<?php
+				if (isset($error)) {
+					echo $error;
+				}
+				?>
+			</div>
 			<div id="topbar"></div>
 			<div id="sidetopbar">
 				<div id="borderimage"></div>

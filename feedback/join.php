@@ -76,13 +76,15 @@ if (isset($_POST['join_button'])) {
 		<title>Doe mee - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
-		<?php
-		if (isset($error)) {
-			echo "<script>alert('$error');</script>";
-		}
-		?>
 	</head>
 	<body>
+		<div>
+			<?php
+			if (isset($error)) {
+				echo $error;
+			}
+			?>
+		</div>
 		<div id="topbar"></div>
 		<div id="sidetopbar">
 			<div id="borderimage"></div>
