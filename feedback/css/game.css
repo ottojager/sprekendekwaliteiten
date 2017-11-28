@@ -32,7 +32,7 @@ body {
 }
 #container {
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: 30px auto;
 }
 #topbar {
 	clear: both;
@@ -43,6 +43,7 @@ body {
 }
 #sidetopbar {
 	float: right;
+	height: 28px;
 }
 #borderimage {
 	float: left;
@@ -62,15 +63,17 @@ body {
 	font-size: 14px;
 	background-color: #234152;
 	border-bottom: 2px solid #d32b17;
+	padding: 5px;
 }
-#player__name h2 {
+#player__name span {
 	width: 175px;
+	height: 28px;
 }
 #help {
 	float: right;
 	width: 50px;
-	height: 30px;
-	margin: 0;
+	height: 25px;
+	margin: -4px 0 0 0;
 	background-color: #234152;
 	color: #ffffff;
 	font-family: 'Roboto', sans-serif;
@@ -83,6 +86,7 @@ h1 {
 	text-align: center;
 }
 #card_active {
+	padding: 0px;
 	color: #234152;
 	font-style: italic;
 	font-family: 'Roboto', sans-serif;

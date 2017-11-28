@@ -178,14 +178,14 @@ if ($_SESSION['player_id'] != 11) {
 		<div id="sidetopbar">
 			<div id="borderimage"></div>
 			<div id="player__name">
-				<h2><?php
+				<span><?php
 				if ($_SESSION['player_id'] == 11) {
 					echo 'Spelleider';
 				} else {
 					echo $json['players'][ $_SESSION['player_id'] ]['name']; // look it works don't touch it
 				}
-				?></h2>
-			<button id="help" onclick="help_window()">Help!</button>
+				?></span>
+				<button id="help" onclick="help_window()">Help!</button>
 			</div>
 		</div>
 		<div id="container">
