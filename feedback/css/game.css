@@ -55,13 +55,16 @@ body {
     border-image: url(bovenste_balk.png) 100% round;
 }
 #player__name {
-	width: 175px;
+	width: 275px;
 	height: 28px;
 	color: #ffffff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	background-color: #234152;
 	border-bottom: 2px solid #d32b17;
+}
+#player__name h2 {
+	width: 175px;
 }
 #help {
 	float: right;
@@ -106,7 +109,6 @@ h1 {
 	overflow: hidden;
 }
 #player_list {
-	float: right;
 	width: 31%;
 	margin-left: 2%;
 	font-family: 'Roboto', sans-serif;

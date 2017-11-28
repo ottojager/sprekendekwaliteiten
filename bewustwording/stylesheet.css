@@ -133,7 +133,6 @@ ul li {
 	width: 100%;
 	z-index: 1;
 }*/
-
 button.kaart {
 	margin-top: 30px;
 	width: 277px;
@@ -142,7 +141,6 @@ button.kaart {
 	background: url(kaart-liggend_goed.png);
 	background-size: contain;
 	background-repeat:no-repeat;
-	
 }
 button.kaart:focus {
 	height: 168px;
@@ -158,8 +156,6 @@ button.kaart p {
 	background-color: transparent;
 	z-index: 2;
 }
-
-
 /* KNOPPEN */
 #knoppen {
 	clear: both;
@@ -240,15 +236,12 @@ button.kaart p {
 #graveyard button {
 	background: none;
 }
-
 h2#aflegstapel {
 	font-family: 'Roboto', sans-serif;
 	font-size: 21px;
 	width: 277px;
 	margin-left: 16px;
-	
 }
-
 @media screen and (min-width: 48em) /*768px*/ {
 	#container { padding: 20px; }
 }
@@ -317,7 +310,6 @@ h2#aflegstapel {
 	#huidig p {
 		bottom: 22px;
 	}
-
 	button.kaart {
 		width: 277px;
 		height: 164px;
@@ -355,4 +347,3 @@ h2#aflegstapel {
 		padding-top: 15px !important;
 	}
 }
-

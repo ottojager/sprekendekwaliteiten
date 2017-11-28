@@ -169,6 +169,7 @@ if ($_SESSION['player_id'] != 11) {
 			}
 		</script>
 		<title>Actief - Feedback - Kwaliteitenspel</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="./css/game.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
@@ -189,13 +190,13 @@ if ($_SESSION['player_id'] != 11) {
 		</div>
 		<div id="container">
 			<h1>Actief - Feedback - Kwaliteitenspel</h1>
-			<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
+			<div id="card_display" class="col-xs-11 col-sm-6 col-md-7"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
 
 			<div id="blind_current_player" tabindex="1">
 				<?php echo $json['players'][$json['current_player']]['name']." is aan de beurt." ?>
 			</div>
 
-			<ul id="player_list">
+			<ul id="player_list" class="col-xs-11 col-sm-6 col-md-5">
 				<?php
 				foreach ($json['players'] as $key => $value) {
 					if ($value['name'] != 'Afval stapel') {
