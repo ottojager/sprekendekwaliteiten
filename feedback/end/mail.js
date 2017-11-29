@@ -1,6 +1,8 @@
 function send_mail() {
-	var email = document.getElementById('email').value; //TODO: check for empty email
-														// Het verplichte veld \'Email\' is niet ingevuld.
+	var email = document.getElementById('email').value;
+	if (email == '') {
+		alert('Het verplichte veld \'Email\' is niet ingevuld.');
+	}
 	var pattern =
 /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 // checks for valid email adderess
@@ -10,7 +12,7 @@ function send_mail() {
 		alert('Het veld \'Email\' is niet goed ingevuld.\nZorg dat het een correct formaat heeft bijvoorbeeld \'naam@domein.nl\'.');
 		exit();
 	} else {
-		console.log('check passed')
+		console.log('check passed');
 
 		var email = encodeURIComponent(email);
 
