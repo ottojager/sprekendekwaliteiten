@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
+		<meta charset="utf-8">
+		<link rel="icon" sizes="16x16" type="image/png" href="bewustwording/Rainbow_placeholder.png">
 		<title>Kwaliteitspel</title>
 	</head>
 	<body>
