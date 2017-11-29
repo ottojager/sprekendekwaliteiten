@@ -3,9 +3,15 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="icon" sizes="16x16" type="image/png" href="bewustwording/Rainbow_placeholder.png">
+		<link rel="stylesheet" href="index.css" type="text/css">
 		<title>Kwaliteitspel</title>
 	</head>
 	<body>
+		<div id="topbar"></div>
+			<div id="sidetopbar">
+				<div id="borderimage"></div>
+				<div id="player__name"></div>
+			</div>
 		<h1>Kwaliteitspel</h1>
 		<h2>welkom bij het kwaliteitenspel</h2>
 		<p></p>
