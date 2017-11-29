@@ -60,3 +60,8 @@ h2 {
 	font-size: 28px;
 	text-align: center;
 }
+a {/*temorary code*/
+	margin: 0 auto 0 auto;
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+}
