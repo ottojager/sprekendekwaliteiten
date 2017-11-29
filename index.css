@@ -46,9 +46,17 @@ time, mark, audio, video {
 	border-bottom: 2px solid #d32b17;
 }
 h1 {
+	clear: both;
 	margin: 25px 0 25px 0;
 	color: #234152;
 	font-family: 'Oswald', sans-serif;
 	font-size: 40px;
+	text-align: center;
+}
+h2 {
+	margin: 25px 0 25px 0;
+	color: #234152;
+	font-family: 'Roboto', sans-serif;
+	font-size: 28px;
 	text-align: center;
 }
