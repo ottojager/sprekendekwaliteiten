@@ -185,15 +185,16 @@ if ($_SESSION['player_id'] != 11) {
 				}
 				?></h2>
 			</div>
-			<button id="help" onclick="help_window()">Help!</button>
+			<button id="help" onclick="help_window()">Help</button>
 		</div>
 		<div id="container">
 			<h1>Actief - Feedback - Kwaliteitenspel</h1>
-			<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
 
 			<div id="blind_current_player" tabindex="1">
 				<?php echo $json['players'][$json['current_player']]['name']." is aan de beurt." ?>
 			</div>
+
+			<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
 
 			<ul id="player_list">
 				<?php
