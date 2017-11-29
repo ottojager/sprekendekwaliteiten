@@ -169,6 +169,7 @@ if ($_SESSION['player_id'] != 11) {
 			}
 		</script>
 		<title>Actief - Feedback - Kwaliteitenspel</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="./css/game.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
@@ -177,13 +178,14 @@ if ($_SESSION['player_id'] != 11) {
 		<div id="sidetopbar">
 			<div id="borderimage"></div>
 			<div id="player__name">
-				<h2><?php
+				<span><?php
 				if ($_SESSION['player_id'] == 11) {
 					echo 'Spelleider';
 				} else {
 					echo $json['players'][ $_SESSION['player_id'] ]['name']; // look it works don't touch it
 				}
-				?></h2>
+				?></span>
+				<button id="help" onclick="help_window()">Help!</button>
 			</div>
 			<button id="help" onclick="help_window()">Help</button>
 		</div>
@@ -194,9 +196,10 @@ if ($_SESSION['player_id'] != 11) {
 				<?php echo $json['players'][$json['current_player']]['name']." is aan de beurt." ?>
 			</div>
 
-			<div id="card_display"><img id="card_image" src="css/kaart-liggend%20goed.png" alt=""><p id="current_card"></p></div>
+			<div id="card_active" class="col-xs-1 col-sm-1 col-md-2 col-md-offset-1">Active kaart:</div>
+			<div id="card_display" class="col-xs-11 col-sm-6 col-md-5"><p id="current_card"></p></div>
 
-			<ul id="player_list">
+			<ul id="player_list" class="col-xs-11 col-sm-6 col-md-5">
 				<?php
 				foreach ($json['players'] as $key => $value) {
 					if ($value['name'] != 'Afval stapel') {
@@ -233,7 +236,7 @@ if ($_SESSION['player_id'] != 11) {
 				// Leader only end game, undo buttons, and card list
 			?>
 			<button onclick="end_game()">Game beindigen</button>
-			<button onclick="undo()"><img src="css/Knop.png" alt="Ongedaan maken"></button>
+			<button onclick="undo()"><img src="css/knop_goed.png" alt="Ongedaan maken"></button>
 			<?php } // end leader only buttons ?>
 		</div>
 	</body>
