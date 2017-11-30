@@ -146,7 +146,7 @@ label {
 		font-size: 20px;
 	}
 	#inveld {
-		width: 25%;
+		width: 30%;
 	}
 	#no_ones_gonna_look_trough_this_code_anyway {
 		width: 30%;
@@ -154,12 +154,12 @@ label {
 }
 @media screen and (min-width: 64em) /*1024px*/ {
 	#inveld {
-		width: 17.5%;
+		width: 19%;
 	}
 	input[type=text] {
 		width: 35%;
 	}
 	#no_ones_gonna_look_trough_this_code_anyway {
-		width: 17.5%;
+		width: 19%;
 	}
 }
