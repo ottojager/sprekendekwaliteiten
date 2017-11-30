@@ -82,8 +82,7 @@ if (isset($_POST['makeLobbyButton'])) {
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
 				<div id="inveld">
 					<div class="inputstyle">
-						<label for="name">Naam:</label>
-						<input id="name" type="text" name="name" value="<?php echo $name ?>">
+						<label for="name">Naam:</label><input id="name" type="text" name="name" value="<?php echo $name ?>">
 					</div>
 				</div>
 				<div id="no_ones_gonna_look_trough_this_code_anyway" >

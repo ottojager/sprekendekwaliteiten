@@ -65,7 +65,7 @@ body {
 	border-bottom: 2px solid #d32b17;
 }
 h1 {
-	width: 30%;
+	width: 60%;
 	height: 47px;
 	margin: 8% auto 5% auto;
 	padding: 18px;
@@ -83,9 +83,9 @@ p {
 	text-align: center;
 }
 #naamstyle {
-	width: 320px;
-	height: 35px;
-	padding: 5px 5px 0px 5px;
+	width: 290px;
+	height: 30px;
+	padding: 0px 5px 0px 5px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	color: #ffffff;
@@ -94,9 +94,9 @@ p {
 	text-align: center;
 }
 #groepstyle {
-	width: 320px;
-	height: 35px;
-	padding: 5px 5px 0px 5px;
+	width: 290px;
+	height: 30px;
+	padding: 0px 5px 0px 5px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	color: #ffffff;
@@ -105,7 +105,7 @@ p {
 	text-align: center;
 }
 .red_border {
-	width: 334px;
+	width: 304px;
 	margin: 0% auto 3% auto;
 	border-bottom: 3px solid #d32b17;
 	border-left: 3px solid #d32b17;

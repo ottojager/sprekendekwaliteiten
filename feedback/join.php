@@ -73,6 +73,7 @@ if (isset($_POST['join_button'])) {
 			return false;
 		}
 		</script>
+		<meta charset="utf-8">
 		<title>Doe mee - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
@@ -85,7 +86,7 @@ if (isset($_POST['join_button'])) {
 		</div>
 		<div id="container">
 			<form onsubmit="return validate_form()" method="post">
-				<h1>Kwaliteitenspel</h1>
+				<h1>Kwaliteitenspel - Feedback</h1>
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
 				<div class="red_border">
 					<div id="naamstyle">

@@ -71,7 +71,7 @@ p {
 }
 .inputstyle {
 	width: 98%;
-	height: 39px;
+	height: 31px;
 	padding: 1px;
 	margin: 0% auto 0% auto;
 	font-family: 'Roboto', sans-serif;
@@ -99,7 +99,7 @@ p {
 }
 #no_ones_gonna_look_trough_this_code_anyway {
 	width: 35%;
-	margin: 2% auto 15% auto;
+	margin: 2% auto 10% auto;
 	border-bottom: 3px solid #d32b17;
 	border-left: 3px solid #d32b17;
 }
@@ -150,5 +150,16 @@ label {
 	}
 	#no_ones_gonna_look_trough_this_code_anyway {
 		width: 30%;
+	}
+}
+@media screen and (min-width: 64em) /*1024px*/ {
+	#inveld {
+		width: 17.5%;
+	}
+	input[type=text] {
+		width: 35%;
+	}
+	#no_ones_gonna_look_trough_this_code_anyway {
+		width: 17.5%;
 	}
 }
