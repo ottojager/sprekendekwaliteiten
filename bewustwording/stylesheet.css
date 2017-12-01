@@ -186,7 +186,7 @@ button.kaart p {
 #knoppen button p {
 	background-color: #294253;
 }
-.skiplink {
+.skiplink {/*krijgt geen focus in Vivaldi*/
 	display: block;
 	width: 277px;
 	height: 54px;
