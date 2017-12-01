@@ -113,9 +113,17 @@ p {
 	padding: 4px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
-	color: #ffffff;
-	background-color: #234152;
+	color: #234152;
 	list-style: none;
+}
+#player_list li {
+	margin: 4px;
+	padding: 2px;
+	border-bottom: 2px solid #d32b17;
+	border-left: 2px solid #d32b17;
+}
+#player_list li button {
+	background-color: #1920ef;
 }
 button {
 	width: 25%;
