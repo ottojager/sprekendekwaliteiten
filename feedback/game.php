@@ -235,7 +235,7 @@ if ($_SESSION['player_id'] != 11) {
 			if ($_SESSION['player_id'] == 11) { // if user is game leader
 				// Leader only end game, undo buttons, and card list
 			?>
-			<button onclick="end_game()">Game beindigen</button>
+			<button onclick="end_game()">Spel beëindigen</button>
 			<button onclick="undo()"><img src="css/knop_goed.png" alt="Ongedaan maken"></button>
 			<?php } // end leader only buttons ?>
 		</div>
