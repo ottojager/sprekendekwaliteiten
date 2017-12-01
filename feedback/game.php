@@ -188,7 +188,6 @@ if ($_SESSION['player_id'] != 11) {
 				?></span>
 				<button id="help" onclick="help_window()">Help!</button>
 			</div>
-			<button id="help" onclick="help_window()">Help</button>
 		</div>
 		<div id="container">
 			<h1>Actief - Feedback - Kwaliteitenspel</h1>
