@@ -109,8 +109,20 @@ p {
 	font-family: 'Roboto', sans-serif;
 }
 #player_list {
-	width: 25%;
-	margin: 6% 0%;
+	display: flex;
+		display: -webkit-flex; /* Safari 6.1+ */
+		display: -ms-flex; /* IE 10 */
+	flex-direction: row;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+	flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+	align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+	width: 47%;
+	margin: 4% 0%;
 	padding: 4px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
@@ -118,6 +130,7 @@ p {
 	list-style: none;
 }
 #player_list li {
+	width: 45%;
 	margin: 4px;
 	padding: 2px;
 	border-bottom: 2px solid #d32b17;
