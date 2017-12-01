@@ -14,7 +14,7 @@
 	</div>
 	<div id="container">
 		<h1>Einde - Feedback - Kwaliteitenspel</h1>
-		<p>Type hier je email adres in, zodat je kaarten naar jou opgestuurd kunnen worden.</p>
+		<p>Vul hier je email adres in, zodat je kaarten naar jou opgestuurd kunnen worden.</p>
 		<label for="email">Email</label>
 		<input name="mail" type="email" id="email" />
 		<button onclick="send_mail()">Mail mijn kaarten</button>
