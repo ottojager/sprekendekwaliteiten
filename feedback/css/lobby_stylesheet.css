@@ -60,9 +60,9 @@ body {
 }
 h1 {
 	height: 47px;
-	margin: 100px;
+	margin: 100px 100px 30px 100px;
 	font-family: 'Oswald', sans-serif;
-	font-size: 31px;
+	font-size: 40px;
 	color: #1f3f50;
 	background-color: #fffefe;
 	text-align: center;
@@ -86,12 +86,12 @@ h1 {
 #game_id {
 	width: 25%;
 	height: 5%;
-	margin: 0%;
+	margin: 0% 0% 3% 0%;
 	padding: 4px;
-	font-family: 'Roboto', sans-serif;
-	font-size: 20px;
-	color: #ffffff;
-	background-color: #234152;
+	font-family: 'Oswald', sans-serif;
+	font-size: 37px;
+	color: #234152;
+	background-color: #ffffff;
 	text-align: center;
 }
 #leader {
@@ -105,6 +105,7 @@ h1 {
 	background-color: #234152;
 }
 p {
+	color: #234152;
 	font-family: 'Roboto', sans-serif;
 }
 #player_list {
@@ -123,7 +124,7 @@ p {
 	border-left: 2px solid #d32b17;
 }
 #player_list li button {
-	background-color: #1920ef;
+	background: none;
 }
 button {
 	width: 25%;
@@ -132,5 +133,7 @@ button {
 	font-size: 20px;
 	color: #ffffff;
 	border: 0px solid #a41600;
-	background-color: #234152;
+	background: url(knop_goed.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
