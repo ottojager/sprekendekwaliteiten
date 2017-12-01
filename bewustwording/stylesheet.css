@@ -38,10 +38,10 @@ select:-moz-focusring {
 button {
 	border: 0;
 }
-button:focus {
+/*button:focus {
 	border: 8px solid #d32b17;
 	border-radius: 3px;
-}
+}*/
 html {
 }
 body {
@@ -133,21 +133,30 @@ ul li {
 	width: 100%;
 	z-index: 1;
 }*/
-button.kaart {
+
+#kaarten li {
 	margin-top: 30px;
+}
+
+button.kaart {
 	width: 277px;
-	height: 164px;
+	height: 156px;
+	margin: 8px;
 	padding: 0;
 	background: url(kaart-liggend_goed.png);
 	background-size: contain;
 	background-repeat:no-repeat;
 }
+
 button.kaart:focus {
-	height: 168px;
+	width: 293px;
+	height: 172px;
+	margin: 0;
+	border: 8px solid #d32b17;
 }
 button.kaart p {
 	position: absolute;
-	bottom: 25px;
+	bottom: 23px;
 	left: 55px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
@@ -209,11 +218,14 @@ button.kaart p {
 	background-repeat: no-repeat;
 	margin-top: 50px;
 }
-#knoppen button:focus, #knoppen a:focus {
+#knoppen button:focus, #knoppen a.skiplink:focus {
 	height: 70px;
 	padding: 0 42px;
 	border: 8px solid #d32b17;
 	margin-top: 42px;
+}
+#knoppen a.skiplink:focus {
+
 }
 #endGame {
 	z-index: 2;
@@ -242,13 +254,57 @@ h2#aflegstapel {
 	width: 277px;
 	margin-left: 16px;
 }
+
+@media screen and (max-width: 48em) {
+	#kaarten li {
+		margin-top: 20px;
+	}
+	
+	button.kaart {
+		width: 277px;
+		height: 156px;
+		margin: 8px;
+	}
+	button.kaart:focus {
+		width: 293px;
+		height: 172px;
+		margin: 0;
+		border: 8px solid #d32b17;
+	}
+	button.kaart p {
+		bottom: 23px;
+		left: 60px;
+	}
+	button.kaart:focus p {
+		bottom: 23px;
+		left: 60px;
+	}
+	#knoppen button, #knoppen a.skiplink {
+		width: 277px;
+		height: 54px;
+		padding: 0 42px;
+		margin: 28px 8px;
+		font-size: 17px;
+	}
+	#knoppen button:focus, #knoppen a.skiplink:focus {
+		width: 293px;
+		height: 70px;
+		padding: 0 42px;
+		margin: 20px 0;
+		font-size: 17px;
+		border: 8px solid #d32b17;
+	}
+
+	#knoppen a.skiplink:focus {
+		padding-top: 15px !important;
+	}
+}
+
 @media screen and (min-width: 48em) /*768px*/ {
 	#container { padding: 20px; }
 }
-@media screen and (min-width: 62em) /*992px*/ {
-	body {
-		background-color: #fffffe; /*#1920ef;*/
-	}
+@media screen and (min-width: 62em) /*62em=992px*/ {
+
 	#container { padding: 30px; }
 	#huidig {
 		width: 320px;
@@ -257,49 +313,54 @@ h2#aflegstapel {
 	#huidig p {
 		bottom: 35px;
 	}
+	
+	#kaarten li {
+		margin: 20px 0 20px 0;
+	}
 	button.kaart {
-		width: 230px;
-		height: 131px;
+		width: 210px;
+		height: 120px;
+		margin: 8px;
 		font-size: 14px;
 	}
 	button.kaart:focus {
-		height: 135px;
+		width: 226px;
+		height: 136px;
+		margin: 0;
+		border: 8px solid #d32b17;
 	}
 	button.kaart p {
-		bottom: 16px;
-		left: 45px;
+		bottom: 18px;
+		left: 48px;
 		font-size: 14px;
 	}
 	button.kaart:focus p {
-		bottom: 19px;
+		bottom: 18px;
+		left: 48px;
 	}
-	#knoppen button {
-		width: 207px;
+	#knoppen button, #knoppen a.skiplink  {
+		width: 210px;
 		height: 40px;
-		padding: 0 32px;
+		margin: 8px;
+		padding: 0 40px 0 26px;
 		font-size: 15px;
 	}
-	#knoppen button:focus, #knoppen a:focus {
-		height: 70px;
-		padding: 0 32px;
+	#knoppen button:focus, #knoppen a.skiplink:focus {
+		width: 226px;
+		height: 56px;
+		padding: 0 40px 0 26px;
+		margin: 0;
 		font-size: 15px;
+		border: 8px solid #d32b17;
 	}
-	.skiplink {
-		width: 207px;
-		height: 40px;
+	
+	#knoppen a.skiplink:focus {
+		padding-top: 12px !important;
 		font-size: 15px;
-	}
-	.skiplink:focus {
-		width: 207px;
-		height: 40px;
-		font-size: 15px;
-		padding-top: 11px !important;
 	}
 }
 @media screen and (min-width: 80em) /*1280px*/ {
-	body {
-		background-color: #ffffff;
-	}
+
 	#container { padding: 0; }
 	h2 {
 		font-size: 21px;
@@ -310,40 +371,47 @@ h2#aflegstapel {
 	#huidig p {
 		bottom: 22px;
 	}
+	
+	#kaarten li {
+		margin: 20px 0 20px 0;
+	}
+	
 	button.kaart {
 		width: 277px;
-		height: 164px;
+		height: 156px;
+		margin: 8px;
 	}
 	button.kaart:focus {
-		height: 168px;
+		width: 293px;
+		height: 172px;
+		margin: 0;
+		border: 8px solid #d32b17;
 	}
 	button.kaart p {
-		bottom: 25px;
+		bottom: 23px;
+		left: 60px;
 	}
 	button.kaart:focus p {
-		bottom: 28px;
-		left: 55px;
+		bottom: 23px;
+		left: 60px;
 	}
-	#knoppen button {
+	#knoppen button, #knoppen a.skiplink {
 		width: 277px;
 		height: 54px;
 		padding: 0 42px;
+		margin: 8px;
 		font-size: 17px;
 	}
-	#knoppen button:focus, #knoppen a:focus {
+	#knoppen button:focus, #knoppen a.skiplink:focus {
+		width: 293px;
 		height: 70px;
 		padding: 0 42px;
+		margin: 0;
 		font-size: 17px;
+		border: 8px solid #d32b17;
 	}
-	.skiplink {
-		width: 277px;
-		height: 54px;
-		font-size: 17px;
-	}
-	.skiplink:focus {
-		width: 277px;
-		height: 54px;
-		font-size: 17px;
+
+	#knoppen a.skiplink:focus {
 		padding-top: 15px !important;
 	}
 }
