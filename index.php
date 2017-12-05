@@ -13,7 +13,7 @@
 				<div id="player__name"></div>
 			</div>
 		<h1>Kwaliteitspel</h1>
-		<h2>welkom bij het kwaliteitenspel</h2>
+		<h2>Welkom bij het Kwaliteitenspel</h2>
 		<p></p>
 		<div id="knoppen">
 			<a href="./bewustwording">Speel alleen</a>

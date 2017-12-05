@@ -89,13 +89,13 @@ if (isset($_POST['join_button'])) {
 				<h1>Kwaliteitenspel - Feedback</h1>
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
 				<div class="red_border">
-					<div id="naamstyle">
+					<div class="formfield">
 						<label for="name">Vul je naam in:</label>
 						<input id="name"type="text" name="name" value="<?php echo $name ?>">
 					</div>
 				</div>
 				<div class="red_border">
-					<div id="groepstyle">
+					<div class="formfield">
 						<label for="code">Groepscode:</label>
 						<input id="code" type="text" name="code" value="<?php echo $code ?>">
 					</div>
