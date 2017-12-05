@@ -139,9 +139,11 @@ p {
 #player_list li button {
 	background: none;
 }
-button {
-	width: 25%;
-	height: 7%;
+button#start {
+	width: 277px;
+	height: 54px;
+	margin: 8px;
+	padding: 0 30px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	color: #acd7da;
@@ -149,4 +151,13 @@ button {
 	background: url(knop_goed.png);
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+button#start:focus {
+		width: 293px;
+		height: 70px;
+		padding: 0 30px;
+		margin: 0;
+		font-size: 20px;
+		border: 8px solid #d32b17;
 }

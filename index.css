@@ -70,13 +70,21 @@ p {
 }
 a {
 	display: inline-block;
-	margin: 0 20px 0 20px;
-	padding: 14px 72px 20px 72px;
+	width: 210px;
+	height: 35px;
+	margin: 8px 28px 28px 28px;
+	padding-top: 10px;
 	color: #acd7da;
 	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
 	background: url(feedback/css/knop_goed.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	text-decoration: none;
 	text-align: center;
+}
+
+a:focus {
+	border: 8px solid #d32b17;
+	margin: 0 20px 20px 20px;
 }
