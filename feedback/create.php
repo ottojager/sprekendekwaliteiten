@@ -66,7 +66,7 @@ if (isset($_POST['makeLobbyButton'])) {
 		}
 		</script>
 		<title>Aanmaken spel - Feedback - Kwaliteitenspel</title>
-		<link rel="stylesheet" href="css/cr_stylesheet.css" type="text/css">
+		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 		<meta charset="utf-8">
 	</head>
@@ -77,16 +77,18 @@ if (isset($_POST['makeLobbyButton'])) {
 				<div id="borderimage"></div>
 				<div id="player__name"></div>
 			</div>
+			<div id="title"><h1>Kwaliteitenspel</h1>
+			<p>Als spelleider maak je hier een nieuw spel "Feedback" aan. Vul je naam in en kies het aantal kaarten waarmee je de groep wilt laten spelen (maximaal 70).</p></div>
 			<form onsubmit="return validate_form()" method="post">
-				<div id="title"><h1>Kwaliteitenspel</h1></div>
+				
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
-				<div id="inveld">
-					<div class="inputstyle">
+				<div class="red_border">
+					<div class="formfield">
 						<label for="name">Naam:</label><input id="name" type="text" name="name" value="<?php echo $name ?>">
 					</div>
 				</div>
-				<div id="no_ones_gonna_look_trough_this_code_anyway" >
-					<div class="cardstyle">
+				<div class="red_border" >
+					<div class="formfield">
 						<label for="cards">Aantal kaarten:</label>
 						<select name="cards">
 							<option value="10">10</option>
@@ -97,6 +99,7 @@ if (isset($_POST['makeLobbyButton'])) {
 							<option value="60">60</option>
 							<option selected value="70">70</option>
 						</select>
+
 					</div>
 				</div>
 				<input type="submit" value="Aanmaken spel" name="makeLobbyButton">

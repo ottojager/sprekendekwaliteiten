@@ -55,14 +55,16 @@ body {
 #player__name {
 	width: 175px;
 	height: 28px;
+	color: #fafafa;
+	font-family: 'Roboto', sans-serif;
 	background-color: #234152;
 	border-bottom: 2px solid #d32b17;
 }
 h1 {
 	height: 47px;
-	margin: 100px 100px 30px 100px;
+	margin: 100px 50px 30px 50px;
 	font-family: 'Oswald', sans-serif;
-	font-size: 40px;
+	font-size: 30px;
 	color: #1f3f50;
 	background-color: #fffefe;
 	text-align: center;
@@ -130,7 +132,7 @@ p {
 	list-style: none;
 }
 #player_list li {
-	width: 45%;
+	width: 75%;
 	margin: 4px;
 	padding: 2px;
 	border-bottom: 2px solid #d32b17;
@@ -138,6 +140,7 @@ p {
 }
 #player_list li button {
 	background: none;
+	border: none;
 }
 button#start {
 	width: 277px;
@@ -152,7 +155,6 @@ button#start {
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-
 button#start:focus {
 		width: 293px;
 		height: 70px;
@@ -160,4 +162,14 @@ button#start:focus {
 		margin: 0;
 		font-size: 20px;
 		border: 8px solid #d32b17;
+}
+@media screen and (min-width: 40em) /*640px*/ {
+	h1 {
+		height: 47px;
+		margin: 100px 100px 30px 100px;
+		font-size: 40px;
+	}
+	#player_list li {
+		width: 45%;
+	}
 }

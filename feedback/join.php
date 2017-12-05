@@ -85,8 +85,9 @@ if (isset($_POST['join_button'])) {
 			<div id="player__name"></div>
 		</div>
 		<div id="container">
+			<h1>Kwaliteitenspel - Feedback</h1>
+			<p>Vul je naam in. De groepscode krijg je van je spelleider.</p>
 			<form onsubmit="return validate_form()" method="post">
-				<h1>Kwaliteitenspel - Feedback</h1>
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
 				<div class="red_border">
 					<div class="formfield">

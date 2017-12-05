@@ -76,13 +76,18 @@ h1 {
 	text-align: center;
 }
 p {
-	margin-bottom: 10px;
+	margin: 50px 0 0 0;
 	color: #234152;
 	font-family: 'Roboto', sans-serif;
 	font-size: 21px;
 	text-align: center;
 }
+#title p {
+	width: 70%;
+	margin: 30px auto;
+}
 .formfield {
+	margin-top: 20px;
 	width: 320px;
 	height: 30px;
 	padding: 2px 5px 0px 5px;
@@ -98,21 +103,27 @@ p {
 	border-bottom: 3px solid #d32b17;
 	border-left: 3px solid #d32b17;
 }
-input[type=text] {
+input[type=text], select {
 	border-radius: 0px;
 	border: 0px solid #234152;
 	float: right;
 	margin: 6px 5px;
 }
+
+input[type=text]:focus {
+	margin: 3px 2px;
+	border: 3px solid #d32b17;
+}
 input[type=submit] {
+	display: block;
 	width: 260px;
 	height: 54px;
-	margin: 0% 0% 0% 40%;
+	margin: 8px auto 0 auto;
 	padding: 0 42px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	color: #acd7da;
-	border: 0px solid #234152;
+	border: 0;
 	background: url(knop_goed.png);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -122,4 +133,8 @@ input[type=submit]:hover {
 }
 input[type=submit]:focus {
 	cursor: pointer;
+	width: 276px;
+	height: 70px;
+	margin: -8px auto;
+	border: 8px solid #d32b17;
 }
