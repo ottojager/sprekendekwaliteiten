@@ -78,7 +78,11 @@ if (!(bool)$json) { // if $json actually has content
 		<div id="topbar"></div>
 		<div id="sidetopbar">
 			<div id="borderimage"></div>
-			<div id="player__name"></div>
+			<?php if ($_SESSION['player_id'] == 11) { ?>
+				<div id="player__name">spelleider</div>
+			<?php } else { ?>
+				<div id="player__name"><?php echo $json['players'][ $_SESSION['player_id'] ]['name']; ?></div>
+			<?php } ?>
 		</div>
 		<div id="main">
 		<h1>Spelvoorbereiding - Feedback - Kwaliteitenspel</h1>
@@ -107,7 +111,7 @@ if (!(bool)$json) { // if $json actually has content
 		if ($_SESSION['player_id'] == 11) {
 			?><button onclick="start_game()">Start het spel</button><?php
 		} else {
-			?><p>Wacht tpt idereen aanwezig is. De spelbegeleider zal het spel zometeen beginnen.</p><?php
+			?><p>Wacht tot idereen aanwezig is. De spelbegeleider zal het spel zometeen beginnen.</p><?php
 		}
 		?>
 		</div>
