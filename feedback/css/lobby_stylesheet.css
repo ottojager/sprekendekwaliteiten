@@ -61,7 +61,7 @@ body {
 	border-bottom: 2px solid #d32b17;
 }
 h1 {
-	height: 150x;
+	height: 130x;
 	margin: 80px 50px 0px 50px;
 	font-family: 'Oswald', sans-serif;
 	font-size: 28px;
@@ -157,14 +157,24 @@ button#start {
 	background-repeat: no-repeat;
 }
 button#start:focus {
-		width: 293px;
-		height: 70px;
-		padding: 0 30px;
-		margin: 0;
-		font-size: 20px;
-		border: 8px solid #d32b17;
+	width: 293px;
+	height: 70px;
+	padding: 0 30px;
+	margin: 0;
+	font-size: 20px;
+	border: 8px solid #d32b17;
 }
 @media screen and (min-width: 40em) /*640px*/ {
+	h1 {
+		height: 47px;
+		margin: 100px 100px 30px 100px;
+		font-size: 40px;
+	}
+	#player_list li {
+		width: 45%;
+	}
+}
+@media screen and (min-width: 64em) /*1024px*/ {
 	h1 {
 		height: 47px;
 		margin: 100px 100px 30px 100px;
