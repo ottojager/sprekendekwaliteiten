@@ -61,10 +61,10 @@ body {
 	border-bottom: 2px solid #d32b17;
 }
 h1 {
-	height: 47px;
-	margin: 100px 50px 30px 50px;
+	height: 150x;
+	margin: 80px 50px 0px 50px;
 	font-family: 'Oswald', sans-serif;
-	font-size: 30px;
+	font-size: 28px;
 	color: #1f3f50;
 	background-color: #fffefe;
 	text-align: center;
@@ -139,8 +139,9 @@ p {
 	border-left: 2px solid #d32b17;
 }
 #player_list li button {
-	background: none;
+	float: right;
 	border: none;
+	background: none;
 }
 button#start {
 	width: 277px;
