@@ -89,6 +89,7 @@ if ($_SESSION['player_id'] != 11) {
 					var div = document.getElementById('card_stack');
 					div.innerHTML = '';
 					var list = document.createElement('ul');
+					var cards = game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].reverse();
 					game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].forEach(function(item, index){
 						var child = document.createElement('li');
 						child.innerHTML = item;
