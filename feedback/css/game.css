@@ -96,7 +96,7 @@ h1 {
 	position: relative;
 	width: 200px;
 	height: 139px;
-	background: url(/../kwal-spel/feedback/css/kaart-liggend_goed.png);
+	background: url(./kaart-liggend_goed.png);
 	background-size: contain;
 	background-repeat:no-repeat;
 }
