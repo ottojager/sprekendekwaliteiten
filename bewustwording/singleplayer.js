@@ -76,6 +76,10 @@ function endGame(no_confirm) {
         var email = document.createElement('input');
         email.id = 'email';
         email.type = 'email';
+        var label = document.createElement('label');
+        label.innerHTML = 'E-mail';
+        label.htmlFor = 'email';
+        div.appendChild(label);
         div.appendChild(email);
         var btn = document.createElement('button');
         btn.onclick = function() {
@@ -161,8 +165,8 @@ function backButton() {
     //var lastCard = document.getElementById(lastChosenPosition[0]).innerHTML;
     if (lastChosenPosition[0] !== "trash") {
         cardStack.unshift(document.getElementById("current").innerHTML);
-        currentCard = document.getElementById(lastChosenPosition[0]).innerHTML;
-        document.getElementById("current").innerHTML = document.getElementById(lastChosenPosition[0]).innerHTML;
+        currentCard = document.getElementById(lastChosenPosition[0]).firstChild.innerHTML;
+        document.getElementById("current").innerHTML = document.getElementById(lastChosenPosition[0]).firstChild.innerHTML;
         document.getElementById(lastChosenPosition[0]).innerHTML = graveyard[0];
         lastChosenPosition.shift();
         graveyard.shift();
