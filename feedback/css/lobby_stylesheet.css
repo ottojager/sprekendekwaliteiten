@@ -143,7 +143,7 @@ p {
 	border: none;
 	background: none;
 }
-button#start {
+button #start {
 	width: 277px;
 	height: 54px;
 	margin: 8px;
@@ -156,7 +156,7 @@ button#start {
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-button#start:focus {
+button #start:focus {
 	width: 293px;
 	height: 70px;
 	padding: 0 30px;
