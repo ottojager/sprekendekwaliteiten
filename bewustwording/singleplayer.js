@@ -42,7 +42,7 @@ function rewriteGraveyard() {
         var item = document.createElement('li');
         item.innerHTML = graveyard[i];
         garbage_pile.appendChild(item);
-		
+
     }
 }
 
@@ -99,7 +99,8 @@ function endGame(no_confirm) {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
-                    // just do nothig for the time being
+                    alert('De e-mail is verstuurd.');
+                    email.value = '';
 				}
 			};
 			xhttp.open("GET", "./mail.php?cards=" + cards + "&email=" + email, true);
