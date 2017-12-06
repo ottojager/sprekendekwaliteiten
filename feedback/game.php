@@ -66,11 +66,10 @@ if ($_SESSION['player_id'] != 11) {
 
 				// upate current card
 				document.getElementById("current_card").innerHTML = game_info['current_card'];
-				document.getElementById("card_image").alt = game_info['current_card'];
-				// check if displayed gotten card is less than the newest info if so update HTML
+				document.getElementById("card_display").alt = game_info['current_card'];
 
-				document.getElementById('blind_current_player').innerHTML = game_info['players'][ game_info['current_player'] ]['name'] + ' is aan de beurt.';
 				// update blind turn notifier thing
+				document.getElementById("blind_current_player").innerHTML = game_info['players'][ game_info['current_player'] ]['name'] + ' is aan de beurt.';
 
 				<?php if ($_SESSION['player_id'] != 11) { // update card list for players ?>
 				if (

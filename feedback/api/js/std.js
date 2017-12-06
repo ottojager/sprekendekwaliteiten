@@ -7,7 +7,7 @@ function reply_click(clicked_id) {
 function addListeners(amount_players) {
 	"use strict";
 	var i;
-	for (i = 0; i <  amount_players; i += 1) {
+	for (i = 0; i <  amount_players - 1; i += 1) {
 		document.getElementById(i.toString()).addEventListener('click', function() {
 			reply_click(this.id);
 		});
