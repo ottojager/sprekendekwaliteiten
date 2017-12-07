@@ -199,8 +199,10 @@ if ($_SESSION['player_id'] != 11) {
 
 			<h2 id="card_active" class="col-xs-2 col-sm-2 col-md-2">Actieve kaart:</h2>
 			<div id="card_display" class="col-xs-10 col-sm-5 col-md-5"><p id="current_card"></p></div>
-			<ul id="player_list" class="col-xs-12 col-sm-4 col-md-3">
+			<div class="col-xs-12 col-sm-4 col-md-3">
 				<h2>Spelers:</h2>
+				<ul id="player_list" >
+				
 				<?php
 				foreach ($json['players'] as $key => $value) {
 					if ($value['name'] != 'Afval stapel') {
@@ -208,7 +210,8 @@ if ($_SESSION['player_id'] != 11) {
 					}
 				}
 				?>
-			</ul>
+				</ul>
+			</div>
 			<div id="cards_left" class="col-xs-10 col-md-2">
 				<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
 			</div>

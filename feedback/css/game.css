@@ -162,22 +162,23 @@ h1 {
 	margin-bottom: 30px;
 }	
 .card_stack {
-	width: 300px;
-	margin: 1%;
-	color: #fffefe;
-	background-color: #a82519;
 	font-family: 'Roboto', sans-serif;
-	list-style: none;
+	
 }
-.card_stack > li {
-	padding: 0 2px 0 2px;
+.card_stack ul {
+	list-style-type: none;
 }
-.card_stack > li:first-child {
-	padding-top: 2px;
+
+.card_stack ul li {
+	width: 277px;
+	height: 156px;
+	margin: 8px;
+	padding: 0;
+	background: url(kaart-liggend_goed.png);
+	background-size: contain;
+	background-repeat:no-repeat;
 }
-.card_stack > li:last-child {
-	padding-bottom: 2px;
-}
+
 button {
 	width: 246px;
 	margin: 1%;
@@ -228,6 +229,7 @@ h2 {
 	#cards_left {
 		clear: right;
 		margin-left: 0px;
+		margin-top: 19px;
 	}
 }
 @media screen and (min-width: 80em) /*1280px*/ {
