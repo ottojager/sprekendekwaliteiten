@@ -93,7 +93,9 @@ if ($_SESSION['player_id'] != 11) {
 					game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].forEach(function(item, index){
 						var child = document.createElement('li');
 						child.className = 'col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0';
-						child.innerHTML = item;
+						var card_text = document.createElement('p');
+						card_text.innerHTML = item;
+						child.appendChild(card_text);
 						list.appendChild(child);
 					});
 					div.appendChild(list);
