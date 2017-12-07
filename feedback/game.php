@@ -197,10 +197,10 @@ if ($_SESSION['player_id'] != 11) {
 				<?php echo $json['players'][$json['current_player']]['name']." is aan de beurt." ?>
 			</div>
 
-			<div id="card_active" class="col-xs-1 col-sm-1 col-md-2">Actieve kaart:</div>
-			<div id="card_display" class="col-xs-11 col-sm-6 col-md-5"><p id="current_card"></p></div>
-
-			<ul id="player_list" class="col-xs-11 col-sm-6 col-md-5">
+			<h2 id="card_active" class="col-xs-2 col-sm-2 col-md-2">Actieve kaart:</h2>
+			<div id="card_display" class="col-xs-10 col-sm-5 col-md-5"><p id="current_card"></p></div>
+			<ul id="player_list" class="col-xs-12 col-sm-4 col-md-3">
+				<h2>Spelers:</h2>
 				<?php
 				foreach ($json['players'] as $key => $value) {
 					if ($value['name'] != 'Afval stapel') {
@@ -209,15 +209,16 @@ if ($_SESSION['player_id'] != 11) {
 				}
 				?>
 			</ul>
-			<div id="cards_left">
+			<div id="cards_left" class="col-xs-10 col-md-2">
 				<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
 			</div>
+			<div style="clear: both;"></div>
 
 			<a class="skiplink" href="#blind_current_player">Naar huidige kaart</a>
 
 			<!-- keep these on one line or JS will see a child element that isn't there -->
 			<?php if ($_SESSION['player_id'] != 11) { ?>
-			<h2>Ontvangen kaarten</h2>
+			<h2 class="col-xs-12">Ontvangen kaarten</h2>
 			<div id="card_stack" class="card_stack">Nog geen kaarten ontvangen.</div>
 			<?php } else { ?>
 			<div id="card_stack" class="card_stack">Klik op een speler om diens kaarten te zien.</div>
