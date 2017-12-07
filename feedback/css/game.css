@@ -79,7 +79,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 h1 {
-	margin: 25px 0 25px 0;
+	margin: 25px 0px 25px 0px;
 	color: #234152;
 	font-family: 'Oswald', sans-serif;
 	font-size: 40px;
@@ -204,10 +204,6 @@ button img {
 @media screen and (min-width: 80em) /*1280px*/ {
 	body {
 		background-color: #ffffff;
-	}
-	h1 {
-		margin-right: 37%;
-		margin-left: 37%;
 	}
 	#card_display {
 		width: 500px;

@@ -190,7 +190,7 @@ if ($_SESSION['player_id'] != 11) {
 			</div>
 		</div>
 		<div id="container">
-			<h1>Actief - Feedback - Kwaliteitenspel</h1>
+			<h1 class="col-xs-12 col-sm-12 col-md-12">Actief - Feedback - Kwaliteitenspel</h1>
 
 			<div id="blind_current_player" tabindex="1">
 				<?php echo $json['players'][$json['current_player']]['name']." is aan de beurt." ?>
