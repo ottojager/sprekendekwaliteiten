@@ -115,6 +115,7 @@ h1 {
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
+	white-space: nowrap;
 }
 #player_list {
 	width: 31%;
@@ -142,6 +143,7 @@ h1 {
 	font-family: 'Roboto', sans-serif;
     font-size: 24px;
 	color: #1f3f50;
+	text-align: left;
 }
 #cards_left {
 	width: 150px;
