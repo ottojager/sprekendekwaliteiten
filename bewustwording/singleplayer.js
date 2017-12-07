@@ -117,7 +117,9 @@ function endGame(no_confirm) {
         p.id = 'error';
         div.appendChild(p);
         document.getElementById("actievekaart").appendChild(div);
-        alert("Je hebt alle kaarten gehad. Vul je email in en klik op \"Stuur email\" om de resultaten als email naar jezelf te stuuren.");
+        if (typeof no_confirm === undefined) {
+            alert("Je hebt alle kaarten gehad. Vul je email in en klik op \"Stuur email\" om de resultaten als email naar jezelf te stuuren.");
+        }
     }
 
 }
