@@ -223,13 +223,13 @@ button img {
 .skiplink {
 	right: 300%;
 	position: absolute;
+	white-space: nowrap;
 }
 .skiplink:focus {
 	position: absolute;
 	right: inherit;
-	background-color: #abd5d9;
-	border: 0px solid #a71d0f;
-	border-bottom-width: 6px;
-	border-left-width: 6px;
 	text-decoration: none;
+	background: url(./knop_goed.png);
+	background-size: contain;
+	background-repeat:no-repeat;
 }
