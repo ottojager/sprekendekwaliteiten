@@ -9,10 +9,10 @@
 	<div id="topbar"></div>
 	<div id="sidetopbar">
 		<div id="borderimage"></div>
-		<div id="player__name"></div>
+		<div id="player__name">spelleider</div>
 	</div>
 	<div id="container">
-		<h1>Einde - Feedback - Speelvorm 2</h1>
+		<h1>Einde spel - Feedback - Speelvorm 2</h1>
 		<?php
 		foreach ($json['players'] as $key => $player) {
 			if ($player['name'] != 'Afval stapel') {

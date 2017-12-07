@@ -10,10 +10,10 @@
 	<div id="topbar"></div>
 	<div id="sidetopbar">
 		<div id="borderimage"></div>
-		<div id="player__name"></div>
+		<div id="player__name"><?php echo $json['players'][ $_SESSION['player_id'] ]['name'];?></div>
 	</div>
 	<div id="container">
-		<h1>Einde - Feedback - Kwaliteitenspel</h1>
+		<h1>Einde spel - Feedback - Kwaliteitenspel</h1>
 		<p>Vul hier je email adres in, zodat je kaarten naar jou opgestuurd kunnen worden.</p>
 		<label for="email">Email</label>
 		<input name="mail" type="email" id="email" />
