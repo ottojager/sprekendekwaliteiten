@@ -219,7 +219,7 @@ if ($_SESSION['player_id'] != 11) {
 			<h2>Ontvangen kaarten</h2>
 			<div id="card_stack" class="card_stack">Nog geen kaarten ontvangen.</div>
 			<?php } else { ?>
-			<div id="card_stack" class="card_stack">Klik op een speler om hun kaarten te zien.</div>
+			<div id="card_stack" class="card_stack">Klik op een speler om diens kaarten te zien.</div>
 			<?php } ?>
 
 			<button
