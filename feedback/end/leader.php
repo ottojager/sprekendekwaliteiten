@@ -3,20 +3,20 @@
 <head>
 	<title>Einde - Feedback - Speelvorm 2</title>
 	<link rel="stylesheet" href="../css/end.css" type="text/css">
-	<link rel="icon" sizes="16x16" type="image/png" href="/../kwal-spel/2/css/Rainbow_placeholder.png">
+	<link rel="icon" sizes="16x16" type="image/png" href="/../kwal-spel/feedback/css/Rainbow_placeholder.png">
 </head>
 <body>
 	<div id="topbar"></div>
 	<div id="sidetopbar">
 		<div id="borderimage"></div>
-		<div id="player__name">spelleider</div>
+		<div id="player__name">Spelleider</div>
 	</div>
 	<div id="container">
 		<h1>Einde spel - Feedback - Speelvorm 2</h1>
 		<?php
 		foreach ($json['players'] as $key => $player) {
 			if ($player['name'] != 'Afval stapel') {
-				echo '<p>'.$player['name'].':</p>';
+				echo '<h2>'.$player['name'].':</h2>';
 				echo '<ul>';
 				foreach ($player['stack'] as $key => $value) {
 					echo "<li>$value</li>";
@@ -25,6 +25,7 @@
 			}
 		}
 		?>
+		<p>De spelers kunnen hun ontvangen kaarten per e-mail ontvangen en aan jou als spelleider doorsturen.</p>
 		<a href="../delete.php">Spel verlaten</a>
 	</div>
 </body>

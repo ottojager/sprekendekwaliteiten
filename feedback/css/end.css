@@ -75,16 +75,26 @@ h1 {
 	font-family: 'Oswald', sans-serif;
 	font-size: 40px;
 	text-align: center;
+	color: rgb(35, 65, 82);
 }
-p {
-	width: 23%;
-	margin: 0% 0% 3% 0%;
+p#uitlegtekst {
+	width: 70%;
+	margin: 0 0 30px 0;
 	padding: 4px;
 	font-family: 'Roboto', sans-serif;
 	color: #c4f6f8;
 	background-color: #1f3f50;
 	text-align: center;
 }
+
+h2, ul li,p {
+	font-family: 'Roboto', sans-serif;
+	color: rgb(35, 65, 82);
+}
+h2 { 
+	text-decoration: underline;
+}
+
 ul {
 	flex: 0 1 auto;
 	font-family: 'Roboto', sans-serif;
@@ -92,6 +102,7 @@ ul {
 	background-color: #fffefe;
 	list-style: none;
 	text-align: center;
+	margin-bottom: 30px;
 }
 label {
 	font-family: 'Roboto', sans-serif;
@@ -112,7 +123,17 @@ a {
 	text-decoration-line: none;
 	text-align: center;
 }
-button {
+
+input#email {
+	width: 248px;
+	margin: 3px;
+}
+
+input#email:focus {
+	border: 3px solid #d32b17;
+}
+button#sendmail:hover { cursor: pointer; }
+button#sendmail {
 	width: 277px;
 	height: 54px;
 	margin: 10px;
