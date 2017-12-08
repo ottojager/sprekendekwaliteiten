@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<link rel="icon" sizes="16x16" type="image/png" href="bewustwording/Rainbow_placeholder.png">
 		<link rel="stylesheet" href="index.css" type="text/css">
-		<title>Kwaliteitspel</title>
+		<title>Kwaliteitenspel</title>
 	</head>
 	<body>
 		<div id="topbar"></div>
@@ -12,7 +12,7 @@
 				<div id="borderimage"></div>
 				<div id="player__name"></div>
 			</div>
-		<h1>Kwaliteitspel</h1>
+		<h1>Kwaliteitenspel</h1>
 		<h2>Welkom bij het Kwaliteitenspel</h2>
 		<p></p>
 		<div id="knoppen">

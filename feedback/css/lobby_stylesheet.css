@@ -140,6 +140,9 @@ p {
 }
 #player_list li button {
 	float: right;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: #234152;
 	border: none;
 	background: none;
 }

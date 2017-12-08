@@ -62,7 +62,7 @@ if (!(bool)$json) { // if $json actually has content
 							xhttp.open("GET", "./api/kick.php?p="+index, false);
 							xhttp.send();
 						}
-						button.innerHTML = '<img src="css/trash-icon.png" alt="verwijder speler" height="25" width="25">';
+						button.innerHTML = 'X';
 						child.appendChild(button);
 					<?php } ?>
 
@@ -100,7 +100,7 @@ if (!(bool)$json) { // if $json actually has content
 			<?php
 			foreach ($json['players'] as $key => $value) {
 				if ($_SESSION['player_id'] == 11) {
-					echo '<li>'.$value['name'].'<button onclick="alert(\''.$key.'\')"><img src="css/trash-icon.png" alt="verwijderen" height="25" width="25"></button></li>';
+					echo '<li>'.$value['name'].'<button onclick="alert(\''.$key.'\')">X</button></li>';
 				} else {
 					echo '<li>'.$value['name'].'</li>';
 				}
