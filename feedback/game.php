@@ -218,33 +218,36 @@ if ($_SESSION['player_id'] != 11) {
 				<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
 			</div>
 			<div style="clear: both;"></div>
-
-			<a class="skiplink" href="#blind_current_player">Naar huidige kaart</a>
+			
+			<div class="row" id="knoppen">
+				<div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0">
+					<a class="skiplink" href="#blind_current_player">Naar huidige kaart</a>
+				</div>
+				<?php
+					if ($_SESSION['player_id'] != 11) {
+					echo '<div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button onclick="reply_click('. (count($json['players'])-1) .')">Kaart weggooien</button></div>';
+					}
+					else { // if user is game leader
+					// Leader only end game, undo buttons, and card list
+				?>
+					<button onclick="end_game()">Spel beëindigen</button>
+					<button onclick="undo()">Ongedaan maken</button>
+				<?php } // end leader only buttons ?>
+			</div>
 
 			<!-- keep these on one line or JS will see a child element that isn't there -->
 			<?php if ($_SESSION['player_id'] != 11) { ?>
-			<h2 class="col-xs-12">Ontvangen kaarten</h2>
+			<h2 class="col-xs-12">Jouw ontvangen kaarten</h2>
 			<div id="card_stack" class="card_stack">Nog geen kaarten ontvangen.</div>
 			<?php } else { ?>
 			<div id="card_stack" class="card_stack">Klik op een speler om diens kaarten te zien.</div>
-			<?php } ?>
+			
+			<?php 
+			  echo '<button onclick="view_cards('. (count($json['players'])-1) .')">Afval stapel</button>'; 
+			} ?>
 
-			<button
-			<?php
-			if ($_SESSION['player_id'] == 11) {
-				echo ' onclick="view_cards('. (count($json['players'])-1) .')">Afval stapel';
-			} else {
-				echo ' onclick="reply_click('. (count($json['players'])-1) .')">Weggooien';
-			}
-			?>
-			</button>
-			<?php
-			if ($_SESSION['player_id'] == 11) { // if user is game leader
-				// Leader only end game, undo buttons, and card list
-			?>
-			<button onclick="end_game()">Spel beëindigen</button>
-			<button onclick="undo()"><img src="css/knop_goed.png" alt="Ongedaan maken"></button>
-			<?php } // end leader only buttons ?>
+
+
 		</div>
 	</body>
 </html>

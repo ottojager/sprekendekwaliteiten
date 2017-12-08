@@ -93,11 +93,11 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 	text-align: right;
 }
-
 @media screen and (max-width: 768px) {
-	#card_active { text-align: left;}
+	#card_active {
+		text-align: left;
+	}
 }
-
 #card_display {
 	width: 350px;
 	height: 200px;
@@ -162,13 +162,12 @@ h1 {
 	margin-bottom: 30px;
 }	
 .card_stack {
+	margin-top: 50px;
 	font-family: 'Roboto', sans-serif;
-	
 }
 .card_stack ul {
 	list-style-type: none;
 }
-
 .card_stack ul li {
 	width: 277px;
 	height: 156px;
@@ -178,7 +177,17 @@ h1 {
 	background-size: contain;
 	background-repeat:no-repeat;
 }
-
+.card_stack ul li p {
+	position: absolute;
+	bottom: 18px;
+	left: 40px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	border: 0;
+	color: #234152;
+	background-color: transparent;
+	z-index: 2;
+}
 button {
 	width: 246px;
 	margin: 1%;
@@ -245,22 +254,70 @@ h2 {
 		bottom: 28px;
 		left: 54px;
 	}
-	
 	#player_list > li:first-child {
 		/*margin-top: 34%;*/
 		background-color: #fdfdfd;
 	}
 }
-.skiplink {
-	right: 300%;
+.skiplink {/*krijgt geen focus in Vivaldi*/
+	display: block;
+	width: 277px;
+	height: 54px;
 	position: absolute;
-	white-space: nowrap;
+	right: 500%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	color: #acd7da;
+	text-align: center;
+    text-decoration: none;
+   	background: url(knop_goed.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 .skiplink:focus {
-	position: absolute;
+	display: block;
+	width: 277px;
+	height: 54px;
+	position: relative;
 	right: inherit;
 	text-decoration: none;
-	background: url(./knop_goed.png);
+	color: #acd7da;
+	padding-top: 15px !important;
+	margin-top: -8px;
+	text-align: center;
+    text-decoration: none;
+   	background: url(knop_goed.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-top: 50px;
+}
+/* KNOPPEN */
+#knoppen {
+	clear: both;
+	margin-bottom: 50px;
+}
+#knoppen button {
+	width: 277px;
+	height: 54px;
+	padding: 0 42px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	color: #acd7da;
+	border: 0px #830e73 solid;
+	background: url(knop_goed.png);
 	background-size: contain;
 	background-repeat:no-repeat;
+	margin-top: 50px;
+}
+#knoppen button p {
+	background-color: #294253;
+}
+#knoppen button:focus, #knoppen a.skiplink:focus {
+	height: 70px;
+	padding: 0 42px;
+	border: 8px solid #d32b17;
+	margin-top: 42px;
+}
+#knoppen a.skiplink:focus {
+
 }

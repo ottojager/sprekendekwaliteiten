@@ -133,11 +133,9 @@ ul li {
 	width: 100%;
 	z-index: 1;
 }*/
-
 #kaarten li {
 	margin-top: 30px;
 }
-
 button.kaart {
 	width: 277px;
 	height: 156px;
@@ -147,7 +145,6 @@ button.kaart {
 	background-size: contain;
 	background-repeat:no-repeat;
 }
-
 button.kaart:focus {
 	width: 293px;
 	height: 172px;
@@ -254,12 +251,10 @@ h2#aflegstapel {
 	width: 277px;
 	margin-left: 16px;
 }
-
 @media screen and (max-width: 48em) {
 	#kaarten li {
 		margin-top: 20px;
 	}
-	
 	button.kaart {
 		width: 277px;
 		height: 156px;
@@ -294,18 +289,19 @@ h2#aflegstapel {
 		font-size: 17px;
 		border: 8px solid #d32b17;
 	}
-
 	#knoppen a.skiplink:focus {
 		padding-top: 15px !important;
 	}
 }
-
 @media screen and (min-width: 48em) /*768px*/ {
-	#container { padding: 20px; }
+	#container {
+		padding: 20px;
+	}
 }
 @media screen and (min-width: 62em) /*62em=992px*/ {
-
-	#container { padding: 30px; }
+	#container {
+		padding: 30px;
+	}
 	#huidig {
 		width: 320px;
 		height: 182px;
@@ -314,7 +310,6 @@ h2#aflegstapel {
 	#huidig p {
 		bottom: 35px;
 	}
-	
 	#kaarten li {
 		margin: 20px 0 20px 0;
 	}
@@ -354,15 +349,15 @@ h2#aflegstapel {
 		font-size: 15px;
 		border: 8px solid #d32b17;
 	}
-	
 	#knoppen a.skiplink:focus {
 		padding-top: 12px !important;
 		font-size: 15px;
 	}
 }
 @media screen and (min-width: 80em) /*1280px*/ {
-
-	#container { padding: 0; }
+	#container {
+		padding: 0;
+	}
 	h2 {
 		font-size: 21px;
 	}
@@ -372,11 +367,9 @@ h2#aflegstapel {
 	#huidig p {
 		bottom: 22px;
 	}
-	
 	#kaarten li {
 		margin: 20px 0 20px 0;
 	}
-	
 	button.kaart {
 		width: 277px;
 		height: 156px;
@@ -411,7 +404,6 @@ h2#aflegstapel {
 		font-size: 17px;
 		border: 8px solid #d32b17;
 	}
-
 	#knoppen a.skiplink:focus {
 		padding-top: 15px !important;
 	}
