@@ -54,7 +54,8 @@ body {
 }
 #player__name {
 	width: 175px;
-	height: 28px;
+	height: 24px;
+	padding-top: 4px;
 	color: #fafafa;
 	font-family: 'Roboto', sans-serif;
 	background-color: #234152;
