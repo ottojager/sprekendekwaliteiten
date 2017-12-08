@@ -60,9 +60,12 @@ html {
 }
 #player__name {
 	width: 175px;
-	height: 28px;
-	background-color: #234152;
+	height: 24px;
+	padding-top: 4px;
+	font-family: 'Roboto', sans-serif;
+	color: #fafafa;
 	border-bottom: 2px solid #d32b17;
+	background-color: #234152;
 }
 #container {
 	clear: both;
@@ -90,14 +93,34 @@ ul {
 	list-style: none;
 	text-align: center;
 }
-a {
-	flex: 0 1 auto;
-	margin: 2px;
-	padding: 3px;
+label {
 	font-family: 'Roboto', sans-serif;
-	color: #fffffe;
-	background-color: #a82519;
+}
+a {
+	display: block;
+	width: 277px;
+	height: 54px;
+	margin: 15px 2px 2px 2px;
+	padding: 15px 3px 3px 3px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	color: #acd7da;
+	background: url(knop_goed.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 	text-decoration: none;
 	text-decoration-line: none;
 	text-align: center;
+}
+button {
+	width: 277px;
+	height: 54px;
+	margin: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	color: #acd7da;
+	border: none;
+	background: url(knop_goed.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
