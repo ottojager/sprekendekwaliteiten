@@ -117,9 +117,6 @@ function endGame(no_confirm) {
         p.id = 'error';
         div.appendChild(p);
         document.getElementById("actievekaart").appendChild(div);
-        if (typeof no_confirm === undefined) {
-            alert("Je hebt alle kaarten gehad. Vul je email in en klik op \"Stuur email\" om de resultaten als email naar jezelf te stuuren.");
-        }
     }
 
 }
@@ -159,6 +156,7 @@ function reply_click(clicked_id) {
         //checken of de game eindigt
         if (cardStack.length === 0 && currentCard == null) {
 	           endGame(true);
+               alert("Je hebt alle kaarten gehad. Vul je email in en klik op \"Stuur email\" om de resultaten als email naar jezelf te stuuren.");
         }
     }
 }
