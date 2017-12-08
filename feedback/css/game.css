@@ -173,6 +173,7 @@ h1 {
 	height: 156px;
 	margin: 8px;
 	padding: 0;
+	border: none;
 	background: url(kaart-liggend_goed.png);
 	background-size: contain;
 	background-repeat:no-repeat;
@@ -188,6 +189,14 @@ h1 {
 	background-color: transparent;
 	z-index: 2;
 }
+.card_stack li {
+	width: 277px;
+	margin: 3px;
+	padding: 3px;
+	border-bottom: 2px solid #d81d26;
+	border-left: 2px solid #d81d26;
+	list-style-type: none;
+}
 button {
 	width: 246px;
 	margin: 1%;
@@ -196,10 +205,6 @@ button {
 	background-color: #fffefe;
 	border: 0px solid #000000;
 	border-radius: 0px;
-}
-button img {
-	width: 100%;
-	height: 100%;
 }
 h2 {
 	font-family: 'Roboto', sans-serif;
