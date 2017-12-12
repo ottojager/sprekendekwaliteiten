@@ -104,7 +104,8 @@ function endGame(no_confirm) {
             xhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
                     alert('De e-mail is verstuurd.');
-                    email.value = '';
+                    document.getElementById('email').value = '';
+                    document.location.href= '../';
 				}
 			};
 			xhttp.open("GET", "./mail.php?cards=" + cards + "&email=" + email, true);
