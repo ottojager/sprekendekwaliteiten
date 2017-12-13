@@ -6,7 +6,7 @@
 				$config = json_decode(file_get_contents('../database_config.json'), true); // load the db connection info
 				$db = mysqli_connect($config['hostname'], $config['username'], $config['password']);
 
-				mysqli_select_db($db, "kwalspelaccess");
+				mysqli_select_db($db, "k26431_kwalspel");
 				$sql = "SELECT * FROM cards";
 				$result = mysqli_query($db, $sql);
 				$array = array();

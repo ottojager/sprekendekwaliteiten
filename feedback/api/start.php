@@ -12,7 +12,7 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	$db = mysqli_connect($config['hostname'], $config['username'], $config['password']);
 
 	// Create card stack
-	mysqli_select_db($db, "kwalspelaccess");
+	mysqli_select_db($db, "k26431_kwalspel");
 	$sql = "SELECT * FROM cards";
 	$result = mysqli_query($db, $sql);
 	$card_stack = array();
