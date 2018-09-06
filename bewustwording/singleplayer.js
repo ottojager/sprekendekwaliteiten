@@ -122,19 +122,6 @@ function endGame(no_confirm) {
 
 }
 
-addListeners();
-
-var graveyard = [];
-var lastChosenPosition = [];
-var gameEnded = 0;
-//kaarten schudden
-shuffle(cardStack);
-//8 handkaarten neerleggen
-fillSlots();
-//eerste kaart pakken en in active slot doen
-var currentCard = takeCard();
-document.getElementById("current").innerHTML = currentCard;
-
 function reply_click(clicked_id) {
     "use strict";
     if (gameEnded == 0) {
@@ -156,11 +143,12 @@ function reply_click(clicked_id) {
         document.getElementById("current").innerHTML = currentCard;
         //checken of de game eindigt
         if (cardStack.length === 0 && currentCard == null) {
-	           endGame(true);
-               alert("Je hebt alle kaarten gehad. Vul je email in en klik op \"Stuur email\" om de resultaten als email naar jezelf te stuuren.");
+            endGame(true);
+            alert("Je hebt alle kaarten gehad. Vul je email in en klik op \"Stuur email\" om de resultaten als email naar jezelf te stuuren.");
         }
     }
 }
+
 function backButton() {
     "use strict";
     //var lastCard = document.getElementById(lastChosenPosition[0]).innerHTML;
@@ -179,3 +167,16 @@ function backButton() {
     }
     rewriteGraveyard();
 }
+
+addListeners();
+
+var graveyard = [];
+var lastChosenPosition = [];
+var gameEnded = 0;
+//kaarten schudden
+shuffle(cardStack);
+//8 handkaarten neerleggen
+fillSlots();
+//eerste kaart pakken en in active slot doen
+var currentCard = takeCard();
+document.getElementById("current").innerHTML = currentCard;

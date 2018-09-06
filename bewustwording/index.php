@@ -30,28 +30,28 @@
 			<div id="borderimage"></div>
 			<div id="player__name"></div>
 		</div>
+		<h1>Kwaliteitenspel - Bewustwording</h1>
 		<div id="container">
-			<h1>Kwaliteitenspel - Bewustwording</h1>
 			<div id="actievekaart" class="row">
 				<h2 class="col-md-offset-2 col-xs-1 col-sm-2 col-sm-offset-1 col-xs-offset-1">Actieve kaart:</h2>
 				<div id="huidig" class="col-xs-11 col-sm-6 col-md-4"><p id="current"></p></div>
 			</div>
 			<div id="kaarten">
-			<h2 id="jkaart">Jouw 8 kaarten</h2>
-			<ul>
-				<div class="row">
-					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot1" class="kaart"><p></p></button></li>
-					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot2" class="kaart"><p></p></button></li>
-					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot3" class="kaart"><p></p></button></li>
-					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot4" class="kaart"><p></p></button></li>
-				</div>
-				<div class="row">
-					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot5" class="kaart"><p></p></button></li>
-					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot6" class="kaart"><p></p></button></li>
-					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot7" class="kaart"><p></p></button></li>
-					<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot8" class="kaart"><p></p></button></li>
-				</div>
-			</ul>
+				<h2 id="jkaart">Jouw 8 kaarten</h2>
+				<ul>
+					<div class="row">
+						<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot1" class="kaart"><p></p></button></li>
+						<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot2" class="kaart"><p></p></button></li>
+						<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot3" class="kaart"><p></p></button></li>
+						<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot4" class="kaart"><p></p></button></li>
+					</div>
+					<div class="row">
+						<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot5" class="kaart"><p></p></button></li>
+						<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot6" class="kaart"><p></p></button></li>
+						<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot7" class="kaart"><p></p></button></li>
+						<li class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button id="slot8" class="kaart"><p></p></button></li>
+					</div>
+				</ul>
 			</div>
 
 			<div class="row" id="knoppen">
