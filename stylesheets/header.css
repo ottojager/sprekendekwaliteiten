@@ -1,1 +1,60 @@
-/* Welkom, Felix deze comment gelieve deleten zodra je hier je code in stopt! */
+
+:root {
+	/*kleur*/
+	--rood: #d4263e;
+	--grijs: #e9e9ea;
+	--dkrblauw: #163143;
+	--groen: #60bebb;
+	
+	/*font zaken*/
+	--spelvorm: oswald, monospace;
+}
+	
+.headvorm	{
+	/*flex*/
+	display: inline-flex;
+	flex: 4;
+	flex-wrap: wrap;
+	position:absolute;
+	left:0;
+	
+	
+	/*fonts en letters*/
+	text-align: center;
+	font-family: var(--spelvorm);
+	
+	/*kleuren*/
+	background-color: var(--grijs);
+	border-top: solid 4px var(--dkrblauw);
+	color: var(--dkrblauw);
+	
+	/*hoogte en andere lengtes*/
+	height: 36px;
+	width:100%;
+}
+
+.headvorm-lesser {
+	/*positionering*/
+	display: inline-flex;
+	flex: 4;
+	position: relative;
+	padding-left: 5%;
+	padding-right: 5px;
+	
+	/*fonts en letters*/
+	font-family: var(--spelvorm);
+	font-size: 1.6vw;
+	
+	/*kleuren*/
+	color: var(--dkrblauw);
+	
+}
+
+.titel {
+	/*text*/
+	text-align:center;
+	font-family: var(--spelvorm);
+		
+	/*kleur*/
+	color:var(--dkrblauw);
+}
