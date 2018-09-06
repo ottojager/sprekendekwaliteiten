@@ -89,23 +89,7 @@ a:focus {
 	margin: 0 20px 20px 20px;
 }
 
-footer {
-	position: relative;
-}
 
-footer p {
-	position: fixed;
-	bottom: 30px;
-	width: 100%;
-	text-align: center;
-	background-color: #e9e9ea;
-	color: #163143;
-	border-top: 4px solid #163143;
-	padding: 15px 0;
-	font-family: Oswald, monospace;
-	font-size: 11px;
-	
-}
 
 .container {
 	margin: 0 auto;

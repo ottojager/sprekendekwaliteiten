@@ -3,7 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="icon" sizes="16x16" type="image/png" href="bewustwording/Rainbow_placeholder.png">
-		<link rel="stylesheet" href="index.css" type="text/css">
+		<link rel="stylesheet" href="./index.css" type="text/css">
+		<link rel="stylesheet" href="./stylesheets/header.css" type="text/css">
+		<link rel="stylesheet" href="./stylesheets/footer.css" type="text/css">
 		<title>Kwaliteitenspel</title>
 	</head>
 	<body>
@@ -24,6 +26,6 @@
 		</main>
 	</body>
 	<footer>
-		<p>"Sprekende kwaliteiten is uitgevoerd met toestemming van Peter Gerrickens en mogelijk gemaakt door Stichting Bartim&eacute;us Sonneheerdt en het KF Heinfonds"</p>
+		<p class="credits">"Sprekende kwaliteiten is uitgevoerd met toestemming van Peter Gerrickens en mogelijk gemaakt door Stichting Bartim&eacute;us Sonneheerdt en het KF Heinfonds"</p><p class="e4w">©Eye4Web 2017-2018</p>
 	</footer>
 </html>
