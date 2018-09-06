@@ -9,19 +9,14 @@ function shuffle(a) {
         a[j] = x;
     }
 }
+
 function takeCard() {
     "use strict";
     var takenCard = cardStack[0];
     cardStack.shift();
     return takenCard;
 }
-function fillSlots() {
-    "use strict";
-    var i;
-    for (i = 1; i < 9; i += 1) {
-        document.getElementById("slot" + i.toString()).getElementsByTagName('p')[0].innerHTML = takeCard();
-    }
-}
+
 function rewriteGraveyard() {
     "use strict";
     var i;
@@ -54,13 +49,13 @@ function addListeners() {
 			reply_click(this.id);
 		});
     }
-	document.getElementById("trash").addEventListener('click', function() {
-			reply_click(this.id);
-			window.scrollTo(0,document.body.scrollHeight);
-		});
-	document.getElementById("skiplink").addEventListener('click', function() {
-			window.scrollTo(0,0);
-		});
+	// document.getElementById("trash").addEventListener('click', function() {
+	// 		reply_click(this.id);
+	// 		window.scrollTo(0,document.body.scrollHeight);
+	// 	});
+	// document.getElementById("skiplink").addEventListener('click', function() {
+	// 		window.scrollTo(0,0);
+	// 	});
 }
 
 function endGame(no_confirm) {
@@ -128,19 +123,21 @@ function reply_click(clicked_id) {
         var i;
         lastChosenPosition.unshift(clicked_id);
         if (clicked_id !== "trash") {
-            //plaats actieve kaart in graveyard array
-            graveyard.unshift(document.getElementById(clicked_id).innerHTML);
-            //vervang geselecteerde hand kaart met actieve kaart
-            document.getElementById(clicked_id).getElementsByTagName('p')[0].innerHTML = currentCard;
+            var card_text = document.getElementById(clicked_id).getElementsByTagName('p')[0].innerHTML
+            if (confirm("Weet u zeker dat u "+card_text+" wilt vervangen?")) {
+                //plaats actieve kaart in graveyard array
+                graveyard.unshift(document.getElementById(clicked_id).innerHTML);
+                //vervang geselecteerde hand kaart met actieve kaart
+                document.getElementById(clicked_id).getElementsByTagName('p')[0].innerHTML = currentCard;
+            }
         } else {
             //actieve kaart in graveyard doen
             graveyard.unshift(document.getElementById("current").innerHTML);
         }
         //graveyard reïninitaliseren
-        rewriteGraveyard();
+        // rewriteGraveyard();
         //nieuwe kaart pakken en in current slot doen
-        currentCard = takeCard();
-        document.getElementById("current").innerHTML = currentCard;
+        newCard();
         //checken of de game eindigt
         if (cardStack.length === 0 && currentCard == null) {
             endGame(true);
@@ -168,15 +165,65 @@ function backButton() {
     rewriteGraveyard();
 }
 
-addListeners();
+function newCard() {
+    "use strict";
+    // pakt niewe kaart van de cardStack zet die als active card en gaat naar de new card view
+    currentCard = takeCard();
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var html = this.responseText.replace("card", currentCard);
+            document.getElementById("container").innerHTML = html;
+            document.getElementById("trash").addEventListener('click', function() {
+        			reply_click(this.id);
+        			window.scrollTo(0,document.body.scrollHeight);
+        	});
+        }
+    };
+    xhttp.open("GET", "./newcard.html", true);
+    xhttp.send();
+}
 
+function handView() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // lots o' replaces
+            var html = this.responseText
+            .replace("active card", currentCard)
+            .replace("card1", hand[1])
+            .replace("card2", hand[2])
+            .replace("card3", hand[3])
+            .replace("card4", hand[4])
+            .replace("card5", hand[5])
+            .replace("card6", hand[6])
+            .replace("card7", hand[7])
+            .replace("card8", hand[8]);
+            document.getElementById("container").innerHTML = html;
+            // add click event listeners zodat we kunnen zien welke kaart geslecteerd woord
+            addListeners();
+        }
+    };
+    xhttp.open("GET", "./hand.html", true);
+    xhttp.send();
+}
+
+// een paar default values ininitaliseren
+var currentCard = '';
+var hand = [];
 var graveyard = [];
 var lastChosenPosition = [];
 var gameEnded = 0;
-//kaarten schudden
+
+// kaarten schudden
 shuffle(cardStack);
-//8 handkaarten neerleggen
-fillSlots();
-//eerste kaart pakken en in active slot doen
-var currentCard = takeCard();
-document.getElementById("current").innerHTML = currentCard;
+
+// 8 handkaarten neerleggen
+var i;
+for (i = 1; i < 9; i += 1) {
+    // document.getElementById("slot" + i.toString()).getElementsByTagName('p')[0].innerHTML = takeCard();
+    hand[i] = takeCard();
+}
+
+// eerste kaart pakken en in active slot doen
+newCard();
