@@ -11,9 +11,7 @@ footer p {
 	color: #163143;
 	padding: 10px 0;
 	font-family: Oswald, monospace;
-	font-size: 10px;
-
-	
+	font-size: 1.1vw;
 }
 
 .credits {
@@ -25,5 +23,5 @@ footer p {
 	position: fixed;
 	text-align: right;
 	bottom: 0;
-	right: 6%;
+	right: 5%;
 }
