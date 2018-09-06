@@ -45,7 +45,7 @@ function addListeners() {
 	"use strict";
 	var i;
     for (i = 1; i < 9; i += 1) {
-        document.getElementById("slot" + i.toString()).addEventListener('click', function() {
+        document.getElementById(i.toString()).addEventListener('click', function() {
 			reply_click(this.id);
 		});
     }
@@ -119,6 +119,7 @@ function endGame(no_confirm) {
 
 function reply_click(clicked_id) {
     "use strict";
+    console.log(clicked_id);
     if (gameEnded == 0) {
         var i;
         lastChosenPosition.unshift(clicked_id);
@@ -128,7 +129,8 @@ function reply_click(clicked_id) {
                 //plaats actieve kaart in graveyard array
                 graveyard.unshift(document.getElementById(clicked_id).innerHTML);
                 //vervang geselecteerde hand kaart met actieve kaart
-                document.getElementById(clicked_id).getElementsByTagName('p')[0].innerHTML = currentCard;
+                hand[Number(clicked_id)] = currentCard;
+                newCard();
             }
         } else {
             //actieve kaart in graveyard doen
@@ -137,7 +139,7 @@ function reply_click(clicked_id) {
         //graveyard reïninitaliseren
         // rewriteGraveyard();
         //nieuwe kaart pakken en in current slot doen
-        newCard();
+
         //checken of de game eindigt
         if (cardStack.length === 0 && currentCard == null) {
             endGame(true);
