@@ -29,7 +29,7 @@
 	color: var(--dkrblauw);
 	
 	/*hoogte en andere lengtes*/
-	height: 36px;
+	height: 45px;
 	width:100%;
 }
 
@@ -54,7 +54,13 @@
 	/*text*/
 	text-align:center;
 	font-family: var(--spelvorm);
-		
+	font-size: 2.55vw;
+	text-transform: uppercase;
+	
 	/*kleur*/
 	color:var(--dkrblauw);
+}
+
+.onder	{
+	
 }

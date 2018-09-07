@@ -1,6 +1,6 @@
 <header>
-	<h1 class="titel">SPREKENDE</h1>
-	<h1 class="titel onder">KWALITEITEN</h1>
+	<h1 class="titel">sprekende</h1>
+	<h1 class="titel onder">kwaliteiten</h1>
 	<div class="headvorm">
 		<div class="headvorm-lesser"
 			 style="width:25%;">
