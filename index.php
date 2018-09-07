@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="icon" sizes="16x16" type="image/png" href="bewustwording/Rainbow_placeholder.png">
-		<link rel="stylesheet" href="index.css" type="text/css">
+		<link rel="stylesheet" href="./css/index.css" type="text/css">
 		<link rel="stylesheet" href="./css/header.css" type="text/css">
 		<link rel="stylesheet" href="./css/footer.css" type="text/css">
 		<title>Kwaliteitenspel</title>

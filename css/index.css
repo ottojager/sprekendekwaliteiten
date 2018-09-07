@@ -8,8 +8,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -35,9 +35,9 @@ time, mark, audio, video {
 	background-color: #234152;
 	border-bottom: 30px solid #564573;
 	border-left: 30px solid #564573;
-    -webkit-border-image: url(feedback/css/bovenste_balk.png) 100% round;
-    -o-border-image: url(feedback/css/bovenste_balk.png) 100% round;
-    border-image: url(feedback/css/bovenste_balk.png) 100% round;
+    -webkit-border-image: url(../feedback/css/bovenste_balk.png) 100% round;
+    -o-border-image: url(../feedback/css/bovenste_balk.png) 100% round;
+    border-image: url(../feedback/css/bovenste_balk.png) 100% round;
 }
 #player__name {
 	width: 175px;
@@ -77,7 +77,7 @@ a {
 	color: #acd7da;
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
-	background: url(feedback/css/knop_goed.png);
+	background: url(../feedback/css/knop_goed.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	text-decoration: none;
