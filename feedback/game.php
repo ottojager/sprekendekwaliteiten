@@ -175,7 +175,7 @@ if ($_SESSION['player_id'] != 11) {
 		<title>Actief - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="./css/game.css" type="text/css">
-		<link rel="stylesheet" href="../stylesheets/footer.css" type="text/css">
+		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>

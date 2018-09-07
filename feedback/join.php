@@ -76,7 +76,7 @@ if (isset($_POST['join_button'])) {
 		<meta charset="utf-8">
 		<title>Doe mee - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
-		<link rel="stylesheet" href="../stylesheets/footer.css" type="text/css">
+		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>

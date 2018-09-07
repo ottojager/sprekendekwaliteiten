@@ -1,15 +1,14 @@
-
 :root {
 	/*kleur*/
 	--rood: #d4263e;
 	--grijs: #e9e9ea;
 	--dkrblauw: #163143;
 	--groen: #60bebb;
-	
+
 	/*font zaken*/
 	--spelvorm: oswald, monospace;
 }
-	
+
 .headvorm	{
 	/*flex*/
 	display: inline-flex;
@@ -17,17 +16,17 @@
 	flex-wrap: wrap;
 	position:absolute;
 	left:0;
-	
-	
+
+
 	/*fonts en letters*/
 	text-align: center;
 	font-family: var(--spelvorm);
-	
+
 	/*kleuren*/
 	background-color: var(--grijs);
 	border-top: solid 4px var(--dkrblauw);
 	color: var(--dkrblauw);
-	
+
 	/*hoogte en andere lengtes*/
 	width:100%;
 }
@@ -38,14 +37,14 @@
 	flex: 4;
 	position: relative;
 	padding-left: 9%;
-	
+
 	/*fonts en letters*/
 	font-family: var(--spelvorm);
 	font-size: 1.6vw;
-	
+
 	/*kleuren*/
 	color: var(--dkrblauw);
-	
+
 }
 
 .titel {
@@ -55,7 +54,7 @@
 	text-transform: uppercase;
 	letter-spacing: 1.0887244px;
 	font-weight: 800;
-	
+
 	/*kleur*/
 	color:var(--dkrblauw);
 }
