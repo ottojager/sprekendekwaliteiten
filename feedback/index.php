@@ -6,6 +6,7 @@ session_start();
 	<head>
 		<title>Speelvorm 2</title>
 		<link rel="stylesheet" href="css/index.css" type="text/css">
+		<link rel="stylesheet" href="../stylesheets/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
@@ -21,6 +22,7 @@ session_start();
 				echo '<a href="./lobby.php">terug naar game</a> ';
 			}
 			echo '<a href="./delete.php">delete session</a>';
-		}?>
+		}
+		include('footer.php') ?>
 	</body>
 </html>

@@ -72,6 +72,7 @@ if (!(bool)$json) { // if $json actually has content
 		</script>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/lobby_stylesheet.css" type="text/css">
+		<link rel="stylesheet" href="../stylesheets/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
@@ -115,5 +116,6 @@ if (!(bool)$json) { // if $json actually has content
 		}
 		?>
 		</div>
+		<?php include('../footer.php') ?>
 	</body>
 </html>

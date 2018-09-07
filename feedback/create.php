@@ -67,6 +67,7 @@ if (isset($_POST['makeLobbyButton'])) {
 		</script>
 		<title>Aanmaken spel - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
+		<link rel="stylesheet" href="../stylesheets/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 		<meta charset="utf-8">
 	</head>
@@ -80,7 +81,7 @@ if (isset($_POST['makeLobbyButton'])) {
 			<div id="title"><h1>Kwaliteitenspel</h1>
 			<p>Als spelleider maak je hier een nieuw spel "Feedback" aan. Vul je naam in en kies het aantal kaarten waarmee je de groep wilt laten spelen (maximaal 70).</p></div>
 			<form onsubmit="return validate_form()" method="post">
-				
+
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
 				<div class="red_border">
 					<div class="formfield">
@@ -105,5 +106,6 @@ if (isset($_POST['makeLobbyButton'])) {
 				<input type="submit" value="Aanmaken spel" name="makeLobbyButton">
 			</form>
 		</div>
+		<?php include('../footer.php') ?>
 	</body>
 </html>

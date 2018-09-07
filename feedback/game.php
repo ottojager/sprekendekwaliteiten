@@ -175,6 +175,7 @@ if ($_SESSION['player_id'] != 11) {
 		<title>Actief - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="./css/game.css" type="text/css">
+		<link rel="stylesheet" href="../stylesheets/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
@@ -204,7 +205,7 @@ if ($_SESSION['player_id'] != 11) {
 			<div class="col-xs-12 col-sm-4 col-md-3">
 				<h2>Spelers:</h2>
 				<ul id="player_list" >
-				
+
 				<?php
 				foreach ($json['players'] as $key => $value) {
 					if ($value['name'] != 'Afval stapel') {
@@ -218,7 +219,7 @@ if ($_SESSION['player_id'] != 11) {
 				<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
 			</div>
 			<div style="clear: both;"></div>
-			
+
 			<div class="row" id="knoppen">
 				<div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0">
 					<a class="skiplink" href="#blind_current_player">Naar huidige kaart</a>
@@ -241,14 +242,15 @@ if ($_SESSION['player_id'] != 11) {
 			<div id="card_stack" class="card_stack">Nog geen kaarten ontvangen.</div>
 			<?php } else { ?>
 			<div id="card_stack" class="card_stack">Klik op een speler om diens kaarten te zien.</div>
-			
-			<?php 
-			  echo '<button onclick="view_cards('. (count($json['players'])-1) .')">Afval stapel</button>'; 
+
+			<?php
+			  echo '<button onclick="view_cards('. (count($json['players'])-1) .')">Afval stapel</button>';
 			} ?>
 
 
 
 		</div>
+		<?php include('../footer.php') ?>
 	</body>
 </html>
 <?php
