@@ -25,3 +25,14 @@ footer p {
 	bottom: 0;
 	right: 4%;
 }
+
+@media screen and (max-width: 768px) {
+	footer p {
+	font-size: 3vw;
+	}
+
+.copyright {
+	position: initial;
+	text-align: center;
+	}	
+}
