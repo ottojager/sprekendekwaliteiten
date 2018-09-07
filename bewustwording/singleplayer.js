@@ -62,7 +62,7 @@ function endGame(no_confirm) {
     if (no_confirm || confirm('Weet u zeker dat u het spel wil beëindigen?')) {
         gameEnded = 1;
         //top leegmaken
-        document.getElementById("actievekaart").innerHTML = "";
+        document.getElementById("container").innerHTML = "";
 
         // container div
         var div = document.createElement('div');
@@ -112,7 +112,7 @@ function endGame(no_confirm) {
         var p = document.createElement('p');
         p.id = 'error';
         div.appendChild(p);
-        document.getElementById("actievekaart").appendChild(div);
+        document.getElementById("container").appendChild(div);
     }
 
 }
