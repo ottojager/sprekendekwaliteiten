@@ -29,7 +29,6 @@
 	color: var(--dkrblauw);
 	
 	/*hoogte en andere lengtes*/
-	height: 45px;
 	width:100%;
 }
 
@@ -38,8 +37,7 @@
 	display: inline-flex;
 	flex: 4;
 	position: relative;
-	padding-left: 5%;
-	padding-right: 5px;
+	padding-left: 9%;
 	
 	/*fonts en letters*/
 	font-family: var(--spelvorm);
@@ -54,15 +52,20 @@
 	/*text*/
 	text-align:center;
 	font-family: var(--spelvorm);
-	font-size: 2.55vw;
 	text-transform: uppercase;
+	letter-spacing: 1.0887244px;
+	font-weight: 800;
 	
 	/*kleur*/
 	color:var(--dkrblauw);
 }
 
+.boven{
+	font-size: 1.4vw;
+}
+
 .onder	{
 	font-weight: 100;
-	margin-top: -2%;
-	
+	margin-top: -1.7%;
+	letter-spacing: 8.5px;
 }
