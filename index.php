@@ -9,29 +9,7 @@
 		<title>Kwaliteitenspel</title>
 	</head>
 	<body>
-		<header>
-			<h1 class="titel">SPREKENDE</h1>
-			<h1 class="titel onder">KWALITEITEN</h1>
-			<div class="headvorm">
-				<div class="headvorm-lesser"
-					 style="width:25%;">
-					<a style="display:block;">spel: combi</a>
-				</div>
-				<div class="headvorm-lesser"
-					 style="width:25%;">
-					<a style="display:block;">terug naar start</a>
-				</div>
-				<div class="headvorm-lesser" style="width:25%;"></div>
-				<div class="headvorm-lesser"
-					 style="width:25%;">
-					<a style="display:block;">help</a>
-				</div>
-				<div class="headvorm-lesser"
-					 style="width:10%;">
-					<a style="display:block;">naam speler</a>
-				</div>
-			</div>
-		</header>
+		<?php include('header.php') ?>
 		<main class="container">
 			<div id="topbar"></div>
 				<div id="sidetopbar">
@@ -47,8 +25,6 @@
 				<a href="./feedback/create.php">Begeleider? Klik hier</a>
 			</div>
 		</main>
+		<?php include('footer.php') ?>
 	</body>
-	<footer>
-		<p class="credits">"Sprekende kwaliteiten is uitgevoerd met toestemming van Peter Gerrickens en mogelijk gemaakt door Stichting Bartim&eacute;us Sonneheerdt en het KF Heinfonds"</p><p class="copyright">©Eye4Web 2017-2018</p>
-	</footer>
 </html>
