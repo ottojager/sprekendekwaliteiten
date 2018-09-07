@@ -130,7 +130,7 @@ function reply_click(clicked_id) {
                 graveyard.unshift(document.getElementById(clicked_id).innerHTML);
                 //vervang geselecteerde hand kaart met actieve kaart
                 hand[Number(clicked_id)] = currentCard;
-                newCard();
+                document.getElementById("newCardButton").onclick = newCard;
             }
         } else {
             //actieve kaart in graveyard doen
