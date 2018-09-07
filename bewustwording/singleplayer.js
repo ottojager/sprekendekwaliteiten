@@ -120,27 +120,31 @@ function endGame(no_confirm) {
 function reply_click(clicked_id) {
     "use strict";
     console.log(clicked_id);
-    if (gameEnded == 0) {
+    if (gameEnded == 0 && currentCard !== 0) {
         var i;
         lastChosenPosition.unshift(clicked_id);
         if (clicked_id !== "trash") {
             var card_text = document.getElementById(clicked_id).getElementsByTagName('p')[0].innerHTML
             if (confirm("Weet u zeker dat u "+card_text+" wilt vervangen?")) {
-                //plaats actieve kaart in graveyard array
+                // plaats actieve kaart in graveyard array
                 graveyard.unshift(document.getElementById(clicked_id).innerHTML);
                 //vervang geselecteerde hand kaart met actieve kaart
                 hand[Number(clicked_id)] = currentCard;
+                document.getElementById(clicked_id).innerHTML = "<p>"+currentCard+"</p>";
+                currentCard = 0;
+
+                // allow the user to click the new card button
                 document.getElementById("newCardButton").onclick = newCard;
             }
         } else {
             //actieve kaart in graveyard doen
             graveyard.unshift(document.getElementById("current").innerHTML);
         }
-        //graveyard reïninitaliseren
+        // graveyard reïninitaliseren
         // rewriteGraveyard();
-        //nieuwe kaart pakken en in current slot doen
+        // nieuwe kaart pakken en in current slot doen
 
-        //checken of de game eindigt
+        // checken of de game eindigt
         if (cardStack.length === 0 && currentCard == null) {
             endGame(true);
             alert("Je hebt alle kaarten gehad. Vul je email in en klik op \"Stuur email\" om de resultaten als email naar jezelf te stuuren.");
