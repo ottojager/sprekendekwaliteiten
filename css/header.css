@@ -36,7 +36,7 @@
 	display: inline-flex;
 	flex: 4;
 	position: relative;
-	padding-left: 9%;
+	/*padding-left: 9%;*/
 
 	/*fonts en letters*/
 	font-family: var(--spelvorm);
