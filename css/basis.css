@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* reset Eric Meyer */
+
+body p, h1, h2, h3, h4, h5, h6, ul, li, a {
+	font-family: 'Roboto', sans-serif;
+	color: #234152;
+	text-decoration: none;
+}
+
+h1 {
+	clear: both;
+	margin: 50px 0 25px 0;
+	font-size: 40px;
+	text-align: center;
+}
+
+h2 {
+	margin: 25px 0 25px 0;
+	font-size: 28px;
+	text-align: center;
+}
+
+a {
+	display: inline-block;
+	width: 210px;
+	height: 35px;
+	margin: 8px 28px 28px 28px;
+	padding-top: 10px;
+	font-size: 17px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	text-align: center;
+}
+
+a:focus {
+	border: 8px solid #d32b17;
+	margin: 0 20px 20px 20px;
+}
