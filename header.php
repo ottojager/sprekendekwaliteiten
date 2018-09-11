@@ -10,7 +10,7 @@
 			 <!--style="width:25%;"-->
 			<a style="display:block;">terug naar start</a>
 		</div>
-		<div class="headvorm-lesser"> <!--style="width:25%;"--></div>
+		<div class="headvorm-lesser" style="width:5%;"></div>
 		<div class="headvorm-lesser">
 			 <!--style="width:25%;"-->
 			<a style="display:block;">help</a>
