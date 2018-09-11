@@ -51,6 +51,15 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 }
+
+.menu-sv1 {
+	text-align: center;
+}
+
+.menu-sv1 h1 {
+	border-bottom: 3px solid black;
+}
+
 #topbar {
 	clear: both;
 	width: 100%;
@@ -77,15 +86,7 @@ body {
 	background-color: #234152;
 	border-bottom: 2px solid #d32b17;
 }
-h1 {
-	margin: 25px 0 25px 0;
-	font-family: 'Oswald', sans-serif;
-	font-size: 40px;
-	text-align: center;
-}
-h2 {
-	color: #234152;
-}
+
 #actievekaart {
 	margin: 40px auto 0 auto;
 	font-family: 'Roboto', sans-serif;
