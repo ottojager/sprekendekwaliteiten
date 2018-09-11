@@ -14,7 +14,7 @@
 	display: inline-flex;
 	flex: 4;
 	flex-wrap: wrap;
-	position:absolute;
+	position:relative;
 	left:0;
 
 
