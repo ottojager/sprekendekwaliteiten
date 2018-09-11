@@ -11,11 +11,6 @@
 	<body>
 		<?php include('header.php') ?>
 		<main class="container">
-			<div id="topbar"></div>
-				<div id="sidetopbar">
-					<div id="borderimage"></div>
-					<div id="player__name"></div>
-				</div>
 			<h1>Kwaliteitenspel</h1>
 			<h2>Welkom bij het Kwaliteitenspel</h2>
 			<p></p>
