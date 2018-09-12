@@ -1,15 +1,15 @@
 spelvorm 1:
-- voor pagina
+x voorpagina
 - mail might need some changes
 
 spelvorm 2:
-- voor pagina
+- voorpagina
   - speler / spelleider knoppen
 - ontavangen kaarten view
 - mail might need some changes
 
 spelvorm 3:
-- voor pagina
+- voorpagina
   - twee knoppen
     - spelleider (basically same as spelvorm 2)
     - speler
