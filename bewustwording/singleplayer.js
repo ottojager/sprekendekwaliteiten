@@ -94,15 +94,19 @@ function endGame(no_confirm) {
             var cards = "";
             var i;
             for (i = 1; i < 9; i += 1) {
-                cards += document.getElementById("slot" + i.toString()).innerHTML + ",";
+                cards += hand[i] + ",";
             }
 
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
-                    alert('De e-mail is verstuurd.');
-                    document.getElementById('email').value = '';
-                    document.location.href= '../';
+                    // alert('De e-mail is verstuurd.');
+                    // document.getElementById('email').value = '';
+                    // document.location.href= '../';
+                    document.getElementById('container').innerHTML = '';
+                    var p = document.createElement('p');
+                    p.innerHTML = "Het bericht is verzonden naar uw email.";
+                    document.getElementById('container').appendChild(p);
 				}
 			};
 			xhttp.open("GET", "./mail.php?cards=" + cards + "&email=" + email, true);
