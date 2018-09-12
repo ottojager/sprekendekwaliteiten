@@ -193,7 +193,7 @@ function newCard() {
         	});
         }
     };
-    xhttp.open("GET", "./newcard.html", true);
+    xhttp.open("GET", "./parts/newcard.html", true);
     xhttp.send();
 }
 
@@ -217,7 +217,7 @@ function handView() {
             addListeners();
         }
     };
-    xhttp.open("GET", "./hand.html", true);
+    xhttp.open("GET", "./parts/hand.html", true);
     xhttp.send();
 }
 
