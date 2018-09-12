@@ -59,6 +59,8 @@ function addListeners() {
 }
 
 function endGame(no_confirm) {
+    // this should probably be made simpeler at some point but ya know
+    // don't fix something if it isn't broken
     if (no_confirm || confirm('Weet u zeker dat u het spel wil beëindigen?')) {
         gameEnded = 1;
         //top leegmaken
@@ -139,6 +141,7 @@ function reply_click(clicked_id) {
         } else {
             //actieve kaart in graveyard doen
             graveyard.unshift(document.getElementById("current").innerHTML);
+            newCard();
         }
         // graveyard reïninitaliseren
         // rewriteGraveyard();
