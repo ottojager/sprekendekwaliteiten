@@ -41,20 +41,9 @@ h2 {
 	text-align: center;
 }
 
-a {
-	display: inline-block;
-	width: 210px;
-	height: 35px;
-	margin: 8px 28px 28px 28px;
-	padding-top: 10px;
-	font-size: 17px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	text-decoration: none;
+.button {
+	padding-top: 40px;
+	display: block;
+	width: 100%;
 	text-align: center;
-}
-
-a:focus {
-	border: 8px solid #d32b17;
-	margin: 0 20px 20px 20px;
 }

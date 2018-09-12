@@ -33,10 +33,13 @@
 
 .headvorm-lesser {
 	/*positionering*/
-	display: inline-flex;
+	display: inline-block;
 	flex: 4;
 	position: relative;
-	/*padding-left: 9%;*/
+	text-align: center;
+	width: 210px;
+	height: 35px;
+	padding-top: 10px;
 
 	/*fonts en letters*/
 	font-family: var(--spelvorm);
@@ -44,6 +47,9 @@
 
 	/*kleuren*/
 	color: var(--dkrblauw);
+	
+	/*overige css*/
+	text-decoration: none;
 
 }
 
