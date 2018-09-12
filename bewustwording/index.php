@@ -11,8 +11,10 @@
 	<body>
 		<?php include('../header.php') ?>
 		<main class="container">
-			<h1 class="menu-sv1">Bewustwording spel</h1>
-			<p class="menu-sv1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, ligula vitae egestas luctus, dolor nulla aliquet elit, a aliquam magna nulla at odio. Aenean volutpat lorem sed molestie iaculis. Integer volutpat sapien nulla. Duis volutpat egestas quam, vel blandit quam sodales ut. Nulla tristique quam eget enim blandit, at viverra urna luctus. Proin sagittis, magna vehicula ullamcorper elementum, erat metus scelerisque lectus, id vestibulum velit sem condimentum neque. Mauris venenatis imperdiet mi. Duis quis justo non nisl ultricies blandit a nec mauris. Integer molestie, libero ac pellentesque aliquet, odio velit hendrerit</p>
+			<div>
+				<h1 class="menu-sv">Bewustwording spel</h1>
+				<p class="menu-tut">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, ligula vitae egestas luctus, dolor nulla aliquet elit, a aliquam magna nulla at odio. Aenean volutpat lorem sed molestie iaculis. Integer volutpat sapien nulla. Duis volutpat egestas quam, vel blandit quam sodales ut. Nulla tristique quam eget enim blandit, at viverra urna luctus. Proin sagittis, magna vehicula ullamcorper elementum, erat metus scelerisque lectus, id vestibulum velit sem condimentum neque. Mauris venenatis imperdiet mi. Duis quis justo non nisl ultricies blandit a nec mauris. Integer molestie, libero ac pellentesque aliquet, odio velit hendrerit</p>
+			</div>
 			<a class="button" href="./game.php">start spel</a>
 		</main>
 		<?php include('../footer.php') ?>
