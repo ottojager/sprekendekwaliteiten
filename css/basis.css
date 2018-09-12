@@ -41,9 +41,13 @@ h2 {
 	text-align: center;
 }
 
+#knoppen {
+	margin: 60px auto 0 auto;
+	text-align: center;
+}
+
 .button {
 	padding-top: 40px;
 	display: block;
-	width: 100%;
 	text-align: center;
 }
