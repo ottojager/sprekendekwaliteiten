@@ -56,11 +56,16 @@
 header > img {
 	/*lengte & breedte*/
 	height: auto;
-	width: 11%;
+	width: 12%;
+	max-width: 15%;
 	
-	display: block;
+	display: inline;
 	
-	position: relative;
+	position: fixed;
+	float: left;
+	margin-left: 10%;
+	
+	
 	
 }
 
