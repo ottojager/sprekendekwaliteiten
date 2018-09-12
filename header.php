@@ -1,4 +1,5 @@
 <header>
+	<img src="afbeeldingen/logo-grote-schermen.png" alt="logo">
 	<h1 class="titel boven">sprekende</h1>
 	<h1 class="titel onder">kwaliteiten</h1>
 	<div class="headvorm">

@@ -53,6 +53,17 @@
 
 }
 
+header > img {
+	/*lengte & breedte*/
+	height: auto;
+	width: 11%;
+	
+	display: block;
+	
+	position: relative;
+	
+}
+
 .titel {
 	/*text*/
 	text-align:center;
