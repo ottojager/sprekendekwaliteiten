@@ -78,7 +78,7 @@ h2 {
 	text-align: center;
 }
 
-.button-pos {
+.button-position {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -91,5 +91,11 @@ h2 {
 	padding: 5px;
 	border: 2px solid var(--dkrblauw);
 	border-radius: 20px;
+	color: var(--grijs);
+	background-color: var(--dkrblauw);
+}
+
+.button:hover {
 	background-color: var(--grijs);
+	color: var(--dkrblauw);
 }
