@@ -10,7 +10,8 @@ if (isset($_SESSION['game_id'])) {
 		echo $json;
 	} else {
 		@unlink("../games/$game.json"); // delete the empty file if one were to exist
-		header('HTTP/1.1 404 Not Found'); // send back a 404
+		header('HTTP/1.1 204 No Content'); // send back a 204
+										   // the request has been recieved but no content will be returned
 	}
 } else {
 	header('HTTP/1.1 403 Forbidden');
