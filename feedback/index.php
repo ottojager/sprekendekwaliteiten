@@ -5,7 +5,7 @@ session_start();
 <html lang="nl=NL">
 	<head>
 		<title>Speelvorm 2</title>
-		<link rel="stylesheet" href="../css/basic.css" type="text/css">
+		<link rel="stylesheet" href="../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
