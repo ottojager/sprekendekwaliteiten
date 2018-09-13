@@ -13,11 +13,14 @@ if (isset($_POST['makeLobbyButton'])) {
 				'ASS','TIT','JIZ','CUM','GOY','STD','NAZ','NZI','HEL','GUN','BOM','PRN','WWI','JAP','NIP','NAP','WAR',
 				'WII','HIV','SOA','HIS','HER','DWN','MOF','CBT','XXX',
 			);
+
 			// generate game id
 			do {
 				$id = '';
 				for ($i = 0; $i != 3; $i++) {
 					$id .= chr(mt_rand(65, 90)); // random uppercase ASCII character
+					                             // 65 = A
+												 // 90 = Z
 				}
 			} while (in_array($id,$filtered_names));
 
@@ -34,7 +37,7 @@ if (isset($_POST['makeLobbyButton'])) {
 
 			$_SESSION['player_id'] = 11;
 			$_SESSION['game_id'] = $id;
-			header('Location: lobby.php');
+			header('Location: ./lobby.php');
 		} else {
 			$error = 'Kaarten moet een getal tussen 0 en 70 zijn.';
 		}
@@ -81,7 +84,6 @@ if (isset($_POST['makeLobbyButton'])) {
 			<div id="title"><h1>Kwaliteitenspel</h1>
 			<p>Als spelleider maak je hier een nieuw spel "Feedback" aan. Vul je naam in en kies het aantal kaarten waarmee je de groep wilt laten spelen (maximaal 70).</p></div>
 			<form onsubmit="return validate_form()" method="post">
-
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
 				<div class="red_border">
 					<div class="formfield">
@@ -100,7 +102,6 @@ if (isset($_POST['makeLobbyButton'])) {
 							<option value="60">60</option>
 							<option selected value="70">70</option>
 						</select>
-
 					</div>
 				</div>
 				<input type="submit" value="Aanmaken spel" name="makeLobbyButton">
