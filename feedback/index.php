@@ -21,17 +21,19 @@ session_start();
 			<div class="button-positie">
 				<a class="button" href="join.php">Speler</a>
 				<a class="button" href="create.php">Spelleider</a>
+				<?php
+				if (isset($_SESSION['game_id'])) {
+					$game = $_SESSION['game_id'];
+					$json = json_decode(file_get_contents("./games/$game.json"), true);
+					if ($json['game_started']) {
+						echo '<a class="button" href="./game.php">terug naar game</a> ';
+					} else {
+						echo '<a class="button" href="./lobby.php">terug naar game</a> ';
+					}
+					echo '<a class="button" href="./delete.php">delete session</a>';
+				}
+				?>
 			</div>
-<?php	if (isset($_SESSION['game_id'])) {
-			$game = $_SESSION['game_id'];
-			$json = json_decode(file_get_contents("./games/$game.json"), true);
-			if ($json['game_started']) {
-				echo '<a href="./game.php">terug naar game</a> ';
-			} else {
-				echo '<a href="./lobby.php">terug naar game</a> ';
-			}
-			echo '<a href="./delete.php">delete session</a>';
-		}
-		include('../footer.php'); ?>
+		<?php include('../footer.php'); ?>
 	</body>
 </html>
