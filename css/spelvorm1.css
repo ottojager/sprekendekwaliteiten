@@ -3,3 +3,10 @@
 	display: block;
 	text-align: center;
 }
+
+@media screen and (max-width: 948px)  {
+	.startscherm {
+		width: 80%;
+		min-width: 35%;
+	}
+}
