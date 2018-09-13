@@ -30,7 +30,7 @@ footer p {
 @media screen and (max-width: 948px) {
 	footer {
 	margin-top: 20px;
-	position: initial;
+	position: static;
 	}
 	
 	footer p {
@@ -39,7 +39,7 @@ footer p {
 	}
 
 .copyright {
-	position: initial;
+	position: static;
 	text-align: center;
 	}	
 }
