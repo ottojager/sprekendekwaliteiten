@@ -3,7 +3,8 @@ footer {
 	font-size: 10px;
 	border-top: 4px solid #163143;
 	position: fixed;
-		bottom: 0;
+	bottom: 0;
+	left: 0;
 }
 
 footer p {
