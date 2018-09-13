@@ -20,12 +20,23 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-/* reset Eric Meyer */
+/* CSS Reset ^^ */
 
-body p, h1, h2, h3, h4, h5, h6, ul, li, a {
+/* Standard CSS */
+
+p, h1, h2, h3, h4, h5, h6, ul, li, a {
 	font-family: 'Roboto', sans-serif;
 	color: #234152;
 	text-decoration: none;
+}
+
+body {
+	background-color: #fffefe;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 h1 {
@@ -46,8 +57,39 @@ h2 {
 	text-align: center;
 }
 
+/* Start schermen CSS */
+
+.startscherm {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 35%;
+	text-align: center;
+}
+
+.startscherm-content {
+	font-size: 22px;
+	text-decoration: underline;
+} 
+
 .button {
 	padding-top: 40px;
 	display: block;
 	text-align: center;
+}
+
+.button-pos {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 10%;
+	text-align: center;
+}
+
+.button {
+	margin-top: 40px;
+	padding: 5px;
+	border: 2px solid var(--dkrblauw);
+	border-radius: 20px;
+	background-color: var(--grijs);
 }

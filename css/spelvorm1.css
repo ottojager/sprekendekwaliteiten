@@ -1,22 +1,3 @@
-body {
-	background-color: #fffefe;
-}
-.container {
-	max-width: 1290px;
-	margin: 0 auto;
-}
+/* Oops, zit er maar uit dat deze CSS file een beetje waardeloos is op dit moment of niet? Kom later maar terug als er aan het spel gewerkt moet worden! */
 
-
-div {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 35%;
-	text-align: center;
-}
-
-.menu-sv {
-	font-size: 22px;
-	text-decoration: underline;
-} 
 
