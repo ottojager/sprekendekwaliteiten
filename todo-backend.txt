@@ -1,15 +1,24 @@
 spelvorm 1:
 x voorpagina
+x kaart weggooien broke somehow
 - mail might need some changes
+  - two options
+    - verzenden als pdf  implementatie
+    - verzenden als word implementatie
+  x scherm na dat mail verzonden is
 
 spelvorm 2:
-- voorpagina
-  - speler / spelleider knoppen
+x voorpagina
+  x speler / spelleider knoppen
 - ontavangen kaarten view
 - mail might need some changes
+  - two options
+    - verzenden als pdf  implementatie
+    - verzenden als word implementatie
 
 spelvorm 3:
-- voorpagina
+x add link to this on the front page
+x voorpagina
   - twee knoppen
     - spelleider (basically same as spelvorm 2)
     - speler
