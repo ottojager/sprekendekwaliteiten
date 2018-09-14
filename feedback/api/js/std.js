@@ -40,12 +40,12 @@ function leader_card(amount_players) {
 	var i;
 	for (i = 0; i <  amount_players; i += 1) {
 		document.getElementById(i.toString()).addEventListener('click', function() {
-			view_cards(this.id);
+			leader_view_cards(this.id);
 		});
 	}
 }
 
-function view_cards(id_player) {
+function leader_view_cards(id_player) {
 	var list = document.getElementById('card_stack');
 	list.innerHTML = '';
 	game_info['players'][id_player]['stack'].forEach(function(item, index){

@@ -71,47 +71,47 @@ if ($_SESSION['player_id'] != 11) {
 				// update blind turn notifier thing
 				document.getElementById("blind_current_player").innerHTML = game_info['players'][ game_info['current_player'] ]['name'] + ' is aan de beurt.';
 
-				<?php if ($_SESSION['player_id'] != 11) { // update card list for players ?>
-				if (
-					(
-						document.getElementById("card_stack").childNodes[0].childNodes.length != game_info['players'][own_id]['stack'].length &&
-						document.getElementById("card_stack").innerHTML != 'Nog geen kaarten ontvangen.' &&
-						game_info['players'][own_id]['stack'].length != 0
-					) || (
-						game_info['players'][own_id]['stack'].length > 0 &&
-						document.getElementById("card_stack").innerHTML == 'Nog geen kaarten ontvangen.'
-					)
-				) { // if the user has more cards than are currently being displayed
-					// or if the user a card and the card list still reads the default message
-
-					// card stack
-					console.log('remaking cardstack');
-					var div = document.getElementById('card_stack');
-					div.innerHTML = '';
-					var list = document.createElement('ul');
-					var cards = game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].reverse();
-					game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].forEach(function(item, index){
-						var child = document.createElement('li');
-						child.className = 'col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0';
-						var card_text = document.createElement('p');
-						card_text.innerHTML = item;
-						child.appendChild(card_text);
-						list.appendChild(child);
-					});
-					div.appendChild(list);
-
-					if (first_refresh) {
-						first_refresh = !first_refresh;
-					} else {
-						notification.play();
-					}
-				} else if (
-					game_info['players'][own_id]['stack'].length == 0 &&
-					document.getElementById('card_stack').innerHTML != 'Nog geen kaarten ontvangen.'
-				) {
-					document.getElementById('card_stack').innerHTML = 'Nog geen kaarten ontvangen.';
-				}
-				<?php } ?>
+				// <?php if ($_SESSION['player_id'] != 11) { // update card list for players ?>
+				// if (
+				// 	(
+				// 		document.getElementById("card_stack").childNodes[0].childNodes.length != game_info['players'][own_id]['stack'].length &&
+				// 		document.getElementById("card_stack").innerHTML != 'Nog geen kaarten ontvangen.' &&
+				// 		game_info['players'][own_id]['stack'].length != 0
+				// 	) || (
+				// 		game_info['players'][own_id]['stack'].length > 0 &&
+				// 		document.getElementById("card_stack").innerHTML == 'Nog geen kaarten ontvangen.'
+				// 	)
+				// ) { // if the user has more cards than are currently being displayed
+				// 	// or if the user a card and the card list still reads the default message
+				//
+				// 	// card stack
+				// 	console.log('remaking cardstack');
+				// 	var div = document.getElementById('card_stack');
+				// 	div.innerHTML = '';
+				// 	var list = document.createElement('ul');
+				// 	var cards = game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].reverse();
+				// 	game_info['players'][<?php echo $_SESSION['player_id']; ?>]["stack"].forEach(function(item, index){
+				// 		var child = document.createElement('li');
+				// 		child.className = 'col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0';
+				// 		var card_text = document.createElement('p');
+				// 		card_text.innerHTML = item;
+				// 		child.appendChild(card_text);
+				// 		list.appendChild(child);
+				// 	});
+				// 	div.appendChild(list);
+				//
+				// 	if (first_refresh) {
+				// 		first_refresh = !first_refresh;
+				// 	} else {
+				// 		notification.play();
+				// 	}
+				// } else if (
+				// 	game_info['players'][own_id]['stack'].length == 0 &&
+				// 	document.getElementById('card_stack').innerHTML != 'Nog geen kaarten ontvangen.'
+				// ) {
+				// 	document.getElementById('card_stack').innerHTML = 'Nog geen kaarten ontvangen.';
+				// }
+				// <?php } ?>
 
 				//changing player list order
 				//check if the displayed player list doesn't match the new one ifso update HTMl
@@ -126,21 +126,21 @@ if ($_SESSION['player_id'] != 11) {
 							console.log('adding player to list:' + i);
 							var li = document.createElement('li');
 							var button =  document.createElement('button');
-							button.innerHTML = game_info['players'][i]['name'] + '(' + game_info['players'][i]['stack'].length + ')';
+							button.innerHTML = game_info['players'][i]['name'] + ' (' + game_info['players'][i]['stack'].length + ')';
 							li.appendChild(button);
 							li.id = i;
 							player_list.appendChild(li);
 						}
 					};
-					//check if player = 0 becuase this code is then useless
+					//check if player = 0 becuase this code is useless then
 					if (game_info['current_player'] > 0) {
 						//fill list starting with first player to the player before the current one
 						for (var i = 0; i < game_info['current_player']; i++) {
 							if (game_info['players'][i]['name'] != 'Afval stapel') {
-								console.log('adding player to list 2:' + i);
+								console.log('adding player to list:' + i);
 								var li = document.createElement('li');
 								var button =  document.createElement('button');
-								button.innerHTML = game_info['players'][i]['name'] + '(' + game_info['players'][i]['stack'].length + ')';
+								button.innerHTML = game_info['players'][i]['name'] + ' (' + game_info['players'][i]['stack'].length + ')';
 								li.appendChild(button);
 								li.id = i;
 								player_list.appendChild(li);
@@ -201,7 +201,7 @@ if ($_SESSION['player_id'] != 11) {
 			</div>
 
 			<h2 id="card_active" class="col-xs-2 col-sm-2 col-md-2">Actieve kaart:</h2>
-			<div id="card_display" class="col-xs-10 col-sm-5 col-md-5"><p id="current_card"></p></div>
+			<div id="card_display" class="col-xs-10 col-sm-5 col-md-5"><p id="current_card"><?php echo $json['current_card']; ?></p></div>
 			<div class="col-xs-12 col-sm-4 col-md-3">
 				<h2>Spelers:</h2>
 				<ul id="player_list" >
@@ -209,7 +209,7 @@ if ($_SESSION['player_id'] != 11) {
 				<?php
 				foreach ($json['players'] as $key => $value) {
 					if ($value['name'] != 'Afval stapel') {
-						echo '<li id="'.$value['player_id'].'">'.'<button>'.$value['name'].' (0)</button>'.'</li>';
+						echo '<li id="'.$value['player_id'].'">'.'<button>'.$value['name'].' ('.count($value['stack']).')</button>'.'</li>';
 					}
 				}
 				?>
@@ -235,15 +235,6 @@ if ($_SESSION['player_id'] != 11) {
 					<button onclick="undo()">Ongedaan maken</button>
 				<?php } // end leader only buttons ?>
 			</div>
-			
-			<?php if ($_SESSION['player_id'] != 11) { ?>
-			<h2 class="col-xs-12">Jouw ontvangen kaarten</h2>
-			<div id="card_stack" class="card_stack">Nog geen kaarten ontvangen.</div>
-			<?php } else { ?>
-			<div id="card_stack" class="card_stack">Klik op een speler om diens kaarten te zien.</div>
-			<?php
-			  echo '<button onclick="view_cards('. (count($json['players'])-1) .')">Afval stapel</button>';
-			} ?>
 		</div>
 		<?php include('../footer.php') ?>
 	</body>
