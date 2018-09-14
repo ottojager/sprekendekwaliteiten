@@ -161,21 +161,20 @@ function reply_click(clicked_id) {
 
 function backButton() {
     "use strict";
-    //var lastCard = document.getElementById(lastChosenPosition[0]).innerHTML;
-    if (lastChosenPosition[0] !== "trash") {
-        cardStack.unshift(document.getElementById("current").innerHTML);
-        currentCard = document.getElementById(lastChosenPosition[0]).firstChild.innerHTML;
-        document.getElementById("current").innerHTML = document.getElementById(lastChosenPosition[0]).firstChild.innerHTML;
-        document.getElementById(lastChosenPosition[0]).innerHTML = graveyard[0];
+    if (graveyard.length != 0) {
+        cardStack.unshift(currentCard);
+
+        if (lastChosenPosition[0] != "trash") {
+            currentCard = hand[lastChosenPosition[0].toString()]
+            hand[lastChosenPosition[0].toString()] = graveyard[0];
+        } else {
+            currentCard = graveyard[0];
+        }
+        document.getElementById("current").innerHTML = currentCard;
         lastChosenPosition.shift();
         graveyard.shift();
-    } else if (graveyard.length !== 0) {
-        cardStack.unshift(document.getElementById("current").innerHTML);
-        document.getElementById("current").innerHTML = graveyard[0];
-        currentCard = graveyard[0];
-        graveyard.shift();
+        rewriteGraveyard();
     }
-    rewriteGraveyard();
 }
 
 function newCard() {
