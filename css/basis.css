@@ -80,7 +80,10 @@ h2 {
 }
 
 .button {
-	padding: 5px 15px;
+	display: inline-block;
+	width: 120px;
+	padding: 8px;
+	margin: 0 5px;
 	border: 2px solid var(--dkrblauw);
 	border-radius: 20px;
 	color: var(--grijs);

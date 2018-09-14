@@ -27,11 +27,11 @@ session_start();
 					$game = $_SESSION['game_id'];
 					$json = json_decode(file_get_contents("./games/$game.json"), true);
 					if ($json['game_started']) {
-						echo '<a class="button" href="./game.php">terug naar game</a> ';
+						echo '<a class="button" href="./game.php">Naar spelpel</a> ';
 					} else {
-						echo '<a class="button" href="./lobby.php">terug naar game</a> ';
+						echo '<a class="button" href="./lobby.php">Naar spel</a> ';
 					}
-					echo '<a class="button" href="./delete.php">delete session</a>';
+					echo '<a class="button" href="./delete.php">Verwijder sessie</a>';
 				}
 				?>
 			</div>
