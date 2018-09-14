@@ -56,15 +56,15 @@
 header > img {
 	/*lengte & breedte*/
 	height: auto;
-	width: 12%;
-	max-width: 15%;
+	min-width: 6%;
+    max-width: 7.5%;
 	
 	display: inline;
 	
-	position: fixed;
+	position: absolute;
 	float: left;
 	margin-left: 10%;
-	
+	margin-top: 3px;
 	
 	
 }
