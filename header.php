@@ -5,20 +5,20 @@
 	<div class="headvorm">
 		<div class="headvorm-lesser">
 			 <!--style="width:25%;"-->
-			<a style="display:block;">spel: combi</a>
+			<a style="display:block;">Spel: Combi</a>
 		</div>
 		<div class="headvorm-lesser">
 			 <!--style="width:25%;"-->
-			<a style="display:block;">terug naar start</a>
+			<a style="display:block;">Terug naar start</a>
 		</div>
 		<!--<div class="headvorm-lesser" style="width:5%;"></div -->
 		<div class="headvorm-lesser">
 			 <!--style="width:25%;"-->
-			<a style="display:block;">help</a>
+			<a style="display:block;">Help</a>
 		</div>
 		<div class="headvorm-lesser">
 			 <!--style="width:10%;" -->
-			<a style="display:block;">naam speler</a>
+			<a style="display:block;">Naam speler</a>
 		</div>
 	</div>
 </header>
