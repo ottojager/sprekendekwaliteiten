@@ -235,20 +235,15 @@ if ($_SESSION['player_id'] != 11) {
 					<button onclick="undo()">Ongedaan maken</button>
 				<?php } // end leader only buttons ?>
 			</div>
-
-			<!-- keep these on one line or JS will see a child element that isn't there -->
+			
 			<?php if ($_SESSION['player_id'] != 11) { ?>
 			<h2 class="col-xs-12">Jouw ontvangen kaarten</h2>
 			<div id="card_stack" class="card_stack">Nog geen kaarten ontvangen.</div>
 			<?php } else { ?>
 			<div id="card_stack" class="card_stack">Klik op een speler om diens kaarten te zien.</div>
-
 			<?php
 			  echo '<button onclick="view_cards('. (count($json['players'])-1) .')">Afval stapel</button>';
 			} ?>
-
-
-
 		</div>
 		<?php include('../footer.php') ?>
 	</body>
