@@ -133,7 +133,7 @@ function reply_click(clicked_id) {
             var card_text = document.getElementById(clicked_id).getElementsByTagName('p')[0].innerHTML
             if (confirm("Weet u zeker dat u "+card_text+" wilt vervangen?")) {
                 // plaats actieve kaart in graveyard array
-                graveyard.unshift(document.getElementById(clicked_id).innerHTML);
+                graveyard.unshift(document.getElementById(clicked_id).firstChild.innerHTML);
                 //vervang geselecteerde hand kaart met actieve kaart
                 hand[Number(clicked_id)] = currentCard;
                 document.getElementById(clicked_id).innerHTML = "<p>"+currentCard+"</p>";
