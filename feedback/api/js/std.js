@@ -46,13 +46,13 @@ function leader_card(amount_players) {
 }
 
 function leader_view_cards(id_player) {
-	var list = document.getElementById('card_stack');
-	list.innerHTML = '';
-	game_info['players'][id_player]['stack'].forEach(function(item, index){
-		var child = document.createElement('li');
-		child.innerHTML = item;
-		list.appendChild(child);
-	});
+	// var list = document.getElementById('card_stack');
+	// list.innerHTML = '';
+	// game_info['players'][id_player]['stack'].forEach(function(item, index){
+	// 	var child = document.createElement('li');
+	// 	child.innerHTML = item;
+	// 	list.appendChild(child);
+	// });
 }
 
 start_update();
