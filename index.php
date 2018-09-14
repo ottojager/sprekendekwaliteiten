@@ -15,9 +15,9 @@
 			<h2>Welkom bij het Kwaliteitenspel</h2>
 			<p></p>
 			<div id="knoppen">
-				<a href="./bewustwording/">Bewustwording</a>
-				<a href="./feedback/">Feedback</a>
-				<a href="./combi/">Combi</a>
+				<a class="button" href="./bewustwording/">Bewustwording</a>
+				<a class="button" href="./feedback/">Feedback</a>
+				<a class="button "href="./combi/">Combi</a>
 			</div>
 		</main>
 		<?php include('footer.php') ?>

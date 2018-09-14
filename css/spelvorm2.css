@@ -1,12 +1,3 @@
 .startscherm-content {
 	color: var(--rood);
 }
-
-.button {
-	display: block;
-	text-align: center;
-}
-
-.button-positie {
-	margin-top: 40px;
-}

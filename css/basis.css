@@ -73,15 +73,14 @@ h2 {
 }
 
 .button-positie {
-	display: block;
+	margin-top: 40px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 100px;
 	text-align: center;
 }
 
 .button {
-	padding: 5px;
+	padding: 5px 15px;
 	border: 2px solid var(--dkrblauw);
 	border-radius: 20px;
 	color: var(--grijs);

@@ -21,6 +21,7 @@ session_start();
 			<div class="button-positie">
 				<a class="button" href="join.php">Speler</a>
 				<a class="button" href="create.php">Spelleider</a>
+				
 				<?php
 				if (isset($_SESSION['game_id'])) {
 					$game = $_SESSION['game_id'];
