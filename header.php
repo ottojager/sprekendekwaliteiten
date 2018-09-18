@@ -9,7 +9,7 @@
 		</div>
 		<div class="headvorm-lesser">
 			 <!--style="width:25%;"-->
-			<a style="display:block;">Terug naar start</a>
+			<a href="../index.php" style="display:block;">Terug naar start</a>
 		</div>
 		<!--<div class="headvorm-lesser" style="width:5%;"></div -->
 		<div class="headvorm-lesser">
