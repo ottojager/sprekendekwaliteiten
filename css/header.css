@@ -62,8 +62,7 @@ img.logo {
 	margin-left: 10%;
 	margin-top: 8px;
 	opacity: 1;
-	transition: opacity 0.25s;
-	
+	transition: all 0.25s;
 	
 }
 
@@ -101,8 +100,10 @@ img.logo {
 @media only screen and (max-width: 500px) {
 	
 	img.logo {
-		opacity: 0;
-		transition: opacity 0.25s;
+    opacity:0;
+    transform:rotateX(90deg) rotateY(90deg);
+	transition: all 0.25s;
+	
 	}
 	
 }
