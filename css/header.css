@@ -10,46 +10,33 @@
 }
 
 .headvorm	{
-	/*flex*/
+    
 	display: inline-flex;
-	flex: 4;
-	flex-wrap: wrap;
-	position:relative;
-	left:0;
-
-
-	/*fonts en letters*/
-	text-align: center;
-	font-family: var(--spelvorm);
-
-	/*kleuren*/
-	background-color: var(--grijs);
-	border-top: solid 4px var(--dkrblauw);
-	color: var(--dkrblauw);
-
-	/*hoogte en andere lengtes*/
-	width:100%;
+    flex: 4;
+    flex-wrap: wrap;
+    position: relative;
+    left: 0;
+    font-size: 9.6em;
+    text-align: center;
+    font-family: var(--spelvorm);
+    background-color: var(--grijs);
+    border-top: solid 4px var(--dkrblauw);
+    color: var(--dkrblauw);
+    width: 100%;
 }
 
 .headvorm-lesser {
-	/*positionering*/
+    
 	display: inline-block;
-	flex: 4;
-	position: relative;
-	text-align: center;
-	width: 210px;
-	height: 35px;
-	padding-top: 10px;
-
-	/*fonts en letters*/
-	font-family: var(--spelvorm);
-	font-size: 1.6vw;
-
-	/*kleuren*/
-	color: var(--dkrblauw);
-	
-	/*overige css*/
-	text-decoration: none;
+    flex: 4;
+    position: relative;
+    text-align: center;
+    height: 6%;
+    padding: 0.5%;
+    font-family: var(--spelvorm);
+    font-size: 2.6vw;
+    color: var(--dkrblauw);
+    text-decoration: none;
 
 }
 
@@ -65,7 +52,7 @@ header > img {
 	position: absolute;
 	float: left;
 	margin-left: 10%;
-	margin-top: 0.8%;
+	margin-top: 1.4%;
 	
 	
 }
