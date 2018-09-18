@@ -61,6 +61,8 @@ img.logo {
 	float: left;
 	margin-left: 10%;
 	margin-top: 8px;
+	opacity: 1;
+	transition: opacity 0.25s;
 	
 	
 }
@@ -92,4 +94,15 @@ img.logo {
     letter-spacing: 0.3em;
     font-size: 24px;
     margin-bottom: 0px;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+	
+	img.logo {
+		opacity: 0;
+		transition: opacity 0.25s;
+	}
+	
 }
