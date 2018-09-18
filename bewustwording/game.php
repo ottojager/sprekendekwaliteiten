@@ -1,5 +1,8 @@
 <html lang="nl=NL">
 	<head>
+		<link rel="stylesheet" href="../css/basis.css" type="text/css">
+		<link rel="stylesheet" href="../css/header.css" type="text/css">
+		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<script type="text/javascript">
 			var cardStack =
 				<?php
@@ -26,6 +29,7 @@
 		<link rel="icon" sizes="16x16" type="image/png" href="Rainbow_placeholder.png">
 	</head>
 	<body>
+		<?php include('../header.php') ?>
 		<div id="topbar"></div>
 		<div id="help">
 			<div id="borderimage"></div>
