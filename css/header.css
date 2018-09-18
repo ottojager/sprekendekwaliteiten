@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     position: relative;
     left: 0;
-    font-size: 9.6em;
+    font-size: 16px;/*shift vanaf 478px*/
     text-align: center;
     font-family: var(--spelvorm);
     background-color: var(--grijs);
@@ -34,25 +34,33 @@
     height: 6%;
     padding: 0.5%;
     font-family: var(--spelvorm);
-    font-size: 2.6vw;
     color: var(--dkrblauw);
     text-decoration: none;
 
 }
 
-header > img {
+.header-content {
+	display: flex;
+    flex: 2;
+	flex-flow: column;
+	z-index: 1;
+}
+
+.header-content-parts {
+	display: block;
+}
+
+img.logo {
 	/*lengte & breedte*/
 	height: auto;
-	min-width: 6%;
-	width:12%;
-    max-width:13%;
+	width:85px;
 	
 	display: inline;
 	
-	position: absolute;
+	position: ABSOLUTE;
 	float: left;
 	margin-left: 10%;
-	margin-top: 1.4%;
+	margin-top: 8px;
 	
 	
 }
@@ -63,14 +71,16 @@ header > img {
 	font-family: var(--spelvorm);
 	text-transform: uppercase;
 	letter-spacing: 1.0887244px;
-	font-weight: 800;
+	font-weight: 100;
+	position: relative;
+	z-index: 1;
 
 	/*kleur*/
 	color:var(--dkrblauw);
 }
 
 .boven {
-    font-size: 3.4vw;
+    font-size: 20px;
     position: relative;
     margin-bottom: -4px;
     margin-top: -2px;
@@ -80,6 +90,6 @@ header > img {
 	font-weight: 100;
     margin-top: 0;
     letter-spacing: 0.3em;
-    font-size: 3vw;
+    font-size: 24px;
     margin-bottom: 0px;
 }

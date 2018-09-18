@@ -1,7 +1,13 @@
 <header>
-	<img src="/sprekendekwaliteiten/afbeeldingen/logo-grote-schermen.png" alt="logo">
-	<h1 class="titel boven">sprekende</h1>
-	<h1 class="titel onder">kwaliteiten</h1>
+	<div class="header-content">
+		<div class="header-content-parts">
+			<img class="logo" src="/sprekendekwaliteiten/afbeeldingen/logo-grote-schermen.png" alt="logo">
+		</div>
+		<div class="header-content-parts">
+			<h1 class="titel boven">sprekende</h1>
+			<h1 class="titel onder">kwaliteiten</h1>
+		</div>
+	</div>
 	<div class="headvorm">
 		<div class="headvorm-lesser">
 			 <!--style="width:25%;"-->
@@ -9,7 +15,7 @@
 		</div>
 		<div class="headvorm-lesser">
 			 <!--style="width:25%;"-->
-			<a href="../index.php" style="display:block;">Terug naar start</a>
+			<a href="index.php" style="display:block;">Terug naar start</a>
 		</div>
 		<!--<div class="headvorm-lesser" style="width:5%;"></div -->
 		<div class="headvorm-lesser">
