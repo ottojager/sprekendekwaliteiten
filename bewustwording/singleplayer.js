@@ -68,6 +68,7 @@ function endGame(no_confirm) {
 
         // container div
         var div = document.createElement('div');
+        div.classList.add('form-email');
 
         //input field for email
         var email = document.createElement('input');
