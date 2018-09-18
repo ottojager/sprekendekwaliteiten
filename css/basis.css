@@ -34,6 +34,17 @@ body {
 	background-color: #fffefe;
 }
 
+/* NIET AAN DEZE CODE ZITTEN! */
+
+.form-email {
+	margin: 0 auto;
+	text-align: center;
+	background-color: var(--grijs);
+	border-top: solid black 3px;
+}
+
+/* OK, nu mag het weer! */
+
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
