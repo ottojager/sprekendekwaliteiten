@@ -81,7 +81,8 @@ function endGame(no_confirm) {
         div.appendChild(label);
         div.appendChild(email);
         var btn = document.createElement('button');
-        btn.classList.add('button');
+        btn.classList.add('button')
+        .add('send-button');
         btn.innerHTML='Stuur e-mail';
         btn.onclick = function() {
             var email = document.getElementById('email').value;
