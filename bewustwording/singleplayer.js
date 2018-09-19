@@ -74,6 +74,7 @@ function endGame(no_confirm) {
         var email = document.createElement('input');
         email.id = 'email';
         email.type = 'email';
+        email.classList.add('form-input');
         var label = document.createElement('label');
         label.innerHTML = 'E-mail';
         label.htmlFor = 'email';
@@ -114,12 +115,12 @@ function endGame(no_confirm) {
 			xhttp.send();
         }
         btn.innerHTML='Stuur e-mail';
-        div.appendChild(btn);
         // for later adding error messages
         var p = document.createElement('p');
         p.id = 'error';
         div.appendChild(p);
-        document.getElementById("container").appendChild(div);
+        container.appendChild(div);
+        container.appendChild(btn);
     }
 
 }
