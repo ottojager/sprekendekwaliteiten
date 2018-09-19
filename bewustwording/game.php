@@ -6,7 +6,7 @@
 		<script type="text/javascript">
 			var cardStack =
 				<?php
-				$config = json_decode(file_get_contents('../database_config.json'), true); // load the db connection info
+				$config = json_decode(file_get_contents('../.env.json'), true); // load the db connection info
 				$db = mysqli_connect($config['hostname'], $config['username'], $config['password']);
 
 				mysqli_select_db($db, $config['database']);
