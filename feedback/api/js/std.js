@@ -55,7 +55,76 @@ function leader_view_cards(id_player) {
 	// });
 }
 
+function help_window() {
+	var name = game_info['players'][ game_info['current_player'] ]['name'];
+	var content = name + ' is aan de beurt. ' + name + ' selecteert in de lijst spelers een naam aan wie hij/zij de kwaliteit wil geven';
+	alert(content);
+}
+
+function update_view() {
+	if (view == 'current'){
+		current_card_view();
+	} else {
+		recieved_cards_view();
+	}
+}
+
+function current_card_view() {
+	view = 'current';
+
+	// get container element & clear it
+	var container = document.getElementById('container');
+	container.innerHTML = '';
+
+	// create current card element
+	card_display = document.createElement('div');
+	card_display.id = 'card_display';
+	card_active = document.createElement('p');
+	card_active.id = 'current_card';
+	card_active.innerHTML = game_info['current_card'];
+	card_display.appendChild(card_active);
+
+	// create the player list
+	// let's just forget sorting right now
+	var ul = document.createElement('ul');
+	ul.id = 'player_list';
+	game_info['players'].forEach(function(player){
+		if (player['name'] != 'Afval stapel') {
+			var li = document.createElement('li');
+			li.id = player['player_id'];
+			var button = document.createElement('button');
+			button.innerHTML = player['name']+' ('+player['stack'].length+')';
+			li.appendChild(button);
+			ul.appendChild(li);
+		}
+	});
+
+	container.appendChild(card_display);
+	container.appendChild(ul);
+	addListeners(game_info['players'].length);
+}
+
+function received_cards_view() {
+	view = 'received';
+	// get container element & clear it
+	container = document.getElementById('container');
+	container.innerHTML = '';
+
+	// create card list
+	var ul = document.createElement('ul')
+	game_info['players'][own_id]['stack'].forEach(function(card){
+    	var li = document.createElement('li');
+    	var p = document.createElement('p');
+    	p.innerHTML = card;
+    	li.appendChild(p);
+    	ul.appendChild(li);
+	});
+	container.appendChild(ul);
+}
+var view = 'current';
+
 start_update();
+update_view();
 
 window.setInterval(function(){
 	start_update();
