@@ -37,10 +37,17 @@ body {
 /* NIET AAN DEZE CODE ZITTEN! */
 
 .form-email {
+	width: 40%;
 	margin: 0 auto;
 	text-align: center;
 	background-color: var(--grijs);
 	border-top: solid black 3px;
+}
+
+.form-input {
+	border-radius: 4px;
+	width: 80%;
+	border: 1px solid black
 }
 
 /* OK, nu mag het weer! */
