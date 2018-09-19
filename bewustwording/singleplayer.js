@@ -81,6 +81,8 @@ function endGame(no_confirm) {
         div.appendChild(label);
         div.appendChild(email);
         var btn = document.createElement('button');
+        btn.classList.add('button');
+        btn.innerHTML='Stuur e-mail';
         btn.onclick = function() {
             var email = document.getElementById('email').value;
             var pattern = /[^@]*@[^@]*\..{2,}/;
@@ -114,7 +116,6 @@ function endGame(no_confirm) {
 			xhttp.open("GET", "./mail.php?cards=" + cards + "&email=" + email, true);
 			xhttp.send();
         }
-        btn.innerHTML='Stuur e-mail';
         // for later adding error messages
         var p = document.createElement('p');
         p.id = 'error';
