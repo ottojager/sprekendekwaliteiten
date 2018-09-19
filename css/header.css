@@ -52,7 +52,7 @@
 
 img.logo {
 	/*lengte & breedte*/
-	height: auto;
+	height: 46px;
 	width:85px;
 	
 	display: inline;
@@ -62,7 +62,7 @@ img.logo {
 	margin-left: 10%;
 	margin-top: 8px;
 	opacity: 1;
-	transition: all 0.25s;
+	transition: all 0.75s;
 	
 }
 
@@ -97,12 +97,12 @@ img.logo {
 
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
 	
 	img.logo {
     opacity:0;
-    transform:rotateX(90deg) rotateY(90deg);
-	transition: all 0.25s;
+    transform:rotateY(90deg);
+	transition: all 0.75s;
 	
 	}
 	
