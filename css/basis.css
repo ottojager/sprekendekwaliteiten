@@ -59,7 +59,7 @@ body {
 .send-button {
     position: relative;
     left: 270px;
-    top: 1%;
+    top: 0; /* fix dit minder fijne ding */
 }
 
 #error {
