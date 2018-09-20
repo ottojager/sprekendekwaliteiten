@@ -99,8 +99,14 @@ function current_card_view() {
 		}
 	});
 
+	// recieved cards view button
+	var button = document.createElement('button');
+	button.innerHTML = 'Ontvangen kaarten';
+	button.onclick = received_cards_view;
+
 	container.appendChild(card_display);
 	container.appendChild(ul);
+	container.appendChild(button);
 	addListeners(game_info['players'].length);
 }
 
@@ -120,12 +126,26 @@ function received_cards_view() {
     	ul.appendChild(li);
 	});
 	container.appendChild(ul);
+
+	// back to active card view
+	var button = document.createElement('button');
+	button.innerHTML = 'Terug naar actieve kaart';
+	button.onclick = current_card_view;
+	container.appendChild(button);
 }
 var view = 'current';
+var first_refresh = new Boolean(true);
+var notification = new Audio('sound/notification.mp3');
 
 start_update();
-update_view();
 
 window.setInterval(function(){
 	start_update();
+
+	// if game has ended
+	if (game_info['card_stack'] == 0) {
+		document.location.href = './end/';
+	}
+
+	update_view();
 }, 3000);

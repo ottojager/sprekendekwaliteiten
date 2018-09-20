@@ -30,7 +30,7 @@ if ($_SESSION['player_id'] != 11) {
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
-		<script src="api/js/std.js"></script>
+		<script src="api/js/std.js" defer></script>
 		<?php
 		// leader only JS
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
