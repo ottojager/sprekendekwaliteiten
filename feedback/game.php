@@ -51,17 +51,6 @@ if ($_SESSION['player_id'] != 11) {
 		<script>
 			var amount_players = <?php echo count($json['players']);?>;
 			var own_id = <?php echo $_SESSION['player_id'];?>;
-			var first_refresh = new Boolean(true);
-			var notification = new Audio('sound/notification.mp3');
-			window.setInterval(function(){
-				start_update();
-
-				// if game has ended
-				if (game_info['card_stack'] == 0) {
-					document.location.href = './end/';
-				}
-				update_view();
-			}, 5000);
 		</script>
 		<meta charset="utf-8">
 		<title>Actief - Feedback - Kwaliteitenspel</title>
@@ -86,18 +75,11 @@ if ($_SESSION['player_id'] != 11) {
 			</div>
 		</div>
 		<div id="container">
-			<h1 class="col-xs-12 col-sm-12 col-md-12">Actief - Feedback - Kwaliteitenspel</h1>
-
-			<div id="blind_current_player" tabindex="1">
-				<?php echo $json['players'][$json['current_player']]['name']." is aan de beurt." ?>
+			<div id="card_display">
+				<p id="current_card"><?php echo $json['current_card']; ?></p>
 			</div>
 
-			<h2 id="card_active" class="col-xs-2 col-sm-2 col-md-2">Actieve kaart:</h2>
-			<div id="card_display" class="col-xs-10 col-sm-5 col-md-5"><p id="current_card"><?php echo $json['current_card']; ?></p></div>
-			<div class="col-xs-12 col-sm-4 col-md-3">
-				<h2>Spelers:</h2>
-				<ul id="player_list" >
-
+			<ul id="player_list">
 				<?php
 				foreach ($json['players'] as $key => $value) {
 					if ($value['name'] != 'Afval stapel') {
@@ -105,28 +87,9 @@ if ($_SESSION['player_id'] != 11) {
 					}
 				}
 				?>
-				</ul>
-			</div>
-			<div id="cards_left" class="col-xs-10 col-md-2">
-				<?php echo 'nog '.sizeof($json['card_stack']).' kaarten';?>
-			</div>
-			<div style="clear: both;"></div>
+			</ul>
 
-			<div class="row" id="knoppen">
-				<div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0">
-					<a class="skiplink" href="#blind_current_player">Naar huidige kaart</a>
-				</div>
-					<?php
-					if ($_SESSION['player_id'] != 11) {
-						echo '<div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0"><button onclick="reply_click('. (count($json['players'])-1) .')">Kaart weggooien</button></div>';
-					}
-					else { // if user is game leader
-					       // Leader only end game, undo buttons, and card list
-					?>
-					<button onclick="end_game()">Spel beëindigen</button>
-					<button onclick="undo()">Ongedaan maken</button>
-				<?php } // end leader only buttons ?>
-			</div>
+			<button onclick="received_cards_view()">Ontvangen kaarten</button>
 		</div>
 		<?php include('../footer.php') ?>
 	</body>
