@@ -91,7 +91,7 @@ function endGame(no_confirm) {
             var match = pattern.test(email);
             var p = document.getElementById('error');
             if (!match) {
-                p.innerHTML = 'Het ingevulde email adderess klopt niet';
+                p.innerHTML = 'Het ingevulde email adres klopt niet';
                 exit();
             } else {
                 p.innerHTML = '';
