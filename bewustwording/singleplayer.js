@@ -66,6 +66,10 @@ function endGame(no_confirm) {
         //top leegmaken
         document.getElementById("container").innerHTML = "";
 
+        //container container div
+        var container_div = document.createElement('div');
+        container_div.classList.add('flex-email');
+
         // container div
         var div = document.createElement('div');
         div.classList.add('form-email');
@@ -120,8 +124,9 @@ function endGame(no_confirm) {
         var p = document.createElement('p');
         p.id = 'error';
         div.appendChild(p);
-        container.appendChild(div);
-        container.appendChild(btn);
+        div.appendChild(btn);
+        container_div.appendChild(div);
+        container.appendChild(container_div);
     }
 
 }
