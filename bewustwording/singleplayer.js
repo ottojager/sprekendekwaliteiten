@@ -114,6 +114,7 @@ function endGame(no_confirm) {
                     document.getElementById('container').innerHTML = '';
                     var p = document.createElement('p');
                     p.innerHTML = "Het bericht is verzonden naar uw email.";
+                    p.classList.add('success');
                     document.getElementById('container').appendChild(p);
 				}
 			};
