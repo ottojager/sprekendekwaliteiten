@@ -46,13 +46,17 @@ function leader_card(amount_players) {
 }
 
 function leader_view_cards(id_player) {
-	// var list = document.getElementById('card_stack');
-	// list.innerHTML = '';
-	// game_info['players'][id_player]['stack'].forEach(function(item, index){
-	// 	var child = document.createElement('li');
-	// 	child.innerHTML = item;
-	// 	list.appendChild(child);
-	// });
+	selected_player = id_player;
+	var div = document.getElementById('card_stack');
+	div.innerHTML = '';
+
+	var list = document.createElement('ul')
+	game_info['players'][id_player]['stack'].forEach(function(item, index){
+		var child = document.createElement('li');
+		child.innerHTML = item;
+		list.appendChild(child);
+	});
+	div.appendChild(list);
 }
 
 function help_window() {
@@ -64,8 +68,10 @@ function help_window() {
 function update_view() {
 	if (view == 'current'){
 		current_card_view();
-	} else {
+	} else if (view == 'recieved') {
 		recieved_cards_view();
+	} else if (view == 'leader'){
+		leader_view();
 	}
 }
 
@@ -110,6 +116,70 @@ function current_card_view() {
 	addListeners(game_info['players'].length);
 }
 
+function leader_view() {
+	// get container element & clear it
+	container = document.getElementById('container');
+	container.innerHTML = '';
+
+	// create current card element
+	card_display = document.createElement('div');
+	card_display.id = 'card_display';
+	card_active = document.createElement('p');
+	card_active.id = 'current_card';
+	card_active.innerHTML = game_info['current_card'];
+	card_display.appendChild(card_active);
+
+	// create the player list
+	// let's just forget sorting right now
+	var ul = document.createElement('ul');
+	ul.id = 'player_list';
+	game_info['players'].forEach(function(player){
+		if (player['name'] != 'Afval stapel') {
+			var li = document.createElement('li');
+			li.id = player['player_id'];
+			var button = document.createElement('button');
+			button.innerHTML = player['name']+' ('+player['stack'].length+')';
+			li.appendChild(button);
+			ul.appendChild(li);
+		}
+	});
+
+	// card left counter
+	var cards_left_counter = document.createElement('p');
+	cards_left_counter.innerHTML = 'nog '+game_info['card_stack'].length+' kaarten over.';
+
+	// player card list
+	var player_cards_div = document.createElement('div');
+	player_cards_div.id = "card_stack";
+	player_cards_div.innerHTML = 'Click op de naam van een speler om hier hun kaarten te zien.';
+
+	// buttons
+	var end_game_button = document.createElement('button');
+	end_game_button.innerHTML = 'Spel beëindigen';
+	end_game_button.onclick = end_game;
+
+	var undo_button = document.createElement('button');
+	undo_button.innerHTML = 'Ongedaan maken';
+	undo_button.onclick = undo;
+
+	var graveyard_button = document.createElement('button');
+	graveyard_button.innerHTML = 'Afval stapel';
+	graveyard_button.id = game_info['players'].length-1;
+
+	// adding all elements into the container
+	container.appendChild(card_display);
+	container.appendChild(ul);
+	container.appendChild(cards_left_counter);
+	container.appendChild(player_cards_div);
+	container.appendChild(end_game_button);
+	container.appendChild(undo_button);
+	container.appendChild(graveyard_button);
+	leader_card(game_info['players'].length);
+	if (selected_player !== null) {
+		leader_view_cards(selected_player);
+	}
+}
+
 function received_cards_view() {
 	view = 'received';
 	// get container element & clear it
@@ -133,9 +203,18 @@ function received_cards_view() {
 	button.onclick = current_card_view;
 	container.appendChild(button);
 }
+
+//////////
+// MAIN //
+//////////
 var view = 'current';
 var first_refresh = new Boolean(true);
 var notification = new Audio('sound/notification.mp3');
+
+if (own_id == 11) {
+	view = 'leader';
+	var selected_player = null;
+}
 
 start_update();
 
