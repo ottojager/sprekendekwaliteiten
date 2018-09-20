@@ -35,7 +35,6 @@
 			<div id="borderimage"></div>
 			<div id="player__name"></div>
 		</div>
-		<h1>Kwaliteitenspel - Bewustwording</h1>
 		<div id="container">
 
 		</div>
