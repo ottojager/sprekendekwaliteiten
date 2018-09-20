@@ -82,6 +82,8 @@ function endGame(no_confirm) {
         var label = document.createElement('label');
         label.innerHTML = 'E-mail';
         label.htmlFor = 'email';
+        div.appendChild(label);
+        div.appendChild(email);
         var btn = document.createElement('button');
         btn.classList.add('button', 'send-button');
         btn.innerHTML='Stuur e-mail';
@@ -121,11 +123,9 @@ function endGame(no_confirm) {
         // for later adding error messages
         var p = document.createElement('p');
         p.id = 'error';
-        div.appendChild(label);
-        div.appendChild(email);
+        div.appendChild(p);
+        div.appendChild(btn);
         container_div.appendChild(div);
-        container_div.appendChild(p);
-        container_div.appendChild(btn);
         container.appendChild(container_div);
     }
 
