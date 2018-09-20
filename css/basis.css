@@ -59,11 +59,15 @@ body {
 .send-button {
     position: relative;
     left: 270px;
-    top: 0; /* Despacito */
+    top: 1%;
 }
 
 #error {
 	margin: 0 0 -30px 0;
+}
+
+#success {
+	text-align: center;
 }
 
 .flex-email {
