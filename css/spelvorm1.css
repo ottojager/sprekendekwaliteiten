@@ -1,5 +1,6 @@
 /* Toekomstige stylesheet voor spelvorm 1, Bewustwording. Voor nu is deze leeg. */
 
 .button {
+	display: block;
 	margin: 0 auto;
 }

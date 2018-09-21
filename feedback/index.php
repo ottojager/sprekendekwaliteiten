@@ -28,14 +28,13 @@ session_start();
 					$json = json_decode(file_get_contents("./games/$game.json"), true);
 					if ($json['game_started']) {
 						echo '<a class="button" href="./game.php">Naar spelpel</a> ';
-						} else {
+					} else {
 						echo '<a class="button" href="./lobby.php">Naar spel</a> ';
-						}
-					echo '<a class="button" href="./delete.php">Verwijder sessie</a>';
 					}
-					?>
+					echo '<a class="button" href="./delete.php">Verwijder sessie</a>';
+				}
+				?>
 			</div>
-			
 		<?php include('../footer.php'); ?>
 	</body>
 </html>
