@@ -156,6 +156,7 @@ h2 {
 	.send-button {
     left: 0;
     top: 50px;
+	margin: 35px auto 0;
 	}
 
 	.form-email {
