@@ -8,7 +8,7 @@ function reply_click(clicked_id) {
 function addListeners(amount_players) {
 	"use strict";
 	var i;
-	for (i = 0; i <  amount_players - 1; i += 1) {
+	for (i = 0; i <  amount_players; i += 1) {
 		document.getElementById(i.toString()).addEventListener('click', function() {
 			reply_click(this.id);
 		});
@@ -50,12 +50,16 @@ function leader_view_cards(id_player) {
 	var div = document.getElementById('card_stack');
 	div.innerHTML = '';
 
+	var name = document.createElement('p');
+	name.innerHTML = game_info['players'][id_player]['name'];
 	var list = document.createElement('ul');
 	game_info['players'][id_player]['stack'].forEach(function(item, index){
 		var child = document.createElement('li');
 		child.innerHTML = item;
 		list.appendChild(child);
 	});
+	
+	div.appendChild(name);
 	div.appendChild(list);
 }
 
@@ -105,6 +109,12 @@ function current_card_view() {
 		}
 	});
 
+	// graveyard "button"
+	var graveyard = document.createElement('button');
+	graveyard.innerHTML = 'Afval stapel';
+	graveyard.id = game_info['players'].length-1;
+	// graveyard.onclick =
+
 	// recieved cards view button
 	var button = document.createElement('button');
 	button.innerHTML = 'Ontvangen kaarten';
@@ -112,6 +122,7 @@ function current_card_view() {
 
 	container.appendChild(card_display);
 	container.appendChild(ul);
+	container.appendChild(graveyard);
 	container.appendChild(button);
 	addListeners(game_info['players'].length);
 }
