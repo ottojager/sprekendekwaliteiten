@@ -67,8 +67,8 @@ function endGame(no_confirm) {
         document.getElementById("container").innerHTML = "";
 
         //container container div
-        var container_div = document.createElement('div');
-        container_div.classList.add('flex-email');
+        var email_container = document.createElement('div');
+        email_container.classList.add('email-container');
 
         // container div
         var div = document.createElement('div');
@@ -125,9 +125,9 @@ function endGame(no_confirm) {
         var p = document.createElement('p');
         p.id = 'error';
         div.appendChild(p);
-        div.appendChild(btn);
-        container_div.appendChild(div);
-        container.appendChild(container_div);
+        email_container.appendChild(div);
+        email_container.appendChild(btn);
+        container.appendChild(email_container);
     }
 
 }
