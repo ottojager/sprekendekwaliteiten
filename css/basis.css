@@ -109,12 +109,13 @@ h2 {
 /* NIET AAN DEZE CODE ZITTEN! */
 
 .form-email {
+	display: inline-block;
 	width: 400px;
 	margin: 240px auto 0;
 	text-align: center;
 	background-color: var(--grijs);
 	border-top: solid black 3px;
-	padding: 10px 15px 0;
+	padding: 10px 15px 8px;
 }
 
 .form-email label {
@@ -130,12 +131,11 @@ h2 {
 
 .send-button {
     position: relative;
-    left: 270px;
-    top: 0; /* fix dit minder fijne ding */
+    top: -2px; /* fix dit minder fijne ding */
 }
 
 #error {
-	margin: 0 0 -30px 0;
+	margin: 0;
 }
 
 .success {
@@ -145,7 +145,8 @@ h2 {
 }
 
 .flex-email {
-	display: flex;
+	width: 600px;
+	margin: 0 auto;
 }
 
 @media screen and (max-width: 680px) {
@@ -153,6 +154,14 @@ h2 {
     left: 0;
     top: 50px;
 	}
-}
+
+	
+	.form-email {
+	display: block;	
+	}
+	
+	.flex-email {
+	width: 100%
+	}
 
 /* OK, nu mag het weer! */
