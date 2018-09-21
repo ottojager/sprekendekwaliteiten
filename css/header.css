@@ -47,7 +47,8 @@
 }
 
 .header-content-parts:nth-of-type(2) {
-	 position:absolute;
+	width:100%;
+	position:absolute;
 }
 
 .header-content-parts {
