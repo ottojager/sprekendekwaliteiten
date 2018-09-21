@@ -144,7 +144,7 @@ h2 {
     text-decoration: underline;
 }
 
-.flex-email {
+.email-container {
 	width: 600px;
 	margin: 0 auto;
 }
@@ -155,12 +155,11 @@ h2 {
     top: 50px;
 	}
 
-	
 	.form-email {
 	display: block;	
 	}
 	
-	.flex-email {
+	.email-container {
 	width: 100%
 	}
 
