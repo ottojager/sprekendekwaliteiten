@@ -50,7 +50,7 @@ function leader_view_cards(id_player) {
 	var div = document.getElementById('card_stack');
 	div.innerHTML = '';
 
-	var list = document.createElement('ul')
+	var list = document.createElement('ul');
 	game_info['players'][id_player]['stack'].forEach(function(item, index){
 		var child = document.createElement('li');
 		child.innerHTML = item;
