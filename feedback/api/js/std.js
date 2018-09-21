@@ -116,6 +116,30 @@ function current_card_view() {
 	addListeners(game_info['players'].length);
 }
 
+function received_cards_view() {
+	view = 'received';
+	// get container element & clear it
+	container = document.getElementById('container');
+	container.innerHTML = '';
+
+	// create card list
+	var ul = document.createElement('ul')
+	game_info['players'][own_id]['stack'].forEach(function(card){
+    	var li = document.createElement('li');
+    	var p = document.createElement('p');
+    	p.innerHTML = card;
+    	li.appendChild(p);
+    	ul.appendChild(li);
+	});
+	container.appendChild(ul);
+
+	// back to active card view
+	var button = document.createElement('button');
+	button.innerHTML = 'Terug naar actieve kaart';
+	button.onclick = current_card_view;
+	container.appendChild(button);
+}
+
 function leader_view() {
 	// get container element & clear it
 	container = document.getElementById('container');
@@ -178,30 +202,6 @@ function leader_view() {
 	if (selected_player !== null) {
 		leader_view_cards(selected_player);
 	}
-}
-
-function received_cards_view() {
-	view = 'received';
-	// get container element & clear it
-	container = document.getElementById('container');
-	container.innerHTML = '';
-
-	// create card list
-	var ul = document.createElement('ul')
-	game_info['players'][own_id]['stack'].forEach(function(card){
-    	var li = document.createElement('li');
-    	var p = document.createElement('p');
-    	p.innerHTML = card;
-    	li.appendChild(p);
-    	ul.appendChild(li);
-	});
-	container.appendChild(ul);
-
-	// back to active card view
-	var button = document.createElement('button');
-	button.innerHTML = 'Terug naar actieve kaart';
-	button.onclick = current_card_view;
-	container.appendChild(button);
 }
 
 //////////
