@@ -75,3 +75,7 @@ a:focus {
 	margin: 0 auto;
 	max-width: 1280px;
 }
+
+.button {
+	display: inline-block;
+}

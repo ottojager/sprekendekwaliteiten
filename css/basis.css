@@ -63,8 +63,15 @@ h2 {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 35%;
+	width: 50%;
 	text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+	.startscherm {
+		width: 75%;
+		font-size: 15px;
+	}
 }
 
 .startscherm-content {
