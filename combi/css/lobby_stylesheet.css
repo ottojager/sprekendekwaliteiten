@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html {
+	width: 100%;
+	height: 100%;
+	/*background-image: linear-gradient(to bottom, #ffffff, #71bbff);*/
+	background-color: #fffefe;
+}
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto 0 auto;
+	background-color: #fffefe;
+	/*box-shadow: 0px 0 31px 0 #65606a;*/
+}
+#topbar {
+	clear: both;
+	width: 100%;
+	height: 30px;
+	background-color: #234152;
+	border-bottom: 2px solid #d32b17;
+}
+#sidetopbar {
+	float: right;
+}
+#borderimage {
+	float: left;
+	width: 1px;
+	background-color: #234152;
+	border-bottom: 30px solid #564573;
+	border-left: 30px solid #564573;
+    -webkit-border-image: url(bovenste_balk.png) 100% round;
+    -o-border-image: url(bovenste_balk.png) 100% round;
+    border-image: url(bovenste_balk.png) 100% round;
+}
+#player__name {
+	width: 175px;
+	height: 24px;
+	padding-top: 4px;
+	color: #fafafa;
+	font-family: 'Roboto', sans-serif;
+	background-color: #234152;
+	border-bottom: 2px solid #d32b17;
+}
+h1 {
+	height: 130x;
+	margin: 80px 50px 0px 50px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 28px;
+	color: #1f3f50;
+	background-color: #fffefe;
+	text-align: center;
+}
+#main {
+	display: flex;
+		display: -webkit-flex; /* Safari 6.1+ */
+		display: -ms-flex; /* IE 10 */
+	flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+	flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+	align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+	width: 100%;
+	height: 100%;
+}
+#game_id {
+	width: 25%;
+	height: 5%;
+	margin: 0% 0% 3% 0%;
+	padding: 4px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 37px;
+	color: #234152;
+	background-color: #ffffff;
+	text-align: center;
+}
+#leader {
+	width: 25%;
+	height: 5%;
+	margin: 10% 0% 0% 0%;
+	padding: 4px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #234152;
+}
+p {
+	color: #234152;
+	font-family: 'Roboto', sans-serif;
+}
+#player_list {
+	display: flex;
+		display: -webkit-flex; /* Safari 6.1+ */
+		display: -ms-flex; /* IE 10 */
+	flex-direction: row;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+	flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+	align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+	width: 47%;
+	margin: 4% 0%;
+	padding: 4px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: #234152;
+	list-style: none;
+}
+#player_list li {
+	width: 75%;
+	margin: 4px;
+	padding: 2px;
+	border-bottom: 2px solid #d32b17;
+	border-left: 2px solid #d32b17;
+}
+#player_list li button {
+	float: right;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: #234152;
+	border: none;
+	background: none;
+}
+button #start {
+	width: 277px;
+	height: 54px;
+	margin: 8px;
+	padding: 0 30px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: #acd7da;
+	border: 0px solid #a41600;
+	background: url(knop_goed.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+button #start:focus {
+	width: 293px;
+	height: 70px;
+	padding: 0 30px;
+	margin: 0;
+	font-size: 20px;
+	border: 8px solid #d32b17;
+}
+@media screen and (min-width: 40em) /*640px*/ {
+	h1 {
+		height: 47px;
+		margin: 100px 100px 30px 100px;
+		font-size: 40px;
+	}
+	#player_list li {
+		width: 45%;
+	}
+}
+@media screen and (min-width: 64em) /*1024px*/ {
+	h1 {
+		height: 47px;
+		margin: 100px 100px 30px 100px;
+		font-size: 40px;
+	}
+	#player_list li {
+		width: 45%;
+	}
+}

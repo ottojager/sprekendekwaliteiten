@@ -1,0 +1,32 @@
+{
+	'game_id': int,
+	'current_player': int,
+	'leader_name': str,
+	'leader_last_request': timestamp,
+	'current_card': str,
+	'players': [
+		{
+			'name': str,
+			'player_id': int,
+			'stack': [
+				str,
+			],
+			'hand' [
+                str, (max 5)
+			]
+			'last_request': timestamp,
+		},
+	],
+	'card_stack': [
+		str,
+	],
+	'graveyard': [
+		str,
+	],
+	'last_change': timestamp,
+	'game_started': bool,
+	'max_cards': int,
+	'turn_action': [
+		int,
+	]
+}

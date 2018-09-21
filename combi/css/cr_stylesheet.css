@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0 auto 0 auto;
+	background-color: #fffefe;
+}
+#topbar {
+	clear: both;
+	width: 100%;
+	height: 30px;
+	background-color: #234152;
+	border-bottom: 2px solid #d32b17;
+}
+#sidetopbar {
+	float: right;
+}
+#borderimage {
+	float: left;
+	width: 1px;
+	background-color: #234152;
+	border-bottom: 30px solid #564573;
+	border-left: 30px solid #564573;
+    -webkit-border-image: url(bovenste_balk.png) 100% round;
+    -o-border-image: url(bovenste_balk.png) 100% round;
+    border-image: url(bovenste_balk.png) 100% round;
+}
+#player__name {
+	width: 175px;
+	height: 28px;
+	background-color: #234152;
+	border-bottom: 2px solid #d32b17;
+}
+h1 {
+	height: 47px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 31px;
+	color: #1f3f50;
+	background-color: #fffefe;
+	text-align: center;
+}
+p {
+	margin-bottom: 10px;
+	color: #234152;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+
+#title p {
+	width: 70%;
+	margin: 30px auto;
+}
+.inputstyle {
+	width: 98%;
+	height: 31px;
+	padding: 1px;
+	margin: 0% auto 0% auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 26px;
+	color: #ffffff;
+	background-color: #1f3f50;
+	border: 4px solid #ffffff;
+}
+#inveld {
+	width: 35%;
+	margin: 0% auto 0% auto;
+	border-bottom: 3px solid #d32b17;
+	border-left: 3px solid #d32b17;
+}
+.cardstyle {
+	width: 98%;
+	height: 52px;
+	padding: 1px;
+	margin: 0% auto 0% auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 26px;
+	color: #ffffff;
+	border: 4px solid #ffffff;
+	background-color: #1f3f50;
+}
+#no_ones_gonna_look_trough_this_code_anyway { /* o yes, i will */
+	width: 35%;
+	margin: 2% auto 10% auto;
+	border-bottom: 3px solid #d32b17;
+	border-left: 3px solid #d32b17;
+}
+input[type=text] {
+	border: 1px solid #1f3f50;
+	border-radius: 0px;
+	width: 60%;
+}
+input[type=number] {
+	border: 1px solid #1f3f50;
+	border-radius: 0px;
+	width: 99%;
+}
+input[type=submit] {
+	width: 250px;
+	height: 52px;
+	margin: 0% 41%;
+	padding: 4px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+	color: #acd7da;
+	border: 1px solid #1f3f50;
+	border-radius: 0px;
+	background: url(knop_goed.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+label {
+	font-size: 16px;
+}
+@media screen and (min-width: 640px) {
+	h1 {
+		margin: 50px 0px 50px 0px;
+		font-size: 45px;
+	}
+	input[type=text] {
+		width: 50%;
+	}
+	input[type=number] {
+		width: 50%;
+	}
+	.cardstyle {
+		height: 32px;
+	}
+	label {
+		font-size: 20px;
+	}
+	#inveld {
+		width: 30%;
+	}
+	#no_ones_gonna_look_trough_this_code_anyway {
+		width: 30%;
+	}
+}
+@media screen and (min-width: 64em) /*1024px*/ {
+	#inveld {
+		width: 19%;
+	}
+	input[type=text] {
+		width: 35%;
+	}
+	#no_ones_gonna_look_trough_this_code_anyway {
+		width: 19%;
+	}
+}
