@@ -26,6 +26,7 @@
     top: 2px;
 	vertical-align: top;
     margin: 240px auto 0;
+	display: inline-block;
 }
 
 #error {
@@ -34,7 +35,8 @@
 
 .success {
 	text-align: center;
-    margin-top: 250px;
+    margin: 250px auto 0;
+	font-size: 23px;
     text-decoration: underline;
 }
 
