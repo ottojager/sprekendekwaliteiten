@@ -46,6 +46,10 @@
 	height: 60px;
 }
 
+.header-content-parts:nth-of-type(2) {
+	 position:absolute;
+}
+
 .header-content-parts {
 	display: block;
 }
