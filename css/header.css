@@ -98,7 +98,6 @@ img.logo {
 div.headvorm >a:link, div.headvorm >a:visited { 
     color:#163143;
     text-decoration: none;
-    cursor:wait;
 }
 
 div.headvorm >a:link:active, div.headvorm >a:visited:active { 
