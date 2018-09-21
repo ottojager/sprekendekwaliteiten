@@ -1,3 +1,5 @@
+/* CSS Reset */
+
 @import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -19,8 +21,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
-/* CSS Reset ^^ */
 
 /* Standard CSS */
 
@@ -57,7 +57,7 @@ h2 {
 	text-align: center;
 }
 
-/* Start schermen CSS */
+/* Startscherm CSS */
 
 .startscherm {
 	display: block;
@@ -78,6 +78,8 @@ h2 {
 	margin-right: auto;
 	text-align: center;
 }
+
+/* Startscherm button CSS */
 
 .button {
 	display: inline-block;
