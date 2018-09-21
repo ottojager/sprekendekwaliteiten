@@ -130,8 +130,11 @@ h2 {
 }
 
 .send-button {
-    position: relative;
-    top: -2px; /* fix dit minder fijne ding */
+	height: 40px;
+    /*position: relative;
+    top: -2px; */
+	vertical-align: top;
+    margin: 240px auto 0;
 }
 
 #error {
