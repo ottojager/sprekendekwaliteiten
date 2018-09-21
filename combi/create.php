@@ -68,7 +68,7 @@ if (isset($_POST['makeLobbyButton'])) {
 			return false;
 		}
 		</script>
-		<title>Aanmaken spel - Feedback - Kwaliteitenspel</title>
+		<title>Aanmaken spel - Combi - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
