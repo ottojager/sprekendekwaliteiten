@@ -1,6 +1,7 @@
 <html lang="nl=NL">
 	<head>
 		<link rel="stylesheet" href="../css/basis.css" type="text/css">
+		<link rel="stylesheet" href="../css/email-form.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<script type="text/javascript">
