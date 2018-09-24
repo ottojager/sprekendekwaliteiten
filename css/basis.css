@@ -32,11 +32,17 @@ p, h1, h2, h3, h4, h5, h6, ul, li, a {
 
 body {
 	background-color: #fffefe;
+	min-height: 100%;
+	position: relative;
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1280px;
 	margin: 0 auto;
+}
+
+main.container {
+	padding-bottom: 100px;
 }
 
 h1 {
