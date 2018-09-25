@@ -1,2 +1,27 @@
 /* Toekomstige stylesheet voor spelvorm 1, Bewustwording. Voor nu is deze leeg. */
 
+
+h1 {
+	text-decoration: underline;
+	margin-bottom: 40px;
+}
+
+.button p {
+	font-size: 15px;
+	color: var(--grijs);
+}
+
+#current {
+	text-align: center;
+	position: relative;
+	bottom: 180px;
+	color: white;
+	font-size: 18px;
+}
+
+#actievekaart img {
+	width: 190px;
+	height: 270px;
+	margin: 0 auto;
+	display: block;
+}
