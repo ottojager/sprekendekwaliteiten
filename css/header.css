@@ -30,7 +30,6 @@
     flex: 4;
     position: relative;
     text-align: center;
-    padding: 0.5%;
     font-family: oswald,  monospace;
     color: #163143;
     text-decoration: none;
@@ -141,7 +140,12 @@ div.headvorm >a:link:active, div.headvorm >a:visited:active {
 		margin: auto;
 	}
 	
-	.headvorm, .headvorm-lesser {
+	.headvorm/*, .headvorm-lesser*/ {
+		display: none;
+	}
+	
+	.zichtbaar {
+		visibility: visible;
 		display: block;
 	}
 	
