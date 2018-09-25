@@ -30,14 +30,9 @@
 	</head>
 	<body>
 		<?php include('../header.php') ?>
-		<div id="topbar"></div>
-		<div id="help">
-			<div id="borderimage"></div>
-			<div id="player__name"></div>
-		</div>
-		<div id="container">
+		<main id="container">
 
-		</div>
+		</main>
 		<?php include('../footer.php') ?>
 	</body>
 </html>
