@@ -1,4 +1,4 @@
-/* Toekomstige stylesheet voor spelvorm 1, Bewustwording. Voor nu is deze leeg. */
+/* Stylesheet voor spelvorm 1, Bewustwording. Voor unieke code alleen voor Spelvorm 1. */
 
 
 h1 {
@@ -9,6 +9,10 @@ h1 {
 .button p {
 	font-size: 15px;
 	color: var(--grijs);
+}
+
+.button:hover p {
+	color: var(--dkrblauw);
 }
 
 #current {
@@ -25,3 +29,4 @@ h1 {
 	margin: 0 auto;
 	display: block;
 }
+
