@@ -5,7 +5,7 @@ footer {
 	border-top: 4px solid #163143;
 	position: fixed;
 	bottom: 0;
-	height: 80px;
+	height: 50px;
 	box-sizing: border-box;
 }
 
@@ -23,7 +23,7 @@ footer p {
 }
 
 .copyright {
-	position: fixed;
+	position: absolute;
 	text-align: right;
 	bottom: 0;
 	right: 4%;
@@ -31,6 +31,7 @@ footer p {
 
 @media screen and (max-width: 948px) {
 	footer {
+	height: 80px;
 	margin-top: 20px;
 	}
 	
