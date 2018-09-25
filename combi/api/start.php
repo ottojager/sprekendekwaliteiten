@@ -19,6 +19,7 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	while ($card = mysqli_fetch_assoc($result)) {
 		$card_stack[] = $card['name'];
 	}
+
 	shuffle($card_stack);
 	$card_stack = array_slice($card_stack, 0, $json['max_cards']+1);
 	$json['card_stack'] = $card_stack;
@@ -26,6 +27,10 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	// create player card stacks
 	foreach($json['players'] as $key => $value) {
 		$json['players'][$key]['stack'] = array();
+		$json['players'][$key]['hand'] = array();
+		for ($i = 0; $i != 5; $i++){
+			$json['players'][$key]['hand'][] = array_pop($json['card_stack']);
+		}
 	}
 
 	// add the fake player to use as graveyard
