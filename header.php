@@ -11,11 +11,12 @@
 		</div>
 	</div>
 	<div id="header-menu">
-		<button class="menu-toggle"
+		<button onclick="header_show()"
+        		class="menu-toggle"
 				id="menu-toggle">
 			<img src="http://reacursist.nl/dbconnect/wp-content/themes/dbconnect/../../uploads/2018/02/menu.png"> 
 		</button>
-		<div class="headvorm"> 
+		<div class="headvorm" id="menuheader"> 
 			<a class="headvorm-lesser"
 			   style="display:block;">
 				Spel: Combi
@@ -29,10 +30,22 @@
 			   style="display:block;">
 				Help
 			</a>
-			<a style="display:block;"
-			   class="headvorm-lesser">
+			<a class="headvorm-lesser"
+			   style="display:block;">
 				Naam speler
 			</a>
 		</div>
 	</div>
+	<script>
+		var Header = document.getElementById("menuheader");
+		function header_show(){
+			Header.classList.add('zichtbaar');
+			document.getElementById('menu-toggle').onclick = header_hide;
+		}
+
+		function header_hide(){
+  			Header.classList.remove('zichtbaar');
+			document.getElementById('menu-toggle').onclick = header_show;
+		}
+	</script>
 </header>

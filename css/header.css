@@ -33,6 +33,7 @@
     font-family: oswald,  monospace;
     color: #163143;
     text-decoration: none;
+	padding: 10px 10px 10px 10px;
 
 }
 
@@ -116,7 +117,7 @@ div.headvorm >a:link:active, div.headvorm >a:visited:active {
 		float:left;
 		border: solid 0 #d9d9da;
 	}
-
+	
 @media only screen and (max-width: 650px) {
 	
 	img.logo {
@@ -142,6 +143,10 @@ div.headvorm >a:link:active, div.headvorm >a:visited:active {
 	
 	.headvorm/*, .headvorm-lesser*/ {
 		display: none;
+	}
+	
+	.headvorm-lesser {
+	padding:5px 0;
 	}
 	
 	.zichtbaar {
