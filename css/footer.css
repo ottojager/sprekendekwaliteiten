@@ -22,13 +22,13 @@ footer p {
 	text-align: center;
 }
 
-/* .copyright {
+.copyright {
 	position: absolute;
 	text-align: right;
 	height: 25px;
 	bottom: 0;
 	right: 4%;
-} */
+}
 
 @media screen and (max-width: 948px) {
 	footer {
@@ -41,10 +41,10 @@ footer p {
 	font-size: 1.5vw;
 	}
 
-/* .copyright {
+.copyright {
 	position: initial;
 	text-align: center;
-	} */
+	}
 }
 
 @media screen and (max-width: 686px) {
