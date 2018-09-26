@@ -24,7 +24,7 @@ time, mark, audio, video {
 
 /* Standard CSS */
 
-p, h1, h2, h3, h4, h5, h6, ul, li, a {
+p, h1, h2, h3, h4, h5, h6, ul, li, a, label, button {
 	font-family: 'Roboto', sans-serif;
 	color: var(--dkrblauw);
 	text-decoration: none;
