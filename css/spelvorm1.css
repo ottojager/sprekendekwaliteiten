@@ -44,12 +44,19 @@ h1 {
 	padding-right:10px;
 }
 
-.kaart p {
+.card-holder-b {
 	background-image: url("../afbeeldingen/blauwe-kaart.png");
 	background-size: 140px 190px;
 	height: 190px;
+	width: 140px;
+	margin-right: 10px;
+}
+
+.kaart p {
 	color: white;
 	text-align: center;
+	position: relative;
+    top: 80px;
 }
 
 .hand-button {
@@ -57,7 +64,7 @@ h1 {
     left: 94px;
     position: relative;
     text-align: center;
-    width: 110px;
+    width: 125px;
 	display: inline-block;
     padding: 8px;
     margin: 0 5px;
@@ -67,11 +74,11 @@ h1 {
     background-color: var(--dkrblauw);
 }
 
-.card-holder {
+.card-holder-r {
 	background-image: url("../afbeeldingen/rode-kaart.png");
-	background-size: 125px 160px;
-	height: 160px;
-	width: 125px;
+	background-size: 140px 170px;
+	height: 170px;
+	width: 140px;
 	position: relative;
 	top: 140px;
 	left: 100px;
@@ -85,5 +92,41 @@ h1 {
 }
 
 #hand {
-	margin-top: -110px;
+	margin-top: -114px;
+}
+
+@media screen and (max-width: 900px) {
+	
+	.top-menu {
+	margin: 0 auto 50px;
+	text-align: center;
+	}
+	
+	.card-holder-r {
+	top: 0;
+	left: 0;
+	position: initial;
+	margin: 25px auto;
+	display: inline-block
+	}
+	
+	#hand {
+	box-sizing: border-box;
+	margin: 0 auto;	
+	}
+	
+	.new-row {
+	width: 530px;
+	margin: 0 auto 20px;
+	}
+	
+	.hand-button {
+	top: 60px;
+	left: 0;
+	display: block;
+	width: 200px;
+	margin-bottom: 25px;
+	text-align: center;
+	display: inline-block;
+	}
 }
