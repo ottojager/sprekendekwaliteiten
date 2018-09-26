@@ -121,17 +121,14 @@ h1 {
 @media screen and (max-width: 990px) {
 	
 	.linker-menu {
-	margin: 0 auto 50px;
+	margin: 50px auto;
 	text-align: center;
 	float: none;
 	}
 	
 	.card-holder-r {
 	position: initial;
-	margin: 20px auto 0;
-	top: 0;
-	left: 0;
-	
+	margin: 0 auto 50px;
 	}
 	
 	#hand {
@@ -146,8 +143,6 @@ h1 {
 	
 	.huidige-kaarten {
 	position: initial;
-	top: 0px;
-	left: 0;
 	margin: 20px 0;
 	text-align: center;
 	display: inline-block;
@@ -155,6 +150,14 @@ h1 {
 }
 
 @media screen and (max-width: 816px) {
+	.linker-menu {
+	margin: 60px 0 25px;
+	}
+	
+	.card-holder-r {
+	margin: 0 auto 25px;
+	}
+	
 	.kaart-rij {
 	width: 400px;	
 	}
