@@ -52,6 +52,10 @@ h1 {
 	margin-right: 10px;
 }
 
+.card-holder-b:hover {
+	background-image: url("../afbeeldingen/blauw-rood-kaart.png");
+}
+
 .kaart p {
 	color: white;
 	text-align: center;
