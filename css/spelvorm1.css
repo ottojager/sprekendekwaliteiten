@@ -7,6 +7,10 @@ h1 {
 	margin-bottom: 40px;
 }
 
+.button {
+	cursor: pointer;
+}
+
 .button p {
 	font-size: 15px;
 	color: var(--grijs);
@@ -40,6 +44,7 @@ h1 {
 }
 
 .kaart {
+	cursor: pointer;
 	width: 140px;
 	padding-right:10px;
 }
@@ -134,3 +139,5 @@ h1 {
 	display: inline-block;
 	}
 }
+
+@media screen and (max-width: 670px) 
