@@ -2,6 +2,7 @@
 
 
 h1 {
+	font-size: 30px;
 	text-decoration: underline;
 	margin-bottom: 40px;
 }
@@ -30,3 +31,26 @@ h1 {
 	display: block;
 }
 
+.new-row {
+    display: -webkit-box;
+    margin: 0 auto 40px;
+    text-align: center;
+    width: 60%;
+	list-style: none;
+}
+
+.kaart {
+	width: 140px;
+	padding-right:10px;
+}
+
+.kaart {
+	background-image: url("../afbeeldingen/blauwe-kaart.png");
+	background-size: 140px 190px;
+	height: 190px;
+}
+
+.kaart p {
+	color: white;
+	text-align: center;
+}
