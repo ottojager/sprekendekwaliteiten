@@ -66,10 +66,10 @@ h1 {
 
 .huidige-kaarten {
 	top: 165px;
-    left: 94px;
+    left: 86px;
     position: relative;
     text-align: center;
-    width: 124px;
+    width: 140px;
 	display: inline-block;
     padding: 8px;
     margin: 0 5px;
@@ -118,19 +118,20 @@ h1 {
     top: 80px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 990px) {
 	
 	.linker-menu {
 	margin: 0 auto 50px;
 	text-align: center;
+	float: none;
 	}
 	
 	.card-holder-r {
+	position: initial;
+	margin: 20px auto 0;
 	top: 0;
 	left: 0;
-	position: initial;
-	margin: 25px auto;
-	display: inline-block
+	
 	}
 	
 	#hand {
@@ -139,21 +140,20 @@ h1 {
 	}
 	
 	.kaart-rij {
-	width: 620px;
 	margin: 0 auto 20px;
+	float: none;
 	}
 	
 	.huidige-kaarten {
-	top: 60px;
+	position: initial;
+	top: 0px;
 	left: 0;
-	display: block;
-	width: 200px;
-	margin-bottom: 25px;
+	margin: 20px 0;
 	text-align: center;
 	display: inline-block;
 	}
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 816px) {
 	
 }
