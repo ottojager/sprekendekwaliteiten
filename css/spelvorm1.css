@@ -155,5 +155,11 @@ h1 {
 }
 
 @media screen and (max-width: 816px) {
+	.kaart-rij {
+	width: 400px;	
+	}
 	
+	.card-holder-b {
+	margin-bottom: 20px;
+	}
 }
