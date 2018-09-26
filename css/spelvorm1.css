@@ -35,7 +35,7 @@ h1 {
     display: -webkit-box;
     margin: 0 auto 40px;
     text-align: center;
-    width: 60%;
+    width: 40%;
 	list-style: none;
 }
 
@@ -44,13 +44,46 @@ h1 {
 	padding-right:10px;
 }
 
-.kaart {
+.kaart p {
 	background-image: url("../afbeeldingen/blauwe-kaart.png");
 	background-size: 140px 190px;
 	height: 190px;
-}
-
-.kaart p {
 	color: white;
 	text-align: center;
+}
+
+.hand-button {
+	top: 165px;
+    left: 94px;
+    position: relative;
+    text-align: center;
+    width: 110px;
+	display: inline-block;
+    padding: 8px;
+    margin: 0 5px;
+    border: 2px solid var(--dkrblauw);
+    border-radius: 20px;
+    color: var(--grijs);
+    background-color: var(--dkrblauw);
+}
+
+.card-holder {
+	background-image: url("../afbeeldingen/rode-kaart.png");
+	background-size: 125px 160px;
+	height: 160px;
+	width: 125px;
+	position: relative;
+	top: 140px;
+	left: 100px;
+}
+
+.new-hand {
+	text-align: center;
+    position: relative;
+    top: 60px;
+	color: white;
+}
+
+#hand {
+	margin-top: -110px;
 }
