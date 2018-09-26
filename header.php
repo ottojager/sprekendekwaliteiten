@@ -46,7 +46,8 @@
 			   style="display:block;">
 				Help
 			</a>
-			<a class="headvorm-lesser"
+			<a id="player__name"
+			   class="headvorm-lesser"
 			   style="display:block;">
 				Naam speler
 			</a>

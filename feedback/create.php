@@ -70,11 +70,13 @@ if (isset($_POST['makeLobbyButton'])) {
 		</script>
 		<title>Aanmaken spel - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
+		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 		<meta charset="utf-8">
 	</head>
 	<body>
+		<?php include('../header.php') ?>
 		<div>
 			<div id="topbar"></div>
 			<div id="sidetopbar">
