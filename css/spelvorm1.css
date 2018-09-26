@@ -1,6 +1,8 @@
 /* Stylesheet voor spelvorm 1, Bewustwording. Voor unieke code alleen voor Spelvorm 1. */
 
 
+/* Informatie pagina CSS */
+
 h1 {
 	font-size: 30px;
 	text-decoration: underline;
@@ -20,6 +22,10 @@ h1 {
 	color: var(--dkrblauw);
 }
 
+
+/* Ontvangen kaart CSS */
+
+
 #current {
 	text-align: center;
 	position: relative;
@@ -35,52 +41,10 @@ h1 {
 	display: block;
 }
 
-.new-row {
-    display: -webkit-box;
-    margin: 0 auto 40px;
-    text-align: center;
-    width: 40%;
-	list-style: none;
-}
+/* Kaart inruilen CSS > Huidige kaart */
 
-.kaart {
-	cursor: pointer;
-	width: 140px;
-	padding-right:10px;
-}
-
-.card-holder-b {
-	background-image: url("../afbeeldingen/blauwe-kaart.png");
-	background-size: 140px 190px;
-	height: 190px;
-	width: 140px;
-	margin-right: 20px;
-}
-
-.card-holder-b:hover {
-	background-image: url("../afbeeldingen/blauw-rood-kaart.png");
-}
-
-.kaart p {
-	color: white;
-	text-align: center;
-	position: relative;
-    top: 80px;
-}
-
-.hand-button {
-	top: 165px;
-    left: 94px;
-    position: relative;
-    text-align: center;
-    width: 124px;
-	display: inline-block;
-    padding: 8px;
-    margin: 0 5px;
-    border: 2px solid var(--dkrblauw);
-    border-radius: 20px;
-    color: var(--grijs);
-    background-color: var(--dkrblauw);
+.linker-menu {
+	float: left;
 }
 
 .card-holder-r {
@@ -96,17 +60,67 @@ h1 {
 .new-hand {
 	text-align: center;
     position: relative;
-    top: 60px;
+    top: 75px;
 	color: white;
 }
 
-#hand {
-	margin-top: -114px;
+.huidige-kaarten {
+	top: 165px;
+    left: 94px;
+    position: relative;
+    text-align: center;
+    width: 124px;
+	display: inline-block;
+    padding: 8px;
+    margin: 0 5px;
+    border: 2px solid var(--dkrblauw);
+    border-radius: 20px;
+    color: var(--grijs);
+    background-color: var(--dkrblauw);
+}
+
+/* Kaart inruilen CSS > Rijen */
+
+.kaart-rij {
+    display: block;
+    margin: 40px auto 0;
+	float: right;
+    text-align: center;
+    width: 800px;
+	list-style: none;
+	
+}
+
+.card-holder-b {
+	background-image: url("../afbeeldingen/blauwe-kaart.png");
+	background-size: 140px 200px;
+	height: 200px;
+	width: 140px;
+	margin-right: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.card-holder-b:hover {
+	background-image: url("../afbeeldingen/blauw-rood-kaart.png");
+}
+
+.kaart {
+	cursor: pointer;
+	width: 140px;
+	padding-right:10px;
+}
+
+.kaart p {
+	color: white;
+	text-align: center;
+	position: relative;
+    top: 80px;
 }
 
 @media screen and (max-width: 900px) {
 	
-	.top-menu {
+	.linker-menu {
 	margin: 0 auto 50px;
 	text-align: center;
 	}
@@ -124,12 +138,12 @@ h1 {
 	margin: 0 auto;	
 	}
 	
-	.new-row {
+	.kaart-rij {
 	width: 620px;
 	margin: 0 auto 20px;
 	}
 	
-	.hand-button {
+	.huidige-kaarten {
 	top: 60px;
 	left: 0;
 	display: block;
@@ -140,4 +154,6 @@ h1 {
 	}
 }
 
-@media screen and (max-width: 670px) 
+@media screen and (max-width: 670px) {
+	
+}
