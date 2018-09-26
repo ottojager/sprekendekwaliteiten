@@ -46,12 +46,12 @@
 	height: 60px;
 }
 
-.header-content-parts:nth-of-type(2) {
+.header-content-title {
 	width:100%;
 	position:absolute;
 }
 
-.header-content-parts {
+.header-content-logo {
 	display: block;
 }
 
@@ -80,6 +80,7 @@ img.logo {
 	font-weight: 100;
 	position: relative;
 	z-index: 1;
+	text-decoration: none;
 
 	/*kleur*/
 	color:#163143;
