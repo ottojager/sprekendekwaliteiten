@@ -37,6 +37,7 @@ if (isset($_POST['makeLobbyButton'])) {
 
 			$_SESSION['player_id'] = 11;
 			$_SESSION['game_id'] = $id;
+			$_SESSION['game_mode'] = 3;
 			header('Location: ./lobby.php');
 		} else {
 			$error = 'Kaarten moet een getal tussen 0 en 70 zijn.';

@@ -25,6 +25,7 @@ if (isset($_POST['join_button'])) {
 							$_SESSION['player_id'] = $id;
 							$_SESSION['player_name'] = $name; // because player_id might need to change later
 							$_SESSION['game_id'] = $code;
+							$_SESSION['game_mode'] = 3;
 							header('Location: lobby.php');
 						}
 					} else {

@@ -19,6 +19,10 @@
 				<a class="button" href="join.php">Speler</a>
 				<a class="button" href="create.php">Spelleider</a>
 			</div>
+			<!-- if (isset($_SESSION['game_mode'] && $_SESSION['game_mode'] == 3)) {
+			we will need this if later when I implement the extra
+			buttons for when someone is in an ongoing game
+			- niels -->
 		<?php include('../footer.php') ?>
 	</body>
 </html>
