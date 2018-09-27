@@ -23,6 +23,7 @@
 			we will need this if later when I implement the extra
 			buttons for when someone is in an ongoing game
 			- niels -->
+		</main>
 		<?php include('../footer.php') ?>
 	</body>
 </html>
