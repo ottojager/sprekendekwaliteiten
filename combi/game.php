@@ -40,9 +40,55 @@ if ($_SESSION['player_id'] != 11) {
 	</head>
 	<body>
 		<?php include('../header.php'); ?>
-		<div id="container">
+		<?php if ($_SESSION['player_id'] != 11) {
+		/////////////
+		// players //
+		/////////////
+		?>
+		<div id="container" class="player-container">
+			<div id="card_display">
+				<p id="current_card"><?php echo $json['current_card']; ?></p>
+			</div>
 
-		</div>
+			<ul id="player_list">
+				<?php
+				foreach ($json['players'] as $key => $value) {
+					if ($value['name'] != 'Afval stapel') {
+						echo '<li id="'.$value['player_id'].'"><button>'.$value['name'].' ('.count($value['stack']).')</button></li>';
+					}
+				}
+				?>
+			</ul>
+			<button id="<?php echo count($json['players'])-1 ?>" onclick="reply_click(<?php echo count($json['players'])-1 ?>)">Afval stapel</button>
+
+			<button onclick="received_cards_view()">Ontvangen kaarten</button>
+		<?php } else {
+		/////////////////
+		// game leader //
+		/////////////////
+		?>
+		<div id="container" class="leader-container">
+			<div id="card_display">
+				<p id="current_card"><?php // echo $json['current_card']; ?></p>
+			</div>
+
+			<ul id="player_list">
+				<?php
+				foreach ($json['players'] as $key => $value) {
+					if ($value['name'] != 'Afval stapel') {
+						echo '<li id="'.$value['player_id'].'"><button>'.$value['name'].' ('.count($value['stack']).')</button></li>';
+					}
+				}
+				?>
+			</ul>
+			<p>nog <?php echo count($json['card_stack']); ?> kaarten over.</p>
+			<div id="card_stack">
+				<p>Click op de naam van een speler om hier hun kaarten te zien.</p>
+			</div>
+			<button onclick="end_game()">Spel beëindigen</button>
+			<button onclick="undo()">Ongedaan maken</button>
+			<button id="<?php echo count($json['players'])-1 ?>" onclick="leader_view_cards(<?php echo count($json['players'])-1 ?>)">Afval stapel</button>
+		<?php } ?>
 		<?php include('../footer.php'); ?>
 	</body>
 </html>
