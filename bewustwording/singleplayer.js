@@ -149,6 +149,7 @@ function reply_click(clicked_id) {
                 currentCard = 0;
 
                 // allow the user to click the new card button
+                document.getElementById("newCardButton").setAttribute('aria-disabled', false);
                 document.getElementById("newCardButton").onclick = newCard;
             }
         } else {
