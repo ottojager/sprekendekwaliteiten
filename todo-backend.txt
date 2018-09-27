@@ -10,7 +10,7 @@ x kaart weggooien broke somehow
 spelvorm 2:
 x voorpagina
   x speler / spelleider knoppen
-- ontavangen kaarten view
+x ontavangen kaarten view
 - mail might need some changes
   - two options
     - verzenden als pdf  implementatie
@@ -22,7 +22,7 @@ x voorpagina
   - twee knoppen
     - spelleider (basically same as spelvorm 2)
     - speler
-- elke speler begint met 5 hand kaarten
+x elke speler begint met 5 hand kaarten
 - de speler die aan de beurt is pakt een kaart
 - twee opties
   - geeft een handkaart weg aan andere speler

@@ -12,7 +12,7 @@
 				str,
 			],
 			'hand' [
-                str, (max 5)
+                str,
 			]
 			'last_request': timestamp,
 		},
