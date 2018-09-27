@@ -39,6 +39,12 @@ if (!(bool)$json) { // if $json actually has content
 		<?php } // end of leader only javascript ?>
 
 		<script>
+			function kick(id) { // send a request to the server to kick the player with ID [index]
+				var xhttp = new XMLHttpRequest();
+				xhttp.open("GET", "./api/kick.php?p="+id, false);
+				xhttp.send();
+			}
+
 			var id = <?php echo $_SESSION['player_id']; ?>; // the ID of the current user
 
 			var s = 3000; // how often to refresh in ms
@@ -58,12 +64,10 @@ if (!(bool)$json) { // if $json actually has content
 					<?php if ($_SESSION['player_id'] == 11) { ?>
 						// kick button only visible to the game leader
 						var button = document.createElement('button');
-						button.onclick = function() { // send a request to the server to kick the player with ID [index]
-							var xhttp = new XMLHttpRequest();
-							xhttp.open("GET", "./api/kick.php?p="+index, false);
-							xhttp.send();
-						}
-						button.innerHTML = 'X';
+						button.onclick = function() {
+							kick(index);
+						};
+						button.innerHTML = '<img src="css/trash-icon.png" alt="verwijder speler" height="25" width="25">';
 						child.appendChild(button);
 					<?php } ?>
 
@@ -102,7 +106,7 @@ if (!(bool)$json) { // if $json actually has content
 			<?php
 			foreach ($json['players'] as $key => $value) {
 				if ($_SESSION['player_id'] == 11) {
-					echo '<li>'.$value['name'].'<button onclick="alert(\''.$key.'\')">X</button></li>';
+					echo '<li>'.$value['name'].'<button onclick="kick(\''.$key.'\')">X</button></li>';
 				} else {
 					echo '<li>'.$value['name'].'</li>';
 				}
