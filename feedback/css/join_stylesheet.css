@@ -63,7 +63,7 @@ body {
 	margin: 10px 0 0 0;
 	color: #234152;
 	font-family: oswald,  monospace;
-	font-size: 16px;
+	font-size: 21px;
 	text-align: center;
 }
 
@@ -71,7 +71,7 @@ body {
 	margin: 0px 0 0 0;
 	color: #d4263e;
 	font-family: oswald,  monospace;
-	font-size: 16px;
+	font-size: 21px;
 	text-align: center;
 }
 
@@ -81,8 +81,8 @@ body {
 }
 .formfield {
 	margin-top: 20px;
-	width: 320px;
-	height: 30px;
+	width: 500px;
+	height: 50px;
 	padding: 2px 5px 0px 5px;
 	font-family: oswald,  monospace;
 	font-size: 16px;
@@ -137,4 +137,105 @@ input[type=submit]:hover {
 }
 input[type=submit]:focus {
 	cursor: pointer;
+}
+
+@media only screen and (max-width: 650px) {
+	
+	#borderimage {
+		float: left;
+		width: 1px;
+		background-color: #234152;
+	}
+	#player__name {
+	}
+	
+	#title > h1 {
+		width: 60%;
+		height: 47px;
+		margin: 8% auto 5% auto;
+		padding: 18px;
+		text-decoration: underline;
+		font-family: 'Oswald', sans-serif;
+		font-size: 35px;
+		color: #234152;
+		background-color: #fffefe;
+		text-align: center;
+	}
+	
+	#title > p {
+		margin: 10px 0 0 0;
+		color: #234152;
+		font-family: oswald,  monospace;
+		font-size: 16px;
+		text-align: center;
+	}
+	
+	p#error {
+		margin: 0px 0 0 0;
+		color: #d4263e;
+		font-family: oswald,  monospace;
+		font-size: 16px;
+		text-align: center;
+	}
+	
+	#title p {
+		width: 70%;
+		margin: 30px auto;
+	}
+	.formfield {
+		margin-left: -56.9px;
+		margin-top: 20px;
+		width: 441.894px;
+		height: 30px;
+		padding: 2px 5px 0px 5px;
+		font-family: oswald,  monospace;
+		font-size: 16px;
+		color: #163143;
+		border-top: 3px solid #234152;
+		background-color: #e9e9ea;
+		border-bottom-right-radius: 2px;
+	}
+	.red_border {
+		width: 334px;
+		margin: 0% auto 3% auto;
+	}
+	
+	label[for=name]{
+		text-align: center;
+		margin: 20px;
+	}
+	
+	label[for=code]{
+		text-align: center;
+		margin: 20px;
+	}
+	
+	label[for=cards]{
+		text-align: center;
+		margin: 20px;
+	}
+	
+	input[type=text], select {
+		border-radius: 2px;
+		border: 1px solid #234152;
+		float: right;
+		margin: 6px 5px;
+	}
+	
+	input[type=text]:focus {
+		margin: 3px 2px;
+	}
+	
+	input[type=submit] {
+		display: block;
+		height: 40px;
+		margin: 8px auto 0 auto;
+		padding: 0 42px;
+		font-family: oswald,  monospace;
+		font-size: 17px;
+		color: #e9e9ea; /*acd7da*/
+		background-color: #163143;
+		border-radius: 10px;
+	}
+	
 }
