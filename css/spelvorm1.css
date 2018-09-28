@@ -73,26 +73,24 @@ h1 {
 	color: white;
 }
 
+.linker-menu .button {
+	display: block;
+}
+
 .huidige-kaarten {
 	top: 165px;
     left: 86px;
     position: relative;
     text-align: center;
-    width: 185px;
-	display: inline-block;
+
     padding: 12px;
-    margin: 0 5px;
-    border: 2px solid var(--dkrblauw);
-    border-radius: 20px;
-    color: var(--grijs);
-    background-color: var(--dkrblauw);
 }
 
 /* Kaart inruilen CSS > Rijen */
 
 .kaart-rij {
     display: block;
-    margin: 40px auto 0;
+    margin: 20px auto 0;
 	float: right;
     text-align: center;
     width: 800px;
@@ -101,6 +99,7 @@ h1 {
 }
 
 .kaart {
+	padding: 5px;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -111,7 +110,7 @@ h1 {
 
 .kaart button {
 	background-image: url(../afbeeldingen/blauwe-kaart.png);
-    height: 230px;
+    height: 234px;
     width: 165px;
     background-size: cover;
 	background-color: #fff;

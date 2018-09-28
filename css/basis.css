@@ -141,7 +141,7 @@ h2 {
     background-color: var(--dkrblauw);
 	box-sizing: border-box;
 	color: var(--grijs);
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .button button:hover {
