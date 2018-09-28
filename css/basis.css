@@ -128,6 +128,7 @@ h2 {
 .button {
 	display: inline-block;
 	box-sizing: border-box;
+
 }
 
 .button button {
@@ -140,6 +141,7 @@ h2 {
     background-color: var(--dkrblauw);
 	box-sizing: border-box;
 	color: var(--grijs);
+	font-size: 16px;
 }
 
 .button button:hover {
@@ -150,6 +152,7 @@ h2 {
 .button button p {
 	color: var(--grijs);
 	padding: 10px;
+	font-size: 16px;
 }
 
 .button button:hover p {

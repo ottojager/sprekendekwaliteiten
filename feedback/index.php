@@ -24,8 +24,9 @@ session_start();
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, ligula vitae egestas luctus, dolor nulla aliquet elit, a aliquam magna nulla at odio. Aenean volutpat lorem sed molestie iaculis. Integer volutpat sapien nulla. Duis volutpat egestas quam, vel blandit quam sodales ut. Nulla tristique quam eget enim blandit, at viverra urna luctus. Proin sagittis, magna vehicula ullamcorper elementum, erat metus scelerisque lectus, id vestibulum velit sem condimentum neque. Mauris venenatis imperdiet mi.</p>
 			</div>
 			<div class="button-positie">
-				<a class="button" href="join.php">Speler</a>
-				<a class="button" href="create.php">Spelleider</a>
+				<div class="button"><a href="join.php"><button>Speler</button></a></div>
+				<div class="button"><a href="create.php"><button>Spelleider</button></a></div>
+			</div>
 
 				<?php
 				if (isset($_SESSION['game_mode']) && $_SESSION['game_mode'] == 2) {
@@ -33,11 +34,11 @@ session_start();
 						$game = $_SESSION['game_id'];
 						$json = json_decode(file_get_contents("./games/$game.json"), true);
 						if ($json['game_started']) {
-							echo '<a class="button" href="./game.php">Naar spelpel</a> ';
+							echo '<div class="button"><a class="button" href="./game.php"><button>Naar spelpel</button></a></div> ';
 						} else {
-							echo '<a class="button" href="./lobby.php">Naar spel</a> ';
+							echo '<div class="button"><a class="button" href="./lobby.php"><button>Naar spel</button></a></div> ';
 						}
-						echo '<a class="button" href="./delete.php">Verwijder sessie</a>';
+						echo '<div class="button"><a class="button" href="./delete.php"><button>Verwijder sessie</button></a></div>';
 					}
 				}
 				?>
