@@ -77,19 +77,18 @@ if (!(bool)$json) { // if $json actually has content
 		</script>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/lobby_stylesheet.css" type="text/css">
+		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<div id="topbar"></div>
-		<div id="sidetopbar">
-			<div id="borderimage"></div>
-			<?php if ($_SESSION['player_id'] == 11) { ?>
-				<div id="player__name">spelleider</div>
-			<?php } else { ?>
-				<div id="player__name"><?php echo $json['players'][ $_SESSION['player_id'] ]['name']; ?></div>
-			<?php } ?>
-		</div>
+		<?php
+		// create some variables to add header values
+		$spelvorm = 'Feedback';
+		$name = $_SESSION['player_name'];
+
+		include('../header.php');
+		?>
 		<div id="main">
 		<h1>Spelvoorbereiding - Feedback - Kwaliteitenspel</h1>
 			<?php if ($_SESSION['player_id'] == 11) { // game leader only ?>
