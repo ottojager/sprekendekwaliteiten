@@ -63,6 +63,10 @@ function endGame(no_confirm) {
     // don't fix something if it isn't broken
     if (no_confirm || confirm('Weet u zeker dat u het spel wil beëindigen?')) {
         gameEnded = 1;
+
+        // change title
+        document.title = 'Bewustwording - Einde';
+
         //top leegmaken
         document.getElementById("container").innerHTML = "";
 
@@ -209,6 +213,7 @@ function newCardView() {
         			reply_click(this.id);
         			window.scrollTo(0,document.body.scrollHeight);
         	});
+            document.title = 'Bewustwording - Nieuwe kaart'
         }
     };
     xhttp.open("GET", "./parts/newcard.html", true);
@@ -233,6 +238,7 @@ function handView() {
             document.getElementById("container").innerHTML = html;
             // add click event listeners zodat we kunnen zien welke kaart geslecteerd woord
             addListeners();
+            document.title = 'Bewustwording - Ruil je kaart';
         }
     };
     xhttp.open("GET", "./parts/inruilen.html", true);
@@ -256,11 +262,7 @@ function handViewTemp() {
             .replace("card8", hand[8]);
             document.getElementById("container").innerHTML = html;
 
-            // change the newCardButton to serve as a back button instead
-            // var back_button = document.getElementById('newCardButton');
-            // back_button.onclick = newCardView;
-            // back_button.innerHTML = 'Terug naar huidige kaart';
-            // back_button.setAttribute('aria-disabled', false);
+            document.title = 'Bewustwording - Hand kaarten';
         }
     };
     xhttp.open("GET", "./parts/hand_overview.html", true);

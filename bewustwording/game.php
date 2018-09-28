@@ -22,7 +22,7 @@
 			;
 		</script>
 		<script type="text/javascript" src="singleplayer.js" defer></script>
-		<title>Bewustwording - Kwaliteitenspel</title>
+		<title>Bewustwording - Nieuwe kaart</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../css/spelvorm1.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">

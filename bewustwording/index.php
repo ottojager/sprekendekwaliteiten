@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
-		<title>Speelvorm 1</title>
+		<title>Bewustwording - Start</title>
 		<link rel="stylesheet" href="../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../css/spelvorm1.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
