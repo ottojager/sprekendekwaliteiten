@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Spelvorm 3</title>
+		<title>Combi - Start</title>
 		<link rel="stylesheet" href="../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../css/spelvorm3.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
