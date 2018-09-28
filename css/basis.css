@@ -92,7 +92,7 @@ h2 {
 	text-align: center;
 }
 
-/* Startscherm button CSS */
+/* Oude button CSS 
 
 .button {
 	display: inline-block;
@@ -119,4 +119,39 @@ h2 {
 	margin-right: auto;
 	text-align: center;
 	}
+}
+
+*/
+
+/* Nieuwe button CSS */
+
+.button {
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.button button {
+	height: 46px;
+    width: 185px;
+	display: inline-block;
+    margin: 5px;
+    border: 2px solid var(--dkrblauw);
+    border-radius: 20px;
+    background-color: var(--dkrblauw);
+	box-sizing: border-box;
+	color: var(--grijs);
+}
+
+.button button:hover {
+	background-color: var(--grijs);
+	color: var(--dkrblauw);
+}
+
+.button button p {
+	color: var(--grijs);
+	padding: 10px;
+}
+
+.button button:hover p {
+	color: var(--dkrblauw);
 }
