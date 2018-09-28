@@ -23,7 +23,7 @@ session_start();
 				<a class="button" href="create.php">Spelleider</a>
 
 				<?php
-				if (isset($_SESSION['game_mode'] && $_SESSION['game_mode'] == 2)) {
+				if (isset($_SESSION['game_mode']) && $_SESSION['game_mode'] == 2) {
 					if (isset($_SESSION['game_id'])) {
 						$game = $_SESSION['game_id'];
 						$json = json_decode(file_get_contents("./games/$game.json"), true);
