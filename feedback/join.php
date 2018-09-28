@@ -114,7 +114,7 @@ if (isset($_POST['join_button'])) {
 						<input id="code" type="text" name="code" value="<?php echo $code ?>">
 					</div>
 				</div>
-				<input name="join_button" value="Doe mee" type="submit" />
+				<div class="button"><button>Submit</button></div>
 			</form>
 		</div>
 		<?php include('../footer.php') ?>
