@@ -80,8 +80,9 @@ body {
 	margin: 30px auto;
 }
 .formfield {
+	margin-left: -56.9px;
 	margin-top: 20px;
-	width: 500px;
+	width: 441.894px;
 	height: 50px;
 	padding: 2px 5px 0px 5px;
 	font-family: oswald,  monospace;
@@ -183,9 +184,9 @@ input[type=submit]:focus {
 		margin: 30px auto;
 	}
 	.formfield {
-		margin-left: -56.9px;
-		margin-top: 20px;
-		width: 441.894px;
+		margin-left: 0px;
+		margin-top: 15px;
+		width: 320px;
 		height: 30px;
 		padding: 2px 5px 0px 5px;
 		font-family: oswald,  monospace;
