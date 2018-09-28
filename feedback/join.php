@@ -82,7 +82,12 @@ if (isset($_POST['join_button'])) {
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<?php include('../header.php') ?>
+		<?php
+		// create some variables to add header values
+		$spelvorm = 'Feedback';
+
+		include('../header.php');
+		?>
 		<div id="topbar"></div>
 		<div id="sidetopbar">
 			<div id="borderimage"></div>

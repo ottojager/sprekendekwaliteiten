@@ -9,7 +9,12 @@
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<?php include('../header.php') ?>
+		<?php
+		// create some variables to add header values
+		$spelvorm = 'Combi';
+
+		include('../header.php');
+		?>
 		<main class="container">
 			<div class="startscherm">
 				<h1 class="startscherm-content">Combi spel</h1>

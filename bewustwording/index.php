@@ -9,7 +9,12 @@
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<?php include('../header.php') ?>
+		<?php
+		// create some variables to add header values
+		$spelvorm = 'Bewustwording';
+
+		include('../header.php');
+		?>
 		<main class="container">
 			<div class="startscherm">
 				<h1 class="startscherm-content">Bewustwording spel</h1>
@@ -22,4 +27,3 @@
 		<?php include('../footer.php') ?>
 	</body>
 </html>
-

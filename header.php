@@ -24,33 +24,37 @@
 					<rect x="4.5" y="13.5" width="30" height="3" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />
   					<ellipse cx="2" cy="15" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
   					<ellipse cx="35" cy="15" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
-  
+
 					<rect x="4.5" y="23.5" width="30" height="3" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />
   					<ellipse cx="2" cy="25" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
   					<ellipse cx="35" cy="25" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
 				</g>
-				Sorry, your browser does not support inline SVG.  
+				Sorry, your browser does not support inline SVG.
 			</svg>
 		</button>
-		<div class="headvorm" id="menuheader"> 
-			<a class="headvorm-lesser"
-			   style="display:block;">
-				Spel: Combi
-			</a>
+		<div class="headvorm" id="menuheader">
+			<?php if (isset($spelvorm)) { ?>
+				<a class="headvorm-lesser"
+			   		style="display:block;">
+					Spel: <?php echo $spelvorm ?>
+				</a>
+			<?php } ?>
 			<a class="headvorm-lesser"
 			   style="display:block;"
-			   href="./index.php">
+			   href="./">
 				Terug naar start
 			</a>
 			<a class="headvorm-lesser"
 			   style="display:block;">
 				Help
 			</a>
-			<a id="player__name"
-			   class="headvorm-lesser"
-			   style="display:block;">
-				Naam speler
-			</a>
+			<?php if (isset($name)) { ?>
+				<a id="player__name"
+			   		class="headvorm-lesser"
+			   		style="display:block;">
+					<?php echo $name ?>
+				</a>
+			<?php } ?>
 		</div>
 	</div>
 	<script>

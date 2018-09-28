@@ -77,7 +77,12 @@ if (isset($_POST['makeLobbyButton'])) {
 		<meta charset="utf-8">
 	</head>
 	<body>
-		<?php include('../header.php') ?>
+		<?php
+		// create some variables to add header values
+		$spelvorm = 'Feedback';
+
+		include('../header.php');
+		?>
 		<div>
 			<div id="topbar"></div>
 			<div id="sidetopbar">

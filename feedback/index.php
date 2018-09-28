@@ -12,7 +12,12 @@ session_start();
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<?php include('../header.php'); ?>
+		<?php
+		// create some variables to add header values
+		$spelvorm = 'Feedback';
+
+		include('../header.php');
+		?>
 		<main class="container">
 			<div class="startscherm">
 				<h1 class="startscherm-content">Feedback spel</h1>
