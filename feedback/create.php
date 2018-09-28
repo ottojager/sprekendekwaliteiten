@@ -89,7 +89,7 @@ if (isset($_POST['makeLobbyButton'])) {
 				<div id="borderimage"></div>
 				<div id="player__name"></div>
 			</div>
-			<div id="title"><h1>Kwaliteitenspel</h1>
+			<div id="title"><h1>Aanmaken spel</h1>
 			<p>Als spelleider maak je hier een nieuw spel "Feedback" aan. Vul je naam in en kies het aantal kaarten waarmee je de groep wilt laten spelen (maximaal 70).</p></div>
 			<form onsubmit="return validate_form()" method="post">
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
