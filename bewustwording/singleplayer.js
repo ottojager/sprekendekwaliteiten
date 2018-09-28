@@ -191,6 +191,11 @@ function newCard() {
     "use strict";
     // pakt niewe kaart van de cardStack zet die als active card en gaat naar de new card view
     currentCard = takeCard();
+    newCardView();
+}
+
+function newCardView() {
+    // ga naar de new card view
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -224,6 +229,34 @@ function handView() {
             document.getElementById("container").innerHTML = html;
             // add click event listeners zodat we kunnen zien welke kaart geslecteerd woord
             addListeners();
+        }
+    };
+    xhttp.open("GET", "./parts/hand.html", true);
+    xhttp.send();
+}
+
+function handViewTemp() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // lots o' replaces
+            var html = this.responseText
+            .replace("active card", currentCard)
+            .replace("card1", hand[1])
+            .replace("card2", hand[2])
+            .replace("card3", hand[3])
+            .replace("card4", hand[4])
+            .replace("card5", hand[5])
+            .replace("card6", hand[6])
+            .replace("card7", hand[7])
+            .replace("card8", hand[8]);
+            document.getElementById("container").innerHTML = html;
+
+            // change the newCardButton to serve as a back button instead
+            var back_button = document.getElementById('newCardButton');
+            back_button.onclick = newCardView;
+            back_button.innerHTML = 'Terug naar huidige kaart';
+            back_button.setAttribute('aria-disabled', false);
         }
     };
     xhttp.open("GET", "./parts/hand.html", true);
