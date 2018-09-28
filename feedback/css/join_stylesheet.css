@@ -48,7 +48,6 @@ body {
 
 #title > h1 {
 	width: 60%;
-	height: 47px;
 	margin: 8% auto 5% auto;
 	padding: 18px;
 	text-decoration: underline;
@@ -152,7 +151,6 @@ input[type=submit]:focus {
 	
 	#title > h1 {
 		width: 60%;
-		height: 47px;
 		margin: 8% auto 5% auto;
 		padding: 18px;
 		text-decoration: underline;
