@@ -76,6 +76,8 @@ if (isset($_POST['join_button'])) {
 		</script>
 		<meta charset="utf-8">
 		<title>Meld je aan - Feedback - Kwaliteitenspel</title>
+		<link rel="stylesheet" href="../css/basis.css" type="text/css">
+		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
 		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">

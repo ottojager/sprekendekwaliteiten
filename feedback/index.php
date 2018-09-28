@@ -26,8 +26,7 @@ session_start();
 			<div class="button-positie">
 				<div class="button"><a href="join.php"><button>Speler</button></a></div>
 				<div class="button"><a href="create.php"><button>Spelleider</button></a></div>
-			</div>
-
+				
 				<?php
 				if (isset($_SESSION['game_mode']) && $_SESSION['game_mode'] == 2) {
 					if (isset($_SESSION['game_id'])) {
