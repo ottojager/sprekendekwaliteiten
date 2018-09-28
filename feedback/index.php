@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
-		<title>Speelvorm 2</title>
+		<title>Feedback - start</title>
 		<link rel="stylesheet" href="../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
