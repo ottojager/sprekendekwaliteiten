@@ -84,8 +84,10 @@ function endGame(no_confirm) {
         label.htmlFor = 'email';
         div.appendChild(label);
         div.appendChild(email);
+        var button_div = document.createElement('div');
+        button_div.classList.add('button');
         var btn = document.createElement('button');
-        btn.classList.add('button', 'send-button');
+        btn.classList.add('send-button');
         btn.innerHTML='Stuur e-mail';
         btn.onclick = function() {
             var email = document.getElementById('email').value;
@@ -124,9 +126,11 @@ function endGame(no_confirm) {
         // for later adding error messages
         var p = document.createElement('p');
         p.id = 'error';
+
+        button_div.appendChild(btn);
         div.appendChild(p);
         email_container.appendChild(div);
-        email_container.appendChild(btn);
+        email_container.appendChild(button_div);
         container.appendChild(email_container);
     }
 
@@ -231,7 +235,7 @@ function handView() {
             addListeners();
         }
     };
-    xhttp.open("GET", "./parts/hand.html", true);
+    xhttp.open("GET", "./parts/inruilen.html", true);
     xhttp.send();
 }
 
@@ -253,13 +257,13 @@ function handViewTemp() {
             document.getElementById("container").innerHTML = html;
 
             // change the newCardButton to serve as a back button instead
-            var back_button = document.getElementById('newCardButton');
-            back_button.onclick = newCardView;
-            back_button.innerHTML = 'Terug naar huidige kaart';
-            back_button.setAttribute('aria-disabled', false);
+            // var back_button = document.getElementById('newCardButton');
+            // back_button.onclick = newCardView;
+            // back_button.innerHTML = 'Terug naar huidige kaart';
+            // back_button.setAttribute('aria-disabled', false);
         }
     };
-    xhttp.open("GET", "./parts/hand.html", true);
+    xhttp.open("GET", "./parts/hand_overview.html", true);
     xhttp.send();
 }
 
