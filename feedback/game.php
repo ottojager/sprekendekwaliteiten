@@ -55,24 +55,18 @@ if ($_SESSION['player_id'] != 11) {
 		<meta charset="utf-8">
 		<title>Actief - Feedback - Kwaliteitenspel</title>
 		<link rel="stylesheet" href="./css/game.css" type="text/css">
+		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<div id="topbar"></div>
-		<div id="sidetopbar">
-			<div id="borderimage"></div>
-			<div id="player__name">
-				<span><?php
-				if ($_SESSION['player_id'] == 11) {
-					echo 'Spelleider';
-				} else {
-					echo $json['players'][ $_SESSION['player_id'] ]['name']; // look it works don't touch it
-				}
-				?></span>
-				<button id="help" onclick="help_window()">Help!</button>
-			</div>
-		</div>
+		<?php
+		// create some variables to add header values
+		$spelvorm = 'Feedback';
+		$name = $_SESSION['player_name'];
+
+		include('../header.php');
+		?>
 		<?php if ($_SESSION['player_id'] != 11) {
 		/////////////
 		// players //
