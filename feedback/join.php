@@ -112,9 +112,12 @@ if (isset($_POST['join_button'])) {
 					<div class="formfield">
 						<label for="code">Groepscode:</label>
 						<input id="code" type="text" name="code" value="<?php echo $code ?>">
+						
 					</div>
 				</div>
-				<div class="button"><button>Submit</button></div>
+				<div class="button">
+					<button name="join_button" value="Submit" type="submit">Submit</button>
+				</div>
 			</form>
 		</div>
 		<?php include('../footer.php') ?>

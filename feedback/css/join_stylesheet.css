@@ -139,6 +139,16 @@ input[type=submit]:focus {
 	cursor: pointer;
 }
 
+button[name=join_button] {
+	display: block;
+    margin: 8px auto 0 auto;
+}
+
+div.button {
+	display: block;
+    margin: 8px auto 0 auto;
+}
+
 @media only screen and (max-width: 650px) {
 	
 	#borderimage {
