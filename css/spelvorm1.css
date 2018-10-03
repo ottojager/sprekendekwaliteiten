@@ -121,7 +121,8 @@ h1 {
 	background-image: url(../afbeeldingen/blauw-rood-kaart.png);
 }
 
-@media screen and (max-width: 990px) {
+
+@media screen and (max-width: 1050px) {
 	
 	.linker-menu {
 	margin: 50px auto;
@@ -129,6 +130,10 @@ h1 {
 	float: none;
 	}
 	
+	.bottom-menu {
+	margin: 0 auto;
+	text-align: center;
+	}
 	.card-holder-r {
 	position: initial;
 	margin: 0 auto 50px;
@@ -169,4 +174,3 @@ h1 {
 	margin-bottom: 20px;
 	}
 }
-
