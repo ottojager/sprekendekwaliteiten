@@ -235,6 +235,10 @@ div.button {
 		margin: 3px 2px;
 	}
 	
+	button[name=join_button] {
+		width: 250px;
+	}
+	
 	input[type=submit] {
 		display: block;
 		height: 40px;
