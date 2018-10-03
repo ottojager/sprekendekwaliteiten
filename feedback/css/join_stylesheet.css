@@ -139,7 +139,7 @@ input[type=submit]:focus {
 	cursor: pointer;
 }
 
-button[name=join_button] {
+button[name=join_button], button[name=makeLobbyButton] {
 	display: block;
     margin: 8px auto 0 auto;
 }
@@ -235,7 +235,7 @@ div.button {
 		margin: 3px 2px;
 	}
 	
-	button[name=join_button] {
+	button[name=join_button], button[name=makeLobbyButton] {
 		width: 250px;
 	}
 	

@@ -115,7 +115,10 @@ if (isset($_POST['makeLobbyButton'])) {
 						</select>
 					</div>
 				</div>
-				<input type="submit" value="Aanmaken spel" name="makeLobbyButton">
+				<div class="button">
+					<button type="submit" value="Aanmaken spel" name="makeLobbyButton"> Aanmaken spel
+    				</button>
+				</div>
 			</form>
 		</div>
 		<?php include('../footer.php') ?>
