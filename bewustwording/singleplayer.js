@@ -142,7 +142,6 @@ function endGame(no_confirm) {
 
 function reply_click(clicked_id) {
     "use strict";
-    debugger
     console.log(clicked_id);
     if (gameEnded == 0 && currentCard !== 0) {
         var i;
@@ -180,7 +179,6 @@ function reply_click(clicked_id) {
 
 function backButton() {
     "use strict";
-    debugger
     if (graveyard.length > 0) {
         if (currentCard !== 0) {
             cardStack.unshift(currentCard);
