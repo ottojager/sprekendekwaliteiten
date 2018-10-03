@@ -1,11 +1,15 @@
 .header-content-logo {
-	background-image: url("../afbeeldingen/logo-grote-schermen.png");
-	background-size: 85px 46px ;
-	height: 46px;
-	width: 85px;	
-	position: relative;
-	left: 10%;
-	top: 8px;
+	background-image: url(../afbeeldingen/logo-grote-schermen.png);
+    background-size: 89px 50px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 12.7% 0.5%;
+    transition: background-position 1s;
+    height: 68px;
+    width: 99px;
+    position: relative;
+    left: 10%;
+    top: 0;
 }
 
 :root {
@@ -196,6 +200,11 @@ div.headvorm >a:link:active, div.headvorm >a:visited:active {
 	
 	div.headvorm > a:hover{
 		border-bottom-color: black;
+	}
+	
+	.header-content-logo {
+    background-position: 12.7% -6.5%;
+    transition: background-position 1s;
 	}
 
 }
