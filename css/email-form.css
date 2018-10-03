@@ -1,11 +1,12 @@
 .form-email {
 	display: inline-block;
-	width: 400px;
+	width: 370px;
 	margin: 240px auto 0;
 	text-align: center;
 	background-color: var(--grijs);
 	border-top: solid black 3px;
 	padding: 10px 15px 8px;
+	vertical-align: bottom;
 }
 
 .form-email label {
@@ -22,11 +23,13 @@
 .send-button {
 	height: 40px;
     position: relative;
-    left: 10px;
-    top: 2px;
 	vertical-align: top;
-    margin: 240px auto 0;
 	display: inline-block;
+}
+
+.email-container button {
+	margin: 0 0 0 5px;
+	height: 42px;
 }
 
 #error {
@@ -47,8 +50,11 @@
 
 @media screen and (max-width: 680px) {
 	.send-button {
-    left: 0;
-    top: 50px;
+    top: 10px;
+	text-align: center;
+	}
+	
+	.email-container button {
 	margin: 0 auto;
 	}
 
