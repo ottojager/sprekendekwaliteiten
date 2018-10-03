@@ -82,8 +82,11 @@ h1 {
     left: 86px;
     position: relative;
     text-align: center;
-
     padding: 12px;
+}
+
+button[aria-disabled="true"] {
+	cursor: not-allowed;
 }
 
 /* Kaart inruilen CSS > Rijen */
