@@ -142,6 +142,7 @@ function endGame(no_confirm) {
 
 function reply_click(clicked_id) {
     "use strict";
+    debugger
     console.log(clicked_id);
     if (gameEnded == 0 && currentCard !== 0) {
         var i;
@@ -179,14 +180,27 @@ function reply_click(clicked_id) {
 
 function backButton() {
     "use strict";
-    if (graveyard.length != 0) {
-        cardStack.unshift(currentCard);
+    debugger
+    if (graveyard.length > 0) {
+        if (currentCard !== 0) {
+            cardStack.unshift(currentCard);
+        }
 
         if (lastChosenPosition[0] != "trash") {
             currentCard = hand[lastChosenPosition[0].toString()]
-            hand[lastChosenPosition[0].toString()] = graveyard[0];
+            hand[lastChosenPosition[0].toString()] = graveyard[0]
+            graveyard.splice(0, 1);
         } else {
             currentCard = graveyard[0];
+        }
+
+        // update views
+        if (view == 'currentCard') {
+            newCardView();
+        } else if (view == 'hand') {
+            handViewTemp();
+        } else if (view == 'trade') {
+            handView();
         }
         document.getElementById("current").innerHTML = currentCard;
         lastChosenPosition.shift();
@@ -203,6 +217,7 @@ function newCard() {
 }
 
 function newCardView() {
+    view = 'currentCard';
     // ga naar de new card view
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -221,6 +236,7 @@ function newCardView() {
 }
 
 function handView() {
+    view = 'trade'
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -246,6 +262,7 @@ function handView() {
 }
 
 function handViewTemp() {
+    view = 'hand';
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -275,6 +292,7 @@ var hand = [];
 var graveyard = [];
 var lastChosenPosition = [];
 var gameEnded = 0;
+var view = 'currentCard';
 
 // kaarten schudden
 shuffle(cardStack);
