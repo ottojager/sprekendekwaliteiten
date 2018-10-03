@@ -1,3 +1,13 @@
+.header-content-logo {
+	background-image: url("../afbeeldingen/logo-grote-schermen.png");
+	background-size: 85px 46px ;
+	height: 46px;
+	width: 85px;	
+	position: relative;
+	left: 10%;
+	top: 8px;
+}
+
 :root {
 	/*kleur*/
 	--rood: #d4263e;

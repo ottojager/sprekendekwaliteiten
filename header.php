@@ -1,10 +1,6 @@
 <header>
 	<div class="header-content">
-		<div class="header-content-logo">
-			<img class="logo"
-				 src="/sprekendekwaliteiten/afbeeldingen/logo-grote-schermen.png"
-				 alt="logo">
-		</div>
+		<div class="header-content-logo"></div>
 		<div class="header-content-title">
 			<h1 class="titel boven">sprekende</h1>
 			<h1 class="titel onder">kwaliteiten</h1>
