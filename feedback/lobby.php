@@ -91,7 +91,6 @@ if (!(bool)$json) { // if $json actually has content
 		include('../header.php');
 		?>
 		<div id="main">
-		<h1>Spelvoorbereiding - Feedback - Kwaliteitenspel</h1>
 			<?php if ($_SESSION['player_id'] == 11) { // game leader only ?>
 			<h2 id="game_id">Spelvoorbereiding</h2>
 			<p>Geef de spelers deze code:<?php echo $json['game_id']; ?><br />
@@ -117,7 +116,7 @@ if (!(bool)$json) { // if $json actually has content
 		if ($_SESSION['player_id'] == 11) {
 			?><div class="button"> <button id="start" onclick="start_game()">Start het spel</button></div><?php
 		} else {
-			?><p>Wacht tot idereen aanwezig is. De spelbegeleider zal het spel zometeen beginnen.</p><?php
+			?><p>Wacht tot iedereen aanwezig is. De spelbegeleider zal het spel zometeen beginnen.</p><?php
 		}
 		?>
 		</div>
