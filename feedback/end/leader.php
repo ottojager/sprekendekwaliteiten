@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl=NL">
 <head>
-	<title>Feedback - Einde</title>
+	<title>Einde - Feedback - Sprekende Kwaliteiten</title>
 	<link rel="stylesheet" href="../css/end.css" type="text/css">
 	<link rel="icon" sizes="16x16" type="image/png" href="/../kwal-spel/feedback/css/Rainbow_placeholder.png">
 </head>
@@ -12,7 +12,7 @@
 		<div id="player__name">Spelleider</div>
 	</div>
 	<div id="container">
-		<h1>Feedback - Einde</h1>
+		<h1>Einde - Feedback</h1>
 		<?php
 		foreach ($json['players'] as $key => $player) {
 			if ($player['name'] != 'Afval stapel') {

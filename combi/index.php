@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Combi - Start</title>
+		<title>Start - Combi - Sprekende Kwaliteiten</title>
 		<link rel="stylesheet" href="../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../css/spelvorm3.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">

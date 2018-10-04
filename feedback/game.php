@@ -53,7 +53,7 @@ if ($_SESSION['player_id'] != 11) {
 			var own_id = <?php echo $_SESSION['player_id'];?>;
 		</script>
 		<meta charset="utf-8">
-		<title>Actief - Feedback - Kwaliteitenspel</title>
+		<title>Actief - Feedback - Sprekende Kwaliteiten</title>
 		<link rel="stylesheet" href="./css/game.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">

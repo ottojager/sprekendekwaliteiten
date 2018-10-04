@@ -32,7 +32,7 @@ if ($_SESSION['player_id'] != 11) {
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Actief - Combi - Kwaliteitenspel</title>
+		<title>Actief - Combi - Sprekende Kwaliteiten</title>
 		<link rel="stylesheet" href="./css/game.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">

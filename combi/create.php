@@ -69,7 +69,7 @@ if (isset($_POST['makeLobbyButton'])) {
 			return false;
 		}
 		</script>
-		<title>Aanmaken spel - Combi - Kwaliteitenspel</title>
+		<title>Aanmaken spel - Combi - Sprekende Kwaliteiten</title>
 		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
@@ -82,7 +82,7 @@ if (isset($_POST['makeLobbyButton'])) {
 				<div id="borderimage"></div>
 				<div id="player__name"></div>
 			</div>
-			<div id="title"><h1>Kwaliteitenspel</h1>
+			<div id="title"><h1>Aanmaken spel - Combi</h1>
 			<p>Als spelleider maak je hier een nieuw spel "Feedback" aan. Vul je naam in en kies het aantal kaarten waarmee je de groep wilt laten spelen (maximaal 70).</p></div>
 			<form onsubmit="return validate_form()" method="post">
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>

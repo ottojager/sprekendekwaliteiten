@@ -75,7 +75,7 @@ if (isset($_POST['join_button'])) {
 		}
 		</script>
 		<meta charset="utf-8">
-		<title>Doe mee - Combi - Kwaliteitenspel</title>
+		<title>Doe mee - Combi - Sprekende Kwaliteiten</title>
 		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
@@ -87,7 +87,7 @@ if (isset($_POST['join_button'])) {
 			<div id="player__name"></div>
 		</div>
 		<div id="container">
-			<h1>Kwaliteitenspel - Feedback</h1>
+			<h1>Doe mee - Combi</h1>
 			<p>Vul je naam in. De groepscode krijg je van je spelleider.</p>
 			<form onsubmit="return validate_form()" method="post">
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>

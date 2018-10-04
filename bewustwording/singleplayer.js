@@ -65,7 +65,7 @@ function endGame(no_confirm) {
         gameEnded = 1;
 
         // change title
-        document.title = 'Bewustwording - Einde';
+        document.title = 'Einde - Bewustwording - Sprekende Kwaliteiten';
 
         //top leegmaken
         document.getElementById("container").innerHTML = "";
@@ -227,7 +227,7 @@ function newCardView() {
         			reply_click(this.id);
         			window.scrollTo(0,document.body.scrollHeight);
         	});
-            document.title = 'Bewustwording - Nieuwe kaart'
+            document.title = 'Nieuwe kaart - Bewustwording - Sprekende Kwaliteiten';
         }
     };
     xhttp.open("GET", "./parts/newcard.html", true);
@@ -253,7 +253,7 @@ function handView() {
             document.getElementById("container").innerHTML = html;
             // add click event listeners zodat we kunnen zien welke kaart geslecteerd woord
             addListeners();
-            document.title = 'Bewustwording - Ruil je kaart';
+            document.title = 'Ruil je kaart - Bewustwording - Sprekende Kwaliteiten';
         }
     };
     xhttp.open("GET", "./parts/inruilen.html", true);
@@ -278,7 +278,7 @@ function handViewTemp() {
             .replace("card8", hand[8]);
             document.getElementById("container").innerHTML = html;
 
-            document.title = 'Bewustwording - Hand kaarten';
+            document.title = 'Hand kaarten - Bewustwording - Sprekende Kwaliteiten';
         }
     };
     xhttp.open("GET", "./parts/hand_overview.html", true);
