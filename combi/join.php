@@ -4,7 +4,7 @@ session_set_cookie_params(24*60*60); // change how long session cookies last
 session_start();
 if (isset($_POST['join_button'])) {
 	$name = trim($_POST['name']);
-	if (strlen($name) >= 2 && strlen($name) <= 20) {
+	if (strlen($name) >= 2 && strlen($name) <= 10) {
 		if ($name != 'Afval stapel') {
 			$code = strtoupper($_POST['code']);
 			if (strlen($code) == 3) {
@@ -41,7 +41,7 @@ if (isset($_POST['join_button'])) {
 			$error = 'Die naam is gereseveert.';
 		}
 	} else {
-		$error = 'Naam moet minimaal 3 tekens en mag maximaal 20 bevatten.';
+		$error = 'Naam moet minimaal 2 tekens en mag maximaal 10 bevatten.';
 	}
 	$name = $_POST['name'];
 	$code = $_POST['code'];

@@ -4,7 +4,7 @@ session_set_cookie_params(24*60*60); // change how long session cookies last
 session_start();
 if (isset($_POST['makeLobbyButton'])) {
 	$name = trim($_POST['name']);
-	if (strlen($name) >= 2 && strlen($name) <= 20) {
+	if (strlen($name) >= 2 && strlen($name) <= 10) {
 		if ((int)$_POST['cards'] <= 70 && (int)$_POST['cards'] > 0) { // if the assigned amount of cards is less than 70
 			                                                          // TODO: add a propper minimum amount of cards
 			//list of filtered codes
@@ -43,7 +43,7 @@ if (isset($_POST['makeLobbyButton'])) {
 			$error = 'Kaarten moet een getal tussen 0 en 70 zijn.';
 		}
 	} else {
-		$error = 'Naam moet minimaal 3 tekens en mag maximaal 20 bevatten.';
+		$error = 'Naam moet minimaal 2 tekens en mag maximaal 10 bevatten.';
 	}
 	$name = $_POST['name'];
 } else {
