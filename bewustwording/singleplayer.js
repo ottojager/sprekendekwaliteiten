@@ -155,6 +155,7 @@ function reply_click(clicked_id) {
                 hand[Number(clicked_id)] = currentCard;
                 document.getElementById(clicked_id).innerHTML = "<p>"+currentCard+"</p>";
                 currentCard = 0;
+                document.getElementById('current-card-holder').classList.add('switched');
 
                 // allow the user to click the new card button
                 document.getElementById("newCardButton").setAttribute('aria-disabled', false);
@@ -185,8 +186,8 @@ function backButton() {
         }
 
         if (lastChosenPosition[0] != "trash") {
-            currentCard = hand[lastChosenPosition[0].toString()]
-            hand[lastChosenPosition[0].toString()] = graveyard[0]
+            currentCard = hand[lastChosenPosition[0].toString()];
+            hand[lastChosenPosition[0].toString()] = graveyard[0];
             graveyard.splice(0, 1);
         } else {
             currentCard = graveyard[0];
