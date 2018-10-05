@@ -20,7 +20,7 @@
 		?>
 		<main class="container" id="main">
 			<div class="startscherm">
-				<h1 class="startscherm-content">Bewustwording spel</h1>
+				<h1 class="startscherm-content">Start - Bewustwording</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, ligula vitae egestas luctus, dolor nulla aliquet elit, a aliquam magna nulla at odio. Aenean volutpat lorem sed molestie iaculis. Integer volutpat sapien nulla. Duis volutpat egestas quam, vel blandit quam sodales ut. Nulla tristique quam eget enim blandit, at viverra urna luctus. Proin sagittis, magna vehicula ullamcorper elementum, erat metus scelerisque lectus, id vestibulum velit sem condimentum neque. Mauris venenatis imperdiet mi. Duis quis justo non nisl ultricies blandit a nec mauris. Integer molestie, libero ac pellentesque aliquet, odio velit hendrerit.</p>
 			</div>
 			<div class="button-positie">
