@@ -9,15 +9,13 @@
 		<title>Kwaliteitenspel</title>
 	</head>
 	<body>
-		<ul class="skip-link">
-			<li><a href="#main">Skip naar main content</a></li>
-		</ul>
+		<a href="#main" class="skip-link">Skip naar main content</a>
 		<?php
 		$no_back_to_start = true;
 
 		include('header.php')
 		?>
-		<main class="container">
+		<main class="container" id="main">
 			<h1>Kwaliteitenspel</h1>
 			<h2>Welkom bij het Kwaliteitenspel</h2>
 			<p></p>

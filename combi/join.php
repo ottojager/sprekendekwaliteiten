@@ -81,12 +81,8 @@ if (isset($_POST['join_button'])) {
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<div id="topbar"></div>
-		<div id="sidetopbar">
-			<div id="borderimage"></div>
-			<div id="player__name"></div>
-		</div>
-		<div id="container">
+		<a href="#main" class="skip-link">Skip naar main content</a>
+		<main class="container" id="main">
 			<h1>Doe mee - Combi</h1>
 			<p>Vul je naam in. De groepscode krijg je van je spelleider.</p>
 			<form onsubmit="return validate_form()" method="post">
@@ -105,7 +101,7 @@ if (isset($_POST['join_button'])) {
 				</div>
 				<input name="join_button" value="Doe mee" type="submit" />
 			</form>
-		</div>
+		</main>
 		<?php include('../footer.php') ?>
 	</body>
 </html>

@@ -89,12 +89,7 @@ if (isset($_POST['makeLobbyButton'])) {
 
 		include('../header.php');
 		?>
-		<div>
-			<div id="topbar"></div>
-			<div id="sidetopbar">
-				<div id="borderimage"></div>
-				<div id="player__name"></div>
-			</div>
+		<main class="container" id="main">
 			<div id="title"><h1>Aanmaken spel - Feedback</h1>
 			<p>Als spelleider maak je hier een nieuw spel "Feedback" aan. Vul je naam in en kies het aantal kaarten waarmee je de groep wilt laten spelen (maximaal 70).</p></div>
 			<form onsubmit="return validate_form()" method="post">
@@ -123,7 +118,7 @@ if (isset($_POST['makeLobbyButton'])) {
     				</button>
 				</div>
 			</form>
-		</div>
+		</main>
 		<?php include('../footer.php') ?>
 	</body>
 </html>

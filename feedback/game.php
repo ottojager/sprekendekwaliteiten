@@ -60,9 +60,7 @@ if ($_SESSION['player_id'] != 11) {
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<ul class="skip-link">
-			<li><a href="#main">Skip naar main content</a></li>
-		</ul>
+		<a href="#main" class="skip-link">Skip naar main content</a>
 		<?php
 		// create some variables to add header values
 		$spelvorm = 'Feedback';
@@ -75,7 +73,7 @@ if ($_SESSION['player_id'] != 11) {
 		// players //
 		/////////////
 		?>
-		<div id="container" class="player-container">
+		<div id="container" class="player-container" id="main">
 			<div id="card_display">
 				<p id="current_card"><?php echo $json['current_card']; ?></p>
 			</div>

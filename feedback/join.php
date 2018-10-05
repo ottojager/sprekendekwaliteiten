@@ -84,21 +84,15 @@ if (isset($_POST['join_button'])) {
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
-		<ul class="skip-link">
-			<li><a href="#main">Skip naar main content</a></li>
-		</ul>
+		<a href="#main" class="skip-link">Skip naar main content</a>
 		<?php
 		// create some variables to add header values
 		$spelvorm = 'Feedback';
 
 		include('../header.php');
 		?>
-		<div id="topbar"></div>
-		<div id="sidetopbar">
-			<div id="borderimage"></div>
-			<div id="player__name"></div>
-		</div>
-		<div id="container">
+		
+		<main class="container" id="main">
 			<div id="title">
 				<h1>Meld je aan - Feedback</h1>
 				<p>Vul je naam in. De groepscode krijg je van je spelleider.</p>
@@ -122,7 +116,7 @@ if (isset($_POST['join_button'])) {
 					<button name="join_button" value="Submit" type="submit">Submit</button>
 				</div>
 			</form>
-		</div>
+		</main>
 		<?php include('../footer.php') ?>
 	</body>
 </html>
