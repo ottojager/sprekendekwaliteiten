@@ -68,7 +68,8 @@ function endGame(no_confirm) {
         document.title = 'Einde - Bewustwording - Sprekende Kwaliteiten';
 
         //top leegmaken
-        document.getElementById("main").innerHTML = "";
+        var container = document.getElementById("main");
+        container.innerHTML = "";
 
         //container container div
         var email_container = document.createElement('div');
