@@ -68,7 +68,7 @@ function endGame(no_confirm) {
         document.title = 'Einde - Bewustwording - Sprekende Kwaliteiten';
 
         //top leegmaken
-        document.getElementById("container").innerHTML = "";
+        document.getElementById("main").innerHTML = "";
 
         //container container div
         var email_container = document.createElement('div');
@@ -222,7 +222,7 @@ function newCardView() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var html = this.responseText.replace("card", currentCard);
-            document.getElementById("container").innerHTML = html;
+            document.getElementById("main").innerHTML = html;
             document.getElementById("trash").addEventListener('click', function() {
         			reply_click(this.id);
         			window.scrollTo(0,document.body.scrollHeight);
@@ -250,7 +250,7 @@ function handView() {
             .replace("card6", hand[6])
             .replace("card7", hand[7])
             .replace("card8", hand[8]);
-            document.getElementById("container").innerHTML = html;
+            document.getElementById("main").innerHTML = html;
             // add click event listeners zodat we kunnen zien welke kaart geslecteerd woord
             addListeners();
             document.title = 'Ruil je kaart - Bewustwording - Sprekende Kwaliteiten';
@@ -276,7 +276,7 @@ function handViewTemp() {
             .replace("card6", hand[6])
             .replace("card7", hand[7])
             .replace("card8", hand[8]);
-            document.getElementById("container").innerHTML = html;
+            document.getElementById("main").innerHTML = html;
 
             document.title = 'Hand kaarten - Bewustwording - Sprekende Kwaliteiten';
         }
