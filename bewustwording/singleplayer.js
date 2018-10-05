@@ -122,7 +122,7 @@ function endGame(no_confirm) {
                     var p = document.createElement('p');
                     p.innerHTML = "Het bericht is verzonden naar uw email.";
                     p.classList.add('success');
-                    document.getElementById('container').appendChild(p);
+                    document.getElementById('main').appendChild(p);
 				}
 			};
 			xhttp.open("GET", "./mail.php?cards=" + cards + "&email=" + email, true);
