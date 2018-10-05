@@ -16,6 +16,7 @@ session_start();
 		<?php
 		// create some variables to add header values
 		$spelvorm = 'Feedback';
+		$no_back_to_start = true;
 
 		include('../header.php');
 		?>
