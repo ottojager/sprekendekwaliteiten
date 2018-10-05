@@ -88,6 +88,7 @@ h1 {
     position: relative;
     text-align: center;
     padding: 12px;
+	left: 82px;
 }
 
 
@@ -109,7 +110,7 @@ button[aria-disabled="true"] {
     display: block;
     margin: 20px auto 0;
     text-align: center;
-    width: 800px;
+    width: 1200px;
 	list-style: none;
 	
 }
@@ -167,6 +168,7 @@ button[aria-disabled="true"] {
 	.kaart-rij {
 	margin: 0 auto 20px;
 	float: none;
+	width: 800px;
 	}
 	
 	.huidige-kaarten {
