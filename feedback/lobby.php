@@ -83,6 +83,7 @@ if (!(bool)$json) { // if $json actually has content
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
+		<a href="#main" class="skip-link">Skip naar main content</a>
 		<?php
 		// create some variables to add header values
 		$spelvorm = 'Feedback';
@@ -90,7 +91,7 @@ if (!(bool)$json) { // if $json actually has content
 
 		include('../header.php');
 		?>
-		<div id="main">
+		<main class="container" id="main">
 			<?php if ($_SESSION['player_id'] == 11) { // game leader only ?>
 			<h2 id="game_id">Spelvoorbereiding - Feedback</h2>
 			<p>Geef de spelers deze code:<?php echo $json['game_id']; ?><br />
@@ -119,7 +120,7 @@ if (!(bool)$json) { // if $json actually has content
 			?><p>Wacht tot iedereen aanwezig is. De spelbegeleider zal het spel zometeen beginnen.</p><?php
 		}
 		?>
-		</div>
+		</main>
 		<?php include('../footer.php') ?>
 	</body>
 </html>
