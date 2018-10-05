@@ -5,7 +5,7 @@
 			<h1 class="titel onder">kwaliteiten</h1>
 		</div>
 	</div>
-	<div id="header-menu">
+	<div id="header-menu" id="nav">
 		<button onclick="header_show()"
         		class="menu-toggle"
 				id="menu-toggle">
