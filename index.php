@@ -9,7 +9,11 @@
 		<title>Kwaliteitenspel</title>
 	</head>
 	<body>
-		<?php include('header.php') ?>
+		<?php
+		$no_back_to_start = true;
+
+		include('header.php')
+		?>
 		<main class="container">
 			<h1>Kwaliteitenspel</h1>
 			<h2>Welkom bij het Kwaliteitenspel</h2>

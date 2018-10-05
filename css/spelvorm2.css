@@ -92,15 +92,16 @@ p {
 	-ms-align-items: center;
 	font-family: 'Roboto', sans-serif;
 	padding:4px;
-	margin:8px 3px 3px 3px;
+	width:55%;
 	font-size: 20px;
 	color: #234152;
 	list-style: none;
 }
 
 #player_list li{
-	margin: 4px;
+	margin: 8px auto 0 auto;
 	padding:4px;
+	width:250px;
 	background-color: #e9e9ea;
 	border-top: 4px solid #163143;
 	text-align:center;
@@ -139,25 +140,17 @@ button #start:focus {
 
 
 
-@media screen and (min-width: 40em) /*640px*/ {
+@media screen and (min-width: 650px) {
 	h1 {
-		margin: 100px 100px 30px 100px;
+		margin: auto;
 		font-size: 40px;
 	}
 	#player_list li {
-		width: 45%;
+		width: 40%;
 	}
 
 }
-@media screen and (min-width: 64em) /*1024px*/ {
-	h1 {
-		margin: 100px 100px 30px 100px;
-		font-size: 40px;
-	}
-	#player_list li {
-		width: 45%;
-	}
-}
+
 /*einde lobby*/
 
 #title > h1 {
@@ -235,6 +228,7 @@ input[type=text], select {
 input[type=text]:focus {
 	margin: 3px 2px;
 }
+
 input[type=submit] {
 	display: block;
 	height: 40px;
@@ -258,9 +252,17 @@ button[name=join_button], button[name=makeLobbyButton] {
     margin: 8px auto 0 auto;
 }
 
-div.button {
+.button-positie > div.button {
+	display:inline-block;
+}
+
+/*div.button {
 	display: block;
     margin: 8px auto 0 auto;
+}*/
+.startscherm-content {
+	color: var(--rood);
+	margin: 50px auto 30px auto;
 }
 
 @media only screen and (max-width: 650px) {
@@ -270,6 +272,7 @@ div.button {
 		width: 1px;
 		background-color: #234152;
 	}
+	
 	#player__name {
 	}
 	
@@ -305,6 +308,7 @@ div.button {
 		width: 70%;
 		margin: 30px auto;
 	}
+	
 	.formfield {
 		margin-left: 0px;
 		margin-top: 15px;
@@ -318,6 +322,7 @@ div.button {
 		background-color: #e9e9ea;
 		border-bottom-right-radius: 2px;
 	}
+	
 	.red_border {
 		width: 334px;
 		margin: 0% auto 3% auto;
@@ -366,6 +371,12 @@ div.button {
 		width: 250px;
 	}
 	
+	.startscherm-content {
+	color: var(--rood);
+	margin: 0;
+    padding: 30px 0;
+	}
+	
 	/*lobby kleine schermen*/
 	ul#player_list {
 		display:block;
@@ -375,6 +386,7 @@ div.button {
 		color: #234152;
 		list-style: none;
 	}
+	
 	ul#player_list li{
 		padding:4px;
 		width:250px;
@@ -387,9 +399,7 @@ div.button {
 		width: 250px;
 		margin: auto;
 	}
+	
+	
 	/*einde lobby kleine schermen*/
-}
-
-.startscherm-content {
-	color: var(--rood);
 }
