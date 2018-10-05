@@ -14,7 +14,7 @@ header {
 	background-size: 94px 54px;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: 12.2% 2.6%;
+	background-position: 12.2% 0.5%;
 	transition: background-position 1s;
 	position: relative;
 }
@@ -66,10 +66,8 @@ img.logo {
 	/*lengte & breedte*/
 	height: 46px;
 	width:85px;
-	
 	display: inline;
-	
-	position: ABSOLUTE;
+	position: absolute;
 	float: left;
 	margin-left: 10%;
 	margin-top: 8px;

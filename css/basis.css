@@ -24,7 +24,7 @@ time, mark, audio, video {
 
 /* Skip link CSS */
 
-.skip-link a {
+.skip-link {
 	position: absolute;
 	top: -3em;
 	background-color: var(--dkrblauw);
@@ -32,7 +32,7 @@ time, mark, audio, video {
 	padding: 5px;
 }
 
-.skip-link a:focus {
+.skip-link:focus {
 	top: 0;
 }
 
