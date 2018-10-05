@@ -80,6 +80,9 @@ if (isset($_POST['makeLobbyButton'])) {
 		<meta charset="utf-8">
 	</head>
 	<body>
+		<ul class="skip-link">
+			<li><a href="#main">Skip naar main content</a></li>
+		</ul>
 		<?php
 		// create some variables to add header values
 		$spelvorm = 'Feedback';

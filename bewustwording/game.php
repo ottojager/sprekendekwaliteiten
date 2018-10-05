@@ -28,7 +28,11 @@
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="Rainbow_placeholder.png">
 	</head>
-	<body onbeforeunload="return confirm('Weet u zeked dat u de pagina wilt sluiten')">
+	
+	<body onbeforeunload="return confirm('Weet u zeker dat u de pagina wilt sluiten?')">
+		<ul class="skip-link">
+			<li><a href="#main">Skip naar main content</a></li>
+		</ul>
 		<?php
 		// create some variables to add header values
 		$spelvorm = 'Bewustwording';

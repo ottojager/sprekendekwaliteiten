@@ -9,6 +9,9 @@
 		<title>Kwaliteitenspel</title>
 	</head>
 	<body>
+		<ul class="skip-link">
+			<li><a href="#main">Skip naar main content</a></li>
+		</ul>
 		<?php
 		$no_back_to_start = true;
 
