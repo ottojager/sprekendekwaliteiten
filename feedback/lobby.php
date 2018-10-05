@@ -67,7 +67,7 @@ if (!(bool)$json) { // if $json actually has content
 						button.onclick = function() {
 							kick(index);
 						};
-						button.innerHTML = '<img src="../afbeeldingen/kruisje.png" alt="verwijder speler" height="25" width="25">';
+						button.innerHTML = '<img src="../afbeeldingen/kruisje.png" alt="verwijder speler" height="20" width="20">';
 						child.appendChild(button);
 					<?php } ?>
 
@@ -106,7 +106,7 @@ if (!(bool)$json) { // if $json actually has content
 			<?php
 			foreach ($json['players'] as $key => $value) {
 				if ($_SESSION['player_id'] == 11) {
-					echo '<li><button onclick="kick(\''.$key.'\')"><img src="../afbeeldingen/kruisje.png" alt="verwijder speler" height="25" width="25"></button>'.$value['name'].'</li>';
+					echo '<li><button onclick="kick(\''.$key.'\')"><img src="../afbeeldingen/kruisje.png" alt="verwijder speler" height="20" width="20"></button>'.$value['name'].'</li>';
 				} else {
 					echo '<li>'.$value['name'].'</li>';
 				}
