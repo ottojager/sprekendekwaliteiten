@@ -4,6 +4,10 @@ form, label {
 	font: inherit;
 }
 
+h1 {
+	margin: 0;
+}
+
 html {
 	width: 100%;
 	height: 100%;
@@ -128,7 +132,10 @@ button #start:focus {
 	border: 8px solid #d32b17;
 }
 
-
+div.button {
+	display: block;
+    margin: 8px auto 0 auto;
+}
 
 
 @media screen and (min-width: 650px) {
@@ -145,8 +152,6 @@ button #start:focus {
 /*einde lobby*/
 
 #title > h1 {
-	width: 60%;
-	margin: 8px auto 5% auto;
 	padding: 18px;
 	text-decoration: underline;
 	font-family: 'Oswald', sans-serif;
@@ -268,8 +273,6 @@ button[name=join_button], button[name=makeLobbyButton] {
 	}
 	
 	#title > h1 {
-		width: 60%;
-		margin: 8% auto 5% auto;
 		padding: 18px;
 		text-decoration: underline;
 		font-family: 'Oswald', sans-serif;
