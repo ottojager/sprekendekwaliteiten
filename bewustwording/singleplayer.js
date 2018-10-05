@@ -118,7 +118,7 @@ function endGame(no_confirm) {
                     // alert('De e-mail is verstuurd.');
                     // document.getElementById('email').value = '';
                     // document.location.href= '../';
-                    document.getElementById('container').innerHTML = '';
+                    document.getElementById('main').innerHTML = '';
                     var p = document.createElement('p');
                     p.innerHTML = "Het bericht is verzonden naar uw email.";
                     p.classList.add('success');
