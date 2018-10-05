@@ -76,10 +76,10 @@ if (!(bool)$json) { // if $json actually has content
 			}, s);
 		</script>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
+		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>

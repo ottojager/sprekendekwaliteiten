@@ -9,20 +9,11 @@ html {
 	height: 100%;
 	background-color: #fffefe;/*fix tab here*/
 }
+
 body {
 	background-color: #fffefe;
 }
-#container {
-	display: flex;
-		display: -webkit-flex; /* Safari 6.1+ */
-		display: -ms-flex; /* IE 10 */
-	flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-	max-width: 1200px;
-	clear: both;
-	margin: 0 auto;
-}
+
 #borderimage {
 	float: left;
 	width: 1px;
