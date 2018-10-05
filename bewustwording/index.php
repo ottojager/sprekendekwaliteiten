@@ -9,13 +9,17 @@
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
+		<ul class="skip-link">
+			<li><a href="#nav">Skip naar navigatie</a></li>
+			<li><a href="#main">Skip naar main content</a></li>
+		</ul>
 		<?php
 		// create some variables to add header values
 		$spelvorm = 'Bewustwording';
 
 		include('../header.php');
 		?>
-		<main class="container">
+		<main class="container" id="main">
 			<div class="startscherm">
 				<h1 class="startscherm-content">Bewustwording spel</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, ligula vitae egestas luctus, dolor nulla aliquet elit, a aliquam magna nulla at odio. Aenean volutpat lorem sed molestie iaculis. Integer volutpat sapien nulla. Duis volutpat egestas quam, vel blandit quam sodales ut. Nulla tristique quam eget enim blandit, at viverra urna luctus. Proin sagittis, magna vehicula ullamcorper elementum, erat metus scelerisque lectus, id vestibulum velit sem condimentum neque. Mauris venenatis imperdiet mi. Duis quis justo non nisl ultricies blandit a nec mauris. Integer molestie, libero ac pellentesque aliquet, odio velit hendrerit.</p>

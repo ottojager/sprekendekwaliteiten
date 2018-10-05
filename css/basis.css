@@ -22,6 +22,20 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+/* Skip link CSS */
+
+.skip-link a {
+	position: absolute;
+	top: -3em;
+	background-color: var(--dkrblauw);
+	color: var(--grijs);
+	padding: 5px;
+	}
+	
+.skip-link a:focus {
+	top: 0;
+	}
+
 /* Standard CSS */
 
 p, h1, h2, h3, h4, h5, h6, ul, li, a, label, button {
