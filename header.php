@@ -33,12 +33,16 @@
 			   		style="display:block;">
 					Spel: <?php echo $spelvorm ?>
 				</a>
-			<?php } ?>
+			<?php
+			}
+			if (!isset($no_back_to_start)) {
+			?>
 			<a class="headvorm-lesser"
 			   style="display:block;"
 			   href="./">
 				Terug naar start
 			</a>
+			<?php } ?>
 			<a class="headvorm-lesser"
 			   style="display:block;">
 				Help
