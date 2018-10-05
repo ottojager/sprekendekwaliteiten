@@ -30,11 +30,11 @@ time, mark, audio, video {
 	background-color: var(--dkrblauw);
 	color: var(--grijs);
 	padding: 5px;
-	}
-	
+}
+
 .skip-link a:focus {
 	top: 0;
-	}
+}
 
 /* Standard CSS */
 

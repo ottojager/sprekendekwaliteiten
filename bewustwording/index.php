@@ -10,7 +10,6 @@
 	</head>
 	<body>
 		<ul class="skip-link">
-			<li><a href="#nav">Skip naar navigatie</a></li>
 			<li><a href="#main">Skip naar main content</a></li>
 		</ul>
 		<?php
