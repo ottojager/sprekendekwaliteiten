@@ -73,7 +73,7 @@ if ($_SESSION['player_id'] != 11) {
 		// players //
 		/////////////
 		?>
-		<div id="container" class="player-container" id="main">
+		<main id="main" class="container player-container">
 			<div id="card_display">
 				<p id="current_card"><?php echo $json['current_card']; ?></p>
 			</div>
@@ -95,7 +95,7 @@ if ($_SESSION['player_id'] != 11) {
 		// game leader //
 		/////////////////
 		?>
-		<div id="container" class="leader-container">
+		<main id="main" class="container leader-container">
 			<div id="card_display">
 				<p id="current_card"><?php echo $json['current_card']; ?></p>
 			</div>
@@ -117,7 +117,7 @@ if ($_SESSION['player_id'] != 11) {
 	        <button onclick="undo()">Ongedaan maken</button>
 			<button id="<?php echo count($json['players'])-1 ?>" onclick="leader_view_cards(<?php echo count($json['players'])-1 ?>)">Afval stapel</button>
 		<?php } ?>
-		</div>
+		</main>
 		<?php include('../footer.php') ?>
 	</body>
 </html>

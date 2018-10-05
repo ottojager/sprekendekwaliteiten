@@ -58,7 +58,7 @@ function leader_view_cards(id_player) {
 		child.innerHTML = item;
 		list.appendChild(child);
 	});
-	
+
 	div.appendChild(name);
 	div.appendChild(list);
 }
@@ -83,7 +83,7 @@ function current_card_view() {
 	view = 'current';
 
 	// get container element & clear it
-	var container = document.getElementById('container');
+	var container = document.getElementById('main');
 	container.innerHTML = '';
 
 	// create current card element
@@ -130,7 +130,7 @@ function current_card_view() {
 function received_cards_view() {
 	view = 'received';
 	// get container element & clear it
-	container = document.getElementById('container');
+	container = document.getElementById('main');
 	container.innerHTML = '';
 
 	// create card list
@@ -153,7 +153,7 @@ function received_cards_view() {
 
 function leader_view() {
 	// get container element & clear it
-	container = document.getElementById('container');
+	container = document.getElementById('main');
 	container.innerHTML = '';
 
 	// create current card element
