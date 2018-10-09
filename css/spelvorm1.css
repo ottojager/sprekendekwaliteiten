@@ -57,15 +57,15 @@ h1 {
 
 .linker-menu h2 {
 	position: relative;
-	left: 70px;
+	left: 40%;
 	margin: 55px 0 0 0;
 }
 
 .card-holder-r {
 	background-image: url("../afbeeldingen/rode-kaart.png");
-	background-size: 165px 230px;
+	background-size: 166px 230px;
 	height: 230px;
-    width: 165px;
+    width: 166px;
 	position: relative;
 	top: 40px;
 	left: 100px;
@@ -83,14 +83,20 @@ h1 {
 	display: block;
 }
 
-.huidige-kaarten {
-	top: 50px;
+.huidige-kaarten, .terug-kaart {
     position: relative;
     text-align: center;
     padding: 12px;
-	left: 82px;
 }
 
+.huidige-kaarten {
+	top: 50px;
+	left: 43%;
+}
+
+.terug-kaart {
+	top: 25px;
+}
 
 .bottom-menu .button button {
 	margin: 0 auto;
@@ -106,6 +112,11 @@ button[aria-disabled="true"] {
 
 /* Kaart inruilen CSS > Rijen */
 
+.switched {
+	visibility: hidden;
+}
+
+
 .kaart-rij {
     display: block;
     margin: 20px auto 0;
@@ -113,6 +124,10 @@ button[aria-disabled="true"] {
     width: 1200px;
 	list-style: none;
 	
+}
+
+.overview-rij {
+	width: 1105px;
 }
 
 .kaart {
@@ -171,7 +186,7 @@ button[aria-disabled="true"] {
 	width: 800px;
 	}
 	
-	.huidige-kaarten {
+	.huidige-kaarten, .terug-kaart {
 	position: initial;
 	margin: 20px 0;
 	text-align: center;
