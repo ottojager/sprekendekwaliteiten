@@ -156,6 +156,7 @@ function reply_click(clicked_id) {
                 hand[Number(clicked_id)] = currentCard;
                 document.getElementById(clicked_id).innerHTML = "<p>"+currentCard+"</p>";
                 currentCard = 0;
+                document.getElementById('card-heading-text').classList.add('switched')
                 document.getElementById('current-card-holder').classList.add('switched');
 
                 // allow the user to click the new card button
