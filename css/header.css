@@ -115,6 +115,11 @@ div.headvorm >a:link:active, div.headvorm >a:visited:active {
     color: #d4263e;
 }
 
+div.headvorm >a:focus { 
+    background-color:#163143;
+	color: #e9e9ea;
+}
+
 /*dropdown gebeuren*/
 	button.menu-toggle {
 		display:none;
@@ -179,6 +184,12 @@ div.headvorm >a:link:active, div.headvorm >a:visited:active {
 	}
 	
 	div.headvorm > a:hover {
+     	color: #e9e9ea;
+     	background-color: #163143;
+		transition:margin-top 1s;
+	}
+	
+	div.headvorm > a:focus {
      	color: #e9e9ea;
      	background-color: #163143;
 		transition:margin-top 1s;

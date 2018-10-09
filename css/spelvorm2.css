@@ -248,6 +248,12 @@ button[name=join_button], button[name=makeLobbyButton] {
     margin: 8px auto 0 auto;
 }
 
+button[name=join_button]:focus, button[name=makeLobbyButton]:focus {
+	background-color: #e9e9ea;
+	color: #163143;
+	
+}
+
 .button-positie > div.button {
 	display:inline-block;
 }
@@ -259,6 +265,11 @@ button[name=join_button], button[name=makeLobbyButton] {
 .startscherm-content {
 	color: var(--rood);
 	margin: 50px auto 30px auto;
+}
+
+.button:focus {
+	background-color: #e9e9ea;
+	color: #163143;
 }
 
 @media only screen and (max-width: 650px) {
