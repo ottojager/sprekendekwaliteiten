@@ -58,14 +58,11 @@ function addListeners() {
 	// 	});
 }
 
-function endGame(no_confirm) {
+function old_end_game_im_too_azy_too_delete_for_now() {
     // this should probably be made simpeler at some point but ya know
     // don't fix something if it isn't broken
     if (no_confirm || confirm('Weet u zeker dat u het spel wil beëindigen?')) {
-        gameEnded = 1;
 
-        // change title
-        document.title = 'Einde - Bewustwording - Sprekende Kwaliteiten';
 
         //top leegmaken
         var container = document.getElementById("main");
@@ -162,6 +159,12 @@ function reply_click(clicked_id) {
                 // allow the user to click the new card button
                 document.getElementById("newCardButton").setAttribute('aria-disabled', false);
                 document.getElementById("newCardButton").onclick = newCard;
+
+                // do not allow the user to uuse the back button
+                var backButton = document.getElementById("BackToNewCardViewButton")
+                backButton.setAttribute('aria-disabled', true);
+                backButton.onclick = function(){};
+
             }
         } else {
             //actieve kaart in graveyard doen
@@ -174,7 +177,7 @@ function reply_click(clicked_id) {
 
         // checken of de game eindigt
         if (cardStack.length === 0 && currentCard == null) {
-            endGame(true);
+            endGameHandView(true);
             alert("Je hebt alle kaarten gehad. Vul je email in en klik op \"Stuur email\" om de resultaten als email naar jezelf te stuuren.");
         }
     }
@@ -285,6 +288,37 @@ function handViewTemp() {
     };
     xhttp.open("GET", "./parts/hand_overview.html", true);
     xhttp.send();
+}
+
+function endGameHandView(no_confirm) {
+    if (no_confirm || confirm('Weet u zeker dat u het spel wil beëindigen?')) {
+        // no swaping card if the game ended
+        gameEnded = 1;
+
+        // change title
+        document.title = 'Einde - Bewustwording - Sprekende Kwaliteiten';
+
+        view = 'hand';
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // lots o' replaces
+                var html = this.responseText
+                .replace("active card", currentCard)
+                .replace("card1", hand[1])
+                .replace("card2", hand[2])
+                .replace("card3", hand[3])
+                .replace("card4", hand[4])
+                .replace("card5", hand[5])
+                .replace("card6", hand[6])
+                .replace("card7", hand[7])
+                .replace("card8", hand[8]);
+                document.getElementById("main").innerHTML = html;
+            }
+        };
+        xhttp.open("GET", "./parts/endgame_hand.html", true);
+        xhttp.send();
+    }
 }
 
 // een paar default values ininitaliseren
