@@ -83,14 +83,20 @@ h1 {
 	display: block;
 }
 
-.huidige-kaarten {
-	top: 50px;
+.huidige-kaarten, .terug-kaart {
     position: relative;
     text-align: center;
     padding: 12px;
+}
+
+.huidige-kaarten {
+	top: 50px;
 	left: 43%;
 }
 
+.terug-kaart {
+	top: 25px;
+}
 
 .bottom-menu .button button {
 	margin: 0 auto;
@@ -118,6 +124,10 @@ button[aria-disabled="true"] {
     width: 1200px;
 	list-style: none;
 	
+}
+
+.overview-rij {
+	width: 1105px;
 }
 
 .kaart {
@@ -176,7 +186,7 @@ button[aria-disabled="true"] {
 	width: 800px;
 	}
 	
-	.huidige-kaarten {
+	.huidige-kaarten, .terug-kaart {
 	position: initial;
 	margin: 20px 0;
 	text-align: center;
