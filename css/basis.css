@@ -159,7 +159,7 @@ h2 {
 	font-size: 14px;
 }
 
-.button button:hover {
+.button button:hover, .button button:focus {
 	background-color: var(--grijs);
 	color: var(--dkrblauw);
 }
@@ -170,7 +170,7 @@ h2 {
 	font-size: 16px;
 }
 
-.button button:hover p {
+.button button:hover p, .button button:focus p {
 	color: var(--dkrblauw);
 }
 
