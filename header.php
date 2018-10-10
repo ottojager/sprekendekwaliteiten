@@ -39,7 +39,13 @@
 			?>
 			<a class="headvorm-lesser"
 			   style="display:block;"
-			   href="./">
+			   href="<?php
+			   if (isset($in_sub_folder)) {
+				   echo "../";
+			   } else {
+				   echo "./";
+			   }
+			   ?>">
 				Terug naar start
 			</a>
 			<?php } ?>
