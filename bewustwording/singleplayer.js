@@ -58,7 +58,7 @@ function addListeners() {
 	// 	});
 }
 
-function old_end_game_im_too_azy_too_delete_for_now() {
+function old_end_game_im_too_azy_too_delete_for_now(no_confirm) {
     // this should probably be made simpeler at some point but ya know
     // don't fix something if it isn't broken
     if (no_confirm || confirm('Weet u zeker dat u het spel wil beëindigen?')) {
@@ -298,7 +298,6 @@ function endGameHandView(no_confirm) {
         // change title
         document.title = 'Einde - Bewustwording - Sprekende Kwaliteiten';
 
-        view = 'hand';
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -319,6 +318,20 @@ function endGameHandView(no_confirm) {
         xhttp.open("GET", "./parts/endgame_hand.html", true);
         xhttp.send();
     }
+}
+
+function endGameEmailView() {
+    // change title
+    document.title = 'Email - Bewustwording - Sprekende Kwaliteiten';
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("main").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "./parts/endgame_email.html", true);
+    xhttp.send();
 }
 
 // een paar default values ininitaliseren
