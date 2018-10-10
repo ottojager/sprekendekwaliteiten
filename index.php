@@ -20,9 +20,9 @@
 			<h2>Welkom bij het Kwaliteitenspel</h2>
 			<p></p>
 			<div id="knoppen">
-				<div class="button"><button>Bewustwording</button></div>
-				<div class="button"><button>Feedback</button></div>
-				<div class="button"><button>Combi</button></div>
+				<div class="button"><button onclick="window.location='./bewustwording'">Bewustwording</button></div>
+				<div class="button"><button onclick="window.location='./feedback'">Feedback</button></div>
+				<div class="button"><button onclick="window.location='./combi'">Combi</button></div>
 			</div>
 		</main>
 		<?php include('footer.php') ?>
