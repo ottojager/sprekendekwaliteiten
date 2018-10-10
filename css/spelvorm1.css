@@ -121,7 +121,7 @@ button[aria-disabled="true"] {
     display: block;
     margin: 20px auto 0;
     text-align: center;
-    width: 1200px;
+    width: 100%;
 	list-style: none;
 	
 }
@@ -210,4 +210,14 @@ button[aria-disabled="true"] {
 	.card-holder-b {
 	margin-bottom: 20px;
 	}
+}
+
+/* Spelvorm 1 Eindscherm */
+
+.eind-kaart button {
+	background-image: url(../afbeeldingen/rode-kaart.png);
+}
+	
+.eind-kaart button:hover, .kaart button:focus {
+	background-image: url(../afbeeldingen/rode-kaart.png);
 }
