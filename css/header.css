@@ -11,10 +11,10 @@
 
 header {
 	background-image: url(../afbeeldingen/logo-grote-schermen.png);
-	background-size: 94px 54px;
+	background-size: 168px 88px;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: 12.2% 0.5%;
+	background-position: 12.2% 1.8%;
 	transition: background-position 1s;
 	position: relative;
 }
@@ -53,13 +53,13 @@ header {
     flex: 2;
 	flex-flow: column;
 	z-index: 1;
-	
-	height: 60px;
+	height: 112px;
 }
 
 .header-content-title {
 	width:100%;
 	position:absolute;
+	top: 15px;
 }
 
 img.logo {
@@ -92,7 +92,7 @@ img.logo {
 }
 
 .boven {
-    font-size: 20px;
+    font-size: 28px;
     position: relative;
     margin-bottom: -4px;
     margin-top: -2px;
@@ -102,7 +102,7 @@ img.logo {
 	font-weight: 100;
     margin-top: 0;
     letter-spacing: 0.3em;
-    font-size: 24px;
+    font-size: 34px;
     margin-bottom: 0px;
 }
 
