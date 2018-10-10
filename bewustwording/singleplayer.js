@@ -58,84 +58,39 @@ function addListeners() {
 	// 	});
 }
 
-function old_end_game_im_too_azy_too_delete_for_now(no_confirm) {
-    // this should probably be made simpeler at some point but ya know
-    // don't fix something if it isn't broken
-    if (no_confirm || confirm('Weet u zeker dat u het spel wil beëindigen?')) {
-
-
-        //top leegmaken
-        var container = document.getElementById("main");
-        container.innerHTML = "";
-
-        //container container div
-        var email_container = document.createElement('div');
-        email_container.classList.add('email-container');
-
-        // container div
-        var div = document.createElement('div');
-        div.classList.add('form-email');
-
-        //input field for email
-        var email = document.createElement('input');
-        email.id = 'email';
-        email.type = 'email';
-        email.classList.add('form-input');
-        var label = document.createElement('label');
-        label.innerHTML = 'E-mail';
-        label.htmlFor = 'email';
-        div.appendChild(label);
-        div.appendChild(email);
-        var button_div = document.createElement('div');
-        button_div.classList.add('button');
-        var btn = document.createElement('button');
-        btn.classList.add('send-button');
-        btn.innerHTML='Stuur e-mail';
-        btn.onclick = function() {
-            var email = document.getElementById('email').value;
-            var pattern = /[^@]*@[^@]*\..{2,}/;
-            var match = pattern.test(email);
-            var p = document.getElementById('error');
-            if (!match) {
-                p.innerHTML = 'Het ingevulde email adres klopt niet';
-                exit();
-            } else {
-                p.innerHTML = '';
-            }
-
-            var cards = "";
-            var i;
-            for (i = 1; i < 9; i += 1) {
-                cards += hand[i] + ",";
-            }
-
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-                    // alert('De e-mail is verstuurd.');
-                    // document.getElementById('email').value = '';
-                    // document.location.href= '../';
-                    document.getElementById('main').innerHTML = '';
-                    var p = document.createElement('p');
-                    p.innerHTML = "Het bericht is verzonden naar uw email.";
-                    p.classList.add('success');
-                    document.getElementById('main').appendChild(p);
-				}
-			};
-			xhttp.open("GET", "./mail.php?cards=" + cards + "&email=" + email, true);
-			xhttp.send();
-        }
-        // for later adding error messages
-        var p = document.createElement('p');
-        p.id = 'error';
-
-        button_div.appendChild(btn);
-        div.appendChild(p);
-        email_container.appendChild(div);
-        email_container.appendChild(button_div);
-        container.appendChild(email_container);
+function send_email() {
+    var email = document.getElementById('email').value;
+    var pattern = /[^@]*@[^@]*\..{2,}/;
+    var match = pattern.test(email);
+    var p = document.getElementById('error');
+    if (!match) {
+        p.innerHTML = 'Het ingevulde email adres klopt niet';
+        exit();
+    } else {
+        p.innerHTML = '';
     }
 
+    var cards = "";
+    var i;
+    for (i = 1; i < 9; i += 1) {
+        cards += hand[i] + ",";
+    }
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // alert('De e-mail is verstuurd.');
+            // document.getElementById('email').value = '';
+            // document.location.href= '../';
+            document.getElementById('main').innerHTML = '';
+            var p = document.createElement('p');
+            p.innerHTML = "Het bericht is verzonden naar uw email.";
+            p.classList.add('success');
+            document.getElementById('main').appendChild(p);
+        }
+    };
+    xhttp.open("GET", "./mail.php?cards=" + cards + "&email=" + email, true);
+    xhttp.send();
 }
 
 function reply_click(clicked_id) {
