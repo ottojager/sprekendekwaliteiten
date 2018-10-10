@@ -131,6 +131,22 @@ div.headvorm >a:focus {
 	
 @media only screen and (max-width: 650px) {
 	
+	.header-content {
+	height: 106px;
+	}
+	
+	.header-content-title {
+	top: 13px;
+	}
+	
+	.boven {
+		font-size: 25px;
+	}
+	
+	.onder {
+		font-size: 30px
+	}
+	
 	img.logo {
     opacity:0;
     transform:rotateY(90deg);
