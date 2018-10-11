@@ -54,7 +54,8 @@ if ($_SESSION['player_id'] != 11) {
 		</script>
 		<meta charset="utf-8">
 		<title>Actief - Feedback - Sprekende Kwaliteiten</title>
-		<link rel="stylesheet" href="./css/game.css" type="text/css">
+		<link rel="stylesheet" href="../css/basis.css" type="text/css">
+		<link rel="stylesheet" href="../css/feedback.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
@@ -87,10 +88,11 @@ if ($_SESSION['player_id'] != 11) {
 				}
 				?>
 			</ul>
-			<button id="<?php echo count($json['players'])-1 ?>" onclick="reply_click(<?php echo count($json['players'])-1 ?>)">Afval stapel</button>
+			<div class="player-menu">
+				<div class="button"><button id="<?php echo count($json['players'])-1 ?>" onclick="reply_click(<?php echo count($json['players'])-1 ?>)">Afval stapel</button></div>
 
-			<button onclick="received_cards_view()">Ontvangen kaarten</button>
-		<?php } else {
+				<div class="button"><button onclick="received_cards_view()">Ontvangen kaarten</button></div></div>
+			<?php } else {
 		/////////////////
 		// game leader //
 		/////////////////
@@ -113,9 +115,9 @@ if ($_SESSION['player_id'] != 11) {
 			<div id="card_stack">
 				<p>Click op de naam van een speler om hier hun kaarten te zien.</p>
 			</div>
-			<button onclick="end_game()">Spel beëindigen</button>
-	        <button onclick="undo()">Ongedaan maken</button>
-			<button id="<?php echo count($json['players'])-1 ?>" onclick="leader_view_cards(<?php echo count($json['players'])-1 ?>)">Afval stapel</button>
+			<div class="button"><button onclick="end_game()">Spel beëindigen</button></div>
+	        <div class="button"><button onclick="undo()">Ongedaan maken</button></div>
+			<div class="button"><button id="<?php echo count($json['players'])-1 ?>" onclick="leader_view_cards(<?php echo count($json['players'])-1 ?>)">Afval stapel</button></div>
 		<?php } ?>
 		</main>
 		<?php include('../footer.php') ?>

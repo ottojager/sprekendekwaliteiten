@@ -1,0 +1,25 @@
+/* Tijdelijke stylesheet zodat ik het niet voor Felix verpest */
+
+#card_display {
+	background-image: url("../afbeeldingen/rode-kaart.png");
+	background-size: 166px 230px;
+	height: 230px;
+    width: 166px;
+	position: relative;
+	top: 40px;
+	left: 0;
+	margin: 0 auto;
+}
+
+#current_card {
+    text-align: center;
+    position: relative;
+    top: 100px;
+    color: white;
+    font-size: 18px;
+}
+
+.player-menu {
+	text-align: center;
+    margin: 60px auto 0;
+}
