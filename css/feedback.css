@@ -23,3 +23,13 @@
 	text-align: center;
     margin: 60px auto 0;
 }
+
+#player_list {
+	margin-top: 60px;
+	text-align: center;
+}
+
+#player_list li {
+	display: inline-block;
+	padding: 5px;
+}
