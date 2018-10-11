@@ -103,14 +103,19 @@ function current_card_view() {
 			var li = document.createElement('li');
 			li.id = player['player_id'];
 			var button = document.createElement('button');
+			var button_div = document.createElement('div');
+			button_div.classList.add('player-button');
 			button.innerHTML = player['name']+' ('+player['stack'].length+')';
-			li.appendChild(button);
+			button_div.appendChild(button);
+			li.appendChild(button_div);
 			ul.appendChild(li);
 		}
 	});
 
 	// graveyard "button"
 	var graveyard = document.createElement('button');
+	graveyard_div = document.createElement('div');
+	graveyard_div.classList.add('button');
 	graveyard.innerHTML = 'Afval stapel';
 	graveyard.id = game_info['players'].length-1;
 	// graveyard.onclick =
@@ -122,7 +127,8 @@ function current_card_view() {
 
 	container.appendChild(card_display);
 	container.appendChild(ul);
-	container.appendChild(graveyard);
+	graveyard_div.appendChild(graveyard);
+	container.appendChild(graveyard_div);
 	container.appendChild(button);
 	addListeners(game_info['players'].length);
 }
@@ -146,6 +152,8 @@ function received_cards_view() {
 
 	// back to active card view
 	var button = document.createElement('button');
+	var button_div = document.createElement('div');
+	button_div.classList.add('button');
 	button.innerHTML = 'Terug naar actieve kaart';
 	button.onclick = current_card_view;
 	container.appendChild(button);
