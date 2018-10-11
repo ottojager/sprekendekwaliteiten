@@ -119,7 +119,6 @@ function current_card_view() {
 	graveyard.innerHTML = 'Afval stapel';
 	graveyard.id = game_info['players'].length-1;
 	graveyard_div.appendChild(graveyard);
-	// graveyard.onclick =
 
 	// recieved cards view button
 	var button = document.createElement('button');
@@ -128,11 +127,14 @@ function current_card_view() {
 	button.innerHTML = 'Ontvangen kaarten';
 	button.onclick = received_cards_view;
 	button_div.appendChild(button);
+	var buttons_div = document.createElement('div');
+	buttons_div.classList.add('player-menu');
+	buttons_div.appendChild(graveyard_div);
+	buttons_div.appendChild(button_div);
 
 	container.appendChild(card_display);
 	container.appendChild(ul);
-	container.appendChild(graveyard_div);
-	container.appendChild(button_div);
+	container.appendChild(buttons_div);
 	addListeners(game_info['players'].length);
 }
 
