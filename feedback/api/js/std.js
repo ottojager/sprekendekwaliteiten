@@ -186,8 +186,11 @@ function leader_view() {
 			var li = document.createElement('li');
 			li.id = player['player_id'];
 			var button = document.createElement('button');
+			var button_div = document.createElement('div');
+			button_div.classList.add('player-button');
 			button.innerHTML = player['name']+' ('+player['stack'].length+')';
-			li.appendChild(button);
+			button_div.appendChild(button);
+			li.appendChild(button_div);
 			ul.appendChild(li);
 		}
 	});
@@ -197,31 +200,42 @@ function leader_view() {
 	cards_left_counter.innerHTML = 'nog '+game_info['card_stack'].length+' kaarten over.';
 
 	// player card list
+	var player_cards = document.createElement('p');
 	var player_cards_div = document.createElement('div');
 	player_cards_div.id = "card_stack";
-	player_cards_div.innerHTML = 'Click op de naam van een speler om hier hun kaarten te zien.';
+	player_cards.innerHTML = 'Click op de naam van een speler om hier hun kaarten te zien.';
+	player_cards_div.appendChild(player_cards);
 
 	// buttons
 	var end_game_button = document.createElement('button');
+	var end_game_button_div = document.createElement('div');
+	end_game_button_div.classList.add('button');
 	end_game_button.innerHTML = 'Spel beëindigen';
 	end_game_button.onclick = end_game;
+	end_game_button_div.appendChild(end_game_button);
 
 	var undo_button = document.createElement('button');
+	var undo_button_div = document.createElement('div');
+	undo_button_div.classList.add('button');
 	undo_button.innerHTML = 'Ongedaan maken';
 	undo_button.onclick = undo;
+	undo_button_div.appendChild(undo_button);
 
 	var graveyard_button = document.createElement('button');
+	var graveyard_button_div = document.createElement('div');
+	graveyard_button_div.classList.add('button');
 	graveyard_button.innerHTML = 'Afval stapel';
 	graveyard_button.id = game_info['players'].length-1;
+	graveyard_button_div.appendChild(graveyard_button);
 
 	// adding all elements into the container
 	container.appendChild(card_display);
 	container.appendChild(ul);
 	container.appendChild(cards_left_counter);
 	container.appendChild(player_cards_div);
-	container.appendChild(end_game_button);
-	container.appendChild(undo_button);
-	container.appendChild(graveyard_button);
+	container.appendChild(end_game_button_div);
+	container.appendChild(undo_button_div);
+	container.appendChild(graveyard_button_div);
 	leader_card(game_info['players'].length);
 	if (selected_player !== null) {
 		leader_view_cards(selected_player);
