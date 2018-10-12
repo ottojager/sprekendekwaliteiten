@@ -206,7 +206,10 @@ function leader_view() {
 	player_cards.innerHTML = 'Click op de naam van een speler om hier hun kaarten te zien.';
 	player_cards_div.appendChild(player_cards);
 
-	// buttons
+	/////////////
+	// BUTTONS //
+	/////////////
+	//end game button
 	var end_game_button = document.createElement('button');
 	var end_game_button_div = document.createElement('div');
 	end_game_button_div.classList.add('button');
@@ -214,6 +217,7 @@ function leader_view() {
 	end_game_button.onclick = end_game;
 	end_game_button_div.appendChild(end_game_button);
 
+	// undo button
 	var undo_button = document.createElement('button');
 	var undo_button_div = document.createElement('div');
 	undo_button_div.classList.add('button');
@@ -221,6 +225,7 @@ function leader_view() {
 	undo_button.onclick = undo;
 	undo_button_div.appendChild(undo_button);
 
+	// graveyard_button
 	var graveyard_button = document.createElement('button');
 	var graveyard_button_div = document.createElement('div');
 	graveyard_button_div.classList.add('button');
@@ -228,14 +233,19 @@ function leader_view() {
 	graveyard_button.id = game_info['players'].length-1;
 	graveyard_button_div.appendChild(graveyard_button);
 
+	// A P P E N D   C H I L D
+	var buttons_div = document.createElement('div');
+	buttons_div.appendChild(end_game_button_div);
+	buttons_div.appendChild(undo_button_div);
+	buttons_div.appendChild(graveyard_button_div);
+	buttons_div.classList.add('player-menu');
+
 	// adding all elements into the container
 	container.appendChild(card_display);
 	container.appendChild(ul);
 	container.appendChild(cards_left_counter);
 	container.appendChild(player_cards_div);
-	container.appendChild(end_game_button_div);
-	container.appendChild(undo_button_div);
-	container.appendChild(graveyard_button_div);
+	container.appendChild(buttons_div);
 	leader_card(game_info['players'].length);
 	if (selected_player !== null) {
 		leader_view_cards(selected_player);
