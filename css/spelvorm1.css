@@ -153,6 +153,31 @@ button[aria-disabled="true"] {
 	background-image: url(../afbeeldingen/blauw-rood-kaart.png);
 }
 
+/*achtergrond*/
+
+span.alienBackLeft, span.alienBackRight {
+	height: 76%;
+	top: 159px;
+}
+
+span.alienBackLeft {
+	background-image: url(../afbeeldingen/Links_Alien_Gray.svg);
+}
+
+span.alienBackRight {
+	background-image: url(../afbeeldingen/Rechts_Alien_Gray.svg);
+}
+
+
+@media screen and (max-width: 1240px) {
+	
+	span.alienBackLeft, span.alienBackRight {
+		display:none;
+	}
+
+}
+/*einde achtergrond*/
+
 @media screen and (max-width: 1050px) {
 	
 	.linker-menu h2 {

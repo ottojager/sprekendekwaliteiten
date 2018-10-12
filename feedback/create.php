@@ -80,6 +80,8 @@ if (isset($_POST['makeLobbyButton'])) {
 		<meta charset="utf-8">
 	</head>
 	<body>
+		<span class="alienBackLeft"></span>
+		<span class="alienBackRight"></span>
 		<ul class="skip-link">
 			<li><a href="#main">Skip naar main content</a></li>
 		</ul>
