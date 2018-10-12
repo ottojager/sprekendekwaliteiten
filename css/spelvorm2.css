@@ -11,11 +11,9 @@ h1 {
 html {
 	width: 100%;
 	height: 100%;
-	background-color: #fffefe;/*fix tab here*/
 }
 
 body {
-	background-color: #fffefe;
 }
 
 #borderimage {
@@ -26,6 +24,7 @@ body {
 
 #player__name {
 }
+
 
 /*lobby etc*/
 
@@ -157,7 +156,6 @@ div.button {
 	font-family: 'Oswald', sans-serif;
 	font-size: 35px;
 	color: #234152;
-	background-color: #fffefe;
 	text-align: center;
 }
 

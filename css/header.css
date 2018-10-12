@@ -9,6 +9,33 @@
 	--spelvorm: oswald, monospace;
 }
 
+/*achtergrond met aliens*/
+
+span.alienBackLeft, span.alienBackRight {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	transition: background-position 1s;
+	position: absolute;
+	top: 71%;
+	height: 486%;
+	width: 100%;
+	z-index: -8;
+}
+
+span.alienBackLeft {
+	left: 0;
+    background-size: 298px;
+    background-position: 0% 28%;
+}
+
+span.alienBackRight {
+	right: 0;
+    background-size: 371px;
+    background-position: 100% 62%;
+}
+
+/*einde backgroundbusiness*/
+
 header {
 	background-image: url(../afbeeldingen/logo-grote-schermen.png);
 	background-size: 168px 88px;
@@ -130,7 +157,7 @@ div.headvorm >a:focus {
 	}
 	
 @media only screen and (max-width: 650px) {
-	
+
 	.header-content {
 	height: 106px;
 	}
@@ -183,7 +210,6 @@ div.headvorm >a:focus {
 	
 	.headvorm-lesser{
 		transition:margin-top 1s;
-		
 		border-bottom:solid 3px #e9e9ea;
 	}
 	

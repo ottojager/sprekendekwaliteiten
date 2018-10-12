@@ -1,0 +1,19 @@
+/*achtergrond met aliens*/
+
+span.alienBackLeft {
+	background-image: url(../afbeeldingen/Links_Alien_Gray.svg);
+}
+
+span.alienBackRight {
+	background-image: url(../afbeeldingen/Rechts_Alien_Gray.svg);
+}
+
+
+@media screen and (max-width: 1240px) {
+	
+	span.alienBackLeft, span.alienBackRight {
+		display:none;
+	}
+
+}
+/*einde backgroundbusiness*/

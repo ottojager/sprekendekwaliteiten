@@ -80,6 +80,7 @@ if (isset($_POST['join_button'])) {
 		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
+		<link rel="stylesheet" href="../css/Feedback_background.css"type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
@@ -94,7 +95,7 @@ if (isset($_POST['join_button'])) {
 		<main class="container" id="main">
 			<div id="title">
 				<h1>Meld je aan - Feedback</h1>
-				<p>Vul je naam in. De groepscode krijg je van je spelleider.</p>
+				<p class="uitleg">Vul je naam in. De groepscode krijg je van je spelleider.</p>
 			</div>
 			<form onsubmit="return validate_form()" method="post">
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>

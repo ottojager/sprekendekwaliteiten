@@ -1,4 +1,6 @@
 <header>
+	<span class="alienBackLeft"></span>
+	<span class="alienBackRight"></span>
 	<div class="header-content">
 		<div class="header-content-title">
 			<h1 class="titel boven">sprekende</h1>
@@ -14,7 +16,6 @@
 				<rect x="4.5" y="3.5" width="30" height="3" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />
   					<ellipse cx="2" cy="5" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
   					<ellipse cx="35" cy="5" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
-
 
 					<rect x="4.5" y="13.5" width="30" height="3" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />
   					<ellipse cx="2" cy="15" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />

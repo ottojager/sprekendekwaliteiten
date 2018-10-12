@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="../css/spelvorm1.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
+		<link rel="stylesheet" href="../css/Bewustwording_background.css"type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
