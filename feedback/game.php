@@ -111,7 +111,7 @@ if ($_SESSION['player_id'] != 11) {
 				}
 				?>
 			</ul>
-			<p>nog <?php echo count($json['card_stack']); ?> kaarten over.</p>
+			<p id="amount">nog <?php echo count($json['card_stack']); ?> kaarten over.</p>
 			<div id="card_stack">
 				<p>Click op de naam van een speler om hier hun kaarten te zien.</p>
 			</div>

@@ -198,6 +198,7 @@ function leader_view() {
 	// card left counter
 	var cards_left_counter = document.createElement('p');
 	cards_left_counter.innerHTML = 'nog '+game_info['card_stack'].length+' kaarten over.';
+	cards_left_counter.id = "amount";
 
 	// player card list
 	var player_cards = document.createElement('p');
