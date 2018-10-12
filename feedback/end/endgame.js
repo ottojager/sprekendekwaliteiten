@@ -31,13 +31,13 @@ function send_mail() {
 	}
 }
 
-function render_card_list(index, pid) {
+function render_card_list(index, pid, cards) {
 	// clear out old list
 	var container = document.getElementById('card-list-container-'+pid);
 	container.innerHTML = '';
 
 	var list = document.createElement('ul');
-	for (i = index; i != index+8 && i != card_list[pid].length; i++) {
+	for (i = index; i != index+cards && i != card_list[pid].length; i++) {
 		console.log(card_list[pid][i]);
 		var item = document.createElement('li');
 		item.innerHTML = card_list[pid][i];
@@ -50,18 +50,18 @@ function render_card_list(index, pid) {
 		var back_button = document.createElement('button');
 		back_button.innerHTML = 'Vorge';
 		back_button.onclick = function() {
-			console.log(index-8);
-			render_card_list(index-8, pid);
+			console.log(index-cards);
+			render_card_list(index-cards, pid, cards);
 		}
 		container.appendChild(back_button);
 	}
 
-	if (index+8 < card_list[pid].length) {
+	if (index+cards < card_list[pid].length) {
 		var continue_button = document.createElement('button');
 		continue_button.innerHTML = 'Volgende';
 		continue_button.onclick = function() {
-			console.log(index+8);
-			render_card_list(index+8, pid);
+			console.log(index+cards);
+			render_card_list(index+cards, pid, cards);
 		}
 		container.appendChild(continue_button);
 	}
@@ -69,6 +69,6 @@ function render_card_list(index, pid) {
 
 function leader_initial_rendering_calls(player_count) {
 	for (n = 0; n <= player_count; n++) {
-		render_card_list(0, n);
+		render_card_list(0, n, 6);
 	}
 }

@@ -77,7 +77,7 @@ if (isset($_POST['makeLobbyButton'])) {
 	</head>
 	<body>
 		<main class="container" id="main">
-			<div id="title"><h1>Aanmaken spel - Combi</h1>
+			<div id="title"><h2>Aanmaken spel - Combi</h2>
 			<p>Als spelleider maak je hier een nieuw spel "Feedback" aan. Vul je naam in en kies het aantal kaarten waarmee je de groep wilt laten spelen (maximaal 70).</p></div>
 			<form onsubmit="return validate_form()" method="post">
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>

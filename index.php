@@ -16,8 +16,8 @@
 		include('header.php')
 		?>
 		<main class="container" id="main">
-			<h1>Kwaliteitenspel</h1>
-			<h2>Welkom bij het Kwaliteitenspel</h2>
+			<h2>Kwaliteitenspel</h2>
+			<h3>Welkom bij het Kwaliteitenspel</h3>
 			<p></p>
 			<div id="knoppen">
 				<div class="button"><button onclick="window.location='./bewustwording'">Bewustwording</button></div>

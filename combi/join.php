@@ -83,7 +83,7 @@ if (isset($_POST['join_button'])) {
 	<body>
 		<a href="#main" class="skip-link">Skip naar main content</a>
 		<main class="container" id="main">
-			<h1>Doe mee - Combi</h1>
+			<h2>Doe mee - Combi</h2>
 			<p>Vul je naam in. De groepscode krijg je van je spelleider.</p>
 			<form onsubmit="return validate_form()" method="post">
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>

@@ -27,7 +27,7 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 	?>
 	</script>
 </head>
-<body onload="render_card_list(0, <?php echo $_SESSION['player_id'] ?>)">
+<body onload="render_card_list(0, <?php echo $_SESSION['player_id'] ?>, 8)">
 	<?php
 	// create some variables to add header values
 	$spelvorm = 'Feedback';
