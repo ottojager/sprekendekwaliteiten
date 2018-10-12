@@ -3,3 +3,28 @@
 .startscherm-content {
 	color: var(--groen);
 }
+
+/*achtergrond*/
+
+span.alienBackLeft, span.alienBackRight {
+	height: 76%;
+	top: 159px;
+}
+
+span.alienBackLeft {
+	background-image: url(../afbeeldingen/Links_Alien_Cyan.svg);
+}
+
+span.alienBackRight {
+	background-image: url(../afbeeldingen/Rechts_Alien_Cyan.svg);
+}
+
+
+@media screen and (max-width: 1240px) {
+	
+	span.alienBackLeft, span.alienBackRight {
+		display:none;
+	}
+
+}
+/*einde achtergrond*/

@@ -136,6 +136,30 @@ div.button {
     margin: 8px auto 0 auto;
 }
 
+/*achtergrond*/
+
+span.alienBackLeft, span.alienBackRight {
+	height: 76%;
+	top: 159px;
+}
+
+span.alienBackLeft {
+	background-image: url(../afbeeldingen/Links_Alien_Red.svg);
+}
+
+span.alienBackRight {
+	background-image: url(../afbeeldingen/Rechts_Alien_Red.svg);
+}
+
+
+@media screen and (max-width: 1240px) {
+	
+	span.alienBackLeft, span.alienBackRight {
+		display:none;
+	}
+
+}
+/*einde achtergrond*/
 
 @media screen and (min-width: 650px) {
 	h1 {

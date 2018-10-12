@@ -1,6 +1,4 @@
 <header>
-	<span class="alienBackLeft"></span>
-	<span class="alienBackRight"></span>
 	<div class="header-content">
 		<div class="header-content-title">
 			<h1 class="titel boven">sprekende</h1>
