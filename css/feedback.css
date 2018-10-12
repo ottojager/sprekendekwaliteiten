@@ -42,12 +42,22 @@
 	border-top: 3px solid black;
 }
 
-#amount {
+#card_stack h3 {
+	margin: 10px 0;
+	font-size: 18px;
+	text-decoration: underline;
+}
+
+#amount, #card_stack h3, #card_stack p {
 	margin-top: 15px;	
 }
 
-#card_stack p, #amount {
+#card_stack h3, #card_stack p, #card_stack ul, #amount {
 	text-align: center;
+}
+
+#card_stack ul li {
+	text-decoration: none;
 }
 
 @media screen and (max-width: 650px) {
