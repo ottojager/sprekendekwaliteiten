@@ -42,7 +42,10 @@
 	border-top: 3px solid black;
 }
 
-#card_stack p {
-	text-align: center;
+#amount {
+	margin-top: 15px;	
 }
 
+#card_stack p, #amount {
+	text-align: center;
+}
