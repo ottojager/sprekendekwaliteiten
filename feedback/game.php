@@ -106,7 +106,7 @@ if ($_SESSION['player_id'] != 11) {
 				<?php
 				foreach ($json['players'] as $key => $value) {
 					if ($value['name'] != 'Afval stapel') {
-						echo '<li id="'.$value['player_id'].'"><button>'.$value['name'].' ('.count($value['stack']).')</button></li>';
+						echo '<li id="'.$value['player_id'].'"><div class="player-buttons"><button>'.$value['name'].' ('.count($value['stack']).')</button></div></li>';
 					}
 				}
 				?>
