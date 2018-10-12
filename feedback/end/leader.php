@@ -17,7 +17,9 @@
 	?>
 	</script>
 </head>
-<body onload="leader_initial_rendering_calls(<?php echo count($json['players']) -1; ?>)">
+<!-- javascript voor kaarten pagenation -->
+<!-- onload="leader_initial_rendering_calls(<?php echo count($json['players']) -1; ?>)" -->
+<body>
 	<?php
 	// create some variables to add header values
 	$spelvorm = 'Feedback';
