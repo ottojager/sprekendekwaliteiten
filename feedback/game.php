@@ -115,9 +115,10 @@ if ($_SESSION['player_id'] != 11) {
 			<div id="card_stack">
 				<p>Click op de naam van een speler om hier hun kaarten te zien.</p>
 			</div>
+			<div class="player-menu">
 			<div class="button"><button onclick="end_game()">Spel beëindigen</button></div>
 	        <div class="button"><button onclick="undo()">Ongedaan maken</button></div>
-			<div class="button"><button id="<?php echo count($json['players'])-1 ?>" onclick="leader_view_cards(<?php echo count($json['players'])-1 ?>)">Afval stapel</button></div>
+			<div class="button"><button id="<?php echo count($json['players'])-1 ?>" onclick="leader_view_cards(<?php echo count($json['players'])-1 ?>)">Afval stapel</button></div></div>
 		<?php } ?>
 		</main>
 		<?php include('../footer.php') ?>

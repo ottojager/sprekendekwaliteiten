@@ -31,5 +31,16 @@
 
 #player_list li {
 	display: inline-block;
-	padding: 5px;
+	padding: 10px 60px;
+}
+
+.player-button button {
+	width: 120px;
+	height: 26px;
+	border: 0px;
+	border-top: 3px solid black;
+}
+
+#player_list #3, #6 li button, #9 li button {
+	display: block;
 }
