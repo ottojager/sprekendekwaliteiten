@@ -10,6 +10,11 @@ h1 {
 }
 
 
+html {
+	width: 100%;
+	height: 100%;
+}
+
 /* Ontvangen kaart CSS */
 
 
@@ -154,10 +159,8 @@ button[aria-disabled="true"] {
 }
 
 /*achtergrond*/
-
 span.alienBackLeft, span.alienBackRight {
-	height: 76%;
-	top: 159px;
+	opacity: 0.5;
 }
 
 span.alienBackLeft {
@@ -167,7 +170,6 @@ span.alienBackLeft {
 span.alienBackRight {
 	background-image: url(../afbeeldingen/Rechts_Alien_Gray.svg);
 }
-
 
 @media screen and (max-width: 1240px) {
 	

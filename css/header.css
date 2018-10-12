@@ -17,6 +17,7 @@ header {
 	background-position: 12.2% 1.8%;
 	transition: background-position 1s;
 	position: relative;
+	background-color: white;
 }
 
 .headvorm	{

@@ -181,6 +181,8 @@ span.alienBackLeft, span.alienBackRight {
 	position: absolute;
 	width: 100%;
 	z-index: -8;
+	height: 76%;
+	top: 159px;
 }
 
 span.alienBackLeft {
