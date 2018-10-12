@@ -50,8 +50,12 @@ function leader_view_cards(id_player) {
 	var div = document.getElementById('card_stack');
 	div.innerHTML = '';
 
-	var name = document.createElement('p');
-	name.innerHTML = game_info['players'][id_player]['name'];
+	var name = document.createElement('h3');
+	if (game_info['players'][id_player]['name'] != 'Afval stapel') {
+		name.innerHTML = game_info['players'][id_player]['name'];
+	} else {
+		name.innerHTML = 'Aflegstapel';
+	}
 	var list = document.createElement('ul');
 	game_info['players'][id_player]['stack'].forEach(function(item, index){
 		var child = document.createElement('li');
@@ -116,7 +120,7 @@ function current_card_view() {
 	var graveyard = document.createElement('button');
 	graveyard_div = document.createElement('div');
 	graveyard_div.classList.add('button');
-	graveyard.innerHTML = 'Afval stapel';
+	graveyard.innerHTML = 'Aflegstapel';
 	graveyard.id = game_info['players'].length-1;
 	graveyard_div.appendChild(graveyard);
 
@@ -230,7 +234,7 @@ function leader_view() {
 	var graveyard_button = document.createElement('button');
 	var graveyard_button_div = document.createElement('div');
 	graveyard_button_div.classList.add('button');
-	graveyard_button.innerHTML = 'Afval stapel';
+	graveyard_button.innerHTML = 'Aflegstapel';
 	graveyard_button.id = game_info['players'].length-1;
 	graveyard_button_div.appendChild(graveyard_button);
 

@@ -89,7 +89,7 @@ if ($_SESSION['player_id'] != 11) {
 				?>
 			</ul>
 			<div class="player-menu">
-				<div class="button"><button id="<?php echo count($json['players'])-1 ?>" onclick="reply_click(<?php echo count($json['players'])-1 ?>)">Afval stapel</button></div>
+				<div class="button"><button id="<?php echo count($json['players'])-1 ?>" onclick="reply_click(<?php echo count($json['players'])-1 ?>)">Aflegstapel</button></div>
 
 				<div class="button"><button onclick="received_cards_view()">Ontvangen kaarten</button></div></div>
 			<?php } else {
@@ -118,7 +118,7 @@ if ($_SESSION['player_id'] != 11) {
 			<div class="player-menu">
 			<div class="button"><button onclick="end_game()">Spel beëindigen</button></div>
 	        <div class="button"><button onclick="undo()">Ongedaan maken</button></div>
-			<div class="button"><button id="<?php echo count($json['players'])-1 ?>" onclick="leader_view_cards(<?php echo count($json['players'])-1 ?>)">Afval stapel</button></div></div>
+			<div class="button"><button id="<?php echo count($json['players'])-1 ?>" onclick="leader_view_cards(<?php echo count($json['players'])-1 ?>)">Aflegstapel</button></div></div>
 		<?php } ?>
 		</main>
 		<?php include('../footer.php') ?>
