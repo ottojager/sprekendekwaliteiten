@@ -31,7 +31,8 @@
 
 #player_list li {
 	display: inline-block;
-	padding: 10px 60px;
+	padding: 15px 0;
+	width: 33%
 }
 
 .player-button button {
@@ -41,6 +42,7 @@
 	border-top: 3px solid black;
 }
 
-#player_list #3, #6 li button, #9 li button {
-	display: block;
+#card_stack p {
+	text-align: center;
 }
+
