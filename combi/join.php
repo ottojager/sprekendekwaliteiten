@@ -75,16 +75,30 @@ if (isset($_POST['join_button'])) {
 		}
 		</script>
 		<meta charset="utf-8">
-		<title>Doe mee - Combi - Sprekende Kwaliteiten</title>
-		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
+		<title>Meld je aan - Feedback - Sprekende Kwaliteiten</title>
+		<link rel="stylesheet" href="../css/basis.css" type="text/css">
+		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
+		<link rel="stylesheet" href="../css/header.css" type="text/css">
+		<link rel="stylesheet" href="../css/Feedback_background.css"type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
+		<span class="alienBackLeft"></span>
+		<span class="alienBackRight"></span>
 		<a href="#main" class="skip-link">Skip naar main content</a>
+		<?php
+		// create some variables to add header values
+		$spelvorm = 'Feedback';
+
+		include('../header.php');
+		?>
+
 		<main class="container" id="main">
-			<h2>Doe mee - Combi</h2>
-			<p>Vul je naam in. De groepscode krijg je van je spelleider.</p>
+			<div id="title">
+				<h2>Meld je aan - Feedback</h2>
+				<p class="uitleg">Vul je naam in. De groepscode krijg je van je spelleider.</p>
+			</div>
 			<form onsubmit="return validate_form()" method="post">
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
 				<div class="red_border">
@@ -97,9 +111,12 @@ if (isset($_POST['join_button'])) {
 					<div class="formfield">
 						<label for="code">Groepscode:</label>
 						<input id="code" type="text" name="code" value="<?php echo $code ?>">
+
 					</div>
 				</div>
-				<input name="join_button" value="Doe mee" type="submit" />
+				<div class="button">
+					<button name="join_button" value="Submit" type="submit">Submit</button>
+				</div>
 			</form>
 		</main>
 		<?php include('../footer.php') ?>

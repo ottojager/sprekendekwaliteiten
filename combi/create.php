@@ -37,7 +37,8 @@ if (isset($_POST['makeLobbyButton'])) {
 
 			$_SESSION['player_id'] = 11;
 			$_SESSION['game_id'] = $id;
-			$_SESSION['game_mode'] = 3;
+			$_SESSION['game_mode'] = 2;
+			$_SESSION['player_name'] = $name;
 			header('Location: ./lobby.php');
 		} else {
 			$error = 'Kaarten moet een getal tussen 0 en 70 zijn.';
@@ -69,15 +70,29 @@ if (isset($_POST['makeLobbyButton'])) {
 			return false;
 		}
 		</script>
-		<title>Aanmaken spel - Combi - Sprekende Kwaliteiten</title>
-		<link rel="stylesheet" href="css/join_stylesheet.css" type="text/css">
+		<title>Aanmaken spel - Feedback - Sprekende Kwaliteiten</title>
+		<link rel="stylesheet" href="../css/basis.css" type="text/css">
+		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
+		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
+		<link rel="stylesheet" href="../css/Feedback_background.css"type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 		<meta charset="utf-8">
 	</head>
 	<body>
+		<span class="alienBackLeft"></span>
+		<span class="alienBackRight"></span>
+		<ul class="skip-link">
+			<li><a href="#main">Skip naar main content</a></li>
+		</ul>
+		<?php
+		// create some variables to add header values
+		$spelvorm = 'Feedback';
+
+		include('../header.php');
+		?>
 		<main class="container" id="main">
-			<div id="title"><h2>Aanmaken spel - Combi</h2>
+			<div id="title"><h2>Aanmaken spel - Feedback</h2>
 			<p>Als spelleider maak je hier een nieuw spel "Feedback" aan. Vul je naam in en kies het aantal kaarten waarmee je de groep wilt laten spelen (maximaal 70).</p></div>
 			<form onsubmit="return validate_form()" method="post">
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
@@ -100,7 +115,10 @@ if (isset($_POST['makeLobbyButton'])) {
 						</select>
 					</div>
 				</div>
-				<input type="submit" value="Aanmaken spel" name="makeLobbyButton">
+				<div class="button">
+					<button type="submit" value="Aanmaken spel" name="makeLobbyButton"> Aanmaken spel
+    				</button>
+				</div>
 			</form>
 		</main>
 		<?php include('../footer.php') ?>

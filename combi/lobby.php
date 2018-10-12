@@ -17,7 +17,7 @@ if (!(bool)$json) { // if $json actually has content
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
-		<title>Spelvoorbereiding - Combi - Sprekende Kwaliteiten</title>
+		<title>Spelvoorbereiding - Feedback - Sprekende Kwaliteiten</title>
 		<script src="api/js/std.js"></script>
 
 		<?php
@@ -67,7 +67,7 @@ if (!(bool)$json) { // if $json actually has content
 						button.onclick = function() {
 							kick(index);
 						};
-						button.innerHTML = '<img src="css/trash-icon.png" alt="verwijder speler" height="25" width="25">';
+						button.innerHTML = '<img src="../afbeeldingen/remove-knop.png" alt="Verwijder speler" height="20" width="20">';
 						child.appendChild(button);
 					<?php } ?>
 
@@ -76,16 +76,24 @@ if (!(bool)$json) { // if $json actually has content
 			}, s);
 		</script>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/lobby_stylesheet.css" type="text/css">
+		<link rel="stylesheet" href="../css/header.css" type="text/css">
+		<link rel="stylesheet" href="../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
+		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
 		<a href="#main" class="skip-link">Skip naar main content</a>
+		<?php
+		// create some variables to add header values
+		$spelvorm = 'Feedback';
+		$name = $_SESSION['player_name'];
+
+		include('../header.php');
+		?>
 		<main class="container" id="main">
-		<h2>Spelvoorbereiding - Combi</h2>
 			<?php if ($_SESSION['player_id'] == 11) { // game leader only ?>
-			<h2 id="game_id">Spelvoorbereiding</h2>
+			<h2 id="game_id">Spelvoorbereiding - Feedback</h2>
 			<p>Geef de spelers deze code:<?php echo $json['game_id']; ?><br />
 			<br />
 			De volgende spelers doen mee:</p>
@@ -98,7 +106,7 @@ if (!(bool)$json) { // if $json actually has content
 			<?php
 			foreach ($json['players'] as $key => $value) {
 				if ($_SESSION['player_id'] == 11) {
-					echo '<li>'.$value['name'].'<button onclick="kick(\''.$key.'\')"><img src="css/trash-icon.png" alt="verwijder speler" height="25" width="25"></button></li>';
+					echo '<li><button onclick="kick(\''.$key.'\')"><img src="../afbeeldingen/Remove-knop.png" alt="Verwijder speler" height="20" width="20"></button>'.$value['name'].'</li>';
 				} else {
 					echo '<li>'.$value['name'].'</li>';
 				}
@@ -107,9 +115,9 @@ if (!(bool)$json) { // if $json actually has content
 			</ul>
 		<?php
 		if ($_SESSION['player_id'] == 11) {
-			?><button id="start" onclick="start_game()">Start het spel</button><?php
+			?><div class="button"> <button id="start" onclick="start_game()">Start het spel</button></div><?php
 		} else {
-			?><p>Wacht tot idereen aanwezig is. De spelbegeleider zal het spel zometeen beginnen.</p><?php
+			?><p>Wacht tot iedereen aanwezig is. De spelbegeleider zal het spel zometeen beginnen.</p><?php
 		}
 		?>
 		</main>
