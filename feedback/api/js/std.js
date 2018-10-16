@@ -90,6 +90,11 @@ function current_card_view() {
 	var container = document.getElementById('main');
 	container.innerHTML = '';
 
+	// the text at the top of the page with the current user or some BS
+	var current_player_text = document.createElement('p');
+	current_player_text.id = 'turn';
+	current_player_text.innerHTML = 'Speler '+game_info['players'][ game_info['current_player'] ]['name']+' is aan de beurt';
+
 	// create current card element
 	card_display = document.createElement('div');
 	card_display.id = 'card_display';
@@ -136,6 +141,8 @@ function current_card_view() {
 	buttons_div.appendChild(graveyard_div);
 	buttons_div.appendChild(button_div);
 
+	// APPEND THE CHILDREN
+	container.appendChild(current_player_text);
 	container.appendChild(card_display);
 	container.appendChild(ul);
 	container.appendChild(buttons_div);
@@ -147,6 +154,12 @@ function received_cards_view() {
 	// get container element & clear it
 	container = document.getElementById('main');
 	container.innerHTML = '';
+
+	// the text at the top of the page with the current user or some BS
+	var current_player_text = document.createElement('p');
+	current_player_text.id = 'turn';
+	current_player_text.innerHTML = 'Speler '+game_info['players'][ game_info['current_player'] ]['name']+' is aan de beurt';
+	container.appendChild(current_player_text);
 
 	// create card list
 	var ul = document.createElement('ul')
