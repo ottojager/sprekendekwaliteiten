@@ -263,6 +263,10 @@ span.alienBackRight {
 	margin: 0 auto;
 }
 
+h3 {
+	text-align: center;
+}
+
 @media screen and (max-width: 680px) {
 	.send-button {
     top: 10px;
