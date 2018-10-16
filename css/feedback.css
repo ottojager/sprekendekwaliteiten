@@ -1,5 +1,9 @@
 /* Tijdelijke stylesheet zodat ik het niet voor Felix verpest */
 
+#turn {
+	text-align: center;
+}
+
 #card_display {
 	background-image: url("../afbeeldingen/rode-kaart.png");
 	background-size: 166px 230px;
