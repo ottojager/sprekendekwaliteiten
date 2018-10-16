@@ -91,6 +91,8 @@ function current_card_view() {
 	container.innerHTML = '';
 
 	// the text at the top of the page with the current user or some BS
+	var h2 = document.createElement('h2');
+	h2.innerHTML = 'Wie krijgt de kaart?';
 	var current_player_text = document.createElement('p');
 	current_player_text.id = 'turn';
 	current_player_text.innerHTML = 'Speler '+game_info['players'][ game_info['current_player'] ]['name']+' is aan de beurt';
@@ -142,6 +144,7 @@ function current_card_view() {
 	buttons_div.appendChild(button_div);
 
 	// APPEND THE CHILDREN
+	container.appendChild(h2);
 	container.appendChild(current_player_text);
 	container.appendChild(card_display);
 	container.appendChild(ul);
