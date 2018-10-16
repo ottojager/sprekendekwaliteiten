@@ -186,6 +186,12 @@ function leader_view() {
 	container = document.getElementById('main');
 	container.innerHTML = '';
 
+	// the text at the top of the page with the current user or some BS
+	var current_player_text = document.createElement('p');
+	current_player_text.id = 'turn';
+	current_player_text.innerHTML = 'Speler '+game_info['players'][ game_info['current_player'] ]['name']+' is aan de beurt';
+	container.appendChild(current_player_text);
+
 	// create current card element
 	card_display = document.createElement('div');
 	card_display.id = 'card_display';
