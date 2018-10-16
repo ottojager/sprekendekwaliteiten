@@ -73,6 +73,10 @@ h2 {
 	text-align: center;
 }
 
+h3 {
+	text-align: center;
+}
+
 #knoppen {
 	margin: 60px auto 0 auto;
 	text-align: center;
@@ -261,10 +265,6 @@ span.alienBackRight {
 .email-container {
 	width: 600px;
 	margin: 0 auto;
-}
-
-h3 {
-	text-align: center;
 }
 
 @media screen and (max-width: 680px) {
