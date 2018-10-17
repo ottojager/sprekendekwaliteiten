@@ -92,12 +92,11 @@ function send_email() {
             // back button
             var back_button = document.createElement('button');
             back_button.innerHTML = 'Terug naar Home';
-            back_button.classList.add('back-button-success');
             back_button.onclick = function() {
                 window.location = '../index.php';
             }
             var back_button_div = document.createElement('div');
-            back_button_div.classList.add('button');
+            back_button_div.classList.add('button', 'back-button-success');
             back_button_div.appendChild(back_button);
 
             document.getElementById('main').appendChild(p);
