@@ -1,5 +1,7 @@
 /* Tijdelijke stylesheet zodat ik het niet voor Felix verpest */
 
+/* Spelvorm 2 Game CSS */
+
 #turn {
 	text-align: center;
 }
@@ -79,4 +81,15 @@
 		width: 180px;
 		height: 30px;
 	}
+}
+
+/* Eindscherm CSS */
+
+.eind-content {
+	margin-top: 100px;
+	text-align: center;
+}
+
+.leave-game {
+	margin-top: 60px;
 }

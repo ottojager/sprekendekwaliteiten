@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="../../css/basis.css" type="text/css">
 	<link rel="stylesheet" href="../../css/header.css" type="text/css">
 	<link rel="stylesheet" href="../../css/footer.css" type="text/css">
+	<link rel="stylesheet" href="../../css/feedback.css" type="text/css"
 	<link rel="icon" sizes="16x16" type="image/png" href="/../kwal-spel/feedback/css/Rainbow_placeholder.png">
 	<script src="./endgame.js"></script>
 	<script>
@@ -37,8 +38,10 @@
 			}
 		}
 		?>
+		<div class="eind-content">
 		<p>De spelers kunnen hun ontvangen kaarten per e-mail ontvangen en aan jou als spelleider doorsturen.</p>
-		<a href="../delete.php">Spel verlaten</a>
+		<div class="button leave-game"><button onclick="window.location='../delete.php'">Spel verlaten</button></div>
+		</div>
 	</div>
 	<?php include('../../footer.php'); ?>
 </body>
