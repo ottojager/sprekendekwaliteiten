@@ -123,6 +123,7 @@ function reply_click(clicked_id) {
 
                 // allow the user to click the new card button
                 document.getElementById("newCardButton").setAttribute('aria-disabled', false);
+				document.getElementById("newCardButton").focus();
                 document.getElementById("newCardButton").onclick = newCard;
 
                 // do not allow the user to uuse the back button
