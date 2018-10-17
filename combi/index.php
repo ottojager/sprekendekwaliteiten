@@ -13,7 +13,6 @@
 		<?php
 		// create some variables to add header values
 		$spelvorm = 'Combi';
-		$no_back_to_start = true;
 
 		include('../header.php');
 		?>

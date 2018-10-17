@@ -40,9 +40,9 @@
 			   style="display:block;"
 			   href="<?php
 			   if (isset($in_sub_folder)) {
-				   echo "../";
+				   echo "/../../";
 			   } else {
-				   echo "./";
+				   echo "../";
 			   }
 			   ?>">
 				Terug naar start
