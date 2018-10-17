@@ -68,6 +68,6 @@ $headers[] = iconv_mime_encode('Subject', $subject, $subject_preferences);
 
 // mail it!!!
 if (!mail($to, $subject, $message, implode("\r\n", $headers))) {
-	header('HTTP/1.1 666 Internal Server Error');
+	header('HTTP/1.1 500 Internal Server Error');
 }
 ?>
