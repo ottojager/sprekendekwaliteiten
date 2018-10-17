@@ -27,8 +27,8 @@ time, mark, audio, video {
 .skip-link {
 	position: absolute;
 	top: -3em;
-	background-color: var(--dkrblauw);
-	color: var(--grijs);
+	background-color: #163143;
+	color: #e9e9ea;
 	padding: 5px;
 	z-index: 1;
 }
@@ -41,7 +41,7 @@ time, mark, audio, video {
 
 p, h1, h2, h3, h4, h5, h6, ul, li, a, label, button {
 	font-family: 'Roboto', sans-serif;
-	color: var(--dkrblauw);
+	color: #163143;
 	text-decoration: none;
 }
 
@@ -155,27 +155,27 @@ h3 {
     width: 185px;
 	display: inline-block;
     margin: 5px;
-    border: 2px solid var(--dkrblauw);
+    border: 2px solid #163143;
     border-radius: 20px;
-    background-color: var(--dkrblauw);
+    background-color: #163143;
 	box-sizing: border-box;
-	color: var(--grijs);
+	color: white;
 	font-size: 14px;
 }
 
 .button button:hover, .button button:focus {
-	background-color: var(--grijs);
-	color: var(--dkrblauw);
+	background-color: #e9e9ea;
+	color: #163143;
 }
 
 .button button p {
-	color: var(--grijs);
+	color: #e9e9ea;
 	padding: 10px;
 	font-size: 16px;
 }
 
 .button button:hover p, .button button:focus p {
-	color: var(--dkrblauw);
+	color: #163143;
 }
 
 span.alienBackLeft, span.alienBackRight {
@@ -222,7 +222,7 @@ span.alienBackRight {
 	width: 370px;
 	margin: 240px auto 0;
 	text-align: center;
-	background-color: var(--grijs);
+	background-color: #e9e9ea;
 	border-top: solid black 3px;
 	padding: 10px 15px 8px;
 	vertical-align: bottom;
