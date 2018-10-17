@@ -19,8 +19,10 @@ if (!(bool)$json) { // if $json actually has content
 	header('Location: ../delete.php'); // send the user to delete.php to have their session cleared
 }
 if ($_SESSION['player_id'] == 11) {
-	include('leader.php');
+	include('./leader.php');
 } else {
-	include('players.php');
+	include('./players.php');
 }
+
+header('HTTP/1.1 403 Forbidden');
 ?>
