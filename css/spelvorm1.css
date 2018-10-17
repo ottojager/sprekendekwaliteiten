@@ -61,9 +61,7 @@ html {
 }
 
 .linker-menu h2 {
-	position: relative;
-	left: 40%;
-	margin: 55px 0 0 0;
+	margin: 55px 0 0 10px;
 }
 
 .card-holder-r {
@@ -73,7 +71,7 @@ html {
     width: 166px;
 	position: relative;
 	top: 40px;
-	left: 100px;
+	left: 20px;
 }
 
 .new-hand {
@@ -96,7 +94,6 @@ html {
 
 .huidige-kaarten {
 	top: 50px;
-	left: 43%;
 }
 
 .terug-kaart {
@@ -144,6 +141,7 @@ button[aria-disabled="true"] {
 
 .kaart p {
 	color: white;
+	font-size: 18px;
 }
 
 .kaart button {
@@ -181,7 +179,7 @@ span.alienBackRight {
 }
 /*einde achtergrond*/
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
 	
 	.linker-menu h2 {
 	left: 0;

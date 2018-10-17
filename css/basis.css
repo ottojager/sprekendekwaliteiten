@@ -51,6 +51,17 @@ body {
 	position: relative;
 }
 
+header, footer, main { display: block; clear: both; } /* voor Internet Explorer die geen HTML5-elementen kent */
+
+/* dit zou het wegvallen van de main content achter de footer moeten voorkomen */
+main:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
 .container, #container {
 	max-width: 1280px;
 	margin: 0 auto;
