@@ -126,7 +126,8 @@ button[aria-disabled="true"] {
     display: block;
     margin: 20px auto 0;
     text-align: center;
-    width: 100%;
+    width: 1024px;/*100%;*/
+	float: right;
 	list-style: none;
 	
 }
@@ -180,7 +181,7 @@ span.alienBackRight {
 }
 /*einde achtergrond*/
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1024px) {
 	
 	.linker-menu h2 {
 	left: 0;
