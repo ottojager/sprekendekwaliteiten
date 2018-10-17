@@ -225,7 +225,6 @@ function handView() {
             // add click event listeners zodat we kunnen zien welke kaart geslecteerd woord
             addListeners();
             document.title = 'Ruil je kaart - Bewustwording - Sprekende Kwaliteiten';
-			document.getElementById("1").focus(); // 1e kaart van de handkaarten krijgt focus.
         }
     };
     xhttp.open("GET", "./parts/inruilen.html", true);
@@ -233,6 +232,7 @@ function handView() {
 	// Nadat part "inruilen.html" is geladen toont de browser na 1000 miliseconden een alert met instructie.
 	setTimeout(function() {
 		alert("Jouw nieuwe kaart is "+currentCard+" . Je kunt één van je 8 handkaarten vervangen door "+currentCard);
+		document.getElementById("1").focus(); // 1e kaart van de handkaarten krijgt focus.
 	}, 1000);
 }
 
