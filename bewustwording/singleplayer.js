@@ -87,6 +87,16 @@ function send_email() {
             p.innerHTML = "Het bericht is verzonden naar uw email.";
             p.classList.add('success');
             document.getElementById('main').appendChild(p);
+			
+			//achtergrond links
+            var backLeft = document.createElement('span');
+            backLeft.classList.add('alienBackLeft');
+            document.getElementById('main').appendChild(backLeft);
+			
+			//achtergrond rechts
+            var backRight = document.createElement('span');
+            backRight.classList.add('alienBackRight');
+            document.getElementById('main').appendChild(backRight);
         }
     };
     xhttp.open("GET", "./mail.php?cards=" + cards + "&email=" + email, true);
