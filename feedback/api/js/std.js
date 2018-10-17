@@ -90,7 +90,7 @@ function current_card_view() {
 	var container = document.getElementById('main');
 	container.innerHTML = '';
 
-	// the text at the top of the page with the current user or some BS
+	// the text at the top of the page with the current user
 	var h2 = document.createElement('h2');
 	h2.innerHTML = 'Wie krijgt de kaart?';
 	var current_player_text = document.createElement('p');
