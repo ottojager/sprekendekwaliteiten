@@ -218,8 +218,8 @@ span.alienBackRight {
 /* E-mail form CSS */
 
 .form-email {
-	display: inline-block;
-	width: 370px;
+	display: block;
+	width: 550px;
 	margin: 240px auto 0;
 	text-align: center;
 	background-color: #e9e9ea;
@@ -235,20 +235,24 @@ span.alienBackRight {
 
 .form-input {
 	border-radius: 4px;
-	width: 300px;
+	width: 470px;
 	border: 1px solid black
 }
 
 .send-button {
 	height: 40px;
     position: relative;
-	vertical-align: top;
 	display: inline-block;
+}
+
+.back-button {
+
 }
 
 .email-container button {
 	margin: 0 0 0 5px;
 	height: 42px;
+	margin-top: 30px;
 }
 
 #error {
@@ -265,20 +269,22 @@ span.alienBackRight {
 .email-container {
 	width: 600px;
 	margin: 0 auto;
+	text-align: center;
 }
 
 @media screen and (max-width: 680px) {
-	.send-button {
-    top: 10px;
-	text-align: center;
-	}
 	
 	.email-container button {
-	margin: 0 auto;
+	margin: 5px auto;
 	}
 
 	.form-email {
-	display: block;	
+	width: 370px;
+	margin-bottom: 25px;
+	}
+	
+	.form-input {
+	width: 300px;
 	}
 	
 	.email-container {
