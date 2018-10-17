@@ -124,7 +124,7 @@ function reply_click(clicked_id) {
                 // allow the user to click the new card button
                 document.getElementById("newCardButton").setAttribute('aria-disabled', false);
 				document.getElementById("newCardButton").focus();
-                document.getElementById("newCardButton").onclick = newCard;
+				document.getElementById("newCardButton").onclick = newCard;
 
                 // do not allow the user to uuse the back button
                 var backButton = document.getElementById("BackToNewCardViewButton")
@@ -225,10 +225,15 @@ function handView() {
             // add click event listeners zodat we kunnen zien welke kaart geslecteerd woord
             addListeners();
             document.title = 'Ruil je kaart - Bewustwording - Sprekende Kwaliteiten';
+			document.getElementById("1").focus(); // 1e kaart van de handkaarten krijgt focus.
         }
     };
     xhttp.open("GET", "./parts/inruilen.html", true);
     xhttp.send();
+	// Nadat part "inruilen.html" is geladen toont de browser na 1000 miliseconden een alert met instructie.
+	setTimeout(function() {
+		alert("Jouw nieuwe kaart is "+currentCard+" . Je kunt één van je 8 handkaarten vervangen door "+currentCard);
+	}, 1000);
 }
 
 function handViewTemp() {
