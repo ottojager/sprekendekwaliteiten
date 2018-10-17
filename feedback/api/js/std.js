@@ -189,11 +189,14 @@ function leader_view() {
 	container = document.getElementById('main');
 	container.innerHTML = '';
 
+	// the H2 at the top of the page
+	var h2 = document.createElement('h2');
+	h2.innerHTML = 'Wie krijgt de kaart?';
+
 	// the text at the top of the page with the current user or some BS
 	var current_player_text = document.createElement('p');
 	current_player_text.id = 'turn';
 	current_player_text.innerHTML = 'Speler '+game_info['players'][ game_info['current_player'] ]['name']+' is aan de beurt';
-	container.appendChild(current_player_text);
 
 	// create current card element
 	card_display = document.createElement('div');
@@ -268,6 +271,8 @@ function leader_view() {
 	buttons_div.classList.add('player-menu');
 
 	// adding all elements into the container
+	container.appendChild(h2);
+	container.appendChild(current_player_text);
 	container.appendChild(card_display);
 	container.appendChild(ul);
 	container.appendChild(cards_left_counter);
