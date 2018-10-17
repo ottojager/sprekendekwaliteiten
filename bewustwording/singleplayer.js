@@ -83,16 +83,31 @@ function send_email() {
             // document.getElementById('email').value = '';
             // document.location.href= '../';
             document.getElementById('main').innerHTML = '';
+
+            // succ text
             var p = document.createElement('p');
             p.innerHTML = "Het bericht is verzonden naar uw email.";
             p.classList.add('success');
+
+            // back button
+            var back_button = document.createElement('button');
+            back_button.innerHTML = 'Terug naar Home';
+            back_button.classList.add('back-button-success');
+            back_button.onclick = function() {
+                window.location = '../index.php';
+            }
+            var back_button_div = document.createElement('div');
+            back_button_div.classList.add('button');
+            back_button_div.appendChild(back_button);
+
             document.getElementById('main').appendChild(p);
-			
+            document.getElementById('main').appendChild(back_button_div);
+
 			//achtergrond links
             var backLeft = document.createElement('span');
             backLeft.classList.add('alienBackLeft');
             document.getElementById('main').appendChild(backLeft);
-			
+
 			//achtergrond rechts
             var backRight = document.createElement('span');
             backRight.classList.add('alienBackRight');
