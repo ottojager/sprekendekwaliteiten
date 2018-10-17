@@ -84,6 +84,7 @@ html {
 
 .linker-menu .button {
 	display: block;
+	margin-left: 5px;
 }
 
 .huidige-kaarten, .terug-kaart {
@@ -101,7 +102,7 @@ html {
 }
 
 .bottom-menu .button button {
-	margin: 5px auto;
+	margin: 25px auto;
 }
 
 .bottom-menu {
@@ -118,15 +119,16 @@ button[aria-disabled="true"] {
 	visibility: hidden;
 }
 
+ul.inruilen .kaart-rij {
+	float: right;
+}
 
 .kaart-rij {
     display: block;
     margin: 20px auto 0;
     text-align: center;
     width: 1024px;/*100%;*/
-	float: right;
 	list-style: none;
-	
 }
 
 .overview-rij {
@@ -181,6 +183,10 @@ span.alienBackRight {
 
 @media screen and (max-width: 1280px) {
 	
+	ul.inruilen .kaart-rij {
+		float: none;
+	}
+
 	.linker-menu h2 {
 	left: 0;
 	margin: 25px 0 25px 0;
