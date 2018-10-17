@@ -15,7 +15,7 @@
 
 		include('header.php')
 		?>
-		<main class="container" id="main">
+		<main class="container" id="main" tabindex="-1">
 			<h2>Kwaliteitenspel</h2>
 			<h3>Welkom bij het Kwaliteitenspel</h3>
 			<p></p>

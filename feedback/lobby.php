@@ -91,7 +91,7 @@ if (!(bool)$json) { // if $json actually has content
 
 		include('../header.php');
 		?>
-		<main class="container" id="main">
+		<main class="container" id="main" tabindex="-1">
 			<?php if ($_SESSION['player_id'] == 11) { // game leader only ?>
 			<h2 id="game_id">Spelvoorbereiding - Feedback</h2>
 			<p>Geef de spelers deze code:<?php echo $json['game_id']; ?><br />

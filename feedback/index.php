@@ -22,7 +22,7 @@ session_start();
 
 		include('../header.php');
 		?>
-		<main class="container" id="main">
+		<main class="container" id="main" tabindex="-1">
 			<div class="startscherm">
 				<h2 class="startscherm-content">Start - Feedback</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, ligula vitae egestas luctus, dolor nulla aliquet elit, a aliquam magna nulla at odio. Aenean volutpat lorem sed molestie iaculis. Integer volutpat sapien nulla. Duis volutpat egestas quam, vel blandit quam sodales ut. Nulla tristique quam eget enim blandit, at viverra urna luctus. Proin sagittis, magna vehicula ullamcorper elementum, erat metus scelerisque lectus, id vestibulum velit sem condimentum neque. Mauris venenatis imperdiet mi.</p>

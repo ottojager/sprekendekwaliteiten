@@ -94,7 +94,7 @@ if (isset($_POST['join_button'])) {
 		include('../header.php');
 		?>
 
-		<main class="container" id="main">
+		<main class="container" id="main" tabindex="-1">
 			<div id="title">
 				<h2>Meld je aan - Feedback</h2>
 				<p class="uitleg">Vul je naam in. De groepscode krijg je van je spelleider.</p>

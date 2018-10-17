@@ -29,7 +29,7 @@
 
 	include('../../header.php');
 	?>
-	<div id="container">
+	<main class="container" id="main" tabindex="-1">
 		<h2>Einde - Feedback</h2>
 		<?php
 		foreach ($json['players'] as $key => $player) {
@@ -42,7 +42,7 @@
 		<p>De spelers kunnen hun ontvangen kaarten per e-mail ontvangen en aan jou als spelleider doorsturen.</p>
 		<div class="button leave-game"><button onclick="window.location='../delete.php'">Spel verlaten</button></div>
 		</div>
-	</div>
+	</main>
 	<?php include('../../footer.php'); ?>
 </body>
 </html>

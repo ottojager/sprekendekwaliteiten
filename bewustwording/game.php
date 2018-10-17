@@ -37,7 +37,7 @@
 
 		include('../header.php');
 		?>
-		<main class="container" id="main">
+		<main class="container" id="main" tabindex="-1">
 
 		</main>
 		<?php include('../footer.php') ?>

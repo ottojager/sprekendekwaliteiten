@@ -38,7 +38,7 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 
 	include('../../header.php');
 	?>
-	<main id="main">
+	<main class="container" id="main" tabindex="-1">
 		<h2>Ontvangen kaarten - Feedback</h2>
 		<div id="card-list-container-<?php echo $_SESSION['player_id'] ?>">
 
