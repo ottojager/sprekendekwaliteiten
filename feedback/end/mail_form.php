@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="../../css/basis.css" type="text/css">
 	<link rel="stylesheet" href="../../css/header.css" type="text/css">
 	<link rel="stylesheet" href="../../css/footer.css" type="text/css">
+	<link rel="stylesheet" href="../../css/spelvorm2.css" type="text/css">
 	<script src="./endgame.js"></script>
 </head>
 <body>
