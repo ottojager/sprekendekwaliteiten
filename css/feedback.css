@@ -67,6 +67,11 @@
 }
 
 @media screen and (max-width: 650px) {
+	
+	h2 {
+	margin: 70px 0 25px 0;	
+	}
+	
 	#card_display {
 		margin: 40px auto 0;
 	}	
@@ -104,6 +109,10 @@
 	list-style: none;
 }
 
+.overview-rij {
+	width: 1105px;
+}
+
 .kaart {
 	padding: 5px;
 	display: inline-block;
@@ -120,3 +129,17 @@
 	color: white;
 	font-size: 18px;
 	}
+
+@media screen and (max-width: 1280px) {
+	.kaart-rij {
+	margin: 0 auto 20px;
+	float: none;
+	width: 800px;
+	}	
+}
+	
+@media screen and (max-width: 1050px) {
+	.kaart-rij {
+	width: 400px;	
+	}
+}
