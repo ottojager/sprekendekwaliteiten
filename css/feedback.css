@@ -93,3 +93,30 @@
 .leave-game {
 	margin-top: 40px;
 }
+
+/* Kaart Rij Redux */
+
+.kaart-rij {
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 1024px;/*100%;*/
+	list-style: none;
+}
+
+.kaart {
+	padding: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.eind-kaart button {
+	background-image: url(../afbeeldingen/rode-kaart.png);
+    height: 234px;
+    width: 165px;
+    background-size: cover;
+	background-color: #fff;
+	border: none;
+	color: white;
+	font-size: 18px;
+	}
