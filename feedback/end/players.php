@@ -6,7 +6,6 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 <html lang="nl=NL">
 <head>
 	<title>Einde - Feedback - Sprekende Kwaliteiten</title>
-	<!-- <link rel="stylesheet" href="../css/end.css" type="text/css"> -->
 	<link rel="stylesheet" href="../../css/basis.css" type="text/css">
 	<link rel="stylesheet" href="../../css/header.css" type="text/css">
 	<link rel="stylesheet" href="../../css/footer.css" type="text/css">
@@ -52,11 +51,13 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 					?>
 				</div>
 			</ul>
-			<div class="buton">
-				<button onclick="window.location='./mail_form.php'">Stuur email</button>
-			</div>
-			<div class="buton">
-				<button onclick="window.location='../../'">Terug naar start</button>
+			<div class="bottom-menu">
+				<div class="button">
+					<button onclick="window.location='./mail_form.php'">Stuur email</button>
+				</div>
+				<div class="button">
+					<button onclick="window.location='../../'">Terug naar start</button>
+				</div>
 			</div>
 		</div>
 	</main>

@@ -99,6 +99,11 @@
 	margin-top: 40px;
 }
 
+.bottom-menu {
+	margin: 0 auto;
+	text-align: center;
+}
+
 /* Kaart Rij Redux */
 
 .kaart-rij {
