@@ -8,7 +8,10 @@
 	<div id="header-menu">
 		<button onclick="header_show()"
         		class="menu-toggle"
-				id="menu-toggle">
+				id="menu-toggle"
+				aria-haspopup="true"
+				aria-controls="menuheader"
+				>
 			<svg height="30" width="40">
 				<g>
 				<rect x="4.5" y="3.5" width="30" height="3" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />
@@ -26,10 +29,15 @@
 				Sorry, your browser does not support inline SVG.
 			</svg>
 		</button>
-		<div class="headvorm" id="menuheader">
+		<div class="headvorm"
+			 id="menuheader"
+			 role="menu"
+			 aria-labelledby="menu-toggle"
+			 >
 			<?php if (isset($spelvorm)) { ?>
 				<a class="headvorm-lesser"
-			   		style="display:block;">
+			   		style="display:block;"
+				   	role="menuitem">
 					Spel: <?php echo $spelvorm ?>
 				</a>
 			<?php
@@ -38,6 +46,7 @@
 			?>
 			<a class="headvorm-lesser"
 			   style="display:block;"
+			   role="menuitem"
 			   href="<?php
 			   if (isset($in_sub_folder)) {
 				   echo "/../../";
@@ -49,13 +58,15 @@
 			</a>
 			<?php } ?>
 			<a class="headvorm-lesser"
-			   style="display:block;">
+			   style="display:block;"
+			   role="menuitem">
 				Help
 			</a>
 			<?php if (isset($name)) { ?>
 				<a id="player__name"
 			   		class="headvorm-lesser"
-			   		style="display:block;">
+			   		style="display:block;"
+				   	role="menuitem">
 					<?php echo $name ?>
 				</a>
 			<?php } ?>
