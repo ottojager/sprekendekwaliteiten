@@ -11,6 +11,7 @@
 				id="menu-toggle"
 				aria-haspopup="true"
 				aria-controls="menuheader"
+				aria-expanded="false"
 				>
 			<svg height="30" width="40">
 				<g>
