@@ -13,8 +13,7 @@ header {
 	background-image: url(../afbeeldingen/logo-grote-schermen.png);
 	background-size: 168px 88px;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: 12.2% 1.8%;
+	background-position: 12.2% 12%;
 	transition: background-position 1s;
 	position: relative;
 	background-color: white;
@@ -221,7 +220,7 @@ div.headvorm >a:focus {
 	}
 	
 	header {
-    background-position: 12.7% -26.5%;
+    background-position: 12.7% -1126.5%;
     transition: background-position 1s;
 	}
 
