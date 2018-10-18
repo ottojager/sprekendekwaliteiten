@@ -52,6 +52,12 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 					?>
 				</div>
 			</ul>
+			<div class="buton">
+				<button onclick="window.location='./mail_form.php'">Stuur email</button>
+			</div>
+			<div class="buton">
+				<button onclick="window.location='../../'">Terug naar start</button>
+			</div>
 		</div>
 	</main>
 	<?php include('../../footer.php'); ?>
