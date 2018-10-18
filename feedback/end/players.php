@@ -38,17 +38,19 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 	<main class="container" id="main" tabindex="-1">
 		<h2>Ontvangen kaarten - Feedback</h2>
 		<div id="card-list-container">
-			<div class="kaart-rij">
-				<?php
-				foreach($json['players'][ $_SESSION['player_id'] ]['stack'] as $key => $value) {
-					if ($key % 4 == 0 && $key != 0) {
-						echo "</div>";
-						echo "<div class=\"kaart-rij\">";
+			<ul>
+				<div class="kaart-rij">
+					<?php
+					foreach($json['players'][ $_SESSION['player_id'] ]['stack'] as $key => $value) {
+						if ($key % 4 == 0 && $key != 0) {
+							echo "</div>";
+							echo "<div class=\"kaart-rij\">";
+						}
+						echo "<li class=\"kaart eind-kaart\"><button>$value</button></li>";
 					}
-					echo "<li class=\"kaart eind-kaart\"><button>$value</button></li>";
-				}
-				?>
-			</div>
+					?>
+				</div>
+			</ul>
 		</div>
 	</main>
 	<?php include('../../footer.php'); ?>
