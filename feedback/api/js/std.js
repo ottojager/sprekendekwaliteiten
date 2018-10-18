@@ -202,6 +202,8 @@ function leader_view() {
 	current_player_text.innerHTML = 'Speler '+game_info['players'][ game_info['current_player'] ]['name']+' is aan de beurt';
 
 	// create current card element
+	var current_card_informational_text = document.createElement('h3');
+	current_card_informational_text.innerHTML = 'Dit is de huidige kaart';
 	card_display = document.createElement('div');
 	card_display.id = 'card_display';
 	card_active = document.createElement('p');
@@ -276,6 +278,7 @@ function leader_view() {
 	// adding all elements into the container
 	container.appendChild(h2);
 	container.appendChild(current_player_text);
+	container.appendChild(current_card_informational_text);
 	container.appendChild(card_display);
 	container.appendChild(ul);
 	container.appendChild(cards_left_counter);
