@@ -96,11 +96,15 @@ function send_email() {
                 window.location = '../index.php';
             }
             var back_button_div = document.createElement('div');
-            back_button_div.classList.add('button', 'back-button-success');
+            back_button_div.classList.add('button');
             back_button_div.appendChild(back_button);
 
+            var back_div_button_div_div = document.createElement('div');
+            back_div_button_div_div.classList.add('bottom-menu');
+            back_div_button_div_div.appendChild(back_button_div);
+
             document.getElementById('main').appendChild(p);
-            document.getElementById('main').appendChild(back_button_div);
+            document.getElementById('main').appendChild(back_div_button_div_div);
 
 			//achtergrond links
             var backLeft = document.createElement('span');
