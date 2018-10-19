@@ -21,7 +21,7 @@ function send_mail() {
 			if (this.readyState == 4 && this.status == 400) {
 				alert('Het ingevulde email adderess klopt niet');
 			} else if (this.readyState == 4 && this.status == 200) {
-				alert('de mail is verstuurd');
+				alert('De mail is verstuurd');
 				var email = document.getElementById('email').value = '';
 			}
 		};
