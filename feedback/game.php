@@ -92,7 +92,7 @@ if ($_SESSION['player_id'] != 11) {
 				?>
 			</ul>
 			<div class="player-menu">
-				<div class="button"><button id="<?php echo count($json['players'])-1 ?>" onclick="reply_click(<?php echo count($json['players'])-1 ?>)">Aflegstapel</button></div>
+				<div class="button"><button id="<?php echo count($json['players'])-1 ?>" onclick="reply_click(<?php echo count($json['players'])-1 ?>)">Wegleggen</button></div>
 
 				<div class="button"><button onclick="received_cards_view()">Ontvangen kaarten</button></div></div>
 			<?php } else {

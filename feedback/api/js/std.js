@@ -129,7 +129,7 @@ function current_card_view() {
 	var graveyard = document.createElement('button');
 	graveyard_div = document.createElement('div');
 	graveyard_div.classList.add('button');
-	graveyard.innerHTML = 'Aflegstapel';
+	graveyard.innerHTML = 'Wegleggen';
 	graveyard.id = game_info['players'].length-1;
 	graveyard_div.appendChild(graveyard);
 
