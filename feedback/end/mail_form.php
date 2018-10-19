@@ -22,7 +22,7 @@
 			<span class="alienBackRight"></span>
 			<div class="form-email">
 				<label for="email">E-mail</label>
-				<input id="email" class="form-input" type="email">
+				<input id="email" class="form-input" type="email" autofocus>
 				<p id="error"></p>
 			</div>
 			<div class="button">

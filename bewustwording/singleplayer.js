@@ -317,6 +317,7 @@ function endGameEmailView() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("main").innerHTML = this.responseText;
+            document.getElementById('email').focus();
         }
     };
     xhttp.open("GET", "./parts/endgame_email.html", true);
