@@ -273,7 +273,7 @@ span.alienBackRight {
 
 .success {
 	text-align: center;
-    margin: 250px auto 0;
+    margin: 250px auto 50px;
 	font-size: 23px;
     text-decoration: underline;
 }
