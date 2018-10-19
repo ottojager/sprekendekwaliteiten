@@ -176,15 +176,40 @@ function received_cards_view() {
     	li.appendChild(p);
     	ul.appendChild(li);
 	});
+
+	var ul = document.createElement('ul');
+	var div = document.createElement('div');
+	div.classList.add('kaart-rij');
+	console.log('test');
+	for (i = 0; i != game_info['players'][own_id]['stack'].length; i++) {
+		console.log(i);
+		if (i % 4 == 0 && i != 0) {
+			ul.appendChild(div);
+			var div = document.createElement('div');
+			div.classList.add('kaart-rij');
+		}
+		var li = document.createElement('li');
+		li.classList.add('kaart', 'eind-kaart');
+
+		var button = document.createElement('button');
+		button.innerHTML = game_info['players'][own_id]['stack'][i];
+		li.appendChild(button);
+		div.appendChild(li);
+	}
+	ul.appendChild(div);
 	container.appendChild(ul);
 
 	// back to active card view
 	var button = document.createElement('button');
 	var button_div = document.createElement('div');
+	var button_div_div = document.createElement('div');
 	button_div.classList.add('button');
+	button_div_div.classList.add('bottom-menu');
 	button.innerHTML = 'Terug naar actieve kaart';
 	button.onclick = current_card_view;
-	container.appendChild(button);
+	button_div.appendChild(button);
+	button_div_div.appendChild(button_div);
+	container.appendChild(button_div_div);
 }
 
 function leader_view() {
