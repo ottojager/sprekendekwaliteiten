@@ -115,9 +115,11 @@ if (isset($_POST['makeLobbyButton'])) {
 						</select>
 					</div>
 				</div>
-				<div class="button">
-					<button type="submit" value="Aanmaken spel" name="makeLobbyButton"> Aanmaken spel
-    				</button>
+				<div class="bottom-menu">
+					<div class="button join-button">
+						<button type="submit" value="Aanmaken spel" name="makeLobbyButton"> Aanmaken spel
+						</button>
+					</div>
 				</div>
 			</form>
 		</main>
