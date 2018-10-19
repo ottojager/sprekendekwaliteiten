@@ -65,6 +65,16 @@ function leader_view_cards(id_player) {
 
 	div.appendChild(name);
 	div.appendChild(list);
+	document.getElementById(id_player).addEventListener('click', function() {
+		leader_view_cards_hide(this.id);
+	});
+}
+
+function leader_view_cards_hide(id_player) {
+	document.getElementById('card_stack').innerHTML = '';
+	document.getElementById(id_player).addEventListener('click', function() {
+		leader_view_cards(this.id);
+	})
 }
 
 function help_window() {
