@@ -245,35 +245,6 @@ input[type=text]:focus {
 	margin: 3px 2px;
 }
 
-input[type=submit] {
-	display: block;
-	height: 40px;
-	margin: 8px auto 0 auto;
-	padding: 0 42px;
-	font-family: oswald,  monospace;
-	font-size: 17px;
-	color: #e9e9ea; /*acd7da*/
-	background-color: #163143;
-	border-radius: 10px;
-}
-input[type=submit]:hover {
-	cursor: pointer;
-}
-input[type=submit]:focus {
-	cursor: pointer;
-}
-
-button[name=join_button], button[name=makeLobbyButton] {
-	display: block;
-    margin: 8px auto 0 auto;
-}
-
-button[name=join_button]:focus, button[name=makeLobbyButton]:focus {
-	background-color: #e9e9ea;
-	color: #163143;
-	
-}
-
 .button-positie > div.button {
 	display:inline-block;
 }
@@ -287,9 +258,9 @@ button[name=join_button]:focus, button[name=makeLobbyButton]:focus {
 	margin: 50px auto 30px auto;
 }
 
-.button:focus {
-	background-color: #e9e9ea;
-	color: #163143;
+.join-button {
+	text-align: center;
+    width: 100%;
 }
 
 @media only screen and (max-width: 650px) {
@@ -376,23 +347,10 @@ button[name=join_button]:focus, button[name=makeLobbyButton]:focus {
 	}
 	
 	input[type=text]:focus {
-		margin: 3px 2px;
+		margin: 3px 2px;	
 	}
 	
-	input[type=submit] {
-		display: block;
-		height: 40px;
-		margin: 8px auto 0 auto;
-		padding: 0 42px;
-		font-family: oswald,  monospace;
-		font-size: 17px;
-		color: #e9e9ea; /*acd7da*/
-		background-color: #163143;
-		border-radius: 10px;
-		
-	}
-	
-	button[name=join_button], button[name=makeLobbyButton] {
+	button[name=makeLobbyButton] {
 		width: 250px;
 	}
 	

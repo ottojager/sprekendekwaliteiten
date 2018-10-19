@@ -114,7 +114,7 @@ if (isset($_POST['join_button'])) {
 
 					</div>
 				</div>
-				<div class="button">
+				<div class="button join-button">
 					<button name="join_button" value="Submit" type="submit">Submit</button>
 				</div>
 			</form>
