@@ -9,6 +9,19 @@
 	--spelvorm: oswald, monospace;
 }
 
+rect, ellipse {
+	fill:rgb(0,0,0);
+	stroke:rgb(0,0,0);
+}
+
+ellipse {
+	stroke-width:2;
+}
+
+rect {
+	stroke-width:3;
+}
+
 header {
 	background-image: url(../afbeeldingen/logo-grote-schermen.png);
 	background-size: 168px 88px;
@@ -128,7 +141,19 @@ div.headvorm >a:focus {
 		float:left;
 		border: solid 0 #d9d9da;
 	}
+
+	button.menu-toggle:focus, button.menu-toggle:hover {
+		background: #a9a9aa;
+	}
 	
+@media only screen and (max-width: 800px) {
+	
+	header {
+    background-position: 12.7% -1126.5%;
+    transition: background-position 1s;
+	}
+}
+
 @media only screen and (max-width: 650px) {
 
 	.header-content {
@@ -219,9 +244,5 @@ div.headvorm >a:focus {
 		border-bottom-color: black;
 	}
 	
-	header {
-    background-position: 12.7% -1126.5%;
-    transition: background-position 1s;
-	}
 
 }

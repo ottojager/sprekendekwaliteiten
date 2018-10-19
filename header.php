@@ -15,17 +15,17 @@
 				>
 			<svg height="30" width="40">
 				<g>
-				<rect x="4.5" y="3.5" width="30" height="3" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />
-  					<ellipse cx="2" cy="5" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
-  					<ellipse cx="35" cy="5" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
+				<rect x="4.5" y="3.5" width="30" height="3"/>
+  					<ellipse cx="2" cy="5" rx="2" ry="1.5"/>
+  					<ellipse cx="35" cy="5" rx="2" ry="1.5"/>
 
-					<rect x="4.5" y="13.5" width="30" height="3" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />
-  					<ellipse cx="2" cy="15" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
-  					<ellipse cx="35" cy="15" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
+					<rect x="4.5" y="13.5" width="30" height="3"/>
+  					<ellipse cx="2" cy="15" rx="2" ry="1.5"/>
+  					<ellipse cx="35" cy="15" rx="2" ry="1.5"/>
 
-					<rect x="4.5" y="23.5" width="30" height="3" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />
-  					<ellipse cx="2" cy="25" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
-  					<ellipse cx="35" cy="25" rx="2" ry="1.5" style="fill:BLACK;stroke:BLACK;stroke-width:2" />
+					<rect x="4.5" y="23.5" width="30" height="3"/>
+  					<ellipse cx="2" cy="25" rx="2" ry="1.5"/>
+  					<ellipse cx="35" cy="25" rx="2" ry="1.5"/>
 				</g>
 				Sorry, your browser does not support inline SVG.
 			</svg>
@@ -75,14 +75,19 @@
 	</div>
 	<script>
 		var Header = document.getElementById("menuheader");
+		var menuToggler = document.getElementById('menu-toggle');
 		function header_show(){
 			Header.classList.add('zichtbaar');
-			document.getElementById('menu-toggle').onclick = header_hide;
+			menuToggler.onclick = header_hide;
+    		Header.setAttribute("aria-expanded", "true"); 
+    		menuToggler.setAttribute("aria-expanded", "true"); 
 		}
 
 		function header_hide(){
   			Header.classList.remove('zichtbaar');
-			document.getElementById('menu-toggle').onclick = header_show;
+			menuToggler.onclick = header_show;
+    		Header.setAttribute("aria-expanded", "false"); 
+    		menuToggler.setAttribute("aria-expanded", "false"); 
 		}
 	</script>
 </header>
