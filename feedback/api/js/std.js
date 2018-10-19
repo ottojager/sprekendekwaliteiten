@@ -180,9 +180,7 @@ function received_cards_view() {
 	var ul = document.createElement('ul');
 	var div = document.createElement('div');
 	div.classList.add('kaart-rij');
-	console.log('test');
 	for (i = 0; i != game_info['players'][own_id]['stack'].length; i++) {
-		console.log(i);
 		if (i % 4 == 0 && i != 0) {
 			ul.appendChild(div);
 			var div = document.createElement('div');
