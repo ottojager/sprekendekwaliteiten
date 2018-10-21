@@ -24,8 +24,11 @@ session_start();
 		?>
 		<main class="container" id="main" tabindex="-1">
 			<div class="startscherm">
-				<h2 class="startscherm-content">Start - Feedback</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, ligula vitae egestas luctus, dolor nulla aliquet elit, a aliquam magna nulla at odio. Aenean volutpat lorem sed molestie iaculis. Integer volutpat sapien nulla. Duis volutpat egestas quam, vel blandit quam sodales ut. Nulla tristique quam eget enim blandit, at viverra urna luctus. Proin sagittis, magna vehicula ullamcorper elementum, erat metus scelerisque lectus, id vestibulum velit sem condimentum neque. Mauris venenatis imperdiet mi.</p>
+				<h2 class="startscherm-content">Speel het spel "Feedback"</h2>
+				<p>Het spel "Feedback" speel je met minimaal één andere speler samen. Het spel wordt geleid door een spelleider (meestal je coach of trainer). De spelleider maakt een "spelsessie" aan en kiest het aantal kaarten waarmee gespeeld wordt. De spelleider krijgt een code, die hij/zij uitdeelt aan de spelers. Hiermee kunnen de spelers deelnemen aan het spel.</p>
+				<p>Telkens is één van de spelers aan de beurt. Die speler krijgt een kaart met een kwaliteit of vervorming daarop. Deze kaart geeft de speler aan één van de andere spelers bij wie hij deze kwaliteit of vervorming vindt passen. Dit doet hij/zij door die speler te selecteren (klik of enter). De speler die aan de beurt is, mag de kaart ook wegleggen, als de kwaliteit of vervorming bij niemand past.</p>
+				<p>Als de kaarten op zijn, eindigt het spel. De spelleider kan het spel ook tussentijds beëindigen. Elke speler ziet dan de kaarten die hij/zij heeft ontvangen en die dus als "feedback" van de andere spelers heeft gekregen. Je kunt deze resultaten aan jezelf laten sturen.</p>
+				<p>Veel plezier met het spel!</p>
 			</div>
 			<div class="button-positie">
 				<div class="button"><button onclick="window.location='./join.php'">Speler</button></div>

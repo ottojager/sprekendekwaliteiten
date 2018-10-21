@@ -21,8 +21,10 @@
 		?>
 		<main class="container" id="main" tabindex="-1">
 			<div class="startscherm">
-				<h2 class="startscherm-content">Start - Bewustwording</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, ligula vitae egestas luctus, dolor nulla aliquet elit, a aliquam magna nulla at odio. Aenean volutpat lorem sed molestie iaculis. Integer volutpat sapien nulla. Duis volutpat egestas quam, vel blandit quam sodales ut. Nulla tristique quam eget enim blandit, at viverra urna luctus. Proin sagittis, magna vehicula ullamcorper elementum, erat metus scelerisque lectus, id vestibulum velit sem condimentum neque. Mauris venenatis imperdiet mi. Duis quis justo non nisl ultricies blandit a nec mauris. Integer molestie, libero ac pellentesque aliquet, odio velit hendrerit.</p>
+				<h2 class="startscherm-content">Speel het spel "Bewustwording"</h2>
+				<p>Het spel "Bewustwording" speel je alleen, of samen met een coach of trainer. Je krijgt telkens een nieuwe kaart. Daarnaast heb je 8 willekeurige "handkaarten" gekregen. De nieuwe (ontvangen) kaart kun je meteen weggooien of inruilen met één van de 8 handkaarten.<br />Om in te ruilen, selecteer je de knop "inruilen". Je ziet dan je 8 handkaarten. Als de nieuwe kaart beter bij jou past dan één van de handkaarten, selecteer je die kaart om in te ruilen. De nieuwe kaart komt dus voor de geselecteerde handkaart in de plaats. Zo nodig kun je dit ongedaan maken.</p>
+				<p>Als je alle kaarten gehad hebt, eindigt het spel. Je kunt het spel ook tussentijds beëindigen. Je ziet dan de 8 kaarten die jij hebt gekozen en die dus het beste bij jou passen. Je kunt deze resultaten aan jezelf laten sturen.</p>
+				<p>Veel plezier met het spel!</p>
 			</div>
 			<div class="button-positie">
 				<div class="button"><button class="button" onclick="window.location='./game.php'">Start spel</button></div>
