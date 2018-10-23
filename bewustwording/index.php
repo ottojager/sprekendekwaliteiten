@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl=NL">
+<html lang="nl">
 	<head>
 		<title>Start - Bewustwording - Sprekende Kwaliteiten</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">

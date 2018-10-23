@@ -52,7 +52,7 @@ if (isset($_POST['makeLobbyButton'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="nl=NL">
+<html lang="nl">
 	<head>
 		<script>
 		function validate_form() {

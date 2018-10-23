@@ -28,7 +28,7 @@ if ($_SESSION['player_id'] != 11) {
 
 ?>
 <!DOCTYPE html>
-<html lang="nl=NL">
+<html lang="nl">
 	<head>
 		<script src="api/js/std.js" defer></script>
 		<?php

@@ -15,7 +15,7 @@ if (!(bool)$json) { // if $json actually has content
 }
 ?>
 <!DOCTYPE html>
-<html lang="nl=NL">
+<html lang="nl">
 	<head>
 		<title>Spelvoorbereiding - Feedback - Sprekende Kwaliteiten</title>
 		<script src="api/js/std.js"></script>

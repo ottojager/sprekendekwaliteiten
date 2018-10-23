@@ -3,7 +3,7 @@ $game = $_SESSION['game_id'];
 $json = json_decode(file_get_contents("../games/$game.json"), true);
 ?>
 <!DOCTYPE html>
-<html lang="nl=NL">
+<html lang="nl">
 <head>
 	<title>Einde - Feedback - Sprekende Kwaliteiten</title>
 	<link rel="stylesheet" href="../../css/basis.css" type="text/css">
