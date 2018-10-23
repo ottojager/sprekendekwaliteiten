@@ -33,13 +33,6 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 		}
 	}
 
-	// add the fake player to use as graveyard
-	$json['players'][] = array(
-		'name' => 'Afval stapel',
-		'player_id' => count($json['players']),
-		'stack' => array(),
-	);
-
 	// draw first card
 	// $json['current_card'] = array_shift($json['card_stack']);
 	$json['players'][0]['hand'][] = array_shift($json['card_stack']);
