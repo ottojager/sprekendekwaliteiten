@@ -24,12 +24,12 @@ $cards = $player['stack'];
 
 // message
 $message = '
-<html lang="nl=NL">
+<html lang="nl">
 <head>
 	<title>Uw kaarten</title>
 </head>
 <body>
-	<h1>Uw kaarten van Kwaliteitenspel - Feedback</h1>
+	<h1>Uw kaarten van Sprekende Kwaliteiten - Feedback</h1>
 	<ul>';
 	foreach ($cards as $key => $value) {
 		if ($value != '') {

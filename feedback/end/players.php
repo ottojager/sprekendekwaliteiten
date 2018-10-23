@@ -27,6 +27,7 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 <!-- javascript voor kaarten pagenation -->
 <!-- onload="render_card_list(0, <?php // echo $_SESSION['player_id'] ?>, 8)" -->
 <body>
+	<a href="#main" class="skip-link">Skip naar main content</a>
 	<?php
 	// create some variables to add header values
 	$spelvorm = 'Feedback';
