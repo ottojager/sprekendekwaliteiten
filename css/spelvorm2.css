@@ -151,7 +151,7 @@ span.alienBackRight {
 
 /* Einde lobby */
 
-#title > h1 {
+#title > h2 {
 	padding: 18px;
 	text-decoration: underline;
 	font-family: 'Oswald', sans-serif;
@@ -196,6 +196,9 @@ span.alienBackRight {
 .red_border {
 	width: 334px;
 	margin: 0% auto 3% auto;
+}
+label {
+	font-family:inherit;
 }
 
 label[for=name]{
@@ -254,7 +257,7 @@ input[type=text]:focus {
 	#player__name {
 	}
 	
-	#title > h1 {
+	#title > h2 {
 		padding: 18px;
 		text-decoration: underline;
 		font-family: 'Oswald', sans-serif;
@@ -307,11 +310,13 @@ input[type=text]:focus {
 	label[for=name]{
 		text-align: center;
 		margin: 20px;
+		font-family:inherit;
 	}
 	
 	label[for=code]{
 		text-align: center;
 		margin: 20px;
+		font-family:inherit;
 	}
 	
 	label[for=cards]{
