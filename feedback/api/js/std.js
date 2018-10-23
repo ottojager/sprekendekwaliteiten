@@ -84,6 +84,12 @@ function help_window() {
 }
 
 function update_view() {
+	if (last_change == game_info['last_change']) {
+		return
+	} else {
+		last_change = game_info['last_change'];
+	}
+
 	if (view == 'current'){
 		current_card_view();
 	} else if (view == 'recieved') {
@@ -329,6 +335,7 @@ function leader_view() {
 var view = 'current';
 var first_refresh = new Boolean(true);
 var notification = new Audio('sound/notification.mp3');
+var last_change = 0;
 
 if (own_id == 11) {
 	view = 'leader';

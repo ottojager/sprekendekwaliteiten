@@ -21,6 +21,10 @@ if ($_SESSION['player_id'] == $json['current_player']) {
 			}
 		} while ($json['players'][ $json['current_player'] ]['name'] == 'Afval stapel');
 	}
+
+	// update timestamp
+	$json['last_change'] = time();
+	
 	//save changes
 	file_put_contents("../games/$game.json", json_encode($json));
 }

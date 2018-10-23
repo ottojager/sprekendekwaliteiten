@@ -19,6 +19,7 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 				$json['players'][$key]['player_id'] = $key;
 			}
 
+			$json['last_change'] = time();
 			file_put_contents("../games/$game.json", json_encode($json));
 		}
 		header('HTTP/1.1 400 Bad Request');

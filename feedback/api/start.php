@@ -41,6 +41,9 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	// make first player the active player
 	$json['current_player'] = 0;
 
+	// update timestamp
+	$json['last_change'] = time();
+
 	// write back to file
 	file_put_contents("../games/$game.json", json_encode($json));
 } else {
