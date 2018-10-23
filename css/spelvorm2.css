@@ -84,12 +84,12 @@ p {
 }
 
 ul#player_list li button{
-	float:left;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px; /* Was 20px */
 	color: #234152;
 	border: none;
 	background: none;
+	cursor: pointer;
 }
 button #start {
 	width: 277px;
@@ -358,7 +358,6 @@ input[type=text]:focus {
 		margin:5px;
 		background-color: #e9e9ea;
 		border-top: 4px solid #163143;
-		text-align: center;
 	}
 	
 	button#start {
