@@ -62,8 +62,8 @@
 	text-align: center;
 }
 
-#card_stack ul li {
-	text-decoration: none;
+#card_stack ul {
+	list-style: none;
 }
 
 @media screen and (max-width: 650px) {
