@@ -1,4 +1,4 @@
-combi/ 
+combi/
 - game/
   - game.php -- 4
   - hand.php -- 3

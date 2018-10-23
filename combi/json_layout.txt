@@ -20,9 +20,6 @@
 	'card_stack': [
 		str,
 	],
-	'graveyard': [
-		str,
-	],
 	'last_change': timestamp,
 	'game_started': bool,
 	'max_cards': int,
