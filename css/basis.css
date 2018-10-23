@@ -99,8 +99,12 @@ h3 {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	width: 55%;
 	text-align: center;
+}
+
+.startscherm p {
+	margin: 10px 0;
 }
 
 @media screen and (max-width: 650px) {
