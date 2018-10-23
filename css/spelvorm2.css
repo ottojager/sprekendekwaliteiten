@@ -406,8 +406,7 @@ input[type=text]:focus {
 
 #player_list li {
 	display: inline-block;
-	padding: 15px 0;
-	width: 33%
+	padding: 10px 0;
 }
 
 .player-button button {
