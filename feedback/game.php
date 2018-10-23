@@ -54,8 +54,9 @@ if ($_SESSION['player_id'] != 11) {
 		</script>
 		<meta charset="utf-8">
 		<title>Actief - Feedback - Sprekende Kwaliteiten</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../css/basis.css" type="text/css">
-		<link rel="stylesheet" href="../css/feedback.css" type="text/css">
+		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">

@@ -1,6 +1,6 @@
 /* Tijdelijke stylesheet zodat ik het niet voor Felix verpest */
 
-/* Spelvorm 2 Game CSS */
+/* Spelvorm 2 Game CSS
 
 #turn {
 	text-align: center;
@@ -88,7 +88,7 @@
 	}
 }
 
-/* Eindscherm CSS */
+/* Eindscherm CSS 
 
 .eind-content {
 	margin-top: 120px;
@@ -104,13 +104,13 @@
 	text-align: center;
 }
 
-/* Kaart Rij Redux */
+/* Kaart Rij Redux
 
 .kaart-rij {
     display: block;
     margin: 20px auto 0;
     text-align: center;
-    width: 1024px;/*100%;*/
+    width: 100%;
 	list-style: none;
 }
 
@@ -144,3 +144,28 @@
 	width: 400px;	
 	}
 }
+
+/* Media Query for ants 
+
+@media screen and (max-width: 320px)  {
+	.eind-kaart button {
+		background-size: 130px 200px;
+		height: 200px;
+		width: 130px;
+		font-size: 16px;
+	}
+	
+	.kaart-rij {
+		width: 100%;
+	}
+	
+	.form-email {
+		width: 273px;
+	}
+	
+	.form-input {
+		width: 200px;
+	}
+}
+
+*/

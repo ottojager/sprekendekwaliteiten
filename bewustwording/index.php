@@ -2,6 +2,7 @@
 <html lang="nl=NL">
 	<head>
 		<title>Start - Bewustwording - Sprekende Kwaliteiten</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../css/spelvorm1.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
