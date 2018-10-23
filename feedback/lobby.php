@@ -99,6 +99,7 @@ if (!(bool)$json) { // if $json actually has content
 			De volgende spelers doen mee:</p>
 
 			<?php } else { // player only ?>
+			<h2>Spelvoorbereiding - Feedback</h2>
 			<p>De volgende spelers doen mee:</p>
 			<?php } ?>
 

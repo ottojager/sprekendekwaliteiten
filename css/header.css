@@ -128,9 +128,15 @@ div.headvorm >a:link:active, div.headvorm >a:visited:active {
     color: #d4263e;
 }
 
-div.headvorm >a:focus { 
+div.headvorm >a:focus, div.headvorm >a:hover { 
     background-color:#163143;
 	color: #e9e9ea;
+}
+
+div.headvorm > a:focus {
+    	color: #e9e9ea;
+    	background-color: #163143;
+	transition:margin-top 1s;
 }
 
 /*dropdown gebeuren*/
