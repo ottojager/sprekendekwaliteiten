@@ -386,3 +386,17 @@ input[type=text]:focus {
 	
 	/*einde lobby kleine schermen*/
 }
+
+@media screen and (max-width: 320px)  {
+	.red_border {
+		width: 270px;
+	}
+	
+	.formfield {
+		width: 260px;
+	}
+	
+	label[for="name"], label[for="code"], label[for="cards"]  {
+		margin: 0;
+	}
+}
