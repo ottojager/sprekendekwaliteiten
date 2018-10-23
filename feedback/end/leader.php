@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="../../css/basis.css" type="text/css">
 	<link rel="stylesheet" href="../../css/header.css" type="text/css">
 	<link rel="stylesheet" href="../../css/footer.css" type="text/css">
-	<link rel="stylesheet" href="../../css/feedback.css" type="text/css"
+	<link rel="stylesheet" href="../../css/spelvorm2.css" type="text/css"
 	<link rel="icon" sizes="16x16" type="image/png" href="/../kwal-spel/feedback/css/Rainbow_placeholder.png">
 	<script src="./endgame.js"></script>
 	<script>
