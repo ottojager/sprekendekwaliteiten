@@ -354,9 +354,11 @@ input[type=text]:focus {
 	ul#player_list li{
 		padding:4px;
 		width:250px;
+		height: 30px;
 		margin:5px;
 		background-color: #e9e9ea;
 		border-top: 4px solid #163143;
+		text-align: center;
 	}
 	
 	button#start {
