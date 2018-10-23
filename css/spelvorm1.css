@@ -245,6 +245,29 @@ span.alienBackRight {
 	}
 }
 
+/* Media Query for ants */
+
+@media screen and (max-width: 320px)  {
+	.kaart button {
+		background-size: 130px 200px;
+		height: 200px;
+		width: 130px;
+		font-size: 16px;
+	}
+	
+	.kaart-rij {
+		width: 100%;
+	}
+	
+		.form-email {
+		width: 273px;
+	}
+	
+	.form-input {
+		width: 200px;
+	}
+}
+
 /* Spelvorm 1 Eindscherm */
 
 .eind-kaart button {
