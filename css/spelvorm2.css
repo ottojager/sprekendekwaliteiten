@@ -221,7 +221,7 @@ input[type=text], select {
 }
 
 input[type=text]:focus {
-	margin: 3px 2px;
+	margin: 6px 5px;
 }
 
 .button-positie > div.button {
@@ -323,7 +323,7 @@ input[type=text]:focus {
 		border-radius: 2px;
 		border: 1px solid #234152;
 		float: right;
-		margin: 6px 5px;
+		margin: 3px 2px;
 	}
 	
 	input[type=text]:focus {
