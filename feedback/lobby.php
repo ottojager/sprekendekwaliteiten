@@ -76,6 +76,7 @@ if (!(bool)$json) { // if $json actually has content
 			}, s);
 		</script>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
