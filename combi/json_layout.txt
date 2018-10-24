@@ -13,11 +13,13 @@
 			],
 			'hand' [
                 str,
-			]
-			'last_request': timestamp,
+			],
 		},
 	],
 	'card_stack': [
+		str,
+	],
+	'graveyard': [
 		str,
 	],
 	'last_change': timestamp,
