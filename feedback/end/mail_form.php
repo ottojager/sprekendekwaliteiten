@@ -17,7 +17,7 @@
 
 	include('../../header.php');
 	?>
-	<main id="main">
+	<main class="container" id="main">
 		<div class="email-container">
 			<span class="alienBackLeft"></span>
 			<span class="alienBackRight"></span>
