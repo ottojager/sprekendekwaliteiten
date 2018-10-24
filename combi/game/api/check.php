@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION['game_id'])) {
 	$game = $_SESSION['game_id'];
-	$json = @file_get_contents("../games/$game.json"); // open the game's json file (hide warnings if they arise)
+	$json = @file_get_contents("../../games/$game.json"); // open the game's json file (hide warnings if they arise)
 	if ((bool)$json) { // if $json actually has content
 		if (isset($json['turn_action'])) {
 			unset($json['turn_action']); // remove the turn_action seeing as users don't need it and it becomes a lot of data real fast

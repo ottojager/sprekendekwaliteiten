@@ -1,9 +1,14 @@
 combi/
 - game/
+  - lobby.php -- same as feedback
   - game.php -- 4
   - hand.php -- 3
   - giveaway.php -- 5
   - trade.php -- 6
+  - games/
+    -- all the game jsons
   - leader/
     - game.php
     - hand.php
+  - api/
+    -- same as feedback

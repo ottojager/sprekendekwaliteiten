@@ -9,9 +9,9 @@ if (isset($_POST['makeLobbyButton'])) {
 			                                                          // TODO: add a propper minimum amount of cards
 			//list of filtered codes
 			$filtered_names = array (
-				'LUL','KUT','PIK','SEX','FUC','FUK','SUC','KKK','GAY','FAG','NIG','ZAK','POO','PIS','DIK','KOK','COK',
-				'ASS','TIT','JIZ','CUM','GOY','STD','NAZ','NZI','HEL','GUN','BOM','PRN','WWI','JAP','NIP','NAP','WAR',
-				'WII','HIV','SOA','HIS','HER','DWN','MOF','CBT','XXX',
+				'LUL','KUT','PIK','SEX','FUC','FUK','FCK','SUC','SUK','KKK','GAY','FAG','NIG','ZAK','POO','PIS','DIK',
+				'KOK','COK','ASS','TIT','JIZ','CUM','GOY','STD','NAZ','NZI','HEL','GUN','BOM','PRN','WWI','JAP','NIP',
+				'NAP','WAR','WII','HIV','SOA','HIS','HER','DWN','MOF','CBT','XXX','GUY','HEK','HEC',
 			);
 
 			// generate game id
@@ -39,7 +39,7 @@ if (isset($_POST['makeLobbyButton'])) {
 			$_SESSION['game_id'] = $id;
 			$_SESSION['game_mode'] = 2;
 			$_SESSION['player_name'] = $name;
-			header('Location: ./lobby.php');
+			header('Location: ./game/lobby.php');
 		} else {
 			$error = 'Kaarten moet een getal tussen 0 en 70 zijn.';
 		}

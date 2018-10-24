@@ -4,11 +4,11 @@ session_start();
 if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	//TODO: add check for minimum amount of players
 	$game = $_SESSION['game_id'];
-	$json = json_decode(file_get_contents("../games/$game.json"), true);
+	$json = json_decode(file_get_contents("../../games/$game.json"), true);
 	$json['game_started'] = true;
 
 	// connect to database
-	$config = json_decode(file_get_contents('../../.env.json'), true); // load the db connection info
+	$config = json_decode(file_get_contents('../../../.env.json'), true); // load the db connection info
 	$db = mysqli_connect($config['hostname'], $config['username'], $config['password']);
 
 	// Create card stack
@@ -41,7 +41,7 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	$json['current_player'] = 0;
 
 	// write back to file
-	file_put_contents("../games/$game.json", json_encode($json));
+	file_put_contents("../../games/$game.json", json_encode($json));
 } else {
 	header('HTTP/1.1 403 Forbidden');
 }

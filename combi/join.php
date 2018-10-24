@@ -26,7 +26,7 @@ if (isset($_POST['join_button'])) {
 							$_SESSION['player_name'] = $name; // because player_id might need to change later
 							$_SESSION['game_id'] = $code;
 							$_SESSION['game_mode'] = 3;
-							header('Location: lobby.php');
+							header('Location: ./game/lobby.php');
 						}
 					} else {
 						$error = 'Je kan niet mee doen aan een spel als deze al bezig is.';

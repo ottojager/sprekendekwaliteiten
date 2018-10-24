@@ -9,7 +9,7 @@ function cmp($a, $b) {
 if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 	if (isset($_GET['p'])) {
 		$game = $_SESSION['game_id'];
-		$json = json_decode(file_get_contents("../games/$game.json"), true);
+		$json = json_decode(file_get_contents("../../games/$game.json"), true);
 
 		if (!$json['game_started']) {
 			// just remove the user it's fine
@@ -19,9 +19,10 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 				$json['players'][$key]['player_id'] = $key;
 			}
 
-			file_put_contents("../games/$game.json", json_encode($json));
+			file_put_contents("../../games/$game.json", json_encode($json));
+		} else {
+			header('HTTP/1.1 400 Bad Request');
 		}
-		header('HTTP/1.1 400 Bad Request');
 	}
 } else {
 	header('HTTP/1.1 403 Forbidden');

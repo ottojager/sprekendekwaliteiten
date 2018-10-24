@@ -2,23 +2,23 @@
 session_start();
 
 if (!isset($_SESSION['game_id'])) {
-	header('location: ./');
+	header('location: ../');
 }
 
 // load game's json file
 $game = $_SESSION['game_id'];
-$json = json_decode(@file_get_contents("./games/$game.json"), true);
+$json = json_decode(@file_get_contents("../games/$game.json"), true);
 
 if (!(bool)$json) { // if $json actually has content
 	@unlink("../games/$game.json"); // delete the empty file if one were to exist
-	header('Location: ./delete.php'); // send the user to delete.php to have their session cleared
+	header('Location: ../delete.php'); // send the user to delete.php to have their session cleared
 }
 ?>
 <!DOCTYPE html>
 <html lang="nl=NL">
 	<head>
 		<title>Spelvoorbereiding - Feedback - Sprekende Kwaliteiten</title>
-		<script src="api/js/std.js"></script>
+		<script src="./api/js/std.js"></script>
 
 		<?php
 		// java script only needed for the game leader
@@ -29,7 +29,7 @@ if (!(bool)$json) { // if $json actually has content
 					var xhttp = new XMLHttpRequest();
 					xhttp.onreadystatechange = function() {
 						if (this.readyState == 4 && this.status == 200) {
-							window.location.href = 'game.php';
+							window.location.href = './';
 						}
 					};
 					xhttp.open("GET", "./api/start.php", true);
@@ -51,7 +51,7 @@ if (!(bool)$json) { // if $json actually has content
 			window.setInterval(function(){ // run this code every [s] seconds
 				start_update(); // get the new game_info
 				if (game_info["game_started"] == true) {
-					window.location.href = 'game.php'; // redirect users if the game has been started
+					window.location.href = './'; // redirect users if the game has been started
 				}
 
 				// regenerate the player list
@@ -76,10 +76,10 @@ if (!(bool)$json) { // if $json actually has content
 			}, s);
 		</script>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="../css/header.css" type="text/css">
-		<link rel="stylesheet" href="../css/basis.css" type="text/css">
-		<link rel="stylesheet" href="../css/footer.css" type="text/css">
-		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
+		<link rel="stylesheet" href="../../css/header.css" type="text/css">
+		<link rel="stylesheet" href="../../css/basis.css" type="text/css">
+		<link rel="stylesheet" href="../../css/footer.css" type="text/css">
+		<link rel="stylesheet" href="../../css/spelvorm2.css" type="text/css">
 		<link rel="icon" sizes="16x16" type="image/png" href="css/Rainbow_placeholder.png">
 	</head>
 	<body>
@@ -89,7 +89,7 @@ if (!(bool)$json) { // if $json actually has content
 		$spelvorm = 'Feedback';
 		$name = $_SESSION['player_name'];
 
-		include('../header.php');
+		include('../../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
 			<?php if ($_SESSION['player_id'] == 11) { // game leader only ?>
@@ -121,6 +121,6 @@ if (!(bool)$json) { // if $json actually has content
 		}
 		?>
 		</main>
-		<?php include('../footer.php') ?>
+		<?php include('../../footer.php') ?>
 	</body>
 </html>
