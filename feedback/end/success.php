@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
 	<link rel="stylesheet" href="../../css/basis.css" type="text/css">
 	<link rel="stylesheet" href="../../css/header.css" type="text/css">

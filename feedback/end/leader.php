@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl=NL">
+<html lang="nl">
 <head>
 	<title>Einde - Feedback - Sprekende Kwaliteiten</title>
 	<link rel="stylesheet" href="../../css/basis.css" type="text/css">

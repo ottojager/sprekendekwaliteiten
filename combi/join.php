@@ -51,7 +51,7 @@ if (isset($_POST['join_button'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="nl=NL">
+<html lang="nl">
 	<head>
 		<script>
 		function validate_form() {

@@ -76,21 +76,29 @@ p {
 
 #player_list li{
 	margin: 8px auto 0 auto;
-	padding:4px;
-	width:250px;
 	background-color: #e9e9ea;
 	border-top: 4px solid #163143;
 	text-align:center;
 }
 
 ul#player_list li button{
-	float:left;
+	width: 250px;
+    padding: 5px;
+    height: 30px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px; /* Was 20px */
 	color: #234152;
 	border: none;
 	background: none;
+	cursor: pointer;
 }
+
+#player_list li:hover, #player_list button:hover, #player_list li:focus {
+	color: #e9e9ea;
+	background-color: #234152;
+	border-top:
+}
+
 button #start {
 	width: 277px;
 	height: 54px;
@@ -143,15 +151,11 @@ span.alienBackRight {
 		margin: auto;
 		font-size: 40px;
 	}
-	#player_list li {
-		width: 40%;
-	}
-
 }
 
 /* Einde lobby */
 
-#title > h1 {
+#title > h2 {
 	padding: 18px;
 	text-decoration: underline;
 	font-family: 'Oswald', sans-serif;
@@ -196,6 +200,9 @@ span.alienBackRight {
 .red_border {
 	width: 334px;
 	margin: 0% auto 3% auto;
+}
+label {
+	font-family:inherit;
 }
 
 label[for=name]{
@@ -254,7 +261,7 @@ input[type=text]:focus {
 	#player__name {
 	}
 	
-	#title > h1 {
+	#title > h2 {
 		padding: 18px;
 		text-decoration: underline;
 		font-family: 'Oswald', sans-serif;
@@ -307,11 +314,13 @@ input[type=text]:focus {
 	label[for=name]{
 		text-align: center;
 		margin: 20px;
+		font-family:inherit;
 	}
 	
 	label[for=code]{
 		text-align: center;
 		margin: 20px;
+		font-family:inherit;
 	}
 	
 	label[for=cards]{
@@ -352,13 +361,10 @@ input[type=text]:focus {
 	}
 	
 	ul#player_list li{
-		padding:4px;
-		width:250px;
 		height: 30px;
 		margin:5px;
 		background-color: #e9e9ea;
 		border-top: 4px solid #163143;
-		text-align: center;
 	}
 	
 	button#start {
@@ -408,7 +414,6 @@ input[type=text]:focus {
 
 #player_list li {
 	display: inline-block;
-	padding: 10px 0;
 }
 
 .player-button button {

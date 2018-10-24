@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl=NL">
+<html lang="nl">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,8 @@
 		include('header.php')
 		?>
 		<main class="container" id="main" tabindex="-1">
-			<h2>Kwaliteitenspel</h2>
-			<h3>Welkom bij het Kwaliteitenspel</h3>
+			<h2>Sprekende Kwaliteiten</h2>
+			<h3>Welkom bij Sprekende Kwaliteiten</h3>
 			<p></p>
 			<div id="knoppen">
 				<div class="button"><button onclick="window.location='./bewustwording'">Bewustwording</button></div>

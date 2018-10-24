@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="nl">
 <html>
 	<head>
 		<title>Start - Combi - Sprekende Kwaliteiten</title>

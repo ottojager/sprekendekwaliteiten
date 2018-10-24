@@ -42,7 +42,7 @@ $to = str_replace('\n', ' ', $to);
 $subject = 'Uw kaarten';
 
 // who actually send the message
-$headers[] = 'From: noreply@reacursist.nl';
+$headers[] = 'From: sprekendekwaliteiten@eye4web.nl';
 
 // without these it won't be able to send html encoded emails
 $headers[] = 'MIME-Version: 1.0';
