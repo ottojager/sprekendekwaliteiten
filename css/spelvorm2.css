@@ -303,7 +303,7 @@ input[type=text], select {
 	padding: 0;
 }
 
-.player-button button:hover, .player-button button:focus {
+#player_list li .player-button button:hover, #player_list li .player-button button:focus {
 	color: #e9e9ea;
 	background-color: #234152;
 }
