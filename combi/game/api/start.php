@@ -33,9 +33,12 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 		}
 	}
 
+	// init graveyard
+	$json['graveyard'] = array();
+
 	// draw first card
-	// $json['current_card'] = array_shift($json['card_stack']);
-	$json['players'][0]['hand'][] = array_shift($json['card_stack']);
+	$json['current_card'] = array_shift($json['card_stack']);
+	// $json['players'][0]['hand'][] = array_shift($json['card_stack']);
 
 	// make first player the active player
 	$json['current_player'] = 0;

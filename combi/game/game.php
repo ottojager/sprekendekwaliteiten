@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="nl">
 	<head>
-		<!-- <script src="./api/js/std.js" defer></script> -->
+		<script src="./api/js/std.js" defer></script>
+		<script>
 		<?php
 		// leader only JS
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
 		?>
-		<script>
 		function end_game() {
 			var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
@@ -17,11 +17,10 @@
 			xhttp.open("GET", "../api/end.php", true);
 			xhttp.send();
 		}
-		</script>
+
 		<?php } // end leader only JS ?>
-		<script>
-			var amount_players = <?php echo count($json['players']);?>;
-			var own_id = <?php echo $_SESSION['player_id'];?>;
+		var amount_players = <?php echo count($json['players']);?>;
+		var own_id = <?php echo $_SESSION['player_id'];?>;
 		</script>
 		<meta charset="utf-8">
 		<title>Actief - Feedback - Sprekende Kwaliteiten</title>
@@ -37,8 +36,13 @@
 		include('../../header.php');
 		?>
 		<main class="container player-container" id="main" tabindex="-1">
-			<h2><?php echo $json['players'][ $json['current_player'] ]['name'] ?> is aan de beurt...</h2>
-			<h3>jouw kaarten</h3>
+			<h2>nieuwe kaart</h2>
+			<div>
+				<button><?php echo $json['current_card']; ?></button>
+			</div>
+			<button onlclick="window.location='./giveaway.php'">weggeven</button>
+			<button onlclick="window.location='./trade.php'">inruilen</button>
+			<h2>Jouw hand kaarten</h2>
 			<ul>
 				<div class="kaart-rij">
 					<?php
