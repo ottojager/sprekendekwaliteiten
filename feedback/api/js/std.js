@@ -77,12 +77,6 @@ function leader_view_cards_hide(id_player) {
 	})
 }
 
-function help_window() {
-	var name = game_info['players'][ game_info['current_player'] ]['name'];
-	var content = name + ' is aan de beurt. ' + name + ' selecteert in de lijst spelers een naam aan wie hij/zij de kwaliteit wil geven';
-	alert(content);
-}
-
 function update_view() {
 	if (last_change == game_info['last_change']) {
 		return
@@ -334,7 +328,7 @@ function leader_view() {
 //////////
 var view = 'current';
 var first_refresh = new Boolean(true);
-var notification = new Audio('sound/notification.mp3');
+
 var last_change = 0;
 
 if (own_id == 11) {
