@@ -35,7 +35,11 @@ if (isset($_POST['join_button'])) {
 					$error = 'Verkeerde code of spel bestaat niet.';
 				}
 			} else {
-				$error = 'Code moet 3 letters zijn.';
+				if (strlen($code) == 0) {
+					$error = "Je hebt geen code ingevuld";
+				} else {
+					$error = 'Code moet 2 letters zijn.';
+				}
 			}
 		} else {
 			$error = 'Die naam is gereseveert.';
@@ -62,14 +66,18 @@ if (isset($_POST['join_button'])) {
 
 			name = name.trim(); // remove white space at beggining and end of the string
 
-			if (name.length >= 3) {
+			if (name.length >= 2) {
 				if (code.length == 3) {
 					return true;
 				} else {
-					error.innerHTML = 'De code moet precies 3 letters zijn.';
+					if (code.length == 0) {
+						error.innerHTML = "Je hebt geen code ingevuld";
+					} else {
+						error.innerHTML = 'De code moet precies 3 letters zijn.';
+					}
 				}
 			} else {
-				error.innerHTML = 'Je naam moet minimaal 3 tekens lang zijn.';
+				error.innerHTML = 'Je naam moet minimaal 2 tekens lang zijn.';
 			}
 			return false;
 		}
