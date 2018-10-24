@@ -84,6 +84,7 @@
 	border: none;
 	background: none;
 	cursor: pointer;
+	float:right;
 }
 
 button #start {
@@ -141,7 +142,7 @@ span.alienBackRight {
 #title p {
 	margin: 30px auto;
 	color: #234152;
-	font-family: oswald,  monospace;
+	font-family: 'Oswald',  monospace;
 	font-size: 21px;
 	text-align: center;
 	width: 70%;
@@ -150,7 +151,7 @@ span.alienBackRight {
 #error {
 	margin: 0px 0 0 0;
 	color: #d4263e;
-	font-family: oswald,  monospace;
+	font-family: 'Oswald',  monospace;
 	font-size: 21px;
 	text-align: center;
 }
@@ -161,7 +162,7 @@ span.alienBackRight {
 	width: 441.894px;
 	height: 50px;
 	padding: 2px 5px 0px 5px;
-	font-family: oswald,  monospace;
+	font-family: 'Oswald',  monospace;
 	font-size: 16px;
 	color: #163143;
 	border-top: 3px solid #234152;
@@ -212,7 +213,7 @@ input[type=text], select {
 	#error {
 		margin: 0px 0 0 0;
 		color: #d4263e;
-		font-family: oswald,  monospace;
+		font-family: 'Oswald',  monospace;
 		font-size: 16px;
 		text-align: center;
 	}
@@ -284,6 +285,11 @@ input[type=text], select {
 	text-align: center;
     margin: 60px auto 0;
 }
+
+#player_list li .player-button button {
+	float:none
+}
+
 
 .player-button button {
 	width: 250px;
