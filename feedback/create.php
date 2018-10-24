@@ -66,7 +66,7 @@ if (isset($_POST['makeLobbyButton'])) {
 			if (name.length >= 3) {
 				return true;
 			} else {
-				error.innerHTML = 'Je naam moet minimaal 3 characters lang zijn.';
+				error.innerHTML = 'Je naam moet minimaal 2 characters lang zijn.';
 			}
 			return false;
 		}
