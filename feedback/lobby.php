@@ -108,7 +108,7 @@ if (!(bool)$json) { // if $json actually has content
 			<?php
 			foreach ($json['players'] as $key => $value) {
 				if ($_SESSION['player_id'] == 11) {
-					echo '<li><button onclick="kick(\''.$key.'\')"><img src="../afbeeldingen/Remove-knop.png" alt="Verwijder speler" height="20" width="20"></button>'.$value['name'].'</li>';
+					echo '<li>'.$value['name'].'<button onclick="kick(\''.$key.'\')"><img src="../afbeeldingen/Remove-knop.png" alt="Verwijder speler" height="20" width="20"></button></li>';
 				} else {
 					echo '<li>'.$value['name'].'</li>';
 				}
