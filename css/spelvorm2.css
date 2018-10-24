@@ -75,6 +75,8 @@ p {
 }
 
 #player_list li{
+	width: 250px;
+    padding: 4px;
 	margin: 8px auto 0 auto;
 	background-color: #e9e9ea;
 	border-top: 4px solid #163143;
