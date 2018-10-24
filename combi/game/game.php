@@ -35,7 +35,7 @@
 		<?php
 		include('../../header.php');
 		?>
-		<main class="container player-container" id="main" tabindex="-1">
+		<main class="container" id="main" tabindex="-1">
 			<h2>nieuwe kaart</h2>
 			<div>
 				<button><?php echo $json['current_card']; ?></button>
