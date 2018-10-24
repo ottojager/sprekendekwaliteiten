@@ -76,14 +76,15 @@ p {
 
 #player_list li{
 	margin: 8px auto 0 auto;
-	padding:4px;
-	width:250px;
 	background-color: #e9e9ea;
 	border-top: 4px solid #163143;
 	text-align:center;
 }
 
 ul#player_list li button{
+	width: 250px;
+    padding: 5px;
+    height: 30px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px; /* Was 20px */
 	color: #234152;
@@ -91,6 +92,13 @@ ul#player_list li button{
 	background: none;
 	cursor: pointer;
 }
+
+#player_list li:hover, #player_list button:hover, #player_list li:focus {
+	color: #e9e9ea;
+	background-color: #234152;
+	border-top:
+}
+
 button #start {
 	width: 277px;
 	height: 54px;
@@ -143,10 +151,6 @@ span.alienBackRight {
 		margin: auto;
 		font-size: 40px;
 	}
-	#player_list li {
-		width: 40%;
-	}
-
 }
 
 /* Einde lobby */
@@ -357,8 +361,6 @@ input[type=text]:focus {
 	}
 	
 	ul#player_list li{
-		padding:4px;
-		width:250px;
 		height: 30px;
 		margin:5px;
 		background-color: #e9e9ea;
@@ -412,7 +414,6 @@ input[type=text]:focus {
 
 #player_list li {
 	display: inline-block;
-	padding: 10px 0;
 }
 
 .player-button button {
