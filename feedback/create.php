@@ -63,7 +63,7 @@ if (isset($_POST['makeLobbyButton'])) {
 
 			name = name.trim(); // remove white space at beggining and end of the string
 
-			if (name.length >= 3) {
+			if (name.length >= 2) {
 				return true;
 			} else {
 				error.innerHTML = 'Je naam moet minimaal 2 characters lang zijn.';

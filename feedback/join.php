@@ -38,7 +38,7 @@ if (isset($_POST['join_button'])) {
 				if (strlen($code) == 0) {
 					$error = "Je hebt geen code ingevuld";
 				} else {
-					$error = 'Code moet 2 letters zijn.';
+					$error = 'Code moet 3 letters zijn.';
 				}
 			}
 		} else {
