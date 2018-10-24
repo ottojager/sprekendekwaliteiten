@@ -1,14 +1,4 @@
-/* Standaard CSS */
-
-@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500');
-
-#borderimage {
-	float: left;
-	width: 1px;
-	background-color: #234152;
-}
-
-/* Lobby CSS */
+/* Main, Leader CSS */
 
 #main {
 	display: flex;
@@ -47,13 +37,12 @@
 	background-color: #234152;
 }
 
-p {
-	color: #234152;
-	font-family: 'Roboto', sans-serif;
-	text-align: center;
-}
+
+/* Player List CSS */
 
 #player_list {
+	
+	/* Felix CSS */
 	display: flex;
 	display: -webkit-flex; /* Safari 6.1+ */
 	display: -ms-flex; /* IE 10 */
@@ -72,11 +61,16 @@ p {
 	font-size: 20px;
 	color: #234152;
 	list-style: none;
+	
+	/* Sander CSS */
+	margin-top: 60px;
+	text-align: center;
 }
 
-#player_list li{
+#player_list li {
+	display: inline-block;
+	padding: 4px;
 	width: 250px;
-    padding: 4px;
 	margin: 8px auto 0 auto;
 	background-color: #e9e9ea;
 	border-top: 4px solid #163143;
@@ -120,10 +114,6 @@ button #start:focus {
 	border: 8px solid #d32b17;
 }
 
-/*div.button {
-	display: block;
-    margin: 8px auto 0 auto;
-}*/
 
 /* Achtergrond*/
 
@@ -146,18 +136,10 @@ span.alienBackRight {
 	}
 }
 
-/* Einde achtergrond */
 
-@media screen and (min-width: 650px) {
-	h1 {
-		margin: auto;
-		font-size: 40px;
-	}
-}
+/* Aanmaak/Inlog Scherm CSS */
 
-/* Einde lobby */
-
-#title > h2 {
+#title h2 {
 	padding: 18px;
 	text-decoration: underline;
 	font-family: 'Oswald', sans-serif;
@@ -166,15 +148,16 @@ span.alienBackRight {
 	text-align: center;
 }
 
-#title > p {
-	margin: 10px 0 0 0;
+#title p {
+	margin: 30px auto;
 	color: #234152;
 	font-family: oswald,  monospace;
 	font-size: 21px;
 	text-align: center;
+	width: 70%;
 }
 
- p#error {
+#error {
 	margin: 0px 0 0 0;
 	color: #d4263e;
 	font-family: oswald,  monospace;
@@ -182,10 +165,6 @@ span.alienBackRight {
 	text-align: center;
 }
 
-#title p {
-	width: 70%;
-	margin: 30px auto;
-}
 .formfield {
 	margin-left: -56.9px;
 	margin-top: 20px;
@@ -207,17 +186,7 @@ label {
 	font-family:inherit;
 }
 
-label[for=name]{
-    text-align: center;
-    margin: 20px;
-}
-
-label[for=code]{
-    text-align: center;
-    margin: 20px;
-}
-
-label[for=cards]{
+label[for=name], label[for=code], label[for=cards]{
     text-align: center;
     margin: 20px;
 }
@@ -229,11 +198,7 @@ input[type=text], select {
 	margin: 6px 5px;
 }
 
-input[type=text]:focus {
-	margin: 6px 5px;
-}
-
-.button-positie > div.button {
+.button-positie {
 	display:inline-block;
 }
 
@@ -254,34 +219,7 @@ input[type=text]:focus {
 
 @media only screen and (max-width: 650px) {
 	
-	#borderimage {
-		float: left;
-		width: 1px;
-		background-color: #234152;
-	}
-	
-	#player__name {
-	}
-	
-	#title > h2 {
-		padding: 18px;
-		text-decoration: underline;
-		font-family: 'Oswald', sans-serif;
-		font-size: 35px;
-		color: #234152;
-		background-color: #fffefe;
-		text-align: center;
-	}
-	
-	#title > p {
-		margin: 10px 0 0 0;
-		color: #234152;
-		font-family: oswald,  monospace;
-		font-size: 16px;
-		text-align: center;
-	}
-	
-	p#error {
+	#error {
 		margin: 0px 0 0 0;
 		color: #d4263e;
 		font-family: oswald,  monospace;
@@ -289,56 +227,15 @@ input[type=text]:focus {
 		text-align: center;
 	}
 	
-	#title p {
-		width: 70%;
-		margin: 30px auto;
-	}
-	
 	.formfield {
 		margin-left: 0px;
 		margin-top: 15px;
 		width: 320px;
 		height: 30px;
-		padding: 2px 5px 0px 5px;
-		font-family: oswald,  monospace;
-		font-size: 16px;
-		color: #163143;
-		border-top: 3px solid #234152;
-		background-color: #e9e9ea;
-		border-bottom-right-radius: 2px;
-	}
-	
-	.red_border {
-		width: 334px;
-		margin: 0% auto 3% auto;
-	}
-	
-	label[for=name]{
-		text-align: center;
-		margin: 20px;
-		font-family:inherit;
-	}
-	
-	label[for=code]{
-		text-align: center;
-		margin: 20px;
-		font-family:inherit;
-	}
-	
-	label[for=cards]{
-		text-align: center;
-		margin: 20px;
 	}
 	
 	input[type=text], select {
-		border-radius: 2px;
-		border: 1px solid #234152;
-		float: right;
 		margin: 3px 2px;
-	}
-	
-	input[type=text]:focus {
-		margin: 3px 2px;	
 	}
 	
 	button[name=makeLobbyButton] {
@@ -346,39 +243,26 @@ input[type=text]:focus {
 	}
 	
 	.startscherm-content {
-	color: #d4263e;
 	margin: 0;
     padding: 30px 0;
 	}
 	
-	/* Lobby kleine schermen*/
-	
 	ul#player_list {
 		display:block;
 		width: auto;
-		font-family: 'Roboto', sans-serif;
-		font-size: 20px;
-		color: #234152;
-		list-style: none;
 	}
 	
 	ul#player_list li{
-		padding: 4px;
-		width: 250px;
 		height: 30px;
 		margin:5px;
-		background-color: #e9e9ea;
-		border-top: 4px solid #163143;
 	}
 	
 	button#start {
 		width: 250px;
 		margin: auto;
 	}
-	
-	
-	/* Einde lobby kleine schermen*/
 }
+
 
 /* Spelvorm 2 Game CSS */
 
@@ -411,16 +295,6 @@ input[type=text]:focus {
     margin: 60px auto 0;
 }
 
-#player_list {
-	margin-top: 60px;
-	text-align: center;
-}
-
-#player_list li {
-	display: inline-block;
-	padding: 10px 0;
-}
-
 .player-button button {
 	width: 130px;
 	height: 26px;
@@ -448,9 +322,9 @@ input[type=text]:focus {
 
 @media screen and (max-width: 650px) {
 	
-	h2 {
+	/*h2 {
 	margin: 70px 0 25px 0;	
-	}
+	}*/ ?
 	
 	#card_display {
 		margin: 0 auto 0;
@@ -467,6 +341,7 @@ input[type=text]:focus {
 		height: 30px;
 	}
 }
+
 
 /* Eindscherm CSS */
 
@@ -489,6 +364,7 @@ input[type=text]:focus {
 	margin: 30px auto 0 auto;
 	text-align: center;
 }
+
 
 /* Kaart Rij Redux */
 
@@ -530,6 +406,7 @@ input[type=text]:focus {
 	width: 400px;	
 	}
 }
+
 
 /* Media Query for ants */
 
