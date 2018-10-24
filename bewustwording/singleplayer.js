@@ -65,7 +65,7 @@ function send_email() {
     var p = document.getElementById('error');
     if (!match) {
         p.innerHTML = 'Het ingevulde email adres klopt niet';
-        exit();
+        return
     } else {
         p.innerHTML = '';
     }
