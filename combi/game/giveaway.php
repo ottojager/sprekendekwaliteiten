@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+
+if (!isset($_SESSION['game_id'])) {
+	header('Location: ../');
+}
+$game = $_SESSION['game_id'];
+$json = json_decode(file_get_contents("../games/$game.json"), true);
+if ($json['game_started'] == false) {
+	header('location: ../lobby.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="nl">
 	<head>
@@ -33,25 +46,26 @@
 	<body>
 		<a href="#main" class="skip-link">Skip naar main content</a>
 		<?php
+		// create some variables to add header values
+		$spelvorm = 'Combi';
+		$name = $_SESSION['player_name'];
+
 		include('../../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
-			<h2>nieuwe kaart</h2>
-			<div>
-				<button><?php echo $json['current_card']; ?></button>
+			<h2>Deel kaart</h2>
+			<div id="card_display">
+				<p id="current_card"><?php echo $json['current_card']; ?></p>
 			</div>
-			<button onclick="window.location='./giveaway.php'">weggeven</button>
-			<button onclick="window.location='./trade.php'">inruilen</button>
 
-			<h2>Jouw hand kaarten</h2>
-			<ul>
-				<div class="kaart-rij">
-					<?php
-					foreach($json['players'][ $_SESSION['player_id'] ]['hand'] as $key => $value) {
-						echo "<li class=\"kaart eind-kaart\"><button>$value</button></li>";
+			<ul id="player_list">
+				<?php
+				foreach ($json['players'] as $key => $value) {
+					if ($value['name'] != 'Afval stapel') {
+						echo '<li id="'.$value['player_id'].'"><div class="player-button"><button>'.$value['name'].' ('.count($value['stack']).')</button></div></li>';
 					}
-					?>
-				</div>
+				}
+				?>
 			</ul>
 		</main>
 		<?php include('../../footer.php') ?>
