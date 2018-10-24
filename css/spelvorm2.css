@@ -80,20 +80,35 @@
 	text-align:center;
 }
 
-#player_list li button {
+#player_list li button{
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px; /* Was 20px */
-	color: #234152;
+	color: inherit;
 	border: none;
 	background: none;
 	cursor: pointer;
 	float:right;
 }
 
-/* Overwrite voor #player_list's float */
+/*hover*/
+ul#player_list li:hover, ul#player_list li:hover  {
+	color:#e9e9ea;
+	background-color: #163143;
+	border-top-color: #e9e9ea;
+}
 
-#player_list li .player-button button {
-	float:none
+/*focus*/
+ul#player_list li:focus{
+	color:#d9d9da;
+	background-color: #062133;
+	border-top-color: #d9d9da;
+}
+
+/*ACTIVE*/
+ul#player_list li:active{
+	color:#e9e9ea;
+	background-color: #d4263e;
+	border-top-color: #163143;
 }
 
 button #start {
@@ -295,6 +310,11 @@ input[type=text], select {
     margin: 60px auto 0;
 }
 
+#player_list li .player-button button {
+	float:none
+}
+
+
 .player-button button {
 	width: 250px;
 	/*margin: 4px;*/
@@ -303,7 +323,7 @@ input[type=text], select {
 	padding: 0;
 }
 
-#player_list li .player-button button:hover, #player_list li .player-button button:focus {
+.player-button button:hover, .player-button button:focus {
 	color: #e9e9ea;
 	background-color: #234152;
 }
