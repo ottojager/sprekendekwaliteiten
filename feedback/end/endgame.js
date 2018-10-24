@@ -2,6 +2,7 @@ function send_mail() {
 	var email = document.getElementById('email').value;
 	if (email == '') {
 		alert('Het verplichte veld \'Email\' is niet ingevuld.');
+		return
 	}
 	var pattern =
 /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
