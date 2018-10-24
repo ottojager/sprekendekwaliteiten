@@ -79,7 +79,7 @@ h1 {
 }
 
 h2 {
-	margin: 50px 0 25px 0;
+	margin: 60px 0 25px 0;
 	font-size: 28px;
 	text-align: center;
 }
@@ -91,6 +91,12 @@ h3 {
 #knoppen {
 	margin: 60px auto 0 auto;
 	text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+	#knoppen {
+	margin: 20px auto 0 auto;
+	}
 }
 
 /* Startscherm CSS */
@@ -292,8 +298,8 @@ span.alienBackRight {
 	}
 
 	.form-email {
+	margin: 194px auto 25px;
 	width: 370px;
-	margin-bottom: 25px;
 	}
 	
 	.form-input {

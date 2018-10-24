@@ -102,7 +102,7 @@ html {
 }
 
 .bottom-menu .button button {
-	margin: 25px auto;
+	margin: 5px auto;
 }
 
 .bottom-menu {
@@ -242,6 +242,12 @@ span.alienBackRight {
 	
 	.card-holder-b {
 	margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#hand {
+	padding-top: 0;
 	}
 }
 
