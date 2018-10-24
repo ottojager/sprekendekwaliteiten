@@ -37,6 +37,9 @@
 	background-color: #234152;
 }
 
+.wacht-text {
+	text-align: center;
+}
 
 /* Player List CSS */
 
@@ -77,7 +80,7 @@
 	text-align:center;
 }
 
-#player_list li button{
+#player_list li button {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px; /* Was 20px */
 	color: #234152;
@@ -85,6 +88,12 @@
 	background: none;
 	cursor: pointer;
 	float:right;
+}
+
+/* Overwrite voor #player_list's float */
+
+#player_list li .player-button button {
+	float:none
 }
 
 button #start {
@@ -285,11 +294,6 @@ input[type=text], select {
 	text-align: center;
     margin: 60px auto 0;
 }
-
-#player_list li .player-button button {
-	float:none
-}
-
 
 .player-button button {
 	width: 250px;

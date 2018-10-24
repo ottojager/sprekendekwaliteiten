@@ -119,7 +119,7 @@ if (!(bool)$json) { // if $json actually has content
 		if ($_SESSION['player_id'] == 11) {
 			?><div class="button"> <button id="start" onclick="start_game()">Start het spel</button></div><?php
 		} else {
-			?><p>Wacht tot iedereen aanwezig is. De spelbegeleider zal het spel zometeen beginnen.</p><?php
+			?><p class="wacht-text">Wacht tot iedereen aanwezig is. De spelbegeleider zal het spel zometeen beginnen.</p><?php
 		}
 		?>
 		</main>
