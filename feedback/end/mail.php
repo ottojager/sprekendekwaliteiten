@@ -52,7 +52,7 @@ $subject_preferences = array(
 // $headers[] = 'To: '.$player['name'].'<'.$to.'>';
 
 // Subject
-$subject = 'Uw kaarten';
+$subject = 'Jouw resultaten van Sprekende Kwaliteiten - Feedback';
 
 // who actually send the message
 $headers[] = 'From: noreply@reacursist.nl';

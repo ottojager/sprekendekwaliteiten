@@ -39,7 +39,7 @@ $to = str_replace('\r', ' ', $to);
 $to = str_replace('\n', ' ', $to);
 
 // Subject
-$subject = 'Uw kaarten';
+$subject = 'Jouw resultaten van Sprekende Kwaliteiten - Bewustwording ';
 
 // who actually send the message
 $headers[] = 'From: sprekendekwaliteiten@eye4web.nl';
