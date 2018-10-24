@@ -77,7 +77,7 @@
 	text-align:center;
 }
 
-ul#player_list li button{
+#player_list li button{
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px; /* Was 20px */
 	color: #234152;
@@ -85,12 +85,6 @@ ul#player_list li button{
 	background: none;
 	cursor: pointer;
 }
-
-/* #player_list li button:hover, #player_list li button:focus {
-	color: #e9e9ea;
-	background-color: #234152;
-	border-top:
-} */
 
 button #start {
 	width: 277px;
@@ -130,7 +124,6 @@ span.alienBackRight {
 	span.alienBackLeft, span.alienBackRight {
 		display:none;
 	}
-	
 }
 
 
@@ -293,10 +286,15 @@ input[type=text], select {
 }
 
 .player-button button {
-	width: 130px;
-	height: 26px;
+	width: 250px;
+	height: 30px;
 	border: 0px;
-	border-top: 3px solid black;
+}
+
+
+.player-button button:hover, .player-button button:focus {
+	color: #e9e9ea;
+	background-color: #234152;
 }
 
 #card_stack h3 {
