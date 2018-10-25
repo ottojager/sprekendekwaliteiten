@@ -3,22 +3,6 @@
 	<head>
 		<script src="./api/js/std.js" defer></script>
 		<script>
-		<?php
-		// leader only JS
-		if ($_SESSION['player_id'] == 11) { // if user is game leader
-		?>
-		function end_game() {
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					document.location.href = '../end/';
-				}
-			};
-			xhttp.open("GET", "../api/end.php", true);
-			xhttp.send();
-		}
-
-		<?php } // end leader only JS ?>
 		var amount_players = <?php echo count($json['players']);?>;
 		var own_id = <?php echo $_SESSION['player_id'];?>;
 		</script>

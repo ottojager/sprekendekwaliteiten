@@ -10,16 +10,6 @@ function give_card(clicked_id) {
 	start_update();
 }
 
-function addListeners(amount_players) {
-	"use strict";
-	var i;
-	for (i = 0; i <  amount_players; i += 1) {
-		document.getElementById(i.toString()).addEventListener('click', function() {
-			reply_click(this.id);
-		});
-	}
-}
-
 function start_update() {
 	var xhttp = new XMLHttpRequest();
   	xhttp.onreadystatechange = function() {
