@@ -62,7 +62,7 @@ if ($json['game_started'] == false) {
 				<?php
 				foreach ($json['players'] as $key => $value) {
 					if ($value['name'] != 'Afval stapel') {
-						echo '<li id="'.$value['player_id'].'"><div class="player-button"><button onclick="">'.$value['name'].' ('.count($value['stack']).')</button></div></li>';
+						echo '<li id="'.$value['player_id'].'"><div class="player-button"><button onclick="reply_click('.$value['player_id'].')">'.$value['name'].' ('.count($value['stack']).')</button></div></li>';
 					}
 				}
 				?>
