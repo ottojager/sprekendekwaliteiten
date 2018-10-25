@@ -80,8 +80,6 @@ function leader_view_cards_hide(id_player) {
 //////////
 // MAIN //
 //////////
-var view = 'current';
-var first_refresh = new Boolean(true);
 
 if (own_id == 11) {
 	view = 'leader';
