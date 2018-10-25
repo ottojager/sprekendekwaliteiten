@@ -77,6 +77,17 @@ function leader_view_cards_hide(id_player) {
 	})
 }
 
+function update_view() {
+	if (last_change == game_info['last_change']) {
+		return
+	} else {
+		last_change = game_info['last_change'];
+	}
+	// below function has to be implemented per page
+	// if this function ends up being undefined look at the page not this code
+	update_page_view();
+}
+
 //////////
 // MAIN //
 //////////
@@ -95,4 +106,5 @@ window.setInterval(function(){
 	if (game_info['card_stack'] == 0) {
 		document.location.href = './end/';
 	}
+	update_view();
 }, 3000);
