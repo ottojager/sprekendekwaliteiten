@@ -48,8 +48,16 @@ if (!(bool)$json) { // if $json actually has content
 			var id = <?php echo $_SESSION['player_id']; ?>; // the ID of the current user
 
 			var s = 3000; // how often to refresh in ms
+			var last_change = 0;
 			window.setInterval(function(){ // run this code every [s] seconds
 				start_update(); // get the new game_info
+
+				if (last_change == game_info['last_change']) {
+					return
+				} else {
+					last_change = game_info['last_change'];
+				}
+
 				if (game_info["game_started"] == true) {
 					window.location.href = 'game.php'; // redirect users if the game has been started
 				}
