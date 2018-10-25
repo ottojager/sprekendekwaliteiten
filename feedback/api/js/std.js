@@ -327,7 +327,6 @@ function leader_view() {
 // MAIN //
 //////////
 var view = 'current';
-var first_refresh = new Boolean(true);
 
 var last_change = 0;
 
