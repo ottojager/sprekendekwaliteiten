@@ -34,6 +34,15 @@ if ($json['game_started'] == false) {
 		<?php } // end leader only JS ?>
 		var amount_players = <?php echo count($json['players']);?>;
 		var own_id = <?php echo $_SESSION['player_id'];?>;
+
+		function update_page_view() {
+			// this funtion implements page updating
+			// it will be called by update_view() in std.js everytime the game's
+			// json file is updated
+			if (game_info['current_player'] != own_id) {
+				window.location = './';
+			}
+		}
 		</script>
 		<meta charset="utf-8">
 		<title>Actief - Feedback - Sprekende Kwaliteiten</title>
@@ -62,7 +71,7 @@ if ($json['game_started'] == false) {
 				<?php
 				foreach ($json['players'] as $key => $value) {
 					if ($value['name'] != 'Afval stapel') {
-						echo '<li id="'.$value['player_id'].'"><div class="player-button"><button onclick="reply_click('.$value['player_id'].')">'.$value['name'].' ('.count($value['stack']).')</button></div></li>';
+						echo '<li id="'.$value['player_id'].'"><div class="player-button"><button onclick="give_card('.$value['player_id'].')">'.$value['name'].' ('.count($value['stack']).')</button></div></li>';
 					}
 				}
 				?>

@@ -1,5 +1,10 @@
-function reply_click(clicked_id) {
+function give_card(clicked_id) {
 	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			window.location = './';  // send whoever called this function back to the game's main page
+		}
+	}
 	xhttp.open("GET", "./api/game_logic.php?sel=" + clicked_id, true);
 	xhttp.send();
 	start_update();
@@ -91,6 +96,7 @@ function update_view() {
 //////////
 // MAIN //
 //////////
+var last_change = 0;
 
 if (own_id == 11) {
 	view = 'leader';

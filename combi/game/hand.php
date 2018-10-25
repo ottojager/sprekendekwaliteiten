@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
 	<head>
-		<!-- <script src="./api/js/std.js" defer></script> -->
+		<script src="./api/js/std.js" defer></script>
 		<?php
 		// leader only JS
 		if ($_SESSION['player_id'] == 11) { // if user is game leader
@@ -20,8 +20,24 @@
 		</script>
 		<?php } // end leader only JS ?>
 		<script>
-			var amount_players = <?php echo count($json['players']);?>;
-			var own_id = <?php echo $_SESSION['player_id'];?>;
+		var amount_players = <?php echo count($json['players']);?>;
+		var own_id = <?php echo $_SESSION['player_id'];?>;
+
+		function update_page_view() {
+			// this funtion implements page updating
+			// it will be called by update_view() in std.js everytime the game's
+			// json file is updated
+
+			// check if it's that players turn and redirect them to the current
+			// player version of the page
+			if (game_info['current_player'] == own_id) {
+				window.location = './';
+			}
+
+			// update page content
+			document.getElementById('current_player_indicator').innerHTML =
+			game_info['players'][ game_info['current_player'] ]['name']+" is aan de beurt...";
+		}
 		</script>
 		<meta charset="utf-8">
 		<title>Actief - Feedback - Sprekende Kwaliteiten</title>
@@ -37,7 +53,7 @@
 		include('../../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
-			<h2><?php echo $json['players'][ $json['current_player'] ]['name'] ?> is aan de beurt...</h2>
+			<h2 id="current_player_indicator"><?php echo $json['players'][ $json['current_player'] ]['name'] ?> is aan de beurt...</h2>
 			<h3>jouw kaarten</h3>
 			<ul>
 				<div class="kaart-rij">
