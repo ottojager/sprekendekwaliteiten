@@ -20,7 +20,6 @@ span.alienBackRight {
 	span.alienBackLeft, span.alienBackRight {
 		display:none;
 	}
-
 }
 
 
@@ -96,6 +95,9 @@ span.alienBackRight {
 	margin-top: 4px;
 }
 
+.eind-kaart {
+	margin-bottom: 10px;
+}
 
 /* Media Queries */
 
