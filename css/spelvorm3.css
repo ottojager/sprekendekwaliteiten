@@ -66,6 +66,9 @@ span.alienBackRight {
 	color: white;
 	}
 	
+.eind-kaart button:hover, .eind-kaart button:focus {
+	background-image: url(../afbeeldingen/rode-kaart.png);
+}
 
 /* Speler's Hand */ 
 
@@ -76,7 +79,26 @@ span.alienBackRight {
 	text-decoration: underline;
 	font-size: 20px;
 }
-	
+
+
+/* Kaarten Geven Pagina */
+
+.linker-menu {
+	float: left;
+}
+
+.linker-menu h2 {
+	text-decoration: underline;
+}
+
+.linker-menu .button {
+	display: block;
+	margin-top: 4px;
+}
+
+
+/* Media Queries */
+
 @media screen and (max-width: 1050px) {
 	h2 {
 	padding-top: 10px;
@@ -93,19 +115,25 @@ span.alienBackRight {
 	.speler-beurt {
 	position: initial;
 	}
+	
+	.linker-menu h2 {
+	left: 0;
+	margin: 25px 0 25px 0;
+	}
+	
+	.linker-menu {
+	margin: 50px auto;
+	text-align: center;
+	float: none;
+	}
 }
 
-/* Kaarten Geven Pagina */
-
-.linker-menu {
-	float: left;
+@media screen and (max-width: 816px) {
+	.linker-menu {
+	margin: 60px 0 25px;
+	}
 }
 
-.linker-menu .button {
-	display: block;
-}
-
-.new-card {}
 
 /* Media Query for ants */
 
