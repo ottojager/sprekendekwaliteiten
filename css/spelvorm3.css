@@ -53,7 +53,7 @@ span.alienBackRight {
 	background-image: url(../afbeeldingen/blauw-rood-kaart.png);
 }
 
-.trade-rij .kaart button:hover, .trade-rij .kaart button:hover {
+.trade-rij .kaart button:hover, .trade-rij .kaart button:focus {
 	background-image: url(../afbeeldingen/blauwe-kaart.png);
 }
 
