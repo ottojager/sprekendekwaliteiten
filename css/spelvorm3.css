@@ -53,6 +53,10 @@ span.alienBackRight {
 	background-image: url(../afbeeldingen/blauw-rood-kaart.png);
 }
 
+.trade-rij .kaart button:hover, .trade-rij .kaart button:hover {
+	background-image: url(../afbeeldingen/blauwe-kaart.png);
+}
+
 .eind-kaart button {
 	background-image: url(../afbeeldingen/rode-kaart.png);
     height: 234px;

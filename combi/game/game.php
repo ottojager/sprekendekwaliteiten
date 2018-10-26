@@ -34,7 +34,7 @@
 			</div>
 
 			<h2>Jouw hand kaarten</h2>
-			<ul>
+			<ul class="trade-rij">
 				<div class="kaart-rij">
 					<?php
 					foreach($json['players'][ $_SESSION['player_id'] ]['hand'] as $key => $value) {
