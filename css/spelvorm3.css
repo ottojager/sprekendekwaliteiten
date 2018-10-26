@@ -99,6 +99,116 @@ span.alienBackRight {
 	margin-bottom: 10px;
 }
 
+
+/* Gift Card Give-away */
+
+#card_display {
+	background-image: url("../afbeeldingen/rode-kaart.png");
+	background-size: 166px 230px;
+	height: 230px;
+    width: 166px;
+	position: relative;
+	top: 40px;
+	left: 0;
+	margin: 0 auto 50px auto;
+}
+
+#current_card {
+    text-align: center;
+    position: relative;
+    top: 100px;
+    color: white;
+    font-size: 18px;
+}
+
+
+/* Player List CSS */
+
+#player_list {
+	
+	/* Felix CSS */
+	display: flex;
+	display: -webkit-flex; /* Safari 6.1+ */
+	display: -ms-flex; /* IE 10 */
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	align-items: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	font-family: 'Roboto', sans-serif;
+	padding:4px;
+	width:55%;
+	font-size: 20px;
+	color: #234152;
+	list-style: none;
+	margin: 80px auto;
+}
+
+#player_list li {
+	display: inline-block;
+	padding: 4px;
+	width: 250px;
+	margin: 8px auto;
+	background-color: #e9e9ea;
+	border-top: 4px solid #163143;
+	text-align:center;
+}
+
+#player_list li button{
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px; /* Was 20px */
+	color: inherit;
+	border: none;
+	background: none;
+	cursor: pointer;
+	float:right;
+}
+
+/*hover*/
+ul#player_list li:hover, ul#player_list li:hover  {
+	color:#e9e9ea;
+	background-color: #163143;
+	border-top-color: #e9e9ea;
+}
+
+/*focus*/
+ul#player_list li:focus{
+	color:#d9d9da;
+	background-color: #062133;
+	border-top-color: #d9d9da;
+}
+
+/*ACTIVE*/
+ul#player_list li:active{
+	color:#e9e9ea;
+	background-color: #d4263e;
+	border-top-color: #163143;
+}
+
+
+#player_list li .player-button button {
+	float:none
+}
+
+
+.player-button button {
+	width: 250px;
+	/*margin: 4px;*/
+	height: 30px;
+	border: 0;
+	padding: 0;
+}
+
+.player-button button:hover, .player-button button:focus {
+	color: #e9e9ea;
+	background-color: #234152;
+}
+
+
 /* Media Queries */
 
 @media screen and (max-width: 1050px) {

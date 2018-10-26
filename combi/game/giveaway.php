@@ -50,16 +50,16 @@ if ($json['game_started'] == false) {
 			<div id="card_display">
 				<p id="current_card"><?php echo $json['current_card']; ?></p>
 			</div>
-
-			<ul id="player_list">
-				<?php
-				foreach ($json['players'] as $key => $value) {
-					if ($value['name'] != 'Afval stapel') {
-						echo '<li id="'.$value['player_id'].'"><div class="player-button"><button onclick="give_card('.$value['player_id'].')">'.$value['name'].' ('.count($value['stack']).')</button></div></li>';
+		
+				<ul id="player_list">
+					<?php
+					foreach ($json['players'] as $key => $value) {
+						if ($value['name'] != 'Afval stapel') {
+							echo '<li id="'.$value['player_id'].'"><div class="player-button"><button onclick="give_card('.$value['player_id'].')">'.$value['name'].' ('.count($value['stack']).')</button></div></li>';
+						}
 					}
-				}
-				?>
-			</ul>
+					?>
+				</ul>
 		</main>
 		<?php include('../../footer.php') ?>
 	</body>
