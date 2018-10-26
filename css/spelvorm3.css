@@ -4,7 +4,8 @@
 	color: #60bebb;
 }
 
-/*achtergrond*/
+
+/* Achtergrond*/
 
 span.alienBackLeft {
 	background-image: url(../afbeeldingen/Links_Alien_Cyan.svg);
@@ -21,4 +22,45 @@ span.alienBackRight {
 	}
 
 }
-/*einde achtergrond*/
+
+
+/* Kaart Rij Re-Redux */
+
+.kaart-rij {
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 100%;
+	list-style: none;
+}
+
+.kaart {
+	padding: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.eind-kaart button {
+	background-image: url(../afbeeldingen/rode-kaart.png);
+    height: 234px;
+    width: 165px;
+    background-size: cover;
+	background-color: #fff;
+	border: none;
+	color: white;
+	font-size: 18px;
+	}
+
+@media screen and (max-width: 1280px) {
+	.kaart-rij {
+	margin: 0 auto 20px;
+	float: none;
+	width: 800px;
+	}	
+}
+	
+@media screen and (max-width: 1050px) {
+	.kaart-rij {
+	width: 400px;	
+	}
+}
