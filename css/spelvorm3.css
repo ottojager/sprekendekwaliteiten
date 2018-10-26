@@ -63,6 +63,7 @@ span.alienBackRight {
 	border: none;
 	font-size: 18px;
 	margin: 0 15px;
+	color: white;
 	}
 	
 
@@ -100,6 +101,11 @@ span.alienBackRight {
 	float: left;
 }
 
+.linker-menu .button {
+	display: block;
+}
+
+.new-card {}
 
 /* Media Query for ants */
 

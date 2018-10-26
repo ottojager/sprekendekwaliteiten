@@ -22,7 +22,7 @@
 		<main class="container" id="main" tabindex="-1">
 			<div class="linker-menu">
 				<h2>Nieuwe kaart</h2>
-				<div>
+				<div class="eind-kaart">
 					<button><?php echo $json['current_card']; ?></button>
 				</div>
 				<div class="button">
