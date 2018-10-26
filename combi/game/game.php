@@ -20,7 +20,7 @@
 		include('../../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
-			<h2>nieuwe kaart</h2>
+			<h2>Nieuwe kaart</h2>
 			<div>
 				<button><?php echo $json['current_card']; ?></button>
 			</div>
