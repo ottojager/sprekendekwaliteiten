@@ -38,7 +38,6 @@ span.alienBackRight {
 	padding: 5px;
 	display: inline-block;
 	vertical-align: middle;
-	color: white;
 }
 
 .kaart button {
@@ -48,6 +47,7 @@ span.alienBackRight {
     background-size: cover;
 	background-color: #fff;
 	border: none;
+	color: white;
 	}
 	
 .kaart button:hover, .kaart button:focus {
@@ -61,7 +61,6 @@ span.alienBackRight {
     background-size: cover;
 	background-color: #fff;
 	border: none;
-	color: white;
 	font-size: 18px;
 	margin: 0 15px;
 	}
@@ -94,6 +93,13 @@ span.alienBackRight {
 	position: initial;
 	}
 }
+
+/* Kaarten Geven Pagina */
+
+.linker-menu {
+	float: left;
+}
+
 
 /* Media Query for ants */
 

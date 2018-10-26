@@ -20,15 +20,17 @@
 		include('../../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
-			<h2>Nieuwe kaart</h2>
-			<div>
-				<button><?php echo $json['current_card']; ?></button>
-			</div>
-			<div class="button">
-				<button onclick="window.location='./giveaway.php'">weggeven</button>
-			</div>
-			<div class="button">
-				<button onclick="window.location='./trade.php'">inruilen</button>
+			<div class="linker-menu">
+				<h2>Nieuwe kaart</h2>
+				<div>
+					<button><?php echo $json['current_card']; ?></button>
+				</div>
+				<div class="button">
+					<button onclick="window.location='./giveaway.php'">weggeven</button>
+				</div>
+				<div class="button">
+					<button onclick="window.location='./trade.php'">inruilen</button>
+				</div>
 			</div>
 
 			<h2>Jouw hand kaarten</h2>
