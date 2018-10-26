@@ -1,0 +1,11 @@
+in het JSON bestand voor elk spel zit een list ("turn_action"). hierin word bij gehouden welke speler een
+kaart gekregen heeft. deze werkt atm als een kopie van spelvorm 2 waar kaarten alleen naar andere spelers
+konden
+
+Als in spelvorm 3 het kaarten in je hand verwiselen geimplemeteert word moet er rekening mee gehouden
+woorden dat er ook een undo moet woorden geimplemeteert en dus zal er op een manier iets in die lijst gezet
+moeten woorden waarmee je kan bijhouden welke hand kaart verwiseled moet woorden.
+
+ideën tot nu toe zijn:
+<speler_ID>.<hand kaart (1-5)> als één getal opslaan.
+hand kaarten bijhouden via extra player IDs boven de limit (11 vor hand kaart 1, 12 voor kaart 2, etc.).
