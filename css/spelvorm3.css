@@ -38,6 +38,20 @@ span.alienBackRight {
 	padding: 5px;
 	display: inline-block;
 	vertical-align: middle;
+	color: white;
+}
+
+.kaart button {
+	background-image: url(../afbeeldingen/blauwe-kaart.png);
+    height: 234px;
+    width: 165px;
+    background-size: cover;
+	background-color: #fff;
+	border: none;
+	}
+	
+.kaart button:hover, .kaart button:focus {
+	background-image: url(../afbeeldingen/blauw-rood-kaart.png);
 }
 
 .eind-kaart button {
@@ -52,6 +66,7 @@ span.alienBackRight {
 	margin: 0 15px;
 	}
 	
+
 /* Speler's Hand */ 
 
 .speler-beurt {

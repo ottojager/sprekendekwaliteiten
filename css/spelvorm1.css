@@ -280,6 +280,6 @@ span.alienBackRight {
 	background-image: url(../afbeeldingen/rode-kaart.png);
 }
 	
-.eind-kaart button:hover, .kaart button:focus {
+.eind-kaart button:hover, .eind-kaart button:focus {
 	background-image: url(../afbeeldingen/rode-kaart.png);
 }
