@@ -51,16 +51,52 @@ span.alienBackRight {
 	font-size: 18px;
 	margin: 0 15px;
 	}
+	
+/* Speler's Hand */ 
 
-/* @media screen and (max-width: 1280px) {
-	.kaart-rij {
-	margin: 0 auto 20px; 
-	width: 800px;
-	}	
-} */
+.speler-beurt {
+	position: relative;
+	right: 420px;
+	bottom: 0px;
+	text-decoration: underline;
+	font-size: 20px;
+}
 	
 @media screen and (max-width: 1050px) {
+	h2 {
+	padding-top: 10px;
+	}
+	
 	.kaart-rij {
-	width: 400px;	
+	width: 75%;
+	}
+	
+	.eind-kaart button {
+	margin:	0;
+	}
+	
+	.speler-beurt {
+	position: initial;
 	}
 }
+
+/* Media Query for ants */
+
+@media screen and (max-width: 400px)  {
+	h2 {
+	font-size: 22px;
+	}
+	
+	.eind-kaart button {
+	background-size: 130px 200px;
+	height: 200px;
+	width: 130px;
+	font-size: 16px;
+	}
+	
+	.kaart-rij {
+	width: 100%;
+	}
+}
+
+
