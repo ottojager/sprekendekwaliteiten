@@ -46,18 +46,24 @@ if ($json['game_started'] == false) {
 		include('../../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
-			<h2>Nieuwe kaart</h2>
-			<div>
-				<button><?php echo $json['current_card']; ?></button>
+			<div class="linker-menu">
+				<h2>Nieuwe kaart</h2>
+				<div class="eind-kaart">
+					<button><?php echo $json['current_card']; ?></button>
+				</div>
+				<div class="button">
+					<button onclick="">Ongedaan maken</button>
+				</div>
+				<div class="button">	
+					<button onclick="window.location='./'">Terug</button>
+				</div>
 			</div>
-			<button onclick="">Ongedaan maken</button>
-			<button onclick="window.location='./'">Terug</button>
 			<h2>Selecteer een kaart die je wilt inruilen</h2>
 			<ul>
 				<div class="kaart-rij">
 					<?php
 					foreach($json['players'][ $_SESSION['player_id'] ]['hand'] as $key => $value) {
-						echo "<li class=\"kaart eind-kaart\"><button>$value</button></li>";
+						echo "<li class=\"kaart\"><button>$value</button></li>";
 					}
 					?>
 				</div>
