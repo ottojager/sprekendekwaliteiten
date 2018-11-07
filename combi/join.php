@@ -83,9 +83,9 @@ if (isset($_POST['join_button'])) {
 		}
 		</script>
 		<meta charset="utf-8">
-		<title>Meld je aan - Feedback - Sprekende Kwaliteiten</title>
+		<title>Meld je aan - Combi - Sprekende Kwaliteiten</title>
 		<link rel="stylesheet" href="../css/basis.css" type="text/css">
-		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
+		<link rel="stylesheet" href="../css/spelvorm3.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/Feedback_background.css"type="text/css">
@@ -97,14 +97,14 @@ if (isset($_POST['join_button'])) {
 		<a href="#main" class="skip-link">Skip naar main content</a>
 		<?php
 		// create some variables to add header values
-		$spelvorm = 'Feedback';
+		$spelvorm = 'Combi';
 
 		include('../header.php');
 		?>
 
 		<main class="container" id="main" tabindex="-1">
 			<div id="title">
-				<h2>Meld je aan - Feedback</h2>
+				<h2>Meld je aan - Combi</h2>
 				<p class="uitleg">Vul je naam in. De groepscode krijg je van je spelleider.</p>
 			</div>
 			<form onsubmit="return validate_form()" method="post">
@@ -122,7 +122,7 @@ if (isset($_POST['join_button'])) {
 
 					</div>
 				</div>
-				<div class="button">
+				<div class="button join-button">
 					<button name="join_button" value="Submit" type="submit">Submit</button>
 				</div>
 			</form>

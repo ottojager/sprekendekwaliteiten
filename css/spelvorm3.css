@@ -23,6 +23,123 @@ span.alienBackRight {
 }
 
 
+/* Aanmaak/Inlog Scherm CSS */
+
+#title h2 {
+	padding: 18px;
+	text-decoration: underline;
+	font-family: 'Oswald', sans-serif;
+	font-size: 35px;
+	color: #234152;
+	text-align: center;
+}
+
+#title p {
+	margin: 30px auto;
+	color: #234152;
+	font-family: 'Oswald',  monospace;
+	font-size: 21px;
+	text-align: center;
+	width: 70%;
+}
+
+#error {
+	margin: 0px 0 0 0;
+	color: #d4263e;
+	font-family: 'Oswald',  monospace;
+	font-size: 21px;
+	text-align: center;
+}
+
+.formfield {
+	margin-left: -56.9px;
+	margin-top: 20px;
+	width: 441.894px;
+	height: 50px;
+	padding: 2px 5px 0px 5px;
+	font-family: 'Oswald',  monospace;
+	font-size: 16px;
+	color: #163143;
+	border-top: 3px solid #234152;
+	background-color: #e9e9ea;
+	border-bottom-right-radius: 2px;
+}
+.red_border {
+	width: 334px;
+	margin: 0% auto 3% auto;
+}
+label {
+	font-family:inherit;
+}
+
+label[for=name], label[for=code], label[for=cards]{
+    text-align: center;
+    margin: 20px;
+}
+
+input[type=text], select {
+	border-radius: 2px;
+	border: 1px solid #234152;
+	float: right;
+	margin: 6px 5px;
+}
+
+/* .button-positie {
+	display:inline-block;
+} */
+
+.join-button {
+	text-align: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 650px) {
+	
+	#error {
+		margin: 0px 0 0 0;
+		color: #d4263e;
+		font-family: 'Oswald',  monospace;
+		font-size: 16px;
+		text-align: center;
+	}
+	
+	.formfield {
+		margin-left: 0px;
+		margin-top: 15px;
+		width: 320px;
+		height: 30px;
+	}
+	
+	input[type=text], select {
+		margin: 3px 2px;
+	}
+	
+	button[name=makeLobbyButton] {
+		width: 250px;
+	}
+	
+	.startscherm-content {
+	margin: 0;
+    padding: 30px 0;
+	}
+	
+	ul#player_list {
+		display:block;
+		width: auto;
+	}
+	
+	ul#player_list li{
+		height: 30px;
+		margin:5px;
+	}
+	
+	button#start {
+		width: 250px;
+		margin: auto;
+	}
+}
+
+
 /* Kaart Rij Re-Redux */
 
 .kaart-rij {

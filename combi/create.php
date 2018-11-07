@@ -70,9 +70,9 @@ if (isset($_POST['makeLobbyButton'])) {
 			return false;
 		}
 		</script>
-		<title>Aanmaken spel - Feedback - Sprekende Kwaliteiten</title>
+		<title>Aanmaken spel - Combi - Sprekende Kwaliteiten</title>
 		<link rel="stylesheet" href="../css/basis.css" type="text/css">
-		<link rel="stylesheet" href="../css/spelvorm2.css" type="text/css">
+		<link rel="stylesheet" href="../css/spelvorm3.css" type="text/css">
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<link rel="stylesheet" href="../css/Feedback_background.css"type="text/css">
@@ -87,13 +87,13 @@ if (isset($_POST['makeLobbyButton'])) {
 		</ul>
 		<?php
 		// create some variables to add header values
-		$spelvorm = 'Feedback';
+		$spelvorm = 'Combi';
 
 		include('../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
-			<div id="title"><h2>Aanmaken spel - Feedback</h2>
-			<p>Als spelleider maak je hier een nieuw spel "Feedback" aan. Vul je naam in en kies het aantal kaarten waarmee je de groep wilt laten spelen (maximaal 70).</p></div>
+			<div id="title"><h2>Aanmaken spel - Combi</h2>
+			<p>Als spelleider maak je hier een nieuw spel "Combi" aan. Vul je naam in en kies het aantal kaarten waarmee je de groep wilt laten spelen (maximaal 70).</p></div>
 			<form onsubmit="return validate_form()" method="post">
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
 				<div class="red_border">
@@ -115,7 +115,7 @@ if (isset($_POST['makeLobbyButton'])) {
 						</select>
 					</div>
 				</div>
-				<div class="button">
+				<div class="button join-button">
 					<button type="submit" value="Aanmaken spel" name="makeLobbyButton"> Aanmaken spel
     				</button>
 				</div>
