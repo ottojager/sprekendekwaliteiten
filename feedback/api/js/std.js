@@ -172,8 +172,9 @@ function received_cards_view() {
 	container.innerHTML = '';
 
 	// header
-	header = document.create('h3');
+	header = document.createElement('h3');
 	header.innerHTML = 'Dit zijn jouw ontvangen kaarten';
+	container.appendChild(header);
 
 	// the text at the top of the page with the current user or some BS
 	var current_player_text = document.createElement('p');
