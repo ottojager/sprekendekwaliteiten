@@ -16,6 +16,28 @@
 	width: -webkit-fill-available;
 }
 
+.kaart {
+	background-image: url(../afbeeldingen/rode-kaart.png);
+	margin-right: 10px;
+	padding: 0;
+}
+
+/************************************/
+/***** als er iets fout gaat in *****/
+/*****   de css met de buttons, *****/
+/*****   dan ligt dat hieraan   *****/
+/************************************/
+
+button {
+	background-image: inherit;
+	background-size: cover;
+	border-width: 0;
+	height:234px;
+	width: 165px;
+	font-size: 18px;
+	color: white;
+}
+
 #game_id {
 	margin: 8px auto;
 	padding: 4px;
@@ -402,7 +424,7 @@ input[type=text], select {
 }
 
 .kaart {
-	padding: 5px;
+	/*padding: 5px;*/
 	display: inline-block;
 	vertical-align: middle;
 }
