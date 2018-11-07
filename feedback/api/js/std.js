@@ -172,7 +172,7 @@ function received_cards_view() {
 	container.innerHTML = '';
 
 	// header
-	header = document.createElement('h3');
+	header = document.createElement('h2');
 	header.innerHTML = 'Dit zijn jouw ontvangen kaarten';
 	container.appendChild(header);
 
