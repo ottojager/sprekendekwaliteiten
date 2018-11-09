@@ -5,7 +5,19 @@ function give_card(clicked_id) {
 			window.location = './';  // send whoever called this function back to the game's main page
 		}
 	}
-	xhttp.open("GET", "./api/game_logic.php?sel=" + clicked_id, true);
+	xhttp.open("GET", "./api/game_logic.php?player_id=" + clicked_id, true);
+	xhttp.send();
+	start_update();
+}
+
+function exchange_card(clicked_id) {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			window.location = './';  // send whoever called this function back to the game's main page
+		}
+	}
+	xhttp.open("GET", "./api/game_logic.php?player_id="+own_id+ "&card=" + clicked_id, true);
 	xhttp.send();
 	start_update();
 }
@@ -17,7 +29,7 @@ function start_update() {
 	 		//document.getElementById("main").innerHTML = this.responseText;
 		 	game_info = JSON.parse(this.responseText);
 		} else if (this.readyState == 4 && this.status == 204) {
-			window.location.href = './delete.php'; // redirect users to delete.php to have session cleared
+			window.location.href = '../delete.php'; // redirect users to delete.php to have session cleared
 		}
   	};
 	xhttp.open("GET", "./api/check.php", true);
