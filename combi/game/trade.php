@@ -54,7 +54,7 @@ if ($json['game_started'] == false) {
 				<div class="button">
 					<button onclick="">Ongedaan maken</button>
 				</div>
-				<div class="button">	
+				<div class="button">
 					<button onclick="window.location='./'">Terug</button>
 				</div>
 			</div>
