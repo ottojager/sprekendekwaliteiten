@@ -79,15 +79,17 @@ $message = '
 			background-color: white;
 		}
 		
-		.kaart {
+		ul {list-style-type: none;}
+		
+		ul li {
     		padding: 5px;
     		display: inline-block;
 			vertical-align: middle;
 			border-radius: 12px;
-    		background-color: #d4263e;
+    		background: #d4263e;
 		}
 		
-		.kaartContainer {
+		li div {
 			height: 234px;
     		width: 165px;
     		background-color: #d4263e;
