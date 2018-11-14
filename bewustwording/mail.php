@@ -12,8 +12,9 @@ $message = '
 <head>
 	<title>Uw kaarten</title>
 	
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	
 	<style>
-	@import url("https://fonts.googleapis.com/css?family=Oswald:500|Roboto:500");
 	
 		body {
 			margin:0;
@@ -21,14 +22,14 @@ $message = '
 
 		h1 {
 			color:#163143;
-			font-family: oswald, sans-serif;
+			font-family: Oswald, sans-serif;
 		}
 		
 		.header-content {
 			display: initial;
 			height: 112px;
 			margin: 0 0 0 auto;
-    		float: right;
+    		/*float: right;*/
 		}
 		
 		.header-content-title {
@@ -40,7 +41,7 @@ $message = '
 		
 		.titel {
 			text-align:center;
-			font-family: "oswald",  sans-serif;
+			font-family: "Oswald", sans-serif;
 			text-transform: uppercase;
 			letter-spacing: 1.0887244px;
 			font-weight: 100;
@@ -78,6 +79,21 @@ $message = '
 			background-color: white;
 		}
 		
+		.kaart {
+    		padding: 5px;
+    		display: inline-block;
+			vertical-align: middle;
+			border-radius:12px;
+		}
+		
+		.kaartContainer {
+			height: 234px;
+    		width: 165px;
+    		background-size: cover;
+    		background-color: #d4263e;
+    		border: none;
+		}
+		
 		.footer {
 			background-color: #e9e9ea;
 			width: 100%;
@@ -93,7 +109,7 @@ $message = '
 		.footer p {
 			color: #163143;
 			padding: 10px 0;
-			font-family: Oswald, monospace;
+			font-family: Oswald, sans-serif;
 			font-size: 1.1vw;
 			margin-bottom: 0px;
 		}
@@ -129,7 +145,12 @@ $message = '
 	<ul>';
 	foreach ($cards as $key => $value) {
 		if ($value != '') {
-			$message .= '<li>'.$value.'</li>';
+			$message .= '<li class"kaart">
+			<div class"kaartContainer">
+			<p>'.$value.'
+			</p>
+			</div>
+			</li>';
 		}
 	}
 $message .= '</ul>
