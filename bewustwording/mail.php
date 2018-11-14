@@ -39,17 +39,14 @@ $message = '
 		}
 		
 		.titel {
-			/*text*/
 			text-align:center;
-			font-family: "oswald",  monospace;
+			font-family: "oswald",  sans-serif;
 			text-transform: uppercase;
 			letter-spacing: 1.0887244px;
 			font-weight: 100;
 			position: relative;
 			z-index: 1;
 			text-decoration: none;
-			
-			/*kleur*/
 			color:#264153;
 		}
 		
@@ -67,7 +64,7 @@ $message = '
 			margin-bottom: 0px;
 		}
 		
-		header {
+		.header {
 			border-bottom:solid 3px #163143;
 			width:100%;
 			margin:0;
@@ -81,7 +78,7 @@ $message = '
 			background-color: white;
 		}
 		
-		footer {
+		.footer {
 			background-color: #e9e9ea;
 			width: 100%;
 			font-size: 10px;
@@ -93,7 +90,7 @@ $message = '
 			box-sizing: border-box;
 		}
 			
-		footer p {
+		.footer p {
 			color: #163143;
 			padding: 10px 0;
 			font-family: Oswald, monospace;
@@ -113,50 +110,20 @@ $message = '
 			bottom: 0;
 			right: 4%;
 		}
-			
-		@media screen and (max-width: 948px) {
-		footer {
-			height: 70px;
-			margin-top: 20px;
-		}
-			
-		footer p {
-			padding: 3px 0;
-			font-size: 1.5vw;
-		}
-			
-		.copyright {
-			position: initial;
-			text-align: center;
-		}
-		}
-			
-		@media screen and (max-width: 686px) {
-			footer p {
-			font-size: 2vw;
-		}
-		}
-			
-		@media screen and (max-width: 468px) {
-			footer p {
-			font-size: 2.6vw;
-		}
-		}
-
-		
+	
 	</style>
 	
 </head>
 <body>
 
-<header>
+<div class"header">
 <div class="header-content">
 		<div class="header-content-title">
 			<h1 class="titel boven">sprekende</h1>
 			<h1 class="titel onder">kwaliteiten</h1>
 		</div>
 	</div>
-</header>
+</div>
 
 	<h1>Uw kaarten van Kwaliteitenspel - Bewustwording</h1>
 	<ul>';
@@ -167,9 +134,9 @@ $message = '
 	}
 $message .= '</ul>
 
-<footer>
+<div class="footer">
 	<p class="credits">Sprekende kwaliteiten is uitgevoerd met toestemming van Peter Gerrickens en mogelijk gemaakt door Stichting Bartimeus Sonneheerdt en het KF Heinfonds</p><p class="copyright">©Eye4Web 2017-2018</p>
-</footer>
+</div>
 
 
 </body>
