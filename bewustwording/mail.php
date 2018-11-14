@@ -41,14 +41,14 @@ $message = '
 		
 		.titel {
 			text-align:center;
-			font-family: "Oswald", sans-serif;
+			font-family: Oswald, sans-serif;
 			text-transform: uppercase;
 			letter-spacing: 1.0887244px;
 			font-weight: 100;
 			position: relative;
 			z-index: 1;
 			text-decoration: none;
-			color:#264153;
+			color: #264153;
 		}
 		
 		.boven {
@@ -66,7 +66,7 @@ $message = '
 		}
 		
 		.header {
-			border-bottom:solid 3px #163143;
+			border-bottom: 4px solid #163143;
 			width:100%;
 			margin:0;
 			height:100px;	
@@ -83,13 +83,13 @@ $message = '
     		padding: 5px;
     		display: inline-block;
 			vertical-align: middle;
-			border-radius:12px;
+			border-radius: 12px;
+    		background-color: #d4263e;
 		}
 		
 		.kaartContainer {
 			height: 234px;
     		width: 165px;
-    		background-size: cover;
     		background-color: #d4263e;
     		border: none;
 		}
@@ -145,12 +145,7 @@ $message = '
 	<ul>';
 	foreach ($cards as $key => $value) {
 		if ($value != '') {
-			$message .= '<li class"kaart">
-			<div class"kaartContainer">
-			<p>'.$value.'
-			</p>
-			</div>
-			</li>';
+			$message .= '<li class"kaart"><div class"kaartContainer"><p>'.$value.'</p></div></li>';
 		}
 	}
 $message .= '</ul>
