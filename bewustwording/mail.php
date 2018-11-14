@@ -14,7 +14,7 @@ $message = '
 	
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	
-	<style>
+	<style type="text/css">
 	
 		body {
 			margin:0;
@@ -81,7 +81,7 @@ $message = '
 		
 		ul {list-style-type: none;}
 		
-		ul li {
+		li {
     		padding: 5px;
     		display: inline-block;
 			vertical-align: middle;
@@ -96,6 +96,10 @@ $message = '
     		border: none;
 		}
 		
+		li div p {
+		
+		}
+
 		.footer {
 			background-color: #e9e9ea;
 			width: 100%;
