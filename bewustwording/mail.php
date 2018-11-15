@@ -15,19 +15,14 @@ $message = '
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	
 	<style type="text/css">
-		@font-face {
-    	  font-family: "oswald";
-    	  src: url("Oswald-Regular.ttf");
-    	}
-
+	
 		body {
-			margin: 0;
-			font-family: "oswald", sans-serif;
+			margin:0;
 		}
 
 		h1 {
 			color:#163143;
-			font-family: "oswald", sans-serif;
+			font-family: Oswald, sans-serif;
 		}
 		
 		.header-content {
@@ -46,7 +41,7 @@ $message = '
 		
 		.titel {
 			text-align:center;
-			font-family: "oswald", sans-serif;
+			font-family: Oswald, sans-serif;
 			text-transform: uppercase;
 			letter-spacing: 1.0887244px;
 			font-weight: 100;
@@ -87,6 +82,7 @@ $message = '
 		ul {list-style-type: none;}
 		
 		li.kaart {
+			margin: 5px;
     		padding: 5px;
     		display: inline-block;
 			vertical-align: middle;
@@ -102,7 +98,8 @@ $message = '
 		}
 		
 		li div p {
-			margin: auto;
+			margin-top: 50%;
+			margin-bottom: 50%;
 			color:white;
 			text-align: center;
 		}
@@ -122,7 +119,7 @@ $message = '
 		.footer p {
 			color: #163143;
 			padding: 10px 0;
-			font-family: "oswald", sans-serif;
+			font-family: Oswald, sans-serif;
 			font-size: 1.1vw;
 			margin-bottom: 0px;
 		}
