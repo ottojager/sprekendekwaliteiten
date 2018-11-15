@@ -97,7 +97,9 @@ $message = '
 		}
 		
 		li div p {
-		
+			margin: auto;
+			color:white;
+			text-align:center;
 		}
 
 		.footer {
@@ -138,7 +140,7 @@ $message = '
 </head>
 <body>
 
-<div class"header">
+<div class="header">
 <div class="header-content">
 		<div class="header-content-title">
 			<h1 class="titel boven">sprekende</h1>
@@ -151,7 +153,7 @@ $message = '
 	<ul>';
 	foreach ($cards as $key => $value) {
 		if ($value != '') {
-			$message .= '<li class"kaart"><div class"kaartContainer"><p>'.$value.'</p></div></li>';
+			$message .= '<li class="kaart"><div class="kaartContainer"><p>'.$value.'</p></div></li>';
 		}
 	}
 $message .= '</ul>
