@@ -84,6 +84,8 @@ $message = '
 		li.kaart {
 			margin: 5px;
     		padding: 5px;
+			height: 180px;
+			width: 130px;
     		display: inline-block;
 			vertical-align: middle;
 			border-radius: 12px;
@@ -91,8 +93,6 @@ $message = '
 		}
 		
 		div.kaartContainer {
-			height: 234px;
-    		width: 165px;
     		background-color: #d4263e;
     		border: none;
 		}
@@ -122,6 +122,7 @@ $message = '
 			font-family: Oswald, sans-serif;
 			font-size: 1.1vw;
 			margin-bottom: 0px;
+			margin-top: 0;
 		}
 			
 		.credits {
