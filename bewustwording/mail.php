@@ -15,14 +15,19 @@ $message = '
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	
 	<style type="text/css">
-	
+		@font-face {
+    	  font-family: "oswald";
+    	  src: url("Oswald-Regular.ttf");
+    	}
+
 		body {
-			margin:0;
+			margin: 0;
+			font-family: "oswald", sans-serif;
 		}
 
 		h1 {
 			color:#163143;
-			font-family: Oswald, sans-serif;
+			font-family: "oswald", sans-serif;
 		}
 		
 		.header-content {
@@ -41,7 +46,7 @@ $message = '
 		
 		.titel {
 			text-align:center;
-			font-family: Oswald, sans-serif;
+			font-family: "oswald", sans-serif;
 			text-transform: uppercase;
 			letter-spacing: 1.0887244px;
 			font-weight: 100;
@@ -52,7 +57,7 @@ $message = '
 		}
 		
 		.boven {
-			font-size: 28px;
+			font-size: 24px;
 			margin-bottom: -4px;
 			margin-top: -2px;
 		}
@@ -61,7 +66,7 @@ $message = '
 			font-weight: 100;
 			margin-top: 0;
 			letter-spacing: 0.3em;
-			font-size: 34px;
+			font-size: 26px;
 			margin-bottom: 0px;
 		}
 		
@@ -81,7 +86,7 @@ $message = '
 		
 		ul {list-style-type: none;}
 		
-		li {
+		li.kaart {
     		padding: 5px;
     		display: inline-block;
 			vertical-align: middle;
@@ -89,7 +94,7 @@ $message = '
     		background: #d4263e;
 		}
 		
-		li div {
+		div.kaartContainer {
 			height: 234px;
     		width: 165px;
     		background-color: #d4263e;
@@ -99,7 +104,7 @@ $message = '
 		li div p {
 			margin: auto;
 			color:white;
-			text-align:center;
+			text-align: center;
 		}
 
 		.footer {
@@ -117,7 +122,7 @@ $message = '
 		.footer p {
 			color: #163143;
 			padding: 10px 0;
-			font-family: Oswald, sans-serif;
+			font-family: "oswald", sans-serif;
 			font-size: 1.1vw;
 			margin-bottom: 0px;
 		}
