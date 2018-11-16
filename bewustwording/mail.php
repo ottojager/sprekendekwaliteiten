@@ -70,11 +70,6 @@ $message = '
 			width:100%;
 			margin:0;
 			height:100px;	
-			background-image: url("https://northeurope1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Fbartimeus-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!rsOxxjbB6kacfzqYijN2qUD01OKGOpNNqDAaR0FVFns7BIJPLL02R5dAVQHXcrbq%2Fitems%2F01WIHRYN3QCU4OVXF7O5GZRH7U54W7YBRI%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7BEA381570-BFDC-4D77-989F-F4EF2DFC0628%7D%2C4%22&width=1156&height=621&srcWidth=5274&srcHeight=2831");
-			background-size: 168px 88px;
-			background-repeat: no-repeat;
-			background-position: 12.2% 12%;
-			transition: background-position 1s;
 			position: relative;
 			background-color: white;
 		}
