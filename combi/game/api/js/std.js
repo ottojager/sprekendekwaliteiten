@@ -1,3 +1,11 @@
+//Because I can't think of a less complicated way to grab the clicked card's name in JS right now
+var current_swapped_card = null;
+var element_to_swap = null;
+var old_card_text = null;
+var last_traded_id = -1;
+
+
+
 function give_card(clicked_id) {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -10,14 +18,74 @@ function give_card(clicked_id) {
 	start_update();
 }
 
-function exchange_card(clicked_id) {
+function swap_card(element, clickedId, clickedName) {
+	var card = document.getElementById('current_swap_card');
+	//just leave the function if we're trying to trade the current card for itself
+	if (last_traded_id == clickedId) return;
+
+	var card = document.getElementById('current_swap_card');
+	var confirmation = confirm("Wil je " + clickedName + " ruilen voor " + card.innerText + '?');
+
+	//check if player actually wants to trade 2 cards
+	if (confirmation) {
+		//Undo the previous swap, if there is one
+		undo_visual_swap();
+		//store the swapped card element in a variable so we can access it from other functions later
+		element_to_swap = element;
+		last_traded_id = clickedId;
+		//pass the current card (the red one on the left) to the visual swap method
+		do_visual_swap(card);
+	}
+	else {
+		document.getElementById("back_without_trade_btn").focus();
+	}
+
+}
+
+function do_visual_swap(card) {
+	old_card_text = element_to_swap.innerText;
+	//give the darkblue card a new name (of the current card, of course)
+	element_to_swap.innerText = card.innerText;
+	//hide current card, because it's now in the player's hand!
+	card.style = "display:none;";
+	//focus on the confirm trade button, which finalizes the trade and ends this player's turn
+	document.getElementById("confirm_btn").focus();
+}
+
+function undo_visual_swap() {
+	//check just to make sure we're not trying to undo something that hasn't happened
+	if (old_card_text != null) {
+		//give the hand card its old value back
+		element_to_swap.innerText = old_card_text;
+		//un-hide the current card
+		document.getElementById('current_swap_card').style.removeProperty('display');
+		//set these back to null
+		old_card_text = null;
+		element_to_swap = null;
+		last_traded_id = -1;
+	}
+}
+
+function confirm_swap() {
+	//make sure we've actually swapped a card before we try to send the swap to server
+	if (last_traded_id == -1) {
+		var confirmation = confirm("Je hebt nog geen kaart omgeruild. Wil je dit alsnog doen?");
+		if (!confirmation) {
+			//if the player doesn't want to trade anymore, just go back to main screen
+			window.location = './';
+		}
+		//TODO: maybe put focus (back) on cards so the player knows where to pick a card?
+
+		//then just exit the function to prevent sending a swap to server
+		return;
+	}
+
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			window.location = './';  // send whoever called this function back to the game's main page
-		}
+		//this time our decision to swap is final, so we can redirect the player back to the main game window
+		window.location = './';
 	}
-	xhttp.open("GET", "./api/game_logic.php?player_id="+own_id+ "&card=" + clicked_id, true);
+	xhttp.open("GET", "./api/game_logic.php?player_id=" + own_id + "&card=" + last_traded_id, true);
 	xhttp.send();
 	start_update();
 }
@@ -31,7 +99,7 @@ function start_update() {
 		} else if (this.readyState == 4 && this.status == 204) {
 			window.location.href = '../delete.php'; // redirect users to delete.php to have session cleared
 		}
-  	};
+  	}
 	xhttp.open("GET", "./api/check.php", true);
 	xhttp.send();
 }
@@ -112,7 +180,7 @@ window.setInterval(function(){
 
 	// if game has ended
 	if (game_info['card_stack'] == 0) {
-		document.location.href = './end/';
+		document.location.href = '../end/';
 	}
 	update_view();
 }, 3000);

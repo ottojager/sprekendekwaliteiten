@@ -38,11 +38,11 @@ if (isset($_POST['join_button'])) {
 				if (strlen($code) == 0) {
 					$error = "Je hebt geen code ingevuld";
 				} else {
-					$error = 'Code moet 2 letters zijn.';
+					$error = 'Code moet 3 letters zijn.';
 				}
 			}
 		} else {
-			$error = 'Die naam is gereseveert.';
+			$error = 'Die naam is gereserveerd.';
 		}
 	} else {
 		$error = 'Naam moet minimaal 2 tekens en mag maximaal 10 bevatten.';

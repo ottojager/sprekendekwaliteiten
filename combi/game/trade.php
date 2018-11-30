@@ -49,21 +49,24 @@ if ($json['game_started'] == false) {
 			<div class="linker-menu">
 				<h2>Nieuwe kaart</h2>
 				<div class="eind-kaart">
-					<button><?php echo $json['current_card']; ?></button>
+					<button id="current_swap_card"><?php echo $json['current_card']; ?></button>
 				</div>
 				<div class="button">
-					<button onclick="">Ongedaan maken</button>
+					<button onclick="undo_visual_swap()">Ongedaan maken</button>
 				</div>
 				<div class="button">
-					<button onclick="window.location='./'">Terug</button>
+					<button onclick="window.location='./'" id="back_without_trade_btn">Terug zonder ruilen</button>
+				</div>
+				<div class="button" id="confirm_swap_button">
+					<button onclick="confirm_swap()" id="confirm_btn">Bevestig ruil</button>
 				</div>
 			</div>
-			<h2>Selecteer een kaart die je wilt inruilen</h2>
+			<h2 id="swap_text">Selecteer een kaart die je wilt inruilen</h2>
 			<ul>
 				<div class="kaart-rij">
 					<?php
 					foreach($json['players'][ $_SESSION['player_id'] ]['hand'] as $key => $value) {
-						echo "<li class=\"kaart\"><button onclick=\"exchange_card($key)\">$value</button></li>";
+						echo "<li class=\"kaart\"><button onclick=\"swap_card(this, $key, '$value')\">$value</button></li>";
 					}
 					?>
 				</div>

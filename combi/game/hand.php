@@ -19,7 +19,7 @@
 
 			// update page content
 			document.getElementById('current_player_indicator').innerHTML =
-			game_info['players'][ game_info['current_player'] ]['name']+" is aan de beurt...";
+			game_info['players'][game_info['current_player']]['name']+" is aan de beurt...";
 		}
 		</script>
 		<meta charset="utf-8">
@@ -41,9 +41,12 @@
 			<ul>
 				<div class="kaart-rij">
 					<?php
-					foreach($json['players'][ $_SESSION['player_id'] ]['hand'] as $key => $value) {
-						echo "<li class=\"kaart eind-kaart\"><button>$value</button></li>";
-					}
+                    if ($_SESSION['player_id'] < 11)
+                    {
+                        foreach($json['players'][$_SESSION['player_id']]['hand'] as $key => $value) {
+                            echo "<li class=\"kaart eind-kaart\"><button>$value</button></li>";
+                        }
+                    }
 					?>
 				</div>
 			</ul>
