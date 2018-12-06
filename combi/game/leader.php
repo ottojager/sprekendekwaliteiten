@@ -20,12 +20,15 @@
 			// update page content
 			document.getElementById('current_player_indicator').innerText =
             game_info['players'][game_info['current_player']]['name']+" is aan de beurt...";
-            
-            document.getElementById('nieuwe_kaart').innerText = game_info['current_card'];
-            document.getElementById('all_player_cards').innerHTML = displayAllPlayerHands();
+			
+			// display current card value
+			document.getElementById('nieuwe_kaart').innerText = game_info['current_card'];
+			// fill the all_player_cards div with a table containing all cards of all players :)
+			document.getElementById('all_player_cards').innerHTML = updateAllPlayerHands();
+			document.getElementById('all_graveyard_cards').innerHTML = updateGraveyard();
         }
         
-        function displayAllPlayerHands() {
+        function updateAllPlayerHands() {
             var result = "<table>";
             
             // looping through all cards in hand and stack and putting them into a html table :_)
@@ -42,10 +45,40 @@
                     result += "<td>" + card + "</td>";
                 }
                 result += "</tr></table></td></tr>";
-            }
+			}
+			result += "</table>";
 
             return result;
-        }
+		}
+		
+		function updateGraveyard() {
+			var result = "<table><tr>";
+
+			for (index in game_info['graveyard']) {
+				var card = game_info['graveyard'][index];
+				result += "<td>" + card + "</td>";
+			}
+
+			result += "</tr></table>";
+
+			return result;
+		}
+
+		function endGame() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.location.href = '../../combi/end';
+				}
+			};
+			xhttp.open("GET", "./api/end.php", true);
+			xhttp.send();
+		}
+
+		function toggleGraveyard() {
+			var element = document.getElementById('all_graveyard_cards');
+			element.style.display = element.style.display == "none" ? "block" : "none";
+		}
 		</script>
 		<meta charset="utf-8">
 		<title>Actief - Combi - Sprekende Kwaliteiten</title>
@@ -67,11 +100,17 @@
 					<button id="nieuwe_kaart"><?php echo $json['current_card']; ?></button>
 				</div>
 			</div>
-            <!-- this is in desperate need of some css to make it look nice! -->
 			<h2 id="current_player_indicator"><?php echo $json['players'][$json['current_player']]['name'];?> is aan de beurt...</h2>
-			<ul class="trade-rij">
-                <div id="all_player_cards"></div>
-			</ul>
+				<h3>Spelers- en kaartenlijst</h3>
+				<!-- this is in desperate need of some css to make it look nice! -->
+				<div id="all_player_cards"></div>
+				<h3>Aflegstapel</h3>
+				<div id="all_graveyard_cards" style="display:none"></div>
+				<div class="player-menu">
+			<div class="button"><button onclick="endGame()">Spel beëindigen</button></div>
+	        <!--<div class="button"><button onclick="undo()">Ongedaan maken</button></div> this is not a thing yet -->
+			<div class="button"><button id="end_game_btn" onclick="toggleGraveyard()">Aflegstapel</button></div>
+		</div>
 		</main>
 		<?php include('../../footer.php') ?>
 	</body>

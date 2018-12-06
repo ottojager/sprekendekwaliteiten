@@ -29,7 +29,7 @@ if ($json['game_started'] == false) {
 		}
 		</script>
 		<meta charset="utf-8">
-		<title>Actief - Feedback - Sprekende Kwaliteiten</title>
+		<title>Actief - Combi - Sprekende Kwaliteiten</title>
 		<link rel="stylesheet" href="../../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../../css/footer.css" type="text/css">
