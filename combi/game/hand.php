@@ -51,11 +51,7 @@
 					?>
 				</div>
 			</ul>
-  <?php } //end of player content
-		//start of leader content
-   else {?>
-			<h2 id="current_player_indicator"><?php echo $json['players'][$json['current_player']]['name'] ?> is aan de beurt...</h2>
-   <?php }?>
+  <?php } ?>
 		</main>
 		<?php include('../../footer.php') ?>
 	</body>

@@ -33,7 +33,9 @@ $name = $_SESSION['player_name'];
 // TODO: add code to figure out where each player needs to actually be
 if ($_SESSION['player_id'] == $json['current_player']) {
 	include('game.php');
-} else {
+} else if ($_SESSION['player_id'] != 11) {
 	include('hand.php');
+} else {
+	include('leader.php');
 }
 ?>

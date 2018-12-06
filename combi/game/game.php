@@ -26,10 +26,10 @@
 					<button><?php echo $json['current_card']; ?></button>
 				</div>
 				<div class="button">
-					<button onclick="window.location='./giveaway.php'">weggeven</button>
+					<button onclick="window.location='./giveaway.php'">Weggeven</button>
 				</div>
 				<div class="button">
-					<button onclick="window.location='./trade.php'">inruilen</button>
+					<button onclick="window.location='./trade.php'">Inruilen</button>
 				</div>
 			</div>
 

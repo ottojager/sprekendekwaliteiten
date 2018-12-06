@@ -247,7 +247,7 @@ span.alienBackRight {
 	background-color: #e9e9ea;
 	border-top: solid black 3px;
 	padding: 10px 15px 8px;
-	vertical-align: bottom;
+	/*vertical-align: bottom; this is ignored by display:block*/
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -310,4 +310,8 @@ span.alienBackRight {
 	width: 100%;
 	text-align: center;
 	}
+}
+
+table, th, td {
+    border: 1px solid black;
 }
