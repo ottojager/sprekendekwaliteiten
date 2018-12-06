@@ -65,7 +65,7 @@ if ($json['game_started'] == false) {
 			<ul>
 				<div class="kaart-rij">
 					<?php
-					foreach($json['players'][ $_SESSION['player_id'] ]['hand'] as $key => $value) {
+					foreach($json['players'][$_SESSION['player_id']]['hand'] as $key => $value) {
 						echo "<li class=\"kaart\"><button onclick=\"swap_card(this, $key, '$value')\">$value</button></li>";
 					}
 					?>

@@ -105,7 +105,7 @@ function current_card_view() {
 	h2.innerHTML = 'Wie krijgt de kaart?';
 	var current_player_text = document.createElement('p');
 	current_player_text.id = 'turn';
-	current_player_text.innerHTML = 'Speler '+game_info['players'][ game_info['current_player'] ]['name']+' is aan de beurt';
+	current_player_text.innerHTML = 'Speler '+game_info['players'][game_info['current_player']]['name']+' is aan de beurt';
 
 	// create current card element
 	var current_card_informational_text = document.createElement('h3');
@@ -179,7 +179,7 @@ function received_cards_view() {
 	// the text at the top of the page with the current user or some BS
 	var current_player_text = document.createElement('p');
 	current_player_text.id = 'turn';
-	current_player_text.innerHTML = 'Speler '+game_info['players'][ game_info['current_player'] ]['name']+' is aan de beurt';
+	current_player_text.innerHTML = 'Speler '+game_info['players'][game_info['current_player']]['name']+' is aan de beurt';
 	container.appendChild(current_player_text);
 
 	// create card list
@@ -237,7 +237,7 @@ function leader_view() {
 	// the text at the top of the page with the current user or some BS
 	var current_player_text = document.createElement('p');
 	current_player_text.id = 'turn';
-	current_player_text.innerHTML = 'Speler '+game_info['players'][ game_info['current_player'] ]['name']+' is aan de beurt';
+	current_player_text.innerHTML = 'Speler '+game_info['players'][game_info['current_player']]['name']+' is aan de beurt';
 
 	// create current card element
 	var current_card_informational_text = document.createElement('h3');

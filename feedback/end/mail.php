@@ -19,7 +19,7 @@ $to = str_replace('\n', ' ', $to);
 // getting player cards
 $game = $_SESSION['game_id'];
 $json = json_decode(file_get_contents("../games/$game.json"), True);
-$player = $json['players'][ $_SESSION['player_id'] ];
+$player = $json['players'][$_SESSION['player_id']];
 $cards = $player['stack'];
 
 // message

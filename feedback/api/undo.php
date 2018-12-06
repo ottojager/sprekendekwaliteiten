@@ -18,7 +18,7 @@ if ($_SESSION['player_id'] == 11) {
 			} else {
 				$json['current_player'] = $json['current_player'] - 1;
 			}
-		} while ($json['players'][ $json['current_player'] ]['name'] == 'Afval stapel');
+		} while ($json['players'][$json['current_player']]['name'] == 'Afval stapel');
 
 		// set last update timestamp
 		$json['last_change'] = time();

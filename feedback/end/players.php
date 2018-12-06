@@ -18,7 +18,7 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 	// just accept that this works
 	// echo json_encode(
 	// 	array(
-	// 		$_SESSION['player_id'] => $json['players'][ $_SESSION['player_id'] ]['stack']
+	// 		$_SESSION['player_id'] => $json['players'][$_SESSION['player_id']]['stack']
 	// 	)
 	// );
 	?>
@@ -42,7 +42,7 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 			<ul>
 				<div class="kaart-rij">
 					<?php
-					foreach($json['players'][ $_SESSION['player_id'] ]['stack'] as $key => $value) {
+					foreach($json['players'][$_SESSION['player_id']]['stack'] as $key => $value) {
 						if ($key % 4 == 0 && $key != 0) {
 							echo "</div>";
 							echo "<div class=\"kaart-rij\">";

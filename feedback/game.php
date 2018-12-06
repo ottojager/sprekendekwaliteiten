@@ -77,7 +77,7 @@ if ($_SESSION['player_id'] != 11) {
 		?>
 		<main class="container player-container" id="main" tabindex="-1" >
 			<h2>Wie krijgt de kaart?</h2>
-			<p id="turn">Speler <?php echo $json['players'][ $json['current_player'] ]['name']; ?> is aan de beurt</p>
+			<p id="turn">Speler <?php echo $json['players'][$json['current_player']]['name']; ?> is aan de beurt</p>
 			<h3>Dit is de huidige kaart</h3>
 			<div id="card_display">
 				<p id="current_card"><?php echo $json['current_card']; ?></p>
@@ -103,7 +103,7 @@ if ($_SESSION['player_id'] != 11) {
 		?>
 		<main id="main" class="container leader-container">
 			<h2>Wie krijgt de kaart?</h2>
-			<p id="turn">Speler <?php echo $json['players'][ $json['current_player'] ]['name']; ?> is aan de beurt</p>
+			<p id="turn">Speler <?php echo $json['players'][$json['current_player']]['name']; ?> is aan de beurt</p>
 			<h3>Dit is de huidige kaart</h3>
 			<div id="card_display">
 				<p id="current_card"><?php echo $json['current_card']; ?></p>

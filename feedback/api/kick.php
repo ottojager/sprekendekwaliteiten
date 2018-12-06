@@ -13,7 +13,7 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 
 		if (!$json['game_started']) {
 			// just remove the user it's fine
-			unset($json['players'][ $_GET['p'] ]);
+			unset($json['players'][$_GET['p']]);
 			usort($json['players'], "cmp");
 			foreach ($json['players'] as $key => $value) {
 				$json['players'][$key]['player_id'] = $key;

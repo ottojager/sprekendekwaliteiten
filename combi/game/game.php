@@ -7,7 +7,7 @@
 		var own_id = <?php echo $_SESSION['player_id'];?>;
 		</script>
 		<meta charset="utf-8">
-		<title>Actief - Feedback - Sprekende Kwaliteiten</title>
+		<title>Actief - Combi - Sprekende Kwaliteiten</title>
 		<link rel="stylesheet" href="../../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../../css/footer.css" type="text/css">
@@ -37,7 +37,7 @@
 			<ul class="trade-rij">
 				<div class="kaart-rij">
 					<?php
-					foreach($json['players'][ $_SESSION['player_id'] ]['hand'] as $key => $value) {
+					foreach($json['players'][$_SESSION['player_id']]['hand'] as $key => $value) {
 						echo "<li class=\"kaart\"><button>$value</button></li>";
 					}
 					?>

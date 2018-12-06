@@ -23,7 +23,7 @@
 		}
 		</script>
 		<meta charset="utf-8">
-		<title>Actief - Feedback - Sprekende Kwaliteiten</title>
+		<title>Actief - Combi - Sprekende Kwaliteiten</title>
 		<link rel="stylesheet" href="../../css/basis.css" type="text/css">
 		<link rel="stylesheet" href="../../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../../css/footer.css" type="text/css">
@@ -36,20 +36,26 @@
 		include('../../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
-			<h2 id="current_player_indicator"><?php echo $json['players'][ $json['current_player'] ]['name'] ?> is aan de beurt...</h2>
+		<?php
+		//start of player content
+		if ($_SESSION['player_id'] < 11)
+		{?>
+			<h2 id="current_player_indicator"><?php echo $json['players'][$json['current_player']]['name'] ?> is aan de beurt...</h2>
 			<h3 class="speler-beurt">Jouw kaarten</h3>
 			<ul>
 				<div class="kaart-rij">
 					<?php
-                    if ($_SESSION['player_id'] < 11)
-                    {
-                        foreach($json['players'][$_SESSION['player_id']]['hand'] as $key => $value) {
-                            echo "<li class=\"kaart eind-kaart\"><button>$value</button></li>";
-                        }
-                    }
+					foreach($json['players'][$_SESSION['player_id']]['hand'] as $key => $value) {
+						echo "<li class=\"kaart eind-kaart\"><button>$value</button></li>";
+					}
 					?>
 				</div>
 			</ul>
+  <?php } //end of player content
+		//start of leader content
+   else {?>
+			<h2 id="current_player_indicator"><?php echo $json['players'][$json['current_player']]['name'] ?> is aan de beurt...</h2>
+   <?php }?>
 		</main>
 		<?php include('../../footer.php') ?>
 	</body>

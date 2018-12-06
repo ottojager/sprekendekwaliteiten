@@ -19,7 +19,7 @@ if ($_SESSION['player_id'] == $json['current_player']) {
 			} else {
 				$json['current_player'] = $json['current_player'] + 1;
 			}
-		} while ($json['players'][ $json['current_player'] ]['name'] == 'Afval stapel');
+		} while ($json['players'][$json['current_player']]['name'] == 'Afval stapel');
 	}
 
 	// update timestamp
