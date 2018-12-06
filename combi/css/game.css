@@ -213,8 +213,6 @@ h2 {
 	body {
 		background-color: #ffffff; /*#199bbe;*/
 	}
-	h1 {
-	}
 	#card_display {
 		width: 320px;
 		height: 182px;
@@ -322,7 +320,4 @@ h2 {
 	padding: 0 42px;
 	border: 8px solid #d32b17;
 	margin-top: 42px;
-}
-#knoppen a.skiplink:focus {
-
 }

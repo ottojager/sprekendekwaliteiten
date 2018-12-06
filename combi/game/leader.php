@@ -67,7 +67,7 @@
 					<button id="nieuwe_kaart"><?php echo $json['current_card']; ?></button>
 				</div>
 			</div>
-
+            <!-- this is in desperate need of some css to make it look nice! -->
 			<h2 id="current_player_indicator"><?php echo $json['players'][$json['current_player']]['name'];?> is aan de beurt...</h2>
 			<ul class="trade-rij">
                 <div id="all_player_cards"></div>
