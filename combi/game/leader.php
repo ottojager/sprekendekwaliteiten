@@ -30,12 +30,7 @@
 		
 		function undoLastMove() {
 			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					console.log('yay move hopefully undone');  // send whoever called this function back to the game's main page
-				}
-			}
-			xhttp.open("GET", "./api/new_undo.php", true);
+			xhttp.open("GET", "./api/undo.php", true);
 			xhttp.send();
 			start_update();
 		}

@@ -8,13 +8,18 @@ if ($_SESSION['player_id'] == $json['current_player']) {
 	//check if player didn't select themself
 	if ($_GET['player_id'] != $_SESSION['player_id'] || isset($_GET['card'])) {
 		if ($_GET['player_id'] != $_SESSION['player_id']) {
+			$json['last_move_type'] = 'g'; // g stands for GIVE (sadly php does not have enums (?))
+			//this is so undo can find which player was given a card
+			$json['last_swapped_handindex_or_playerid'] = $_GET['player_id'];
 			//add card to chosen players cards and draw new card
 			$json['players'][$_GET['player_id']]['stack'][] = $json['current_card'];
 		} else if (isset($_GET['card'])) {
 			$index = $_GET['player_id'];
 			$card = $_GET['card'];
-			$json['last_move_type'] = 's';
-			$json['last_swapped_index'] = $card;
+			$json['last_move_type'] = 's'; // s stands for SWAP
+			//this is so undo can find at which hand index the previous player swapped a card
+			$json['last_swapped_handindex_or_playerid'] = $card;
+			//this is so undo can find which card was discarded
 			$json['last_played_card'] = $json['current_card'];
 			$json['graveyard'][] = $json['players'][$index]['hand'][$card];
 			$json['players'][$index]['hand'][$card] = $json['current_card'];
