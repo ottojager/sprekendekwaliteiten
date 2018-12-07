@@ -179,7 +179,7 @@ window.setInterval(function(){
 	start_update();
 
 	// if game has ended
-	if (game_info['card_stack'] == 0) {
+	if (game_info['card_stack'] == 0 && own_id != 11) {
 		document.location.href = '../end/';
 	}
 	update_view();

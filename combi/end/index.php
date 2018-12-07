@@ -13,7 +13,7 @@ if ($json['game_started'] == false) {
 	exit();
 }
 
-if ($json['card_stack'] != array()) {
+if (sizeof($json['card_stack']) > 0) {
 	header('Location: ../game.php');
 	exit();
 }
@@ -22,9 +22,7 @@ if (!(bool)$json) { // if $json actually has content
 	header('Location: ../delete.php'); // send the user to delete.php to have their session cleared
 	exit();
 }
-if ($_SESSION['player_id'] == 11) {
-	include('./leader.php');
-} else {
+if ($_SESSION['player_id'] != 11) { //removed leader include, let's just keep leader on the game page
 	include('./players.php');
 }
 ?>

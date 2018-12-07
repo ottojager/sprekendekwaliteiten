@@ -68,7 +68,9 @@
 			var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
-					document.location.href = '../../combi/end';
+					// not redirecting to end page anymore because leader already has a nice overview of all players and their cards on this page!
+					// instead, we just turn the "current player indicator" into a "game has ended indicator"
+					document.getElementById('current_player_indicator').innerText = "Het spel is beëindigd!";
 				}
 			};
 			xhttp.open("GET", "./api/end.php", true);
@@ -109,7 +111,7 @@
 				<div class="player-menu">
 			<div class="button"><button onclick="endGame()">Spel beëindigen</button></div>
 	        <!--<div class="button"><button onclick="undo()">Ongedaan maken</button></div> this is not a thing yet -->
-			<div class="button"><button id="end_game_btn" onclick="toggleGraveyard()">Aflegstapel</button></div>
+			<div class="button"><button onclick="toggleGraveyard()">Aflegstapel</button></div>
 		</div>
 		</main>
 		<?php include('../../footer.php') ?>
