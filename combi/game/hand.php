@@ -37,7 +37,6 @@
 		?>
 		<main class="container" id="main" tabindex="-1">
 		<?php
-		//start of player content
 		if ($_SESSION['player_id'] < 11)
 		{?>
 			<h2 id="current_player_indicator"><?php echo $json['players'][$json['current_player']]['name'] ?> is aan de beurt...</h2>

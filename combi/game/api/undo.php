@@ -18,6 +18,7 @@ if ($_SESSION['player_id'] == 11) {
 			$json['current_player'] = $json['current_player'] - 1;
 		}
 		//save changes
+		$json['last_change'] = time();
 		file_put_contents("../games/$game.json", json_encode($json));
 	}
 }

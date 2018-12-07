@@ -26,7 +26,19 @@
 			// fill the all_player_cards div with a table containing all cards of all players :)
 			document.getElementById('all_player_cards').innerHTML = updateAllPlayerHands();
 			document.getElementById('all_graveyard_cards').innerHTML = updateGraveyard();
-        }
+		}
+		
+		function undoLastMove() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					console.log('yay move hopefully undone');  // send whoever called this function back to the game's main page
+				}
+			}
+			xhttp.open("GET", "./api/new_undo.php", true);
+			xhttp.send();
+			start_update();
+		}
         
         function updateAllPlayerHands() {
             var result = "<table>";
@@ -110,7 +122,7 @@
 				<div id="all_graveyard_cards" style="display:none"></div>
 				<div class="player-menu">
 			<div class="button"><button onclick="endGame()">Spel beëindigen</button></div>
-	        <!--<div class="button"><button onclick="undo()">Ongedaan maken</button></div> this is not a thing yet -->
+	        <div class="button"><button onclick="undoLastMove()">Ongedaan maken</button></div>
 			<div class="button"><button onclick="toggleGraveyard()">Aflegstapel</button></div>
 		</div>
 		</main>

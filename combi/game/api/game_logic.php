@@ -13,9 +13,14 @@ if ($_SESSION['player_id'] == $json['current_player']) {
 			//add card to chosen players cards and draw new card
 			$json['players'][$_GET['player_id']]['stack'][] = $json['current_card'];
 		} else if (isset($_GET['card'])) {
-			array_push($json['turn_action'], array("id" => $_GET['player_id'], "card" => $_GET['card']));
-			$json['graveyard'][] = $json['players'][$_GET['player_id']]['hand'][$_GET['card']];
-			$json['players'][$_GET['player_id']]['hand'][$_GET['card']] = $json['current_card'];
+			$index = $_GET['player_id'];
+			$card = $_GET['card'];
+			$json['last_move_type'] = 's';
+			$json['last_swapped_index'] = $card;
+			$json['last_played_card'] = $json['current_card'];
+			array_push($json['turn_action'], array("id" => $index, "card" => $card));
+			$json['graveyard'][] = $json['players'][$index]['hand'][$card];
+			$json['players'][$index]['hand'][$card] = $json['current_card'];
 		}
 
 		// take a new card

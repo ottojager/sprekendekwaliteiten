@@ -19,10 +19,15 @@ if ($json['game_started'] == false) {
 		var amount_players = <?php echo count($json['players']);?>;
 		var own_id = <?php echo $_SESSION['player_id'];?>;
 
+
 		function update_page_view() {
 			// this funtion implements page updating
 			// it will be called by update_view() in std.js everytime the game's
 			// json file is updated
+
+			// in the case of this page, we check if the current_player has changed during our
+			// own turn, if that's the case, we will want to be sent to the hand.php page instead
+			// this scenario can occur if the game leader undoes a move
 			if (game_info['current_player'] != own_id) {
 				window.location = './';
 			}
