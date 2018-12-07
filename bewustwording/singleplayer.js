@@ -129,7 +129,7 @@ function reply_click(clicked_id) {
         lastChosenPosition.unshift(clicked_id);
         if (clicked_id !== "trash") {
             var card_text = document.getElementById(clicked_id).getElementsByTagName('p')[0].innerHTML
-            if (confirm("Weet u zeker dat u "+card_text+" wilt vervangen?")) {
+            if (confirm("Weet je zeker dat u "+card_text+" wilt vervangen?")) {
                 // plaats actieve kaart in graveyard array
                 graveyard.unshift(document.getElementById(clicked_id).firstChild.innerHTML);
                 //vervang geselecteerde hand kaart met actieve kaart
@@ -280,7 +280,7 @@ function handViewTemp() {
 }
 
 function endGameHandView(no_confirm) {
-    if (no_confirm || confirm('Weet u zeker dat u het spel wil beëindigen?')) {
+    if (no_confirm || confirm('Weet je zeker dat u het spel wil beëindigen?')) {
         // no swaping card if the game ended
         gameEnded = 1;
 

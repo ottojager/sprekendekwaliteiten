@@ -30,7 +30,7 @@
 		<link rel="icon" sizes="16x16" type="image/png" href="Rainbow_placeholder.png">
 	</head>
 	
-	<body onbeforeunload="return confirm('Weet u zeker dat u de pagina wilt sluiten?')">
+	<body onbeforeunload="return confirm('Weet je zeker dat u de pagina wilt sluiten?')">
 		<a href="#main" class="skip-link">Skip naar main content</a>
 		<?php
 		// create some variables to add header values
