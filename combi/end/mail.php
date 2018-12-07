@@ -26,7 +26,7 @@ $cards = $player['stack'];
 $message = '
 <html lang="nl">
 <head>
-	<title>Uw kaarten</title>
+	<title>Jouw kaarten</title>
 	<style type="text/css">
 	
 		body {
@@ -156,7 +156,7 @@ $message = '
 	</div>
 </div>
 
-	<h1>Uw kaarten van Sprekende Kwaliteiten - Feedback</h1>
+	<h1>Jouw kaarten van Sprekende Kwaliteiten - Feedback</h1>
 	<ul>';
 	foreach ($cards as $key => $value) {
 		if ($value != '') {

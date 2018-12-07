@@ -86,7 +86,7 @@ function send_email() {
 
             // succ text
             var p = document.createElement('p');
-            p.innerHTML = "Het bericht is verzonden naar uw email.";
+            p.innerHTML = "Het bericht is verzonden naar jouw e-mail adres.";
             p.classList.add('success');
 
             // back button
@@ -129,7 +129,7 @@ function reply_click(clicked_id) {
         lastChosenPosition.unshift(clicked_id);
         if (clicked_id !== "trash") {
             var card_text = document.getElementById(clicked_id).getElementsByTagName('p')[0].innerHTML
-            if (confirm("Weet je zeker dat u "+card_text+" wilt vervangen?")) {
+            if (confirm("Weet je zeker dat je "+card_text+" wil vervangen?")) {
                 // plaats actieve kaart in graveyard array
                 graveyard.unshift(document.getElementById(clicked_id).firstChild.innerHTML);
                 //vervang geselecteerde hand kaart met actieve kaart
@@ -162,7 +162,7 @@ function reply_click(clicked_id) {
         // checken of de game eindigt
         if (cardStack.length === 0 && currentCard == null) {
             endGameHandView(true);
-            alert("Je hebt alle kaarten gehad. Vul je email in en klik op \"Stuur email\" om de resultaten als email naar jezelf te stuuren.");
+            alert("Je hebt alle kaarten gehad. Vul je e-mail adres in en klik op \"Stuur e-mail\" om de resultaten als e-mail naar jezelf te sturen.");
         }
     }
 }

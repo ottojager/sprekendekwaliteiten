@@ -10,7 +10,7 @@ $cards = explode(',', $_GET['cards']);
 $message = '
 <html lang="nl=NL">
 <head>
-	<title>Uw kaarten</title>
+	<title>Jouw kaarten</title>
 	
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	
@@ -147,7 +147,7 @@ $message = '
 	</div>
 </div>
 
-	<h1>Uw kaarten van Kwaliteitenspel - Bewustwording</h1>
+	<h1>Jouw kaarten van Kwaliteitenspel - Bewustwording</h1>
 	<ul>';
 	foreach ($cards as $key => $value) {
 		if ($value != '') {
