@@ -24,14 +24,5 @@
 	],
 	'last_change': timestamp,
 	'game_started': bool,
-	'max_cards': int,
-	'turn_action': [
-		{
-			'id': int
-			'card': int
-			// ID of the position the card was sent to
-			// null if send the card was sent to another player
-			// 0-4 = that slot in the players own hand (arrays start at zero)
-		}
-	]
+	'max_cards': int
 }

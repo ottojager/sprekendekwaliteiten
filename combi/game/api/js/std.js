@@ -104,12 +104,6 @@ function start_update() {
 	xhttp.send();
 }
 
-function undo() {
-	var xhttp = new XMLHttpRequest();
-	xhttp.open("GET", "./api/undo.php");
-	xhttp.send();
-};
-
 function leader_card(amount_players) {
 	"use strict";
 	var i;

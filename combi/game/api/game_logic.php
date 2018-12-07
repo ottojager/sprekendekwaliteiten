@@ -8,8 +8,6 @@ if ($_SESSION['player_id'] == $json['current_player']) {
 	//check if player didn't select themself
 	if ($_GET['player_id'] != $_SESSION['player_id'] || isset($_GET['card'])) {
 		if ($_GET['player_id'] != $_SESSION['player_id']) {
-			//add to game info which player is selected
-			array_push($json['turn_action'], array("id" => $_GET['player_id'], "card" => null));
 			//add card to chosen players cards and draw new card
 			$json['players'][$_GET['player_id']]['stack'][] = $json['current_card'];
 		} else if (isset($_GET['card'])) {
@@ -18,7 +16,6 @@ if ($_SESSION['player_id'] == $json['current_player']) {
 			$json['last_move_type'] = 's';
 			$json['last_swapped_index'] = $card;
 			$json['last_played_card'] = $json['current_card'];
-			array_push($json['turn_action'], array("id" => $index, "card" => $card));
 			$json['graveyard'][] = $json['players'][$index]['hand'][$card];
 			$json['players'][$index]['hand'][$card] = $json['current_card'];
 		}
