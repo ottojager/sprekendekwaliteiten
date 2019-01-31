@@ -109,8 +109,9 @@ button {
 	border: none;
 	background: none;
 	cursor: pointer;
-	float:right;
-	height: 40px
+	float: right;
+	height: 20px;
+    width: 40px;
 }
 
 /*hover*/
