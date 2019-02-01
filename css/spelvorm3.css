@@ -140,6 +140,7 @@ input[type=text], select {
 	background-image: url(../afbeeldingen/rode-kaart.png);
 }
 
+
 /* Speler's Hand */ 
 
 .speler-beurt {
@@ -148,6 +149,14 @@ input[type=text], select {
 	bottom: 0px;
 	text-decoration: underline;
 	font-size: 20px;
+}
+
+
+/* Speleider kant */
+
+.player-menu {
+	text-align: center;
+    margin: 60px auto 0;
 }
 
 
@@ -264,6 +273,7 @@ ul#player_list li:active{
 #player_list li .player-button button {
 	float:none
 }
+
 
 
 .player-button button {
