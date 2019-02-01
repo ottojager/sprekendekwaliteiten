@@ -280,6 +280,14 @@ ul#player_list li:active{
 }
 
 
+/* End Game */
+
+.bottom-menu {
+	margin: 30px auto 0 auto;
+	text-align: center;
+}
+
+
 /* Media Queries */
 
 @media only screen and (max-width: 650px) {
