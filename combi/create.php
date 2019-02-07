@@ -36,7 +36,7 @@ if (isset($_POST['makeLobbyButton'])) {
 
 			$_SESSION['player_id'] = 11;
 			$_SESSION['game_id'] = $id;
-			$_SESSION['game_mode'] = 2;
+			$_SESSION['game_mode'] = 3;
 			$_SESSION['player_name'] = $name;
 			header('Location: ./game/lobby.php');
 		} else {
