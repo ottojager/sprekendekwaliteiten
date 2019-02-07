@@ -24,8 +24,8 @@
 			// display current card value
 			document.getElementById('nieuwe_kaart').innerText = game_info['current_card'];
 			// fill the all_player_cards div with a table containing all cards of all players :)
-			document.getElementById('all_player_cards').innerHTML = updateAllPlayerHands();
-			document.getElementById('all_graveyard_cards').innerHTML = updateGraveyard();
+			updateAllPlayerHands();
+			//document.getElementById('all_graveyard_cards').innerHTML = updateGraveyard();
 		}
 		
 		function undoLastMove() {
@@ -36,26 +36,25 @@
 		}
         
         function updateAllPlayerHands() {
-            var result = "<table>";
-            
-            // looping through all cards in hand and stack and putting them into a html table :_)
+			var buttons = document.getElementsByClassName("player-button");
             for (index in game_info['players']) {
-                var player = game_info['players'][index];
-                result += "<tr><td><b>" + player['name'] + "</b></td><td><table><tr><td><b>In hand</b></td>";
-                for (card_index in player['hand']) {
-                    var card = player['hand'][card_index];
-                    result += "<td>" + card + "</td>";
-                }
-                result += "</tr><tr><td><b>Ontvangen</b></td>";
-                for (card_index in player['stack']) {
-                    var card = player['stack'][card_index];
-                    result += "<td>" + card + "</td>";
-                }
-                result += "</tr></table></td></tr>";
-			}
-			result += "</table>";
+				var player = game_info['players'][index];
+				var playerDataBox = document.getElementById("player_cards_" + index);
+				var dataBoxName = playerDataBox.getElementsByTagName("h3")[0];
+				var dataBoxCardList = playerDataBox.getElementsByTagName("ul")[0];
 
-            return result;
+				dataBoxName.innerHTML = '';
+				dataBoxCardList.innerHTML = '';
+				dataBoxName.innerHTML = player["name"];
+
+				buttons[index].getElementsByTagName("button")[0].innerHTML = player["name"] + " (" + player["stack"].length + ")";
+
+                for (card_index in player['stack']) {
+					var li = document.createElement('li');
+					li.innerHTML = player['stack'][card_index];
+                    dataBoxCardList.appendChild(li);
+                }
+			}
 		}
 		
 		function updateGraveyard() {
@@ -111,8 +110,17 @@
 			</div>
 			<h2 id="current_player_indicator"><?php echo $json['players'][$json['current_player']]['name'];?> is aan de beurt...</h2>
 				<h3>Spelers- en kaartenlijst</h3>
-				<!-- this is in desperate need of some css to make it look nice! -->
-				<div id="all_player_cards"></div>
+				<?php
+				$playerCardLists = "";
+				foreach ($json['players'] as $key => $value) {
+					if ($value['name'] != 'Afval stapel') {
+						//<div class="player-button"><button>'.$value['name'].' ('.count($value['stack']).')</button></div>
+						echo('<div class="player-button" onclick="toggleCardView('.$key.')"><button>'.$value['name'].' ('.count($value['stack']).')</button></div>');
+						$playerCardLists .= "<div id=\"player_cards_$key\" class=\"player_cards\" style=\"display:none\"><h3>".$value['name']."</h3><ul></ul></div>";
+					}
+				}
+				echo($playerCardLists);
+		    	?>
 				<h3>Aflegstapel</h3>
 				<div id="all_graveyard_cards" style="display:none"></div>
 				<div class="player-menu">

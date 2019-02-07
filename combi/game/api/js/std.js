@@ -4,7 +4,19 @@ var element_to_swap = null;
 var old_card_text = null;
 var last_traded_id = -1;
 
+function toggleCardView(id) {
+	var playerDataBox = document.getElementsByClassName("player_cards");
 
+	for(var i = 0; i < playerDataBox.length; i++) {
+		var box = playerDataBox[i];
+		if (box.id == ("player_cards_" + id)) {
+			box.style.display = (box.style.display == "none" ? "block" : "none");
+		}
+		else {
+			box.style.display = "none";
+		}
+	}
+}
 
 function give_card(clicked_id) {
 	var xhttp = new XMLHttpRequest();
