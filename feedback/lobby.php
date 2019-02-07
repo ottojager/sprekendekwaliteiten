@@ -45,7 +45,7 @@ if (!(bool)$json) { // if $json actually has content
 				xhttp.send();
 			}
 
-			var id = <?php echo $_SESSION['player_id']; ?>; // the ID of the current user
+			var own_id = <?php echo $_SESSION['player_id']; ?>; // the ID of the current user
 
 			var s = 3000; // how often to refresh in ms
 			var last_change = 0;
@@ -56,6 +56,10 @@ if (!(bool)$json) { // if $json actually has content
 					return
 				} else {
 					last_change = game_info['last_change'];
+				}
+
+				if (own_id != 11 && !(own_id in game_info["players"])) {
+					window.location.href = "../";
 				}
 
 				if (game_info["game_started"] == true) {

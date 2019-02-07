@@ -44,12 +44,15 @@ if (!(bool)$json) { // if $json actually has content
 				xhttp.open("GET", "./api/kick.php?p="+id, false);
 				xhttp.send();
 			}
-
-			var id = <?php echo $_SESSION['player_id']; ?>; // the ID of the current user
+			//Let's just start off with naming this correctly
+			var own_id = <?php echo $_SESSION['player_id']; ?>; // the ID of the current user
 
 			var s = 3000; // how often to refresh in ms
 			window.setInterval(function(){ // run this code every [s] seconds
 				start_update(); // get the new game_info
+				if (own_id != 11 && !(own_id in game_info["players"])) {
+					window.location.href = "../../";
+				}
 				if (game_info["game_started"] == true) {
 					window.location.href = './'; // redirect users if the game has been started
 				}
