@@ -1,3 +1,7 @@
+<?php 
+include("login_check.php"); 
+?>
+
 <header>
 	<div class="header-content">
 		<div class="header-content-title">
