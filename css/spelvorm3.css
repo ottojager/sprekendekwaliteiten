@@ -228,6 +228,19 @@ input[type=text], select {
 	margin: 80px auto;
 }
 
+.card_stack h3 { /* So yea this is new, it's an id in spelvorm 2 but here it's a class*/
+	margin: 10px 0;
+	font-size: 18px;
+	text-decoration: underline;
+	margin-top: 15px;	
+	text-align: center;
+}
+
+.card_stack ul {
+	list-style: none;
+	text-align: center;
+}
+
 #player_list li {
 	display: inline-block;
 	padding: 4px;

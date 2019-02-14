@@ -37,37 +37,30 @@
         
         function updateAllPlayerHands() {
 			var buttons = document.getElementsByClassName("player-button");
-            for (index in game_info['players']) {
-				var player = game_info['players'][index];
-				var playerDataBox = document.getElementById("player_cards_" + index);
-				var dataBoxName = playerDataBox.getElementsByTagName("h3")[0];
-				var dataBoxCardList = playerDataBox.getElementsByTagName("ul")[0];
+			var graveyard = game_info['graveyard'];
 
-				dataBoxName.innerHTML = '';
+			for (var index = 0; index < game_info['players'].length + 1; index++) {
+				var dataBoxCardList = document.getElementById("player_cards_" + index).getElementsByTagName("ul")[0];
+
 				dataBoxCardList.innerHTML = '';
-				dataBoxName.innerHTML = player["name"];
+				if (index < game_info['players'].length) {
+					var player = game_info['players'][index];
 
-				buttons[index].getElementsByTagName("button")[0].innerHTML = player["name"] + " (" + player["stack"].length + ")";
+					buttons[index].getElementsByTagName("button")[0].innerHTML = player["name"] + " (" + player["stack"].length + ")";
 
-                for (card_index in player['stack']) {
-					var li = document.createElement('li');
-					li.innerHTML = player['stack'][card_index];
-                    dataBoxCardList.appendChild(li);
-                }
+					for (card_index in player['stack']) {
+						var li = document.createElement('li');
+						li.innerHTML = player['stack'][card_index];
+						dataBoxCardList.appendChild(li);
+					}
+				}
+				else {
+					for (card_index in graveyard) {
+						li.innerHTML = graveyard[card_index];
+						dataBoxCardList.appendChild(li);
+					}
+				}
 			}
-		}
-		
-		function updateGraveyard() {
-			var result = "<table><tr>";
-
-			for (index in game_info['graveyard']) {
-				var card = game_info['graveyard'][index];
-				result += "<td>" + card + "</td>";
-			}
-
-			result += "</tr></table>";
-
-			return result;
 		}
 
 		function endGame() {
@@ -111,22 +104,22 @@
 			<h2 id="current_player_indicator"><?php echo $json['players'][$json['current_player']]['name'];?> is aan de beurt...</h2>
 				<h3>Spelers- en kaartenlijst</h3>
 				<?php
-				$playerCardLists = "";
+				$playerCardLists = '';
+				echo("<ul id=\"player_list\">");
 				foreach ($json['players'] as $key => $value) {
 					if ($value['name'] != 'Afval stapel') {
 						//<div class="player-button"><button>'.$value['name'].' ('.count($value['stack']).')</button></div>
-						echo('<div class="player-button" onclick="toggleCardView('.$key.')"><button>'.$value['name'].' ('.count($value['stack']).')</button></div>');
-						$playerCardLists .= "<div id=\"player_cards_$key\" class=\"player_cards\" style=\"display:none\"><h3>".$value['name']."</h3><ul></ul></div>";
+						echo('<li><div class="player-button" onclick="toggleCardView('.$key.')"><button>'.$value['name'].' ('.count($value['stack']).')</button></div></li>');
+						$playerCardLists .= "<div id=\"player_cards_$key\" class=\"player_cards\" style=\"display:none\"><div class=\"card_stack\"><h3>".$value['name']."</h3><ul></ul></div></div>";
 					}
 				}
-				echo($playerCardLists);
-		    	?>
-				<h3>Aflegstapel</h3>
-				<div id="all_graveyard_cards" style="display:none"></div>
+				echo("</ul>" . $playerCardLists);
+				?>
+								<div id="player_cards_<?=count($json['players'])?>" class="player_cards" style="display:none"><div class="card_stack"><h3>Aflegstapel</h3><ul></ul></div></div>
 				<div class="player-menu">
 			<div class="button"><button onclick="endGame()">Spel beëindigen</button></div>
 	        <div class="button"><button onclick="undoLastMove()">Ongedaan maken</button></div>
-			<div class="button"><button onclick="toggleGraveyard()">Aflegstapel</button></div>
+			<div class="button"><button onclick="toggleCardView(<?=count($json['players'])?>)">Aflegstapel</button></div>
 		</div>
 		</main>
 		<?php include('../../footer.php') ?>

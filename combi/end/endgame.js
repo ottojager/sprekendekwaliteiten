@@ -13,7 +13,6 @@ function send_mail() {
 		alert('Het veld \'Email\' is niet goed ingevuld.\nZorg dat het een correct formaat heeft bijvoorbeeld \'naam@domein.nl\'.');
 		exit();
 	} else {
-		console.log('check passed');
 
 		var email = encodeURIComponent(email);
 
@@ -31,42 +30,6 @@ function send_mail() {
 		xhttp.send('email='+email); // put any post values in here
 	}
 }
-
-// function render_card_list(index, pid, cards) {
-// 	// clear out old list
-// 	var container = document.getElementById('card-list-container-'+pid);
-// 	container.innerHTML = '';
-//
-// 	var list = document.createElement('ul');
-// 	for (i = index; i != index+cards && i != card_list[pid].length; i++) {
-// 		console.log(card_list[pid][i]);
-// 		var item = document.createElement('li');
-// 		item.innerHTML = card_list[pid][i];
-// 		list.appendChild(item);
-// 	}
-// 	container.appendChild(list);
-//
-// 	// back & forwards buttons
-// 	if (index != 0) {
-// 		var back_button = document.createElement('button');
-// 		back_button.innerHTML = 'Vorge';
-// 		back_button.onclick = function() {
-// 			console.log(index-cards);
-// 			render_card_list(index-cards, pid, cards);
-// 		}
-// 		container.appendChild(back_button);
-// 	}
-//
-// 	if (index+cards < card_list[pid].length) {
-// 		var continue_button = document.createElement('button');
-// 		continue_button.innerHTML = 'Volgende';
-// 		continue_button.onclick = function() {
-// 			console.log(index+cards);
-// 			render_card_list(index+cards, pid, cards);
-// 		}
-// 		container.appendChild(continue_button);
-// 	}
-// }
 
 function leader_initial_rendering_calls(player_count) {
 	for (n = 0; n <= player_count; n++) {

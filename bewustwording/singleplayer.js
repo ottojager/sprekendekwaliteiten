@@ -123,7 +123,6 @@ function send_email() {
 
 function reply_click(clicked_id) {
     "use strict";
-    console.log(clicked_id);
     if (gameEnded == 0 && currentCard !== 0) {
         var i;
         lastChosenPosition.unshift(clicked_id);

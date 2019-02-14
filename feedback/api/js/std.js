@@ -43,7 +43,6 @@ function leader_card(amount_players) {
 	for (i = 0; i <  amount_players; i += 1) {
 		document.getElementById(i.toString()).addEventListener('click', function() {
 			leader_view_cards(this.id);
-			console.log(this.id);
 		});
 	}
 }
