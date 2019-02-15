@@ -1,5 +1,6 @@
 <?php
-if (!isset($_SESSION['logged_in'])) {
+echo "test";
+/*if (!isset($_SESSION['logged_in'])) {
     include('db.php');
     $query = $pdo->prepare('SELECT value FROM config WHERE name=?');
     $query->execute(["LOGIN_URL"]);
@@ -11,5 +12,5 @@ if (!isset($_SESSION['logged_in'])) {
 if ($_SESSION['logged_in'] == 'not ok' && !isset($isLoginPage)) {
     echo "check ".$_SESSION['logged_in'];
     header('Location: http://' . $_SERVER['HTTP_HOST'] . $_SESSION['login_url']);
-}
+}*/
 ?>
