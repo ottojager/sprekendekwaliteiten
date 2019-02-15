@@ -1,6 +1,6 @@
 <?php
-echo "test";
-/*if (!isset($_SESSION['logged_in'])) {
+if (!isset($_SESSION['logged_in'])) {
+    echo "test";
     include('db.php');
     $query = $pdo->prepare('SELECT value FROM config WHERE name=?');
     $query->execute(["LOGIN_URL"]);
