@@ -3,7 +3,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 if (!isset($_SESSION['logged_in'])) {
-    echo "test";
     include('db.php');
     $query = $pdo->prepare('SELECT value FROM config WHERE name=?');
     $query->execute(["LOGIN_URL"]);
@@ -13,7 +12,7 @@ if (!isset($_SESSION['logged_in'])) {
 }
 
 if ($_SESSION['logged_in'] == 'not ok' && !isset($isLoginPage)) {
-    echo "check ".$_SESSION['logged_in'];
+    //echo "check ".$_SESSION['logged_in'];
     header('Location: http://' . $_SERVER['HTTP_HOST'] . $_SESSION['login_url']);
 }
 ?>
