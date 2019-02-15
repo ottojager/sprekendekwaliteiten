@@ -17,7 +17,7 @@ session_start();
 		<?php
 		$no_back_to_start = true;
 
-		include('header.php')
+		include('header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
 			<h2>Sprekende Kwaliteiten</h2>
@@ -29,6 +29,6 @@ session_start();
 				<div class="button"><button onclick="window.location='./combi'">Combi</button></div>
 			</div>
 		</main>
-		<?php include('footer.php') ?>
+		<?php include('footer.php'); ?>
 	</body>
 </html>
