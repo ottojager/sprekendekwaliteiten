@@ -92,7 +92,7 @@ if (!(bool)$json) { // if $json actually has content
 		$spelvorm = 'Feedback';
 		$name = $_SESSION['player_name'];
 
-		include('../../header.php');
+		require('../../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
 			<?php if ($_SESSION['player_id'] == 11) { // game leader only ?>

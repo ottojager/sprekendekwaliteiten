@@ -15,7 +15,7 @@
 	$name = $_SESSION['player_name'];
 	$in_sub_folder = true;
 
-	include('../../header.php');
+	require('../../header.php');
 	?>
 	<main class="container" id="main">
 		<div class="email-container">

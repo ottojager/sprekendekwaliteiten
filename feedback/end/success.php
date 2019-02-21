@@ -13,7 +13,7 @@
 	$name = $_SESSION['player_name'];
 	$in_sub_folder = true;
 
-	include('../../header.php');
+	require('../../header.php');
 	?>
 	<main id="main">
 		<p class="success">De email is verstuurd</p>

@@ -34,7 +34,7 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 	$name = $_SESSION['player_name'];
 	$in_sub_folder = true;
 
-	include('../../header.php');
+	require('../../header.php');
 	?>
 	<main class="container" id="main" tabindex="-1">
 		<h2>Ontvangen kaarten (van anderen)</h2>

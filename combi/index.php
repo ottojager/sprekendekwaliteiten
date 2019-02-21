@@ -18,7 +18,7 @@ session_start();
 		// create some variables to add header values
 		$spelvorm = 'Combi';
 
-		include('../header.php');
+		require('../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
 			<div class="startscherm">

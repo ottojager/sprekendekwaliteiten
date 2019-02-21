@@ -68,7 +68,7 @@ if ($_SESSION['player_id'] != 11) {
 		$spelvorm = 'Feedback';
 		$name = $_SESSION['player_name'];
 
-		include('../header.php');
+		require('../header.php');
 		?>
 		<?php if ($_SESSION['player_id'] != 11) {
 		/////////////

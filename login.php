@@ -17,7 +17,7 @@
 </head>
 <body>
     <?php
-    include("header.php"); 
+    require("header.php"); 
     ?>
     <?php 
         if ($_SESSION['logged_in'] == 'ok') {

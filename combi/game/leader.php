@@ -92,7 +92,7 @@
 	<body>
 		<a href="#main" class="skip-link">Skip naar main content</a>
 		<?php
-		include('../../header.php');
+		require('../../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
 			<div class="linker-menu">

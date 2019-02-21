@@ -47,7 +47,7 @@ if ($json['game_started'] == false) {
 		$spelvorm = 'Combi';
 		$name = $_SESSION['player_name'];
 
-		include('../../header.php');
+		require('../../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
 			<div class="linker-menu">

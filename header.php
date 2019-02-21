@@ -1,5 +1,5 @@
 <?php 
-include("login_check.php"); 
+require("login_check.php"); 
 ?>
 
 <header>

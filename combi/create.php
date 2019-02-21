@@ -88,7 +88,7 @@ if (isset($_POST['makeLobbyButton'])) {
 		// create some variables to add header values
 		$spelvorm = 'Combi';
 
-		include('../header.php');
+		require('../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
 			<div id="title"><h2>Aanmaken spel - Combi</h2>

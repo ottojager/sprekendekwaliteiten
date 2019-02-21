@@ -39,7 +39,7 @@ session_start();
 		// create some variables to add header values
 		$spelvorm = 'Bewustwording';
 
-		include('../header.php');
+		require('../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
 

@@ -27,7 +27,7 @@
 	$name = $_SESSION['player_name'];
 	$in_sub_folder = true;
 
-	include('../../header.php');
+	require('../../header.php');
 	?>
 	<main class="container" id="main" tabindex="-1">
 		<h2>Einde - Feedback</h2>

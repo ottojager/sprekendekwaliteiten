@@ -99,7 +99,7 @@ if (isset($_POST['join_button'])) {
 		// create some variables to add header values
 		$spelvorm = 'Combi';
 
-		include('../header.php');
+		require('../header.php');
 		?>
 
 		<main class="container" id="main" tabindex="-1">

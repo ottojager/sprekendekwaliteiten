@@ -17,7 +17,7 @@ session_start();
 		<?php
 		$no_back_to_start = true;
 
-		include('header.php');
+		require('header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
 			<h2>Sprekende Kwaliteiten</h2>
