@@ -12,9 +12,12 @@ function shuffle(a) {
 
 function takeCard() {
     "use strict";
-    var takenCard = cardStack[0];
+    if (cardStack.length > 0) {
+    var takenCard = cardStack[0].name;
     cardStack.shift();
     return takenCard;
+    }
+    return undefined;
 }
 
 function rewriteGraveyard() {
@@ -143,7 +146,7 @@ function reply_click(clicked_id) {
 				document.getElementById("newCardButton").focus();
 				document.getElementById("newCardButton").onclick = newCard;
 
-                // do not allow the user to uuse the back button
+                // do not allow the user to use the back button
                 var backButton = document.getElementById("BackToNewCardViewButton")
                 backButton.setAttribute('aria-disabled', true);
                 backButton.onclick = function(){};
@@ -222,22 +225,23 @@ function newCardView() {
     xhttp.send();
 }
 
+function replaceCards(html) {
+    html = html.replace("active card", currentCard);
+
+    for (var i = 1; i < 9; i++) {
+        html = html.replace("card" + i.toString(), hand[i]);
+    }
+
+    return html;
+}
+
 function handView() {
     view = 'trade'
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // lots o' replaces
-            var html = this.responseText
-            .replace("active card", currentCard)
-            .replace("card1", hand[1])
-            .replace("card2", hand[2])
-            .replace("card3", hand[3])
-            .replace("card4", hand[4])
-            .replace("card5", hand[5])
-            .replace("card6", hand[6])
-            .replace("card7", hand[7])
-            .replace("card8", hand[8]);
+            var html = replaceCards(this.responseText);
             document.getElementById("main").innerHTML = html;
             // add click event listeners zodat we kunnen zien welke kaart geslecteerd woord
             addListeners();
@@ -259,16 +263,7 @@ function handViewTemp() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // lots o' replaces
-            var html = this.responseText
-            .replace("active card", currentCard)
-            .replace("card1", hand[1])
-            .replace("card2", hand[2])
-            .replace("card3", hand[3])
-            .replace("card4", hand[4])
-            .replace("card5", hand[5])
-            .replace("card6", hand[6])
-            .replace("card7", hand[7])
-            .replace("card8", hand[8]);
+            var html = replaceCards(this.responseText);
             document.getElementById("main").innerHTML = html;
 
             document.title = 'Hand kaarten - Bewustwording - Sprekende Kwaliteiten';
@@ -290,16 +285,7 @@ function endGameHandView(no_confirm) {
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 // lots o' replaces
-                var html = this.responseText
-                .replace("active card", currentCard)
-                .replace("card1", hand[1])
-                .replace("card2", hand[2])
-                .replace("card3", hand[3])
-                .replace("card4", hand[4])
-                .replace("card5", hand[5])
-                .replace("card6", hand[6])
-                .replace("card7", hand[7])
-                .replace("card8", hand[8]);
+                var html = replaceCards(this.responseText);
                 document.getElementById("main").innerHTML = html;
             }
         };

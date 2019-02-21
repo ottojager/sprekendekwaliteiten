@@ -1,5 +1,13 @@
 <?php
 session_start();
+$gameType = -1;
+if (isset($_GET['type'])) {
+	$type = $_GET['type'];
+	
+	if (is_numeric($type)) {
+		$gameType = $type;
+	}
+}
 ?>
 <html lang="nl">
 	<head>
@@ -15,11 +23,12 @@ session_start();
 				$db = mysqli_connect($config['hostname'], $config['username'], $config['password']);
 
 				mysqli_select_db($db, $config['database']);
-				$sql = "SELECT * FROM cards";
+				$sql = "SELECT * FROM cards WHERE type = 1 OR type = $gameType";
+				mysqli_query($db, "SET NAMES 'utf8'");
 				$result = mysqli_query($db, $sql);
 				$array = array();
 				while ($card = mysqli_fetch_assoc($result)) {
-					$array[] = $card['name'];
+					$array[] = ["name" => $card['name'], "type" => $card['type']];
 				}
 				echo json_encode($array);
 				?>
@@ -33,7 +42,7 @@ session_start();
 		<link rel="icon" sizes="16x16" type="image/png" href="Rainbow_placeholder.png">
 	</head>
 	
-	<body onbeforeunload="return confirm('Weet je zeker dat u de pagina wilt sluiten?')">
+	<body onbeforeunload="return confirm('Weet je zeker dat je de pagina wilt sluiten?')">
 		<a href="#main" class="skip-link">Skip naar main content</a>
 		<?php
 		// create some variables to add header values
