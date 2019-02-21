@@ -20,9 +20,8 @@
     require("header.php"); 
     ?>
     <?php 
-        if ($_SESSION['logged_in'] == 'ok') {
+        if ($_SESSION['logged_in']) {
             header('Location: ./');
-            echo('login '.$_SESSION['logged_in']);
         }
     
         if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -33,9 +32,8 @@
             
             if ($query->fetchColumn() > 0)
             {
-                $_SESSION['logged_in'] = 'ok';
+                $_SESSION['logged_in'] = true;
                 header('Location: ./');
-                echo($_SESSION['logged_in']);
             }
         }
     ?>
