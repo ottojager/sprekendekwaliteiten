@@ -9,3 +9,6 @@ CREATE TABLE users (
 	username VARCHAR(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
 	password VARCHAR(40) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL
 );
+
+/* Gotta love the different format here */
+CREATE TABLE `kwaliteiten`.`config` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(50) NOT NULL , `value` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
