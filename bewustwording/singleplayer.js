@@ -212,8 +212,7 @@ function newCardView() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var html = this.responseText.replace("card", currentCard);
-            document.getElementById("main").innerHTML = html;
+            document.getElementById("main").innerHTML = this.responseText.replace("card", currentCard);
             document.getElementById("trash").addEventListener('click', function() {
         			reply_click(this.id);
         			window.scrollTo(0,document.body.scrollHeight);
@@ -241,9 +240,8 @@ function handView() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // lots o' replaces
-            var html = replaceCards(this.responseText);
-            document.getElementById("main").innerHTML = html;
-            // add click event listeners zodat we kunnen zien welke kaart geslecteerd woord
+            document.getElementById("main").innerHTML = replaceCards(this.responseText);
+            // add click event listeners zodat we kunnen zien welke kaart geselecteerd wordt 
             addListeners();
             document.title = 'Ruil je kaart - Bewustwording - Sprekende Kwaliteiten';
         }
@@ -263,8 +261,7 @@ function handViewTemp() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // lots o' replaces
-            var html = replaceCards(this.responseText);
-            document.getElementById("main").innerHTML = html;
+            document.getElementById("main").innerHTML = replaceCards(this.responseText);
 
             document.title = 'Hand kaarten - Bewustwording - Sprekende Kwaliteiten';
         }
@@ -285,8 +282,7 @@ function endGameHandView(no_confirm) {
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 // lots o' replaces
-                var html = replaceCards(this.responseText);
-                document.getElementById("main").innerHTML = html;
+                document.getElementById("main").innerHTML = replaceCards(this.responseText);
             }
         };
         xhttp.open("GET", "./parts/endgame_hand.html", true);
