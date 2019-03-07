@@ -35,7 +35,7 @@ session_start();
 				<p>Veel plezier met het spel!</p>
 				<br><br>
 				<input type="radio" name="gametype" onclick="gameType=1" checked>Zonder valkuilen
-				<input type="radio" name="gametype" onclick="gameType=2">Met valkuilen
+				<input type="radio" name="gametype" onclick="gameType=3">Met valkuilen
 			</div>
 			<div class="button-positie">
 				<div class="button"><button class="button" onclick="window.location='./game.php?type='+gameType">Start spel</button></div>

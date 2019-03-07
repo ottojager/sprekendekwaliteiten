@@ -1,0 +1,284 @@
+/* Stylesheet voor spelvorm 1, Bewustwording. Voor unieke code alleen voor Spelvorm 1. */
+
+
+/* Informatie pagina CSS */
+
+h1 {
+	font-size: 30px;
+	text-decoration: underline;
+	margin-bottom: 40px;
+}
+
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+/* Ontvangen kaart CSS */
+
+
+#current {
+	text-align: center;
+	position: relative;
+	bottom: 150px;
+	color: white;
+	font-size: 18px;
+}
+
+#actievekaart img {
+	width: 190px;
+	height: 270px;
+	margin: 0 auto;
+	display: block;
+}
+/*
+@media screen and (max-width: 810px) {
+	.button  {
+		width: 50%;
+		margin: 0;
+		padding: 5px 50px;
+	}
+	.button button {
+		width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+	.button  {
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-bottom: 5px;
+	margin-right: auto;
+	text-align: center;
+	}
+}*/
+
+/* Kaart inruilen CSS > Huidige kaart */
+
+.linker-menu {
+	float: left;
+}
+
+.linker-menu h2 {
+	margin: 55px 0 0 10px;
+}
+
+.card-holder-r {
+	background-image: url("../afbeeldingen/rode-kaart.png");
+	background-size: 166px 230px;
+	height: 230px;
+    width: 166px;
+	position: relative;
+	top: 40px;
+	left: 20px;
+}
+
+.new-hand {
+	text-align: center;
+    position: relative;
+    top: 100px;
+	width: 164px;
+	color: white;
+}
+
+.linker-menu .button {
+	display: block;
+	margin-left: 5px;
+}
+
+.huidige-kaarten, .terug-kaart {
+    position: relative;
+    text-align: center;
+    padding: 12px;
+}
+
+.huidige-kaarten {
+	top: 50px;
+}
+
+.terug-kaart {
+	top: 25px;
+}
+
+.bottom-menu .button button {
+	margin: 5px auto;
+}
+
+.bottom-menu {
+	text-align: center;
+}
+
+button[aria-disabled="true"] {
+	cursor: not-allowed;
+}
+
+/* Kaart inruilen CSS > Rijen */
+
+.switched {
+	visibility: hidden;
+}
+
+ul.inruilen .kaart-rij {
+	float: right;
+}
+
+.kaart-rij {
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+	list-style: none;
+}
+
+.overview-rij {
+	width: 1105px;
+}
+
+.kaart {
+	padding: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.kaart p {
+	color: white;
+	font-size: 18px;
+}
+
+.kaart button {
+	background-image: url(../afbeeldingen/blauwe-kaart.png);
+    height: 234px;
+    width: 165px;
+    background-size: cover;
+	background-color: #fff;
+	border: none;
+	}
+	
+.kaart button:hover {
+	background-image: url(../afbeeldingen/blauw-rood-kaart.png);
+}
+
+/*achtergrond*/
+span.alienBackLeft, span.alienBackRight {
+	opacity: 0.5;
+}
+
+span.alienBackLeft {
+	background-image: url(../afbeeldingen/Links_Alien_Gray.svg);
+}
+
+span.alienBackRight {
+	background-image: url(../afbeeldingen/Rechts_Alien_Gray.svg);
+}
+
+@media screen and (max-width: 1240px) {
+	
+	span.alienBackLeft, span.alienBackRight {
+		display:none;
+	}
+
+}
+/*einde achtergrond*/
+
+@media screen and (max-width: 1280px) {
+	
+	ul.inruilen .kaart-rij {
+		float: none;
+	}
+
+	.linker-menu h2 {
+	left: 0;
+	margin: 25px 0 25px 0;
+	}
+	
+	.linker-menu {
+	margin: 50px auto;
+	text-align: center;
+	float: none;
+	}
+	
+	.bottom-menu {
+	margin: 0 auto;
+	text-align: center;
+	}
+	.card-holder-r {
+	position: initial;
+	margin: 0 auto 50px;
+	}
+	
+	#hand {
+	padding-top: 25px;
+	box-sizing: border-box;
+	margin: 0 auto;	
+	}
+	
+	.kaart-rij {
+	margin: 0 auto 20px;
+	float: none;
+	width: 800px;
+	}
+	
+	.huidige-kaarten, .terug-kaart {
+	position: initial;
+	margin: 20px 0;
+	text-align: center;
+	display: inline-block;
+	}
+}
+
+@media screen and (max-width: 816px) {
+	.linker-menu {
+	margin: 60px 0 25px;
+	}
+	
+	.card-holder-r {
+	margin: 0 auto 25px;
+	}
+	
+	.kaart-rij {
+	width: 400px;	
+	}
+	
+	.card-holder-b {
+	margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#hand {
+	padding-top: 0;
+	}
+}
+
+/* Media Query for ants */
+
+@media screen and (max-width: 320px)  {
+	.kaart button {
+		background-size: 130px 200px;
+		height: 200px;
+		width: 130px;
+		font-size: 16px;
+	}
+	
+	.kaart-rij {
+		width: 100%;
+	}
+	
+		.form-email {
+		width: 273px;
+	}
+	
+	.form-input {
+		width: 200px;
+	}
+}
+
+/* Spelvorm 1 Eindscherm */
+
+.eind-kaart button {
+	background-image: url(../afbeeldingen/rode-kaart.png);
+}
+	
+.eind-kaart button:hover, .eind-kaart button:focus {
+	background-image: url(../afbeeldingen/rode-kaart.png);
+}

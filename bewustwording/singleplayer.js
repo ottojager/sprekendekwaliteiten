@@ -272,7 +272,7 @@ function handViewTemp() {
 
 function endGameHandView(no_confirm) {
     if (no_confirm || confirm('Weet je zeker dat u het spel wil beëindigen?')) {
-        // no swaping card if the game ended
+        // no swapping card if the game ended
         gameEnded = 1;
 
         // change title
@@ -305,7 +305,19 @@ function endGameEmailView() {
     xhttp.send();
 }
 
-// een paar default values ininitaliseren
+function startGameMode4() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            window.location.href = '../kernkwadranten/getstarted.php';
+        }
+    };
+    xhttp.open("POST", "../kernkwadranten/api/new.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.send(JSON.stringify(hand));
+}
+
+// een paar default values initialiseren
 var currentCard = '';
 var hand = [];
 var graveyard = [];

@@ -1,0 +1,1 @@
+<?php header('Location: ../') // Redirect back to home, this file is only here for that ?>

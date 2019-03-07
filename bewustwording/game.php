@@ -1,4 +1,5 @@
 <?php
+require('../functions.php');
 session_start();
 $gameType = -1;
 if (isset($_GET['type'])) {
@@ -17,22 +18,7 @@ if (isset($_GET['type'])) {
 		<link rel="stylesheet" href="../css/header.css" type="text/css">
 		<link rel="stylesheet" href="../css/footer.css" type="text/css">
 		<script type="text/javascript">
-			var cardStack =
-				<?php
-				$config = json_decode(file_get_contents('../.env.json'), true); // load the db connection info
-				$db = mysqli_connect($config['hostname'], $config['username'], $config['password']);
-
-				mysqli_select_db($db, $config['database']);
-				$sql = "SELECT * FROM cards WHERE type = 1 OR type = $gameType";
-				mysqli_query($db, "SET NAMES 'utf8'");
-				$result = mysqli_query($db, $sql);
-				$array = array();
-				while ($card = mysqli_fetch_assoc($result)) {
-					$array[] = ["name" => $card['name'], "type" => $card['type']];
-				}
-				echo json_encode($array);
-				?>
-			;
+			var cardStack = <?= json_encode(getAllCards($gameType)); ?>;
 		</script>
 		<script type="text/javascript" src="singleplayer.js" defer></script>
 		<title>Nieuwe kaart - Bewustwording - Sprekende Kwaliteiten</title>
