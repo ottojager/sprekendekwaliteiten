@@ -1,7 +1,7 @@
 <?php
 
 function getAllCards($cardOptions) {
-    $config = json_decode(file_get_contents('../.env.json'), true); // load the db connection info
+    $config = json_decode(file_get_contents(__DIR__.'/.env.json'), true); // load the db connection info
     $db = mysqli_connect($config['hostname'], $config['username'], $config['password']);
 
     mysqli_select_db($db, $config['database']);

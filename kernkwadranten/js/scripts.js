@@ -27,7 +27,7 @@ function confirmCardSelections() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            // redirect to next window, it doesn't exist yet right now :(
+            window.location.href = './game.php';
         }
     };
     xhttp.open("POST", "../kernkwadranten/api/select.php", true);
@@ -40,3 +40,38 @@ function arrayRemove(arr, value) { //Thanks StackOverflow
         return ele != value;
     });
  }
+
+ function setGameText(id, index) {
+    document.getElementById(id).innerText = indices[index];
+ }
+
+ function toggleCardHighlight(index) {
+    document.getElementById(ids[index]).parentElement.parentElement.classList.toggle("kwadrant-highlight");
+ }
+
+function moveCarousel(positive = true) {
+    var toAdd = positive ? 1 : -1;
+    var carouselCards = document.getElementsByClassName('carousel-card-text');
+    carouselIndex += carouselCards.length * toAdd;
+    var counter = 0;
+    for (var i = 0; i < carouselCards.length; i++) {
+        carouselCards[i].innerText = activeCarousel[(carouselIndex+counter)%activeCarousel.length].name;
+        counter += toAdd;
+    }	
+}
+
+function fillCarousel() {
+    carouselIndex = 0;
+    var carouselCards = document.getElementsByClassName('carousel-card-text');
+
+    for (var i = 0; i < carouselCards.length; i++) {
+        carouselCards[i].innerText = activeCarousel[i].name;
+    }
+}
+
+function startGame() {
+    setGameText("currentCardTitle", currentKernkwaliteitIndex);
+    setGameText("kernkwaliteitCard", currentKernkwaliteitIndex);
+    fillCarousel();
+}
+//TODO: add buttons for carousel, add buttons that let you select valkuil, then move on to uitdaging and allergie

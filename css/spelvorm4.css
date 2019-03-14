@@ -9,6 +9,12 @@ h1 {
 	margin-bottom: 40px;
 }
 
+span.kwadrant {
+	font-size: 30px;
+	text-decoration: underline;
+	margin-bottom: 40px;
+}
+
 
 html {
 	width: 100%;
@@ -18,7 +24,7 @@ html {
 /* Ontvangen kaart CSS */
 
 
-#current {
+.kwadrant-kaart {
 	text-align: center;
 	position: relative;
 	bottom: 150px;
@@ -134,26 +140,45 @@ ul.inruilen .kaart-rij {
 	width: 1105px;
 }
 
-.kaart {
+.kaart, .kwadrant-kaart-box {
 	padding: 5px;
 	display: inline-block;
 	vertical-align: middle;
 }
 
-.kaart p {
+.kaart p, .kwadrant-kaart-box p {
 	color: white;
 	font-size: 18px;
 }
 
-.kaart button {
+.kaart button, .kwadrant-kaart-box div {
 	background-image: url(../afbeeldingen/blauwe-kaart.png);
     height: 234px;
     width: 165px;
     background-size: cover;
 	background-color: #fff;
 	border: none;
-	}
-	
+}
+
+.kwadrant-kaart-box div {
+	line-height: 234px;
+}
+
+.kwadrant-kaart-box {
+	padding: 5px;
+	padding-top: 0px;
+}
+
+.kwadrant-arrow, .kwadrant-arrow-vertical {
+	font-size: 25px;
+}
+
+.kwadrant-arrow-vertical {
+	width: 200px;
+	display: inline-block;
+	margin-left: 0px;
+}
+
 .kaart button:hover {
 	background-image: url(../afbeeldingen/blauw-rood-kaart.png);
 }
@@ -215,7 +240,7 @@ span.alienBackRight {
 	.kaart-rij {
 	margin: 0 auto 20px;
 	float: none;
-	width: 800px;
+	width: 900px;
 	}
 	
 	.huidige-kaarten, .terug-kaart {
@@ -253,7 +278,7 @@ span.alienBackRight {
 /* Media Query for ants */
 
 @media screen and (max-width: 320px)  {
-	.kaart button {
+	.kaart button, .kwadrant-kaart-box div {
 		background-size: 130px 200px;
 		height: 200px;
 		width: 130px;
@@ -276,6 +301,10 @@ span.alienBackRight {
 /* Spelvorm 1 Eindscherm */
 
 .eind-kaart button {
+	background-image: url(../afbeeldingen/rode-kaart.png);
+}
+
+.kwadrant-highlight div {
 	background-image: url(../afbeeldingen/rode-kaart.png);
 }
 	

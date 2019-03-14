@@ -1,5 +1,5 @@
 <?php
-require('../functions.php'); //Get useful functions
+require('../../functions.php'); //Get useful functions
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SESSION['logged_in']) { //Check if POST and logged in
     $receivedCards = json_decode(file_get_contents('php://input')); //Extract cards received in a previous game from the POST body
