@@ -15,14 +15,18 @@ session_start();
             var allValkuilen = <?= json_encode(getAllCards(CardOptions::Valkuilen));?>;
             var activeCarousel = allValkuilen;
             var indices = {};
+            var cardTypes = {1:"valkuil", 2:"uitdaging", 3:"allergie"};
             var ids = {0: "kernkwaliteitCard", 1: "valkuilCard", 2: "uitdagingCard", 3: "allergieCard"};
+            var questions = {1: "Welke eigenschap heb jij als je jouw kwaliteit te veel inzet?",
+                             2: "Wat is voor jou een uitdaging bij deze valkuil?",
+                             3: "Voor welke eigenschap van een ander ben jij allergisch?"};
             var currentKernkwaliteitIndex = 0;
+            var currentKwadrantIndex = 1;
             var carouselIndex = 0;
             
-            var counter = 0;
+            var counter = -1;
             for (var key in playerKwaliteiten) {
-                indices[counter] = key;
-                counter++;
+                indices[++counter] = key;
             }
 
             window.addEventListener('load', function() {
@@ -30,7 +34,7 @@ session_start();
             });
         </script>
         <script src="./js/scripts.js" type="text/javascript" defer></script>
-		<title>Kies 3 kwaliteiten - Kernkwadranten - Sprekende Kwaliteiten</title>
+		<title>Maak kwadranten - Kernkwadranten - Sprekende Kwaliteiten</title>
 		<meta charset="utf-8">
 	</head>
 	
@@ -59,16 +63,27 @@ session_start();
                 </div>
             </ul>
             <br/>
-            <h2><b>[kwadrant]: </b>[vraagstelling]</h2>
+            <h2 id="kwadrantQuestion"></h2>
             <ul>
                 <div class="kaart-rij">
                     <?php 
                         for ($i = 0; $i < 5; $i++) {
-                            echo '<li class="kaart"><button><p class="carousel-card-text"></p></button></li>';
+                            echo '<li class="kaart"><button onclick="nextKwadrantPick(this);"><p class="carousel-card-text"></p></button></li>';
                         }
                     ?>
                 </div>
             </ul>
+            <div class="row" id="knoppen">
+                <div class="button">
+                    <button onclick="moveCarousel(false);">Vorige kaarten</button>
+                </div>
+                <div class="button">
+                    <button>Voltooi kernkwadrant</button>
+                </div>
+                <div class="button">
+                    <button onclick="moveCarousel();">Volgende kaarten</button>
+                </div>
+            </div>
         </main>
         <?php include('../footer.php') ?>
 	</body>

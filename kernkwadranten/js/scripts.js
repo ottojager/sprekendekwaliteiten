@@ -55,23 +55,54 @@ function moveCarousel(positive = true) {
     carouselIndex += carouselCards.length * toAdd;
     var counter = 0;
     for (var i = 0; i < carouselCards.length; i++) {
-        carouselCards[i].innerText = activeCarousel[(carouselIndex+counter)%activeCarousel.length].name;
+        var calculatedIndex = (carouselIndex+counter)%activeCarousel.length;
+        if (calculatedIndex < 0) {
+            //Haha now hope no one bothers to overflow this integer :(
+            calculatedIndex = activeCarousel.length + calculatedIndex;
+        }
+        carouselCards[i].innerText = activeCarousel[calculatedIndex].name;
         counter += toAdd;
     }	
 }
 
-function fillCarousel() {
+function fillCarousel(empty = false) {
     carouselIndex = 0;
     var carouselCards = document.getElementsByClassName('carousel-card-text');
 
     for (var i = 0; i < carouselCards.length; i++) {
-        carouselCards[i].innerText = activeCarousel[i].name;
+        carouselCards[i].innerText = !empty ? activeCarousel[i].name : "";
+    }
+}
+
+function nextKwadrantPick(element) {
+    if (currentKwadrantIndex < 4) {
+        try {
+            toggleCardHighlight(currentKwadrantIndex);
+
+            var currentKernkwaliteit = playerKwaliteiten[indices[currentKernkwaliteitIndex]];
+            var word = element.getElementsByClassName("carousel-card-text")[0];
+            console.log(element);
+            currentKernkwaliteit[cardTypes[currentKwadrantIndex]] = word.innerText;
+            document.getElementById(ids[currentKwadrantIndex]).innerText = word.innerText;
+            toggleCardHighlight(++currentKwadrantIndex);
+
+            document.getElementById("kwadrantQuestion").innerText = questions[currentKwadrantIndex];
+            activeCarousel = currentKwadrantIndex % 2 != 0 ? allValkuilen : allKwaliteiten;
+            fillCarousel();
+        }
+        catch (e) { 
+            fillCarousel(true);
+            currentKernkwaliteitIndex++;
+         }
     }
 }
 
 function startGame() {
+    currentKwadrantIndex = 1;
     setGameText("currentCardTitle", currentKernkwaliteitIndex);
     setGameText("kernkwaliteitCard", currentKernkwaliteitIndex);
+    toggleCardHighlight(1);
+    document.getElementById("kwadrantQuestion").innerText = questions[1];
     fillCarousel();
 }
-//TODO: add buttons for carousel, add buttons that let you select valkuil, then move on to uitdaging and allergie
+//TODO: think we now only need to be able to move onto the next kernkwadrant, then add some summary kind of page, and then.. implement this into the other gamemodes
