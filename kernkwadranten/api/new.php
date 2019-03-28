@@ -14,4 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SESSION['logged_in']) { //Check i
             'uitdaging' => null]; //Add card to session variable (and give it some properties that will later have to be filled)
         }
     }
+
+    echo(json_encode(["success"=>true]));
+    header("Content-Type: application/json");
 }

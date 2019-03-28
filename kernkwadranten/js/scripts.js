@@ -91,18 +91,57 @@ function nextKwadrantPick(element) {
             fillCarousel();
         }
         catch (e) { 
-            fillCarousel(true);
-            currentKernkwaliteitIndex++;
+            if (currentKernkwaliteitIndex < 2) {
+                fillCarousel(true);
+                toggleButtons(false);
+                document.getElementById("kwadrantQuestion").innerText = FINISH_KWADRANT;
+                currentKernkwaliteitIndex++;
+            }
+            else {
+                endGame();
+            }
          }
     }
 }
 
+function toggleButtons(visible) {
+    var elements = document.getElementsByClassName("move-cards-button");
+
+    for (var index = 0; index < elements.length; index++) {
+        elements[index].style.display = visible ? "inline-block" : "none";
+    }
+}
+
 function startGame() {
-    currentKwadrantIndex = 1;
-    setGameText("currentCardTitle", currentKernkwaliteitIndex);
-    setGameText("kernkwaliteitCard", currentKernkwaliteitIndex);
-    toggleCardHighlight(1);
-    document.getElementById("kwadrantQuestion").innerText = questions[1];
-    fillCarousel();
+    if (currentKwadrantIndex == -1 || currentKwadrantIndex == 4) {
+        currentKwadrantIndex = 1;
+        setGameText("currentCardTitle", currentKernkwaliteitIndex);
+        setGameText("kernkwaliteitCard", currentKernkwaliteitIndex);
+        toggleCardHighlight(1);
+        toggleButtons(true);
+
+        for (var index = 1; index < 4; index++) {
+            console.log(ids[index]);
+            document.getElementById(ids[index]).innerText = "";
+        }
+
+        document.getElementById("kwadrantQuestion").innerText = questions[1];
+        fillCarousel();
+    }
+    else {
+        alert("Je huidige kernkwadrant is nog niet af!");
+    }
+}
+
+function endGame() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            window.location.href = './overview.php';
+        }
+    };
+    xhttp.open("POST", "../kernkwadranten/api/end.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.send(JSON.stringify(playerKwaliteiten));
 }
 //TODO: think we now only need to be able to move onto the next kernkwadrant, then add some summary kind of page, and then.. implement this into the other gamemodes

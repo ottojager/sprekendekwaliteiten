@@ -14,5 +14,6 @@ if (!$_SESSION['kernkwadrant_selected']) {
         }
     }
 
-    var_dump($_SESSION['kernkwadrant_results']);
+    echo(json_encode(["success"=>true]));
+    header("Content-Type: application/json");
 }

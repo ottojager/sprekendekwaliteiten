@@ -18,10 +18,12 @@ session_start();
             var cardTypes = {1:"valkuil", 2:"uitdaging", 3:"allergie"};
             var ids = {0: "kernkwaliteitCard", 1: "valkuilCard", 2: "uitdagingCard", 3: "allergieCard"};
             var questions = {1: "Welke eigenschap heb jij als je jouw kwaliteit te veel inzet?",
-                             2: "Wat is voor jou een uitdaging bij deze valkuil?",
-                             3: "Voor welke eigenschap van een ander ben jij allergisch?"};
+            2: "Wat is voor jou een uitdaging bij deze valkuil?",
+            3: "Voor welke eigenschap van een ander ben jij allergisch?"};
+            
+            var FINISH_KWADRANT = "Klik op 'Voltooi kernkwadrant' om door te gaan!";
             var currentKernkwaliteitIndex = 0;
-            var currentKwadrantIndex = 1;
+            var currentKwadrantIndex = -1;
             var carouselIndex = 0;
             
             var counter = -1;
@@ -74,13 +76,13 @@ session_start();
                 </div>
             </ul>
             <div class="row" id="knoppen">
-                <div class="button">
+                <div class="button move-cards-button">
                     <button onclick="moveCarousel(false);">Vorige kaarten</button>
                 </div>
                 <div class="button">
-                    <button>Voltooi kernkwadrant</button>
+                    <button onclick="startGame()">Voltooi kernkwadrant</button>
                 </div>
-                <div class="button">
+                <div class="button move-cards-button">
                     <button onclick="moveCarousel();">Volgende kaarten</button>
                 </div>
             </div>
