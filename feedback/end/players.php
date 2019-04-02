@@ -13,7 +13,7 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 	<link rel="icon" sizes="16x16" type="image/png" href="/../kwal-spel/feedback/css/Rainbow_placeholder.png">
 	<script src="./endgame.js"></script>
 	<script type="text/javascript">
-		var cards = <?= json_encode($json['players'][$_SESSION['player_id']]['hand']) ?>;
+		var cards = <?= json_encode($json['players'][$_SESSION['player_id']]['stack']) ?>;
 		//I don't remember why, but the first item had(?) to be null, so:
 		cards.unshift(null);
 	</script>
