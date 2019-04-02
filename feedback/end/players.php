@@ -12,20 +12,12 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 	<link rel="stylesheet" href="../../css/spelvorm2.css" type="text/css">
 	<link rel="icon" sizes="16x16" type="image/png" href="/../kwal-spel/feedback/css/Rainbow_placeholder.png">
 	<script src="./endgame.js"></script>
-	<!-- <script>
-	var card_list =
-	<?php
-	// just accept that this works
-	// echo json_encode(
-	// 	array(
-	// 		$_SESSION['player_id'] => $json['players'][$_SESSION['player_id']]['stack']
-	// 	)
-	// );
-	?>
-	</script> -->
+	<script type="text/javascript">
+		var cards = <?= json_encode($json['players'][$_SESSION['player_id']]['hand']) ?>;
+		//I don't remember why, but the first item had(?) to be null, so:
+		cards.unshift(null);
+	</script>
 </head>
-<!-- javascript voor kaarten pagenation -->
-<!-- onload="render_card_list(0, <?php // echo $_SESSION['player_id'] ?>, 8)" -->
 <body>
 	<a href="#main" class="skip-link">Skip naar main content</a>
 	<?php
@@ -53,6 +45,9 @@ $json = json_decode(file_get_contents("../games/$game.json"), true);
 				</div>
 			</ul>
 			<div class="bottom-menu">
+				<div class="button">
+					<button onclick="startGameMode4()">Maak kernkwadranten</button>
+				</div>
 				<div class="button">
 					<button onclick="window.location='./mail_form.php'">Stuur email</button>
 				</div>

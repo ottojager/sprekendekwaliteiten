@@ -13,7 +13,7 @@ if ($_SESSION['player_id'] == 11 && isset($_SESSION['game_id'])) {
 
 	// Create card stack
 	mysqli_select_db($db, $config['database']);
-	$sql = "SELECT * FROM cards";
+	$sql = "SELECT * FROM cards WHERE type = 1";
 	mysqli_query($db, 'SET CHARACTER SET utf8');
 	$result = mysqli_query($db, $sql);
 	$card_stack = array();

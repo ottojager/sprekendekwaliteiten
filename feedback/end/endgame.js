@@ -36,3 +36,15 @@ function leader_initial_rendering_calls(player_count) {
 		render_card_list(0, n, 6);
 	}
 }
+
+function startGameMode4() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            window.location.href = '../../kernkwadranten/getstarted.php';
+        }
+    };
+    xhttp.open("POST", "../../kernkwadranten/api/new.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.send(JSON.stringify(cards));
+}
