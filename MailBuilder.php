@@ -7,17 +7,20 @@ class MailBuilder {
     }
 }
 
-$body = HtmlElement::Create("html")->AddChild("body");
-$titles = $body->AddChild("div", ["class" => "header"])->AddChild("div", ["class" => "header-content"])->AddChild("div", ["class" => "header-content-title"]);
-$titles->AddChild("h1", ["class" => "titel boven"])->AddText("sprekende");
-$titles->AddChild("h1", ["class" => "titel boven"])->AddText("kwaliteiten");
-$body->AddChild("h1")->AddText("Jouw 'Sprekende Kwaliteiten' - Feedback");
-$cardList = $body->AddChild("ul");
+$body = HtmlElement::Create("html")->addBody();
+$titles = $body->addDiv()->setClass("header")->addDiv()->setClass("header-content")->addDiv()->setClass("header-content-title");
+$titles->addH1()->setClass("titel boven")->text("sprekende");
+$titles->addH1()->setClass("titel onder")->text("kwaliteiten");
+$body->addH1()->text("Jouw 'Sprekende Kwaliteiten' - Feedback");
+$cardList = $body->addUl();
 
 for ($i = 0; $i < 5; $i++)
 {
-    $cardList->AddChild("li", ["class" => "kaart"])->AddChild("div", ["class" => "kaartContainer"])->AddChild("p")->AddText("Testkaart $i");
+    $cardList->addLi()->setClass("kaart")->addDiv()->setClass("kaartContainer")->addParagraph()->text("Testkaart $i");
 }
 
-$body->AddChild("div", ["class" => "footer"])->AddChild("p", ["class" => "credits"])->AddText("Sprekende Kwaliteiten is uitgevoerd met toestemming van Peter Gerrickens  en mogelijk gemaakt door Stichting Bartimeus Sonneheerdt en het KF Heinfonds");
-echo $titles->Parent->Parent->Parent;
+$body->addDiv()->setClass("footer")->addP()->setClass("credits")->text("Sprekende Kwaliteiten is uitgevoerd met toestemming van Peter Gerrickens  en mogelijk gemaakt door Stichting Bartimeus Sonneheerdt en het KF Heinfonds");
+
+
+//This whole thing is still in some sort of testing phase, I highly recommend you just ignore this!
+echo $body;
