@@ -136,8 +136,7 @@ if (isset($_POST['makeLobbyButton']) && !$loggedIn) {
 				</div>
 				<div class="bottom-menu">
 					<div class="button join-button">
-						<button type="submit" value="Aanmaken spel" name="makeLobbyButton"> Aanmaken spel
-						</button>
+						<button type="submit" value="Aanmaken spel" name="makeLobbyButton">Spel aanmaken</button>
 					</div>
 				</div>
 			</form>
