@@ -205,10 +205,7 @@ span.alienBackRight {
 }
 
 .formfield {
-	margin-left: -56.9px;
 	margin-top: 20px;
-	width: 441.894px;
-	height: 55px;
 	padding: 5px 5px 0px 5px;
 	font-family: 'Oswald',  monospace;
 	font-size: 16px;
@@ -223,23 +220,24 @@ span.alienBackRight {
 }
 
 .red_border {
-	width: 334px;
 	margin: 0% auto 3% auto;
 }
 label {
 	font-family:inherit;
 }
 
-label[for=name], label[for=code], label[for=cards], label[for=password] {
-    text-align: center;
-    margin: 20px;
-}
-
 input[type=text], input[type=password], select {
 	border-radius: 2px;
 	border: 1px solid #234152;
-	float: right;
 	margin: 2px 5px;
+}
+
+label { 
+width: 150px;
+}
+
+input#name, label {
+	display: inline-block
 }
 
 .button-positie {
