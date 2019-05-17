@@ -266,17 +266,6 @@ input#name, label {
 		text-align: center;
 	}
 	
-	.formfield {
-		margin-left: 0px;
-		margin-top: 15px;
-		width: 320px;
-		height: 30px;
-	}
-	
-	input[type=text], select {
-		margin: 3px 2px;
-	}
-	
 	button[name=makeLobbyButton] {
 		width: 250px;
 	}
@@ -460,14 +449,6 @@ input#name, label {
 /* Media Query for ants */
 
 @media screen and (max-width: 320px)  {
-	
-	.red_border {
-		width: 270px;
-	}
-	
-	.formfield {
-		width: 260px;
-	}
 	
 	label[for="name"], label[for="code"], label[for="cards"]  {
 		margin: 0;
