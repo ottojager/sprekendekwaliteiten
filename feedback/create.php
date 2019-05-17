@@ -121,7 +121,7 @@ if (isset($_POST['makeLobbyButton']) && !$loggedIn) {
 					</div>
 				</div>
 				<div class="red_border" >
-					<div class="formfield smallfield">
+					<div class="formfield">
 						<label for="cards">Aantal kaarten:</label>
 						<select name="cards">
 							<option value="10">10</option>

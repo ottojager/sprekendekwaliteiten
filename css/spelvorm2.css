@@ -213,10 +213,7 @@ span.alienBackRight {
 	border-top: 3px solid #234152;
 	background-color: #e9e9ea;
 	border-bottom-right-radius: 2px;
-}
-
-.smallfield {
-	height: 35px;
+	padding: 10px 8px;
 }
 
 .red_border {
