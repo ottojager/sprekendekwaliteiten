@@ -226,7 +226,7 @@ input[type=text], select {
 	font-size: 20px;
 	color: #234152;
 	list-style: none;
-	margin: 10px auto 50px;
+	margin: 20px auto 50px;
 }
 
 .card_stack h3 { /* So yea this is new, it's an id in spelvorm 2 but here it's a class*/
