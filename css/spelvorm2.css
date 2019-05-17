@@ -225,12 +225,12 @@ label {
 	font-family:inherit;
 }
 
-label[for=name], label[for=code], label[for=cards]{
+label[for=name], label[for=code], label[for=cards], label[for=password] {
     text-align: center;
     margin: 20px;
 }
 
-input[type=text], select {
+input[type=text], input[type=password], select {
 	border-radius: 2px;
 	border: 1px solid #234152;
 	float: right;
