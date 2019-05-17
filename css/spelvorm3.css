@@ -159,6 +159,16 @@ input[type=text], select {
     margin: 60px auto 0;
 }
 
+#card_display {
+	background-image: url("../afbeeldingen/rode-kaart.png");
+	background-size: 166px 230px;
+	height: 230px;
+    width: 166px;
+	position: relative;
+	top: 40px;
+	left: 0;
+	margin: 0 auto;
+
 
 /* Kaarten Geven Pagina */
 

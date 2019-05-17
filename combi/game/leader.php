@@ -96,7 +96,7 @@
 		?>
 		<main class="container" id="main" tabindex="-1">
 			<h2>Nieuwe kaart</h2>
-			<div class="eind-kaart">
+			<div class="card_display">
 				<button id="nieuwe_kaart"><?php echo $json['current_card']; ?></button>
 			</div>
 			<h2 id="current_player_indicator"><?php echo $json['players'][$json['current_player']]['name'];?> is aan de beurt...</h2>
