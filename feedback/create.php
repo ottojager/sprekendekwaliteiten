@@ -109,7 +109,7 @@ if (isset($_POST['makeLobbyButton']) && !$loggedIn) {
 		require('../header.php');
 		?>
 		<main class="container" id="main" tabindex="-1">
-			<div id="title"><h2>Aanmaken spel - Feedback</h2>
+			<div id="title"><h2>Spel aanmaken - Feedback</h2>
 			<p>Als spelleider maak je hier een nieuw spel "Feedback" aan. Vul je naam in en kies het aantal kaarten waarmee je de groep wilt laten spelen (maximaal 70).</p></div>
 			<form onsubmit="return validate_form()" method="post">
 				<p id="error"><?php if (isset($error)) { echo $error; } ?></p>
