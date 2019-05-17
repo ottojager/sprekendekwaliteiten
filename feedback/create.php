@@ -2,9 +2,20 @@
 session_set_cookie_params(24*60*60); // change how long session cookies last
                                      // the arg is the number of seconds the cookie lasts
 session_start();
-if (isset($_POST['makeLobbyButton'])) {
+$loggedIn = false;
+if (isset($_POST['makeLobbyButton']) && isset($_POST['name']) && isset($_POST['password'])) {
 	$name = trim($_POST['name']);
-	if (strlen($name) >= 2 && strlen($name) <= 10) {
+	$password = $_POST['password'];
+
+	include('../db.php');
+	$query = $pdo->prepare('SELECT * FROM users WHERE username=? AND password=?');
+	$query->execute([$name, sha1($password)]);
+	
+	if ($query->fetchColumn() > 0)
+	{
+		$loggedIn = true;
+	}
+	if (strlen($name) >= 2 && strlen($name) <= 10 && $loggedIn) {
 		if ((int)$_POST['cards'] <= 70 && (int)$_POST['cards'] > 0) { // if the assigned amount of cards is less than 70
 			                                                          // TODO: add a propper minimum amount of cards
 			//list of filtered codes
@@ -50,6 +61,10 @@ if (isset($_POST['makeLobbyButton'])) {
 	$name = $_POST['name'];
 } else {
 	$name = '';
+}
+
+if (isset($_POST['makeLobbyButton']) && !$loggedIn) {
+	$error = 'Naam of wachtwoord incorrect.';
 }
 ?>
 <!DOCTYPE html>
@@ -101,6 +116,8 @@ if (isset($_POST['makeLobbyButton'])) {
 				<div class="red_border">
 					<div class="formfield">
 						<label for="name">Naam:</label><input id="name" type="text" name="name" value="<?php echo $name ?>">
+						<br>
+						<label for="password">Wachtwoord:</label><input id="password" type="password" name="password">
 					</div>
 				</div>
 				<div class="red_border" >
