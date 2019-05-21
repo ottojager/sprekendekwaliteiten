@@ -1,13 +1,22 @@
 <?php
 require('../functions.php');
 session_start();
-$gameType = -1;
-if (isset($_GET['type'])) {
-	$type = $_GET['type'];
+
+if (isset($_POST['name']) && isset($_POST['password']) && isset($_POST['gametype']))
+{
+	$name = trim($_POST['name']);
+	$password = $_POST['password'];
+	include('../db.php');
+	$query = $pdo->prepare('SELECT * FROM users WHERE username=? AND password=?');
+	$query->execute([$name, sha1($password)]);
 	
-	if (is_numeric($type)) {
-		$gameType = $type;
+	if ($query->fetchColumn() == 0 || !is_numeric($_POST['gametype']))
+	{
+		header('Location: ./?error=' . urlencode('Naam of wachtwoord incorrect.'));
+		die();
 	}
+
+	$gameType = $_POST['gametype'];
 }
 ?>
 <html lang="nl">
@@ -39,6 +48,6 @@ if (isset($_GET['type'])) {
 		<main class="container" id="main" tabindex="-1">
 
 		</main>
-		<?php include('../footer.php') ?>
+		<?php include('../footer.php'); ?>
 	</body>
 </html>
