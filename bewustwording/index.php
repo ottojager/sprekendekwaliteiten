@@ -1,5 +1,6 @@
 <?php
 session_start();
+$GLOBALS['bewustwording_authenticated'] = false;
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -15,6 +16,15 @@ session_start();
 
 		<script type="text/javascript">
 		var gameType = 1;
+		window.addEventListener('load', function() {
+			var paramValue = new URL(window.location.href).searchParams.get('error');
+			console.log(paramValue);
+			if (paramValue != null)
+			{
+				console.log('hm');
+				document.getElementById('error').innerText = paramValue;
+			}
+		});
 		</script>
 	</head>
 	<body>
@@ -34,12 +44,21 @@ session_start();
 				<p>Als je alle kaarten gehad hebt, eindigt het spel. Je kunt het spel ook tussentijds beëindigen. Je ziet dan de 8 kaarten die jij hebt gekozen en die dus het beste bij jou passen. Je kunt deze resultaten aan jezelf laten sturen.</p>
 				<p>Veel plezier met het spel!</p>
 				<br><br>
-				<input type="radio" name="gametype" onclick="gameType=1" checked>Zonder valkuilen
-				<input type="radio" name="gametype" onclick="gameType=3">Met valkuilen
 			</div>
+			<form method="POST" action="./game.php">
+			<p id="error"></p>
+				<div class="red_border">
+					<div class="formfield">
+						<label for="name">Naam:</label><input id="name" type="text" name="name">
+						<br>
+						<label for="password">Wachtwoord:</label><input id="password" type="password" name="password">
+					</div>
+					<input type="radio" name="gametype" value="1" checked>Zonder valkuilen
+				<input type="radio" name="gametype" value="3">Met valkuilen
 			<div class="button-positie">
-				<div class="button"><button class="button" onclick="window.location='./game.php?type='+gameType">Start spel</button></div>
+				<div class="button"><input type="submit" class="button" value="Start spel"></div>
 			</div>
+			</form>
 		</main>
 		<?php include('../footer.php') ?>
 	</body>
