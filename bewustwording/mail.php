@@ -8,10 +8,7 @@ if ((!isset($_GET['cards']) || !isset($_GET['email'])) || preg_match('/[^@]*@[^@
 $cards = explode(',', $_GET['cards']);
 
 $builder = new MailBuilder();
-$builder->setTitle("Feedback");
+$builder->setTitle("Bewustwording");
 $builder->insertCards($cards);
-$builder->sendMail("fake-email");
-
-// mail it
-//mail($to, $subject, $message, implode("\r\n", $headers));
+$builder->sendMail($_GET['email']);
 ?>

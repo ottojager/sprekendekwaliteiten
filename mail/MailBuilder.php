@@ -21,7 +21,7 @@ class MailBuilder {
         "MIME-Version" => "1.0"];
 
         $this->subjectPrefs = ["input-charset" => "utf-8",
-        "output-charset" => "urf-8",
+        "output-charset" => "utf-8",
         "line-length" => 76,
         "line-break-chars" => "\r\n"];
 
@@ -77,8 +77,6 @@ class MailBuilder {
 
     public function sendMail($recipient)
     {
-        echo $this->root;
-        mail($recipient, $this->subject, (string)$this->root, getHeaderString());
-        //for debugging purposes we're not actually mailing anything right now!
+        return mail($recipient, $this->subject, (string)$this->root, getHeaderString());
     }
 }
