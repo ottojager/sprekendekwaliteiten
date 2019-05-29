@@ -17,7 +17,7 @@ class MailBuilder {
         $this->body = $this->root->addBody();
 
         $this->mailHeaders = ["Content-Transfer-Encoding" => "8bit",
-        "Content-type" => "text/html; charset=urf-8",
+        "Content-type" => "text/html; charset=utf-8",
         "MIME-Version" => "1.0"];
 
         $this->subjectPrefs = ["input-charset" => "utf-8",
