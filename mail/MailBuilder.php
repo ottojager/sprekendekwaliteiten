@@ -1,5 +1,5 @@
 <?php
-include('HtmlElement.php');
+require('HtmlElement.php');
 
 class MailBuilder {
     public $root;
@@ -13,7 +13,7 @@ class MailBuilder {
     {
         $this->root = HtmlElement::Create("html")->setLang("nl=NL");
         $this->head = $this->root->addHead();
-        $this->head->addStyle()->setType("text/css")->text(file_get_contents("style.css"));
+        $this->head->addStyle()->setType("text/css")->text(file_get_contents(__DIR__ . "/style.css"));
         $this->body = $this->root->addBody();
 
         $this->mailHeaders = ["Content-Transfer-Encoding" => "8bit",
@@ -78,12 +78,7 @@ class MailBuilder {
     public function sendMail($recipient)
     {
         echo $this->root;
-        //mail($recipient, $this->subject, (string)$this->root, getHeaderString());
+        mail($recipient, $this->subject, (string)$this->root, getHeaderString());
         //for debugging purposes we're not actually mailing anything right now!
     }
 }
-
-$mail = new MailBuilder();
-$mail->setTitle("Feedback");
-$mail->insertCards(["test", "test2", "test3"]);
-$mail->sendMail("fake-email");
