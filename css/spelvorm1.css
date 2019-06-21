@@ -219,8 +219,12 @@ input#name, label {
 	display: inline-block
 }
 
-input[type=radio] { 
-	font-family:  'Oswald',  monospace;
+.radio-buttons { 
+	margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Oswald', monospace;
 }
 
 
