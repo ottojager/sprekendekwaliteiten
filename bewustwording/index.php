@@ -54,8 +54,8 @@ $GLOBALS['bewustwording_authenticated'] = false;
 						<label for="password">Wachtwoord:</label><input id="password" type="password" name="password">
 					</div>
 					<div class="radio-buttons">
-						<label for="gametype-1">Zonder valkuilen<label><input type="radio" name="gametype-1" value="1" checked>
-						<label for="gametype-2">Met valkuilen<label><input type="radio" name="gametype-2" value="3">
+						<label for="gametype-1">Zonder valkuilen<label><input type="radio" name="gametype" id="gametype-1" value="1" checked>
+						<label for="gametype-2">Met valkuilen<label><input type="radio" name="gametype" id="gametype-2" value="3">
 					</div>
 			<div class="bottom-menu">
 				<div class="button"><button type="submit" class="button" value="Start spel">Spel Starten</div>
