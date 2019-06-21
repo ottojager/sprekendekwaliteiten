@@ -176,24 +176,6 @@ span.alienBackRight {
 
 /* Aanmaak/Inlog Scherm CSS */
 
-#title h2 {
-	padding: 18px;
-	text-decoration: underline;
-	font-family: 'Oswald', sans-serif;
-	font-size: 35px;
-	color: #234152;
-	text-align: center;
-}
-
-#title p {
-	margin: 30px auto;
-	color: #234152;
-	font-family: 'Oswald',  monospace;
-	font-size: 21px;
-	text-align: center;
-	width: 70%;
-}
-
 #error {
 	margin: 0px 0 0 0;
 	color: #d4263e;
@@ -203,7 +185,7 @@ span.alienBackRight {
 }
 
 .formfield {
-	margin-top: 20px;
+	margin: 20px auto 0;
 	padding: 5px 5px 0px 5px;
 	font-family: 'Oswald',  monospace;
 	font-size: 16px;
@@ -212,6 +194,7 @@ span.alienBackRight {
 	background-color: #e9e9ea;
 	border-bottom-right-radius: 2px;
 	padding: 10px 15px;
+	width: 26.1%;
 }
 
 .red_border {
@@ -234,10 +217,6 @@ width: 150px;
 
 input#name, label {
 	display: inline-block
-}
-
-.button-positie {
-	display: inline-block;
 }
 
 /*div.button {
