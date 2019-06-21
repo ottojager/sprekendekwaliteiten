@@ -180,7 +180,34 @@ span.alienBackRight {
 }
 /*einde achtergrond*/
 
-/* inlog scherm */
+/* Aanmaak/Inlog Scherm CSS */
+
+#title h2 {
+	padding: 18px;
+	text-decoration: underline;
+	font-family: 'Oswald', sans-serif;
+	font-size: 35px;
+	color: #234152;
+	text-align: center;
+}
+
+#title p {
+	margin: 30px auto;
+	color: #234152;
+	font-family: 'Oswald',  monospace;
+	font-size: 21px;
+	text-align: center;
+	width: 70%;
+}
+
+#error {
+	margin: 0px 0 0 0;
+	color: #d4263e;
+	font-family: 'Oswald',  monospace;
+	font-size: 21px;
+	text-align: center;
+}
+
 .formfield {
 	margin-top: 20px;
 	padding: 5px 5px 0px 5px;
@@ -191,6 +218,47 @@ span.alienBackRight {
 	background-color: #e9e9ea;
 	border-bottom-right-radius: 2px;
 	padding: 10px 15px;
+}
+
+.red_border {
+	margin: 0% auto 3% auto;
+}
+label {
+	font-family:inherit;
+}
+
+input[type=text], input[type=password], select {
+	border-radius: 2px;
+	border: 1px solid #234152;
+	margin: 2px 5px;
+	padding-left: 2px;
+}
+
+.formfield label { 
+width: 150px;
+}
+
+input#name, label {
+	display: inline-block
+}
+
+.button-positie {
+	display: inline-block;
+}
+
+/*div.button {
+	display: block;
+    margin: 8px auto 0 auto;
+}*/
+
+.startscherm-content {
+	color: #d4263e;
+	margin: 50px auto 30px auto;
+}
+
+.join-button {
+	text-align: center;
+    width: 100%;
 }
 
 @media screen and (max-width: 1280px) {
