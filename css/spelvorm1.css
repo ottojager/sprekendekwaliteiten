@@ -194,7 +194,7 @@ span.alienBackRight {
 	background-color: #e9e9ea;
 	border-bottom-right-radius: 2px;
 	padding: 10px 15px;
-	width: 26.1%;
+	width: 336.891px;
 }
 
 .red_border {
@@ -318,12 +318,16 @@ input#name, label {
 		width: 100%;
 	}
 	
-		.form-email {
+	.form-email {
 		width: 273px;
 	}
 	
 	.form-input {
 		width: 200px;
+	}
+	
+	.formfield {
+		width: 269px
 	}
 }
 
