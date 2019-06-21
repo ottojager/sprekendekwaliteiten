@@ -55,7 +55,7 @@ $GLOBALS['bewustwording_authenticated'] = false;
 					</div>
 					<input type="radio" name="gametype" value="1" checked>Zonder valkuilen
 				<input type="radio" name="gametype" value="3">Met valkuilen
-			<div class="button-positie">
+			<div class="bottom-menu">
 				<div class="button"><input type="submit" class="button" value="Start spel"></div>
 			</div>
 			</form>

@@ -238,8 +238,9 @@ input#name, label {
 	display: inline-block
 }
 
-.button-positie {
-	display: inline-block;
+.bottom-menu {
+	margin: 30px auto 0 auto;
+	text-align: center;
 }
 
 /*div.button {
