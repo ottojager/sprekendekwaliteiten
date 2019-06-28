@@ -26,4 +26,4 @@ $cards = $player['stack'];
 $builder = new MailBuilder();
 $builder->setTitle("Combi");
 $builder->insertCards(array_values($cards));
-$builder->sendMail($to);
+echo($builder->sendMail($to));
