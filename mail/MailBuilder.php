@@ -78,8 +78,6 @@ class MailBuilder {
 
     public function sendMail($recipient)
     {
-        echo($this->getHeaderString());
-        return;
         return mail($recipient, $this->subject, (string)$this->root, $this->getHeaderString());
     }
 }
