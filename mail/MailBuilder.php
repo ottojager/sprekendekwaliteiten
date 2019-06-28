@@ -17,11 +17,11 @@ class MailBuilder {
         $this->body = $this->root->addBody();
 
         $this->mailHeaders = ["Content-Transfer-Encoding" => "8bit",
-        "Content-type" => "text/html; charset=utf-8",
+        "Content-type" => "text/html; charset=UTF-8",
         "MIME-Version" => "1.0"];
 
-        $this->subjectPrefs = ["input-charset" => "utf-8",
-        "output-charset" => "utf-8",
+        $this->subjectPrefs = ["input-charset" => "UTF-8",
+        "output-charset" => "UTF-8",
         "line-length" => 76,
         "line-break-chars" => "\r\n"];
 
@@ -69,7 +69,8 @@ class MailBuilder {
 
         foreach ($this->mailHeaders as $key => $value)
         {
-            $result[] = "$key: $value";
+            //Don't add "Key: " prefix to the header if the key is Subject, apparently we can't do that
+            $result[] = $key == "Subject" ? $value : "$key: $value";
         }
 
         return implode("\r\n", $result);
