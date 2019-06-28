@@ -10,5 +10,5 @@ $cards = explode(',', $_GET['cards']);
 $builder = new MailBuilder();
 $builder->setTitle("Bewustwording");
 $builder->insertCards($cards);
-echo($builder->sendMail($_GET['email']));
+$builder->sendMail($_GET['email']);
 ?>

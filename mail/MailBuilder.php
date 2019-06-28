@@ -69,7 +69,7 @@ class MailBuilder {
 
         foreach ($this->mailHeaders as $key => $value)
         {
-            //Don't add "Key: " prefix to the header if the key is Subject, apparently we can't do that
+            //Don't add "Key: " prefix to the header if the key is Subject, apparently it already gets one by default
             $result[] = $key == "Subject" ? $value : "$key: $value";
         }
 
