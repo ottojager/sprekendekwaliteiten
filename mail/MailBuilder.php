@@ -16,14 +16,14 @@ class MailBuilder {
         $this->head->addStyle()->setType("text/css")->text(file_get_contents(__DIR__ . "/style.css"));
         $this->body = $this->root->addBody();
 
-        $this->mailHeaders = ["Content-Transfer-Encoding" => "8bit",
-        "Content-type" => "text/html; charset=UTF-8",
-        "MIME-Version" => "1.0"];
+        $this->mailHeaders = [
+            "Content-Transfer-Encoding" => "8bit",
+            "Content-type" => "text/html; charset=UTF-8",
+            "MIME-Version" => "1.0"
+        ];
 
         $this->subjectPrefs = ["input-charset" => "UTF-8",
-        "output-charset" => "UTF-8",
-        "line-length" => 76,
-        "line-break-chars" => "\r\n"];
+        "output-charset" => "UTF-8"];
 
         $titles = $this->body->addDiv()->setClass("header")->addDiv()->setClass("header-content")->addDiv()->setClass("header-content-title");
         $titles->addH1()->setClass("titel boven")->text("sprekende");
@@ -35,7 +35,7 @@ class MailBuilder {
         $this->body = $this->body->addCenter();
         $message = "Jouw 'Sprekende Kwaliteiten' - $gameMode";
         $this->body->addH1()->text($message);
-        $this->subject = $message;
+        $this->subject = iconv_mime_encode("Subject", $message, $this->subjectPrefs);
     }
 
     public function setCustomMailHeader($name, $value)
@@ -65,7 +65,7 @@ class MailBuilder {
         $result = [];
 
         $this->mailHeaders["Date"] = date("r (T)");
-        $this->mailHeaders["Subject"] = str_replace("Subject: ", "", iconv_mime_encode("Subject", $this->subject, $this->subjectPrefs));
+        $this->mailHeaders["Subject"] = $this->subject;
 
         foreach ($this->mailHeaders as $key => $value)
         {
@@ -78,6 +78,6 @@ class MailBuilder {
 
     public function sendMail($recipient)
     {
-        return mail($recipient, $this->subject, (string)$this->root, $this->getHeaderString());
+        return mail($recipient, str_replace("Subject: ", "", $this->subject), (string)$this->root, $this->getHeaderString());
     }
 }
