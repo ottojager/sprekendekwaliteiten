@@ -77,6 +77,6 @@ class MailBuilder {
 
     public function sendMail($recipient)
     {
-        return mail($recipient, $this->subject, (string)$this->root, getHeaderString());
+        return mail($recipient, $this->subject, (string)$this->root, $this->getHeaderString());
     }
 }
