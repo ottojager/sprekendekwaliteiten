@@ -82,6 +82,14 @@ function send_email() {
             back_div_button_div_div.classList.add('bottom-menu');
             back_div_button_div_div.appendChild(back_button_div);
 
+            var kwadrantDiv = document.createElement('div');
+            kwadrantDiv.classList.add('button');
+            var kwadrantBtn = document.createElement('button');
+            kwadrantBtn.innerText = "Maak kernkwadranten";
+            kwadrantBtn.onclick = startGameMode4;
+            kwadrantDiv.appendChild(kwadrantBtn);
+            back_div_button_div_div.appendChild(kwadrantDiv);
+
             document.getElementById('main').appendChild(p);
             document.getElementById('main').appendChild(back_div_button_div_div);
 

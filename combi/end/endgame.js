@@ -22,7 +22,7 @@ function send_mail() {
 				alert('Het ingevulde email adres klopt niet');
 			} else if (this.readyState == 4 && this.status == 200) {
 				window.location = './success.php'
-				var email = document.getElementById('email').value = '';
+				document.getElementById('email').value = '';
 			}
 		};
 		xhttp.open('POST', './mail.php', true);
