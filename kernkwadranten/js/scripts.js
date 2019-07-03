@@ -144,4 +144,3 @@ function endGame() {
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.send(JSON.stringify(playerKwaliteiten));
 }
-//TODO: think we now only need to be able to move onto the next kernkwadrant, then add some summary kind of page, and then.. implement this into the other gamemodes

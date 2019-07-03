@@ -60,6 +60,18 @@ class MailBuilder {
         }
     }
 
+    public function insertQuadrants($quadrants) 
+    {
+        $quadrantList = $this->body->addUl();
+        foreach ($quadrants as $key => $value) 
+        {
+            $valueList = $quadrantList->addLi()->text($key)->addUl();
+            $valueList->addLi()->text('Valkuil: ' . $value['valkuil']);
+            $valueList->addLi()->text('Allergie: ' . $value['allergie']);
+            $valueList->addLi()->text('Uitdaging: ' . $value['uitdaging']);
+        }
+    }
+
     private function getHeaderString()
     {
         $result = [];

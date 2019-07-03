@@ -72,7 +72,7 @@ session_start();
             <hr />
         <?php endforeach; ?>
         <div class="bottom-menu">
-            <div class="button"><button onclick="confirmCardSelections()">Stuur mijn kwaliteiten</button></div>
+            <div class="button"><button onclick="window.location.href='./mail.php'">Stuur mijn kwaliteiten</button></div>
             <div class="button"><button class="back-button" onclick="window.location='../index.php'">Terug naar Home</button></div>
         </div>
     </main>
