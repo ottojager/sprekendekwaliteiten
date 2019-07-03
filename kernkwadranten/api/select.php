@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-if (!$_SESSION['logged_in']) { return; }
-
 if (!$_SESSION['kernkwadrant_selected']) {
     $selectedCards = json_decode(file_get_contents('php://input'));
     $cards = $_SESSION['kernkwadrant_results'];
