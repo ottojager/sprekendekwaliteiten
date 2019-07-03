@@ -137,6 +137,7 @@ function reply_click(clicked_id) {
                 //vervang geselecteerde hand kaart met actieve kaart
                 hand[Number(clicked_id)] = currentCard;
                 document.getElementById(clicked_id).innerHTML = "<p>"+currentCard+"</p>";
+                currentCardString = currentCard;
                 currentCard = 0;
                 document.getElementById('card-heading-text').classList.add('switched')
                 document.getElementById('current-card-holder').classList.add('switched');
@@ -203,6 +204,7 @@ function newCard() {
     "use strict";
     // pakt niewe kaart van de cardStack zet die als active card en gaat naar de new card view
     currentCard = takeCard();
+    currentCardString = currentCard;
     newCardView();
 }
 
@@ -250,7 +252,7 @@ function handView() {
     xhttp.send();
 	// Nadat part "inruilen.html" is geladen toont de browser na 1000 miliseconden een alert met instructie.
 	setTimeout(function() {
-		alert("Jouw nieuwe kaart is "+currentCard+" . Je kunt één van je 8 handkaarten vervangen door "+currentCard);
+		alert("Jouw nieuwe kaart is "+currentCardString+". Je kunt één van je 8 handkaarten vervangen door "+currentCardString);
 		document.getElementById("1").focus(); // 1e kaart van de handkaarten krijgt focus.
 	}, 1000);
 }
@@ -324,6 +326,7 @@ var graveyard = [];
 var lastChosenPosition = [];
 var gameEnded = 0;
 var view = 'currentCard';
+var currentCardString = '';
 
 // kaarten schudden
 shuffle(cardStack);
