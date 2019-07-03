@@ -20,30 +20,6 @@ function takeCard() {
     return undefined;
 }
 
-function rewriteGraveyard() {
-    "use strict";
-    var i;
-    var garbage_pile = document.getElementById("graveyard"); //TODO: rename to something better than garbage_pile
-    garbage_pile.innerHTML = ""; // empty the list
-    /*var head_li = document.createElement('li');
-    var head = document.createElement('h2');
-	var head_button = document.createElement('button');
-    head.innerHTML = "Aflegstapel";
-	head_button.appendChild(head);
-    head_li.appendChild(head_button);
-    garbage_pile.appendChild(head_li);*/
-
-    for (i = 0; (i < graveyard.length); i += 1) { // do a max of 3 items otherwise do all
-        if (i == 3) {
-            break;
-        }
-        var item = document.createElement('li');
-        item.innerHTML = graveyard[i];
-        garbage_pile.appendChild(item);
-
-    }
-}
-
 function addListeners() {
 	"use strict";
 	var i;
@@ -196,7 +172,6 @@ function backButton() {
         document.getElementById("current").innerHTML = currentCard;
         lastChosenPosition.shift();
         graveyard.shift();
-        rewriteGraveyard();
     }
 }
 
