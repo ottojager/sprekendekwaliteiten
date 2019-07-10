@@ -50,7 +50,7 @@ span.alienBackRight {
 	font-size: 21px;
 	text-align: center;
 }
-
+/*
 .formfield {
 	margin-left: -56.9px;
 	margin-top: 20px;
@@ -77,13 +77,13 @@ label[for=name], label[for=code], label[for=cards]{
     margin: 20px;
 }
 
-/* input[type=text], select, input[type=password] {
+input[type=text], select, input[type=password] {
 	border-radius: 2px;
 	border: 1px solid #234152;
 	float: right;
 	margin: 6px 5px;
 
-} */
+}
 
 input[type=text], input[type=password], select {
 	border-radius: 2px;
@@ -91,6 +91,40 @@ input[type=text], input[type=password], select {
 	margin: 2px 5px;
 	padding-left: 2px;
 	float: right;
+}*/
+
+.formfield {
+	margin-top: 20px;
+	padding: 5px 5px 0px 5px;
+	font-family: 'Oswald',  monospace;
+	font-size: 16px;
+	color: #163143;
+	border-top: 3px solid #234152;
+	background-color: #e9e9ea;
+	border-bottom-right-radius: 2px;
+	padding: 10px 15px;
+}
+
+.red_border {
+	margin: 0% auto 3% auto;
+}
+label {
+	font-family:inherit;
+}
+
+input[type=text], input[type=password], select {
+	border-radius: 2px;
+	border: 1px solid #234152;
+	margin: 2px 5px;
+	padding-left: 2px;
+}
+
+.formfield label { 
+width: 150px;
+}
+
+input#name, label {
+	display: inline-block
 }
 
 .join-button {
