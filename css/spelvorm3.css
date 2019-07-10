@@ -77,11 +77,23 @@ label[for=name], label[for=code], label[for=cards]{
     margin: 20px;
 }
 
-input[type=text], select {
+.formfield label { 
+width: 150px;
+}
+
+/* input[type=text], select, input[type=password] {
 	border-radius: 2px;
 	border: 1px solid #234152;
 	float: right;
 	margin: 6px 5px;
+
+} */
+
+input[type=text], input[type=password], select {
+	border-radius: 2px;
+	border: 1px solid #234152;
+	margin: 2px 5px;
+	padding-left: 2px;
 }
 
 .join-button {
