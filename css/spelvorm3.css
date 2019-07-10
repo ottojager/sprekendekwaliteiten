@@ -93,10 +93,6 @@ input[type=text], input[type=password], select {
 	float: right;
 }
 
-input#name, label {
-	display: inline-block
-}
-
 .join-button {
 	text-align: center;
     width: 100%;
