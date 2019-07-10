@@ -84,6 +84,13 @@ input[type=text], select {
 	margin: 6px 5px;
 }
 
+input[type=text], input[type=password], select {
+	border-radius: 2px;
+	border: 1px solid #234152;
+	margin: 2px 5px;
+	padding-left: 2px;
+}
+
 .join-button {
 	text-align: center;
     width: 100%;
