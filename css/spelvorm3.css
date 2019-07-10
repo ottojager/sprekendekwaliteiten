@@ -72,11 +72,6 @@ label {
 	font-family:inherit;
 }
 
-label[for=name], label[for=code], label[for=cards]{
-    text-align: center;
-    margin: 20px;
-}
-
 /* input[type=text], select, input[type=password] {
 	border-radius: 2px;
 	border: 1px solid #234152;
