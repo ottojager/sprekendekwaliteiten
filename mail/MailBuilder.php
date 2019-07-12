@@ -62,9 +62,9 @@ class MailBuilder {
 
     public function insertQuadrants($quadrants) 
     {
-        $quadrantList = $this->body->addUl()->setClass('kwadrant-rij');
         foreach ($quadrants as $key => $value) 
         {
+            $quadrantList = $this->body->addUl()->setClass('kwadrant-rij');
             $quadrantList->addLi()->text('Kernkwaliteit: ' . $key);
             $quadrantList->addLi()->text('Valkuil: ' . $value['valkuil']);
             $quadrantList->addLi()->text('Allergie: ' . $value['allergie']);
