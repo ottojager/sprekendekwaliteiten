@@ -321,7 +321,16 @@ input#name, label {
 	}
 	
 	.formfield {
-		width: 269px
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.formfield label {
+		width: 35%;
+	}
+	
+	.radio-buttons {
+		width: 100%;
 	}
 }
 
