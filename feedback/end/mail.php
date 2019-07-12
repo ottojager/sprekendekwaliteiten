@@ -1,5 +1,7 @@
 <?php
-try {
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
+
 require('../mail/MailBuilder.php');
 session_start();
 
@@ -20,17 +22,14 @@ $to = str_replace('\n', ' ', $to);
 
 // getting player cards
 
-	$game = $_SESSION['game_id'];
-	$json = json_decode(file_get_contents("../games/$game.json"), True);
-	$player = $json['players'][$_SESSION['player_id']];
-	$cards = $player['stack'];
+$game = $_SESSION['game_id'];
+$json = json_decode(file_get_contents("../games/$game.json"), True);
+$player = $json['players'][$_SESSION['player_id']];
+$cards = $player['stack'];
 
-	$builder = new MailBuilder();
-	$builder->setTitle("Feedback");
-	$builder->insertCards(array_values($cards));
-	$builder->sendMail($to);
-}
-catch (Exception $e) {
-	echo $e->message;
-}
+$builder = new MailBuilder();
+$builder->setTitle("Feedback");
+$builder->insertCards(array_values($cards));
+$builder->sendMail($to);
+
 ?>
