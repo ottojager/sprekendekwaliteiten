@@ -438,7 +438,7 @@ ul#player_list li:active{
 	width: 100%;
 	}
 	
-	#player_list {
+	#player_list li {
 	width: 100%;
 	}
 }
