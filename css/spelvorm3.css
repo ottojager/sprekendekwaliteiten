@@ -226,11 +226,12 @@ input[type=text], input[type=password], select {
 	-ms-align-items: center;
 	font-family: 'Roboto', sans-serif;
 	padding:4px;
-	width:100%;
+	width: 50%;
 	font-size: 20px;
 	color: #234152;
 	list-style: none;
 	margin: 20px auto 50px;
+	
 }
 
 .card_stack h3 { /* So yea this is new, it's an id in spelvorm 2 but here it's a class*/
@@ -352,7 +353,6 @@ ul#player_list li:active{
 	
 	ul#player_list {
 		display:block;
-		width: auto;
 	}
 	
 	ul#player_list li{
