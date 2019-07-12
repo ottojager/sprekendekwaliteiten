@@ -372,7 +372,7 @@ ul#player_list li:active{
 	}
 	
 	.kaart-rij {
-	width: 75%;
+	width: 100%;
 	}
 	
 	.eind-kaart button {
@@ -435,6 +435,10 @@ ul#player_list li:active{
 	}
 	
 	.kaart-rij {
+	width: 100%;
+	}
+	
+	#player_list {
 	width: 100%;
 	}
 }
