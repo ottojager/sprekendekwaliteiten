@@ -95,7 +95,7 @@ button {
 #player_list li {
 	display: inline-block;
 	padding: 4px;
-	width: 250px;
+	width: 300px;
 	margin: 8px auto;
 	background-color: #e9e9ea;
 	border-top: 4px solid #163143;
@@ -111,7 +111,7 @@ button {
 	cursor: pointer;
 	float: right;
 	height: 20px;
-    width: 200px;
+   /* width: 200px; */
 }
 
 /*hover*/
