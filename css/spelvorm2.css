@@ -475,4 +475,13 @@ input#name, label {
 	.form-input {
 		width: 200px;
 	}
+	
+	.formfield {
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.formfield label {
+		width: 35%;
+	}
 }
