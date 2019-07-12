@@ -50,8 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <p id="error"><?= $error ?></p>
                     </div>
                     <div class="button">
-                            <input class="send-button" type="submit" value="Stuur e-mail">
-                        </div>
+                        <input class="send-button" type="submit" value="Stuur e-mail">
+                    </div>
                 </form>
             <?php else : ?>
                 <h1>E-mail is verzonden!</h1>
