@@ -18,13 +18,18 @@ $to = str_replace('\r', ' ', $to);
 $to = str_replace('\n', ' ', $to);
 
 // getting player cards
-$game = $_SESSION['game_id'];
-$json = json_decode(file_get_contents("../games/$game.json"), True);
-$player = $json['players'][$_SESSION['player_id']];
-$cards = $player['stack'];
+try {
+	$game = $_SESSION['game_id'];
+	$json = json_decode(file_get_contents("../games/$game.json"), True);
+	$player = $json['players'][$_SESSION['player_id']];
+	$cards = $player['stack'];
 
-$builder = new MailBuilder();
-$builder->setTitle("Feedback");
-$builder->insertCards(array_values($cards));
-$builder->sendMail($to);
+	$builder = new MailBuilder();
+	$builder->setTitle("Feedback");
+	$builder->insertCards(array_values($cards));
+	$builder->sendMail($to);
+}
+catch (Exception $e) {
+	echo $e->message;
+}
 ?>
