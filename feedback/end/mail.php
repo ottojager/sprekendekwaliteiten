@@ -1,4 +1,5 @@
 <?php
+try {
 require('../mail/MailBuilder.php');
 session_start();
 
@@ -18,7 +19,7 @@ $to = str_replace('\r', ' ', $to);
 $to = str_replace('\n', ' ', $to);
 
 // getting player cards
-try {
+
 	$game = $_SESSION['game_id'];
 	$json = json_decode(file_get_contents("../games/$game.json"), True);
 	$player = $json['players'][$_SESSION['player_id']];
