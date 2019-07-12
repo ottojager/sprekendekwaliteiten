@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
-require('../mail/MailBuilder.php');
+require('../../mail/MailBuilder.php');
 session_start();
 
 if (!isset($_SESSION['game_id'])) {
