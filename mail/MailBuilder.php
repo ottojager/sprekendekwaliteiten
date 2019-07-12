@@ -65,10 +65,10 @@ class MailBuilder {
         foreach ($quadrants as $key => $value) 
         {
             $quadrantList = $this->body->addUl()->setClass('kwadrant-rij');
-            $quadrantList->addLi()->text('Kernkwaliteit: ' . $key);
-            $quadrantList->addLi()->text('Valkuil: ' . $value['valkuil']);
-            $quadrantList->addLi()->text('Allergie: ' . $value['allergie']);
-            $quadrantList->addLi()->text('Uitdaging: ' . $value['uitdaging']);
+            $quadrantList->addLi()->addH3()->text('Kernkwaliteit: ')->addDiv()->text($key);
+            $quadrantList->addLi()->addH3()->text('Valkuil: ')->addDiv()->text($value['valkuil']);
+            $quadrantList->addLi()->addH3()->text('Allergie: ')->addDiv()->text($value['allergie']);
+            $quadrantList->addLi()->addH3()->text('Uitdaging: ')->addDiv()->text($value['uitdaging']);
         }
     }
 
