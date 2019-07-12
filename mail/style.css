@@ -132,12 +132,14 @@ li div p {
 .kwadrant-rij li {
 	box-sizing: border-box;
     margin: 8px;
+	margin-bottom: 20px;
     width: 130px;
 	display: inline-block;
 }
 
 .kwadrant-rij h3 {
 	margin: 0;
+	margin-bottom: 2px;
 }
 
 .kwadrant-rij li div {
@@ -151,4 +153,5 @@ li div p {
     vertical-align: top;
     padding-top: 50%;
     color: #fff;
+	font-size: 14px;
 }
