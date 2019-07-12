@@ -267,12 +267,13 @@ span.alienBackRight {
     position: relative;
 	display: inline-block;
 	font-family: 'Roboto', sans-serif;
+	margin-top: 20px;
 }
 
 .email-container button {
 	margin: 0 0 0 5px;
 	height: 42px;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 #error {
