@@ -1,5 +1,5 @@
 <?php
-require('../mail/MailBuilder.php');
+require('../../mail/MailBuilder.php');
 session_start();
 
 if (!isset($_SESSION['game_id'])) {
