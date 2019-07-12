@@ -114,3 +114,41 @@ li div p {
     bottom: 0;
     right: 4%;
 }
+
+
+/* Kernkwadrant CSS */
+
+.kwadrant-rij {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 0 80px 0;
+    width: 400px;
+}
+
+.kwadrant-rij:last-child {
+	padding-bottom: 0;
+}
+
+.kwadrant-rij li {
+	box-sizing: border-box;
+    margin: 8px;
+    width: 130px;
+	display: inline-block;
+}
+
+.kwadrant-rij h3 {
+	margin: 0;
+}
+
+.kwadrant-rij li div {
+	box-sizing: border-box;
+    padding: 5px;
+    height: 180px;
+    width: 130px;
+    display: inline-block;
+    border-radius: 12px;
+    background: #1e394a;
+    vertical-align: top;
+    padding-top: 50%;
+    color: #fff;
+}
