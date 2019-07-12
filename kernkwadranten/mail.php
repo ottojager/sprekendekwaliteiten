@@ -13,8 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $builder->setTitle('Kernkwadranten');
         $builder->insertQuadrants($_SESSION["kernkwadrant_results"]);
         $builder->sendMail($email);
-    }
-    else {
+    } else {
         $error = 'Ongeldig e-mailadres.';
     }
 }
@@ -43,17 +42,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="email-container">
             <span class="alienBackLeft"></span>
             <span class="alienBackRight"></span>
-            <?php if (!$emailPosted): ?>
-            <form class="form-email" method="POST" action="?">
-                <label for="email">E-mail</label>
-                <input id="email" class="form-input" name="email" type="email" autofocus>
-                <p id="error"><?=$error?></p>
-                <div class="button">
-                    <input class="send-button" type="submit" value="Stuur e-mail">
-                </div>
-            </form>
-            <?php else: ?>
-            <h1>E-mail is verzonden!</h1>
+            <?php if (!$emailPosted) : ?>
+                <form method="POST" action="?">
+                    <div class="form-email">
+                        <label for="email">E-mail</label>
+                        <input id="email" class="form-input" name="email" type="email" autofocus>
+                        <p id="error"><?= $error ?></p>
+                    </div>
+                    <div class="button">
+                            <input class="send-button" type="submit" value="Stuur e-mail">
+                        </div>
+                </form>
+            <?php else : ?>
+                <h1>E-mail is verzonden!</h1>
             <?php endif; ?>
             <div class="button">
                 <button class="back-button" onclick="window.location='../index.php'">Terug naar home</button>
