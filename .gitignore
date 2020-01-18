@@ -2,5 +2,5 @@
 **/games/*.json
 fpdf/**
 create-user.php
-sql/
+/sql/
 todo-backend.txt
